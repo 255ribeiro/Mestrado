@@ -10,7 +10,7 @@
 
 ### Referência Bibliográfica
 
-[.bib](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.bib)
+[bibtex](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.bib)
 
 ### Arquivos
 
