@@ -4,7 +4,7 @@
 ### Orientador: Davidson Martins Moreira
 ### Co-orientador: Arivaldo Leão de Amorim
 ### PPG-MCTI, SENAI/CIMATEC, Salvador, Bahia, Brasil
-### 2015
+### Ano: 2015
 
 [Dissertação](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.pdf)
 
