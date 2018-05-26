@@ -21,3 +21,5 @@
 [Vídeos - modo de trabalho](https://www.youtube.com/playlist?list=PLdvIeM1XzOJC1j1Qpn4NQcStf-6sdUuwe)
 
 [Vídeos - Análise Grafostática](https://www.youtube.com/playlist?list=PLdvIeM1XzOJCGwjoMu13xedHxEulWSnJ1)
+
+[propriedades dos polígonos funiculáres](https://www.youtube.com/watch?v=pIa0o2M0-_s&t=0s&index=2&list=PLdvIeM1XzOJDtgWm5BasOvMG6ntszDsFF)
