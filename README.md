@@ -6,11 +6,11 @@
 ### PPG-MCTI, SENAI/CIMATEC, Salvador, Bahia, Brasil
 ### Ano: 2015
 
-[Dissertação](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.pdf)
+[Dissertação](Ribeiro,_FF-Sistema_Generativo_de_Projeto_Aplicado_ao_Desenho_e_Otimização_da_Estrutura_de_um_Shed-2015.pdf)
 
 ### Referência Bibliográfica
 
-[bibtex](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.bib)
+[bibtex](Ribeiro,_FF-Sistema_Generativo_de_Projeto_Aplicado_ao_Desenho_e_Otimização_da_Estrutura_de_um_Shed-2015.bib)
 
 ### Arquivos
 
