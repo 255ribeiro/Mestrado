@@ -24,4 +24,4 @@
 
 [Vídeos - Análise Grafostática](https://www.youtube.com/playlist?list=PLdvIeM1XzOJCGwjoMu13xedHxEulWSnJ1)
 
-[Vídeo - Propriedades dos Polígonos Funiculres](https://www.youtube.com/watch?v=pIa0o2M0-_s&t=0s&index=2&list=PLdvIeM1XzOJDtgWm5BasOvMG6ntszDsFF)
+[Vídeo - Propriedades dos Polígonos Funiculares](https://www.youtube.com/watch?v=pIa0o2M0-_s&t=0s&index=2&list=PLdvIeM1XzOJDtgWm5BasOvMG6ntszDsFF)
