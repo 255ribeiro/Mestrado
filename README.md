@@ -1,10 +1,10 @@
-# Ariquivos da Dissertação de Mestrado
+## Ariquivos da Dissertação de Mestrado
 # Título: Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed
-## Autor: Fernando Ferraz Ribeiro
-## Orientador: Davidson Martins Moreira
-## Co-orientador: Arivaldo Leão de Amorim
-## PPG-MCTI, SENAI/CIMATEC, Salvador, Bahia, Brasil
-## 2015
+### Autor: Fernando Ferraz Ribeiro
+### Orientador: Davidson Martins Moreira
+### Co-orientador: Arivaldo Leão de Amorim
+### PPG-MCTI, SENAI/CIMATEC, Salvador, Bahia, Brasil
+### 2015
 
 [Dissertação](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.pdf)
 
