@@ -6,12 +6,17 @@
 ## PPG-MCTI, SENAI/CIMATEC, Salvador, Bahia, Brasil
 ## 2015
 
-[Dissertação](Ribeiro%2C%20FF-%20Sistema%20Generativo%20de%20Projeto%20Aplicado%20ao%20Desenho%20e%20Otimiza%C3%A7%C3%A3o%20da%20Estrutura%20de%20um%20Shed%20-%202015.pdf)
+[Dissertação](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.pdf)
 
+### Referência Bibliográfica
 
-[.bib](https://github.com/255ribeiro/Mestrado/blob/master/Ribeiro%2C%20FF-%20Sistema%20Generativo%20de%20Projeto%20Aplicado%20ao%20Desenho%20e%20Otimiza%C3%A7%C3%A3o%20da%20Estrutura%20de%20um%20Shed%20-%202015.bib)
+[.bib](Ribeiro, FF- Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed - 2015.bib)
 
-[Arquivos](https://github.com/255ribeiro/Mestrado/tree/master/grasshopper)
+### Arquivos
+
+[Arquivos Grasshopper-Rhino](https://github.com/255ribeiro/Mestrado/tree/master/grasshopper)
+
+### Vídeos e Playlists
 
 [Vídeos - modo de trabalho](https://www.youtube.com/playlist?list=PLdvIeM1XzOJC1j1Qpn4NQcStf-6sdUuwe)
 
