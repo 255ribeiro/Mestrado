@@ -2,7 +2,7 @@
 ## Título: Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed
 ### Autor: Fernando Ferraz Ribeiro
 ### Orientador: Davidson Martins Moreira
-### Co-orientador: Arivaldo Leão de Amorim
+### Coorientador: Arivaldo Leão de Amorim
 ### PPG-MCTI, SENAI/CIMATEC, Salvador, Bahia, Brasil
 ### Ano: 2015
 
