@@ -1,4 +1,4 @@
-## Ariquivos da Dissertação de Mestrado
+## Arquivos da Dissertação de Mestrado
 ## Título: Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed
 ### Autor: Fernando Ferraz Ribeiro
 ### Orientador: Davidson Martins Moreira
