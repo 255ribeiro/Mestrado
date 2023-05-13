@@ -1,0 +1,108 @@
+\BOOKMARK [0][]{Title.0}{Title Page}{}% 1
+\BOOKMARK [1][]{Nota sobre o estilo do PPGMCTI.1}{Nota sobre o estilo do PPGMCTI}{Title.0}% 2
+\BOOKMARK [1][]{Agradecimentos.1}{Agradecimentos}{Title.0}% 3
+\BOOKMARK [1][]{Resumo.1}{Resumo}{Title.0}% 4
+\BOOKMARK [1][]{Abstract.1}{Abstract}{Title.0}% 5
+\BOOKMARK [1][]{toc.1}{Sumário}{Title.0}% 6
+\BOOKMARK [1][]{lof.1}{Lista de Figuras}{Title.0}% 7
+\BOOKMARK [1][]{Lista de Siglas.1}{Lista de Siglas}{Title.0}% 8
+\BOOKMARK [0][]{chapter.1}{1 Introdu\347\343o}{}% 9
+\BOOKMARK [1][]{section.1.1}{1.1 Defini\347\343o do Problema}{chapter.1}% 10
+\BOOKMARK [2][]{subsection.1.1.1}{1.1.1 Objeto de Estudo}{section.1.1}% 11
+\BOOKMARK [1][]{section.1.2}{1.2 Objetivos}{chapter.1}% 12
+\BOOKMARK [1][]{section.1.3}{1.3 Import\342ncia da Pesquisa}{chapter.1}% 13
+\BOOKMARK [1][]{section.1.4}{1.4 Limites e Limita\347\365es}{chapter.1}% 14
+\BOOKMARK [1][]{section.1.5}{1.5 Quest\365es e Hip\363teses}{chapter.1}% 15
+\BOOKMARK [1][]{section.1.6}{1.6 Aspectos Metodol\363gicos}{chapter.1}% 16
+\BOOKMARK [1][]{section.1.7}{1.7 Organiza\347\343o da Disserta\347\343o de Mestrado}{chapter.1}% 17
+\BOOKMARK [0][]{chapter.2}{2 Algoritmos Generativos e Sistemas Generativos de Projeto}{}% 18
+\BOOKMARK [1][]{section.2.1}{2.1 Defini\347\343o de Algoritmo e Algoritmos Generativos}{chapter.2}% 19
+\BOOKMARK [1][]{section.2.2}{2.2 Principais Modelos de Algoritmos Generativos Aplicados \340 Arquitetura e ICC}{chapter.2}% 20
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Gram\341ticas de Forma \(GF\)}{section.2.2}% 21
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 L-Systems \(LS\)}{section.2.2}% 22
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Aut\364matos Celulares \(AC\)}{section.2.2}% 23
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Swarm Intelligence \(SI\)}{section.2.2}% 24
+\BOOKMARK [2][]{subsection.2.2.5}{2.2.5 Diagramas de Voronoi \(DV\)}{section.2.2}% 25
+\BOOKMARK [2][]{subsection.2.2.6}{2.2.6 Algoritmos de Otimiza\347\343o Estoc\341stica}{section.2.2}% 26
+\BOOKMARK [3][]{subsubsection.2.2.6.1}{2.2.6.1 Algoritmos Gen\351ticos}{subsection.2.2.6}% 27
+\BOOKMARK [3][]{subsubsection.2.2.6.2}{2.2.6.2 Simulated Annealing \(SA\)}{subsection.2.2.6}% 28
+\BOOKMARK [2][]{subsection.2.2.7}{2.2.7 Fractais}{section.2.2}% 29
+\BOOKMARK [2][]{subsection.2.2.8}{2.2.8 Modelos de Par\342metros e Restri\347\365es \(MPR\)}{section.2.2}% 30
+\BOOKMARK [0][]{chapter.3}{3 Grafost\341tica}{}% 31
+\BOOKMARK [1][]{section.3.1}{3.1 Est\341tica e Grafost\341tica}{chapter.3}% 32
+\BOOKMARK [1][]{section.3.2}{3.2 Precis\343o do M\351todo}{chapter.3}% 33
+\BOOKMARK [1][]{section.3.3}{3.3 Conceitos Fundamentais da Est\341tica}{chapter.3}% 34
+\BOOKMARK [1][]{section.3.4}{3.4 Diagramas Rec\355procos}{chapter.3}% 35
+\BOOKMARK [1][]{section.3.5}{3.5 Condi\347\365es de Equil\355brio}{chapter.3}% 36
+\BOOKMARK [1][]{section.3.6}{3.6 Problemas em Equil\355brio}{chapter.3}% 37
+\BOOKMARK [2][]{subsection.3.6.1}{3.6.1 Caso Um - Composi\347\343o de uma For\347a}{section.3.6}% 38
+\BOOKMARK [2][]{subsection.3.6.2}{3.6.2 Caso Dois - Resolu\347\343o de uma For\347a em Duas Componentes}{section.3.6}% 39
+\BOOKMARK [2][]{subsection.3.6.3}{3.6.3 Caso Tr\352s - Resolu\347\343o de uma For\347a em uma Componente de Dire\347\343o Conhecida e Outra que Passe por um Ponto}{section.3.6}% 40
+\BOOKMARK [2][]{subsection.3.6.4}{3.6.4 Caso Quatro - Resolu\347\343o de uma For\347a em Tr\352s Componentes}{section.3.6}% 41
+\BOOKMARK [1][]{section.3.7}{3.7 C\341lculo das Rea\347\365es e Esfor\347os em Treli\347as Planas Bi-Apoiadas}{chapter.3}% 42
+\BOOKMARK [2][]{subsection.3.7.1}{3.7.1 Determina\347\343o Est\341tica de Treli\347as}{section.3.7}% 43
+\BOOKMARK [2][]{subsection.3.7.2}{3.7.2 Regras de Desenho para Obten\347\343o de Diagramas Rec\355procos}{section.3.7}% 44
+\BOOKMARK [2][]{subsection.3.7.3}{3.7.3 C\341lculo das Rea\347\365es}{section.3.7}% 45
+\BOOKMARK [2][]{subsection.3.7.4}{3.7.4 C\341lculo dos Esfor\347os}{section.3.7}% 46
+\BOOKMARK [1][]{section.3.8}{3.8 C\341lculo das Rea\347\365es e Esfor\347os em Treli\347as Planas em Balan\347o}{chapter.3}% 47
+\BOOKMARK [1][]{section.3.9}{3.9 Outros Algoritmos da Grafost\341tica}{chapter.3}% 48
+\BOOKMARK [1][]{section.3.10}{3.10 Ferramentas Computacionais}{chapter.3}% 49
+\BOOKMARK [0][]{chapter.4}{4 Ambiente de Implementa\347\343o}{}% 50
+\BOOKMARK [1][]{section.4.1}{4.1 Rhinoceros 3D}{chapter.4}% 51
+\BOOKMARK [1][]{section.4.2}{4.2 Grasshopper}{chapter.4}% 52
+\BOOKMARK [1][]{section.4.3}{4.3 Python Script}{chapter.4}% 53
+\BOOKMARK [0][]{chapter.5}{5 Trabalho experimental e desenvolvimento da pesquisa}{}% 54
+\BOOKMARK [1][]{section.5.1}{5.1 Divis\343o da Treli\347a em Elementos e Nomenclatura Utilizada}{chapter.5}% 55
+\BOOKMARK [1][]{section.5.2}{5.2 Algoritmo de Gera\347\343o dos Eixos}{chapter.5}% 56
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Par\342metro 1: Curva}{section.5.2}% 57
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Par\342metro 2: Eixo de Simetria}{section.5.2}% 58
+\BOOKMARK [2][]{subsection.5.2.3}{5.2.3 Par\342metro 3: HV1}{section.5.2}% 59
+\BOOKMARK [2][]{subsection.5.2.4}{5.2.4 Par\342metros 5 e 7: HV2 e HV3}{section.5.2}% 60
+\BOOKMARK [2][]{subsection.5.2.5}{5.2.5 Par\342metros 4, 6 e 8: diagV1, diagV2 e diagV3}{section.5.2}% 61
+\BOOKMARK [2][]{subsection.5.2.6}{5.2.6 Par\342metro 9: No\137Shed}{section.5.2}% 62
+\BOOKMARK [2][]{subsection.5.2.7}{5.2.7 Par\342metro 10: VigaDist}{section.5.2}% 63
+\BOOKMARK [2][]{subsection.5.2.8}{5.2.8 Par\342metro 11: Plano}{section.5.2}% 64
+\BOOKMARK [2][]{subsection.5.2.9}{5.2.9 Fun\347\343o 01: Gera\347\343o dos Eixos das Vigas v1 e v2}{section.5.2}% 65
+\BOOKMARK [2][]{subsection.5.2.10}{5.2.10 Fun\347\343o 02: Gera\347\343o dos Eixos da Viga v3}{section.5.2}% 66
+\BOOKMARK [2][]{subsection.5.2.11}{5.2.11 Teste de Determina\347\343o Est\341tica}{section.5.2}% 67
+\BOOKMARK [2][]{subsection.5.2.12}{5.2.12 Sa\355das do Algoritmo}{section.5.2}% 68
+\BOOKMARK [1][]{section.5.3}{5.3 Algoritmo de Gera\347\343o da Volumetria}{chapter.5}% 69
+\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 Par\342metro 1: Mostrar Volume}{section.5.3}% 70
+\BOOKMARK [2][]{subsection.5.3.2}{5.3.2 Par\342metro 2: N\137Tr}{section.5.3}% 71
+\BOOKMARK [2][]{subsection.5.3.3}{5.3.3 Par\342metro 3: Cobertura}{section.5.3}% 72
+\BOOKMARK [2][]{subsection.5.3.4}{5.3.4 Par\342metro 4: Eixos}{section.5.3}% 73
+\BOOKMARK [2][]{subsection.5.3.5}{5.3.5 Par\342metro 5: Dist\137entre\137eixos}{section.5.3}% 74
+\BOOKMARK [2][]{subsection.5.3.6}{5.3.6 Par\342metro 6: Peso\137cobertura}{section.5.3}% 75
+\BOOKMARK [2][]{subsection.5.3.7}{5.3.7 Par\342metro 7: Peso\137esp\137Tr}{section.5.3}% 76
+\BOOKMARK [2][]{subsection.5.3.8}{5.3.8 Par\342metro 8: Fator\137de\137Conv}{section.5.3}% 77
+\BOOKMARK [2][]{subsection.5.3.9}{5.3.9 Par\342metros 9 e 10: Diag\137e e Diag\137l}{section.5.3}% 78
+\BOOKMARK [2][]{subsection.5.3.10}{5.3.10 Par\342metros 11 e 12: Bz\137e e Bz\137l}{section.5.3}% 79
+\BOOKMARK [2][]{subsection.5.3.11}{5.3.11 Par\342metro 13: Plano}{section.5.3}% 80
+\BOOKMARK [2][]{subsection.5.3.12}{5.3.12 Fun\347\343o 01: Gera\347\343o dos volumes}{section.5.3}% 81
+\BOOKMARK [2][]{subsection.5.3.13}{5.3.13 Fun\347\365es 02 e 03: Cargas}{section.5.3}% 82
+\BOOKMARK [2][]{subsection.5.3.14}{5.3.14 Fun\347\365es 04 e 05: \301reas e Momentos de In\351rcia M\355nimos}{section.5.3}% 83
+\BOOKMARK [2][]{subsection.5.3.15}{5.3.15 Sa\355das do Algoritmo}{section.5.3}% 84
+\BOOKMARK [1][]{section.5.4}{5.4 Aplica\347\343o e Valida\347\343o Dos Algoritmos de Gera\347\343o dos Eixos e dos Volumes}{chapter.5}% 85
+\BOOKMARK [1][]{section.5.5}{5.5 Algoritmo de An\341lise Grafost\341tica}{chapter.5}% 86
+\BOOKMARK [2][]{subsection.5.5.1}{5.5.1 Defini\347\343o do Sentido de Sele\347\343o das Linhas de A\347\343o}{section.5.5}% 87
+\BOOKMARK [2][]{subsection.5.5.2}{5.5.2 M\351todo Grafost\341tico Aplicado \340 Viga do Shed}{section.5.5}% 88
+\BOOKMARK [1][]{section.5.6}{5.6 M\351todo Grafost\341tico Aplicado \340s Vigas v1, v2 e Conector}{chapter.5}% 89
+\BOOKMARK [1][]{section.5.7}{5.7 Valida\347\343o para Treli\347as Geradas por Curvas Iniciais no Sentido Dirieta-Esquerda}{chapter.5}% 90
+\BOOKMARK [1][]{section.5.8}{5.8 Teste do Dimensionamento dos Menbros da Treli\347a}{chapter.5}% 91
+\BOOKMARK [1][]{section.5.9}{5.9 Par\342metros do Algoritmo de An\341lise Grafost\341tica}{chapter.5}% 92
+\BOOKMARK [1][]{section.5.10}{5.10 Fun\347\365es do Algoritmo de An\341lise Grafost\341tica}{chapter.5}% 93
+\BOOKMARK [1][]{section.5.11}{5.11 Sa\355das do Algoritmo de An\341lise Grafost\341tica}{chapter.5}% 94
+\BOOKMARK [1][]{section.5.12}{5.12 Aplica\347\343o do Algoritmo de An\341lise Grafost\341tica}{chapter.5}% 95
+\BOOKMARK [0][]{chapter.6}{6 Considera\347\365es finais}{}% 96
+\BOOKMARK [1][]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 97
+\BOOKMARK [1][]{section.6.2}{6.2 Contribui\347\365es}{chapter.6}% 98
+\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 Principais Produtos e Algoritmos Desenvolvidos}{section.6.2}% 99
+\BOOKMARK [1][]{section.6.3}{6.3 Atividades Futuras de Pesquisa}{chapter.6}% 100
+\BOOKMARK [0][]{appendix.A}{A Algoritmos Baseados na Grafost\341tica}{}% 101
+\BOOKMARK [1][]{section.A.1}{A.1 Algoritmo de Soma de Vetores e C\341lculo da Equilibrante}{appendix.A}% 102
+\BOOKMARK [1][]{section.A.2}{A.2 Cluster Utilizado para a Visualiza\347\343o de Vetores}{appendix.A}% 103
+\BOOKMARK [1][]{section.A.3}{A.3 Algoritmo de Desenho do PF, FG, Funicular e C\341lculo da Resultante e Momento }{appendix.A}% 104
+\BOOKMARK [0][]{appendix.B}{B ALgoritmos Generativos no Rhinoceros 3D / Grasshopper}{}% 105
+\BOOKMARK [1][]{section.B.1}{B.1 \040Tri\342ngulo de Sierpinski}{appendix.B}% 106
+\BOOKMARK [1][]{section.B.2}{B.2 C\372pula M\363vel}{appendix.B}% 107
+\BOOKMARK [0][]{figure.B.3}{Refer\352ncias Bibliogr\341ficas}{}% 108

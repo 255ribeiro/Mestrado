@@ -1,0 +1,590 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.22)  14 AUG 2016 12:19
+entering extended mode
+**./elsarticle-template.tex
+(elsarticle-template.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+(elsarticle.cls
+Document Class: elsarticle 2009/09/17, 1.20b: Elsevier Ltd
+\@bls=\dimen102
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count88
+\c@fnote=\count89
+\c@cnote=\count90
+\c@ead=\count91
+\c@author=\count92
+\@eadauthor=\toks15
+\c@affn=\count93
+\absbox=\box26
+\keybox=\box27
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box28
+\els@boxb=\box29
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+
+(elsarticle-template.spl)
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+\splwrite=\write3
+\openout3 = `elsarticle-template.spl'.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count95
+\Gm@cntv=\count96
+\c@Gm@tempcnt=\count97
+\Gm@bindingoffset=\dimen109
+\Gm@wd@mp=\dimen110
+\Gm@odd@mp=\dimen111
+\Gm@even@mp=\dimen112
+\Gm@layoutwidth=\dimen113
+\Gm@layoutheight=\dimen114
+\Gm@layouthoffset=\dimen115
+\Gm@layoutvoffset=\dimen116
+\Gm@dimlist=\toks17
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+\appnamewidth=\dimen117
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count98
+)
+\c@subfigure=\count99
+\c@subtable=\count100
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count101
+\output=\toks19
+\linenoprevgraf=\count102
+\linenumbersep=\dimen125
+\linenumberwidth=\dimen126
+\c@linenumber=\count103
+\c@pagewiselinenumber=\count104
+\c@LN@truepage=\count105
+\c@internallinenumber=\count106
+\c@internallinenumbers=\count107
+\quotelinenumbersep=\dimen127
+\bframerule=\dimen128
+\bframesep=\dimen129
+\bframebox=\box30
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(elsarticle-template.aux)
+\openout1 = `elsarticle-template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen130
+\scratchbox=\box31
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen131
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks21
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* hratio: 1:1
+* vratio: 1:1
+* modes: 
+* h-part:(L,W,R)=(64.75394pt, 468.0pt, 64.75394pt)
+* v-part:(T,H,B)=(111.52342pt, 622.0pt, 111.52342pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=468.0pt
+* \textheight=622.0pt
+* \oddsidemargin=-7.51605pt
+* \evensidemargin=-7.51605pt
+* \topmargin=-22.74657pt
+* \headheight=50.0pt
+* \headsep=12.0pt
+* \topskip=12.0pt
+* \footskip=18.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=24.0pt
+* \skip\footins=24.0pt plus 2.0pt minus 12.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 127.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 127.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Missing character: There is no â in font cmti10!
+Missing character: There is no € in font cmti10!
+Missing character: There is no “ in font cmti10!
+ [1
+
+{C:/Users/ffrib/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<fluxogramametodologia.jpg, id=14, 316.0608pt x 391.2216pt>
+File: fluxogramametodologia.jpg Graphic file (type jpg)
+
+<use fluxogramametodologia.jpg>
+Package pdftex.def Info: fluxogramametodologia.jpg used on input line 157.
+(pdftex.def)             Requested size: 234.0pt x 289.65465pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] [3 <./fluxogramametodologia.jpg>]
+<sarahcupula.jpg, id=21, 322.20375pt x 376.40625pt>
+File: sarahcupula.jpg Graphic file (type jpg)
+ <use sarahcupula.jpg>
+Package pdftex.def Info: sarahcupula.jpg used on input line 187.
+(pdftex.def)             Requested size: 140.40143pt x 164.02257pt.
+
+[4 <./sarahcupula.jpg>] <trt.jpg, id=25, 1775.63374pt x 691.58376pt>
+File: trt.jpg Graphic file (type jpg)
+
+<use trt.jpg>
+Package pdftex.def Info: trt.jpg used on input line 199.
+(pdftex.def)             Requested size: 327.59857pt x 127.59274pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 214.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 214.
+ [5 <./trt.jpg>] <a01s00.png, id=30, 487.8225pt x 339.51843pt>
+File: a01s00.png Graphic file (type png)
+ <use a01s00.png>
+Package pdftex.def Info: a01s00.png used on input line 232.
+(pdftex.def)             Requested size: 126.36043pt x 87.94115pt.
+
+<a01s01.png, id=31, 487.8225pt x 337.26pt>
+File: a01s01.png Graphic file (type png)
+ <use a01s01.png>
+Package pdftex.def Info: a01s01.png used on input line 238.
+(pdftex.def)             Requested size: 126.36043pt x 87.35617pt.
+
+<a01s02.png, id=32, 490.83376pt x 338.76563pt>
+File: a01s02.png Graphic file (type png)
+ <use a01s02.png>
+Package pdftex.def Info: a01s02.png used on input line 244.
+(pdftex.def)             Requested size: 126.36043pt x 87.20856pt.
+
+<a01s03.png, id=33, 490.08093pt x 336.50719pt>
+File: a01s03.png Graphic file (type png)
+ <use a01s03.png>
+Package pdftex.def Info: a01s03.png used on input line 252.
+(pdftex.def)             Requested size: 126.36043pt x 86.76067pt.
+
+<a01s04a.png, id=34, 490.08093pt x 336.50719pt>
+File: a01s04a.png Graphic file (type png)
+ <use a01s04a.png>
+Package pdftex.def Info: a01s04a.png used on input line 258.
+(pdftex.def)             Requested size: 126.36043pt x 86.76067pt.
+
+<a01s04b.png, id=35, 489.32813pt x 336.50719pt>
+File: a01s04b.png Graphic file (type png)
+ <use a01s04b.png>
+Package pdftex.def Info: a01s04b.png used on input line 264.
+(pdftex.def)             Requested size: 126.36043pt x 86.89417pt.
+
+<a01s06.png, id=36, 490.83376pt x 336.50719pt>
+File: a01s06.png Graphic file (type png)
+ <use a01s06.png>
+Package pdftex.def Info: a01s06.png used on input line 272.
+(pdftex.def)             Requested size: 126.36043pt x 86.62717pt.
+
+<a01s08.png, id=37, 487.8225pt x 336.50719pt>
+File: a01s08.png Graphic file (type png)
+ <use a01s08.png>
+Package pdftex.def Info: a01s08.png used on input line 278.
+(pdftex.def)             Requested size: 126.36043pt x 87.16118pt.
+
+<a01s09.png, id=38, 490.08093pt x 331.99031pt>
+File: a01s09.png Graphic file (type png)
+ <use a01s09.png>
+Package pdftex.def Info: a01s09.png used on input line 284.
+(pdftex.def)             Requested size: 126.36043pt x 85.5961pt.
+ [6 <./a01s00.png (PNG copy)> <./a01s01.png (PNG copy)> <./a01s02.png (PNG copy
+)> <./a01s03.png (PNG copy)> <./a01s04a.png (PNG copy)> <./a01s04b.png (PNG cop
+y)> <./a01s06.png (PNG copy)> <./a01s08.png (PNG copy)> <./a01s09.png (PNG copy
+)>]
+<tangentes.png, id=42, 812.28468pt x 231.11343pt>
+File: tangentes.png Graphic file (type png)
+ <use tangentes.png>
+Package pdftex.def Info: tangentes.png used on input line 304.
+(pdftex.def)             Requested size: 304.19714pt x 86.55095pt.
+
+<classicalarch.png, id=43, 379.4175pt x 341.77687pt>
+File: classicalarch.png Graphic file (type png)
+ <use classicalarch.png>
+Package pdftex.def Info: classicalarch.png used on input line 315.
+(pdftex.def)             Requested size: 234.0pt x 210.78865pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./tangentes.png>]
+<computationalarch.png, id=49, 712.16063pt x 345.54094pt>
+File: computationalarch.png Graphic file (type png)
+
+<use computationalarch.png>
+Package pdftex.def Info: computationalarch.png used on input line 328.
+(pdftex.def)             Requested size: 234.0pt x 113.53323pt.
+ [8 <./classicalarch.png> <./computationalarch.png>] <alg01.png, id=53, 2121.42
+563pt x 1014.79124pt>
+File: alg01.png Graphic file (type png)
+ <use alg01.png>
+Package pdftex.def Info: alg01.png used on input line 352.
+(pdftex.def)             Requested size: 444.59857pt x 212.6634pt.
+ [9 <./alg01.png>] <a02s00.png, id=60, 431.36156pt x 337.26pt>
+File: a02s00.png Graphic file (type png)
+ <use a02s00.png>
+Package pdftex.def Info: a02s00.png used on input line 370.
+(pdftex.def)             Requested size: 126.36043pt x 98.79095pt.
+
+<a02s01.png, id=61, 432.86719pt x 335.00156pt>
+File: a02s01.png Graphic file (type png)
+ <use a02s01.png>
+Package pdftex.def Info: a02s01.png used on input line 376.
+(pdftex.def)             Requested size: 126.36043pt x 97.79204pt.
+
+<a02s03.png, id=62, 429.10312pt x 334.24875pt>
+File: a02s03.png Graphic file (type png)
+ <use a02s03.png>
+Package pdftex.def Info: a02s03.png used on input line 382.
+(pdftex.def)             Requested size: 126.36043pt x 98.42401pt.
+
+<a02s04.png, id=63, 432.11438pt x 337.26pt>
+File: a02s04.png Graphic file (type png)
+ <use a02s04.png>
+Package pdftex.def Info: a02s04.png used on input line 390.
+(pdftex.def)             Requested size: 126.36043pt x 98.62112pt.
+
+<a02s05.png, id=64, 430.60875pt x 337.26pt>
+File: a02s05.png Graphic file (type png)
+ <use a02s05.png>
+Package pdftex.def Info: a02s05.png used on input line 396.
+(pdftex.def)             Requested size: 126.36043pt x 98.96593pt.
+
+<a02s06.png, id=65, 431.36156pt x 337.26pt>
+File: a02s06.png Graphic file (type png)
+ <use a02s06.png>
+Package pdftex.def Info: a02s06.png used on input line 402.
+(pdftex.def)             Requested size: 126.36043pt x 98.79095pt.
+
+<a02s07.png, id=66, 431.36156pt x 334.24875pt>
+File: a02s07.png Graphic file (type png)
+ <use a02s07.png>
+Package pdftex.def Info: a02s07.png used on input line 410.
+(pdftex.def)             Requested size: 126.36043pt x 97.90889pt.
+
+<a02s08.png, id=67, 430.60875pt x 331.99031pt>
+File: a02s08.png Graphic file (type png)
+ <use a02s08.png>
+Package pdftex.def Info: a02s08.png used on input line 416.
+(pdftex.def)             Requested size: 126.36043pt x 97.41957pt.
+
+<a02s09.png, id=68, 431.36156pt x 331.99031pt>
+File: a02s09.png Graphic file (type png)
+ <use a02s09.png>
+Package pdftex.def Info: a02s09.png used on input line 422.
+(pdftex.def)             Requested size: 126.36043pt x 97.24734pt.
+ [10 <./a02s00.png (PNG copy)> <./a02s01.png (PNG copy)> <./a02s03.png (PNG cop
+y)> <./a02s04.png (PNG copy)> <./a02s05.png (PNG copy)> <./a02s06.png (PNG copy
+)> <./a02s07.png (PNG copy)> <./a02s08.png (PNG copy)> <./a02s09.png (PNG copy)
+>]
+<alg02.png, id=72, 1820.30063pt x 880.79062pt>
+File: alg02.png Graphic file (type png)
+ <use alg02.png>
+Package pdftex.def Info: alg02.png used on input line 443.
+(pdftex.def)             Requested size: 444.59857pt x 215.11688pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11] <dome01.png, id=76, 485.56406pt x 334.24875pt>
+File: dome01.png Graphic file (type png)
+ <use dome01.png>
+Package pdftex.def Info: dome01.png used on input line 461.
+(pdftex.def)             Requested size: 126.36043pt x 86.97913pt.
+
+<dome02.png, id=77, 487.06969pt x 335.00156pt>
+File: dome02.png Graphic file (type png)
+ <use dome02.png>
+Package pdftex.def Info: dome02.png used on input line 467.
+(pdftex.def)             Requested size: 126.36043pt x 86.90921pt.
+
+<dome03.png, id=78, 485.56406pt x 333.49594pt>
+File: dome03.png Graphic file (type png)
+ <use dome03.png>
+Package pdftex.def Info: dome03.png used on input line 473.
+(pdftex.def)             Requested size: 126.36043pt x 86.78322pt.
+
+<dome04.png, id=79, 485.56406pt x 332.74312pt>
+File: dome04.png Graphic file (type png)
+ <use dome04.png>
+Package pdftex.def Info: dome04.png used on input line 481.
+(pdftex.def)             Requested size: 126.36043pt x 86.58733pt.
+
+<dome05.png, id=80, 484.81125pt x 334.24875pt>
+File: dome05.png Graphic file (type png)
+ <use dome05.png>
+Package pdftex.def Info: dome05.png used on input line 487.
+(pdftex.def)             Requested size: 126.36043pt x 87.11682pt.
+
+<dome06.png, id=81, 485.56406pt x 334.24875pt>
+File: dome06.png Graphic file (type png)
+ <use dome06.png>
+Package pdftex.def Info: dome06.png used on input line 493.
+(pdftex.def)             Requested size: 126.36043pt x 86.97913pt.
+
+<dome07.png, id=82, 487.06969pt x 333.49594pt>
+File: dome07.png Graphic file (type png)
+ <use dome07.png>
+Package pdftex.def Info: dome07.png used on input line 501.
+(pdftex.def)             Requested size: 126.36043pt x 86.5186pt.
+
+<dome08.png, id=83, 487.06969pt x 336.50719pt>
+File: dome08.png Graphic file (type png)
+ <use dome08.png>
+Package pdftex.def Info: dome08.png used on input line 507.
+(pdftex.def)             Requested size: 126.36043pt x 87.2998pt.
+
+<dome09.png, id=84, 484.05844pt x 337.26pt>
+File: dome09.png Graphic file (type png)
+ <use dome09.png>
+Package pdftex.def Info: dome09.png used on input line 513.
+(pdftex.def)             Requested size: 126.36043pt x 88.03546pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./alg02.png>] [13 <./dome01.png (PNG copy)> <./dome02.png (PNG copy)> <./d
+ome03.png (PNG copy)> <./dome04.png (PNG copy)> <./dome05.png (PNG copy)> <./do
+me06.png (PNG copy)> <./dome07.png (PNG copy)> <./dome08.png (PNG copy)> <./dom
+e09.png (PNG copy)>] <ag03s01.png, id=93, 487.06969pt x 315.42844pt>
+File: ag03s01.png Graphic file (type png)
+
+<use ag03s01.png>
+Package pdftex.def Info: ag03s01.png used on input line 540.
+(pdftex.def)             Requested size: 126.36043pt x 81.83138pt.
+ <ag03s02.png, id=94, 487.06969pt x 320.69812pt>
+File: ag03s02.png Graphic file (type png)
+
+<use ag03s02.png>
+Package pdftex.def Info: ag03s02.png used on input line 546.
+(pdftex.def)             Requested size: 126.36043pt x 83.19847pt.
+ <ag03s03.png, id=95, 484.81125pt x 318.43968pt>
+File: ag03s03.png Graphic file (type png)
+
+<use ag03s03.png>
+Package pdftex.def Info: ag03s03.png used on input line 552.
+(pdftex.def)             Requested size: 126.36043pt x 82.99643pt.
+ <lancetDome01.png, id=96, 485.56406pt x 316.93407pt>
+File: lancetDome01.png Graphic file (type png)
+
+<use lancetDome01.png>
+Package pdftex.def Info: lancetDome01.png used on input line 573.
+(pdftex.def)             Requested size: 126.36043pt x 82.47345pt.
+ <lancetDome02.png, id=97, 485.56406pt x 318.43968pt>
+File: lancetDome02.png Graphic file (type png)
+
+<use lancetDome02.png>
+Package pdftex.def Info: lancetDome02.png used on input line 579.
+(pdftex.def)             Requested size: 126.36043pt x 82.86525pt.
+ <lancetDome03.png, id=98, 489.32813pt x 320.69812pt>
+File: lancetDome03.png Graphic file (type png)
+
+<use lancetDome03.png>
+Package pdftex.def Info: lancetDome03.png used on input line 585.
+(pdftex.def)             Requested size: 126.36043pt x 82.81189pt.
+ <alg03.png, id=99, 1790.18813pt x 989.19562pt>
+File: alg03.png Graphic file (type png)
+
+<use alg03.png>
+Package pdftex.def Info: alg03.png used on input line 599.
+(pdftex.def)             Requested size: 444.59857pt x 245.66815pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14 <./ag03s01.png (PNG copy)> <./ag03s02.png (PNG copy)> <./ag03s03.png (PNG c
+opy)> <./lancetDome01.png (PNG copy)> <./lancetDome02.png (PNG copy)> <./lancet
+Dome03.png (PNG copy)>] [15 <./alg03.png>] (elsarticle-template.bbl
+Underfull \hbox (badness 1210) in paragraph at lines 100--108
+[]\OT1/cmr/m/n/10 B. Tepavce-vic, V. Sto-jakovic, Shape gram-mar in con-tem-po-
+rary ar-chi-tec-tural the-ory and de-
+ []
+
+[16]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ” in font cmr10!
+ [17]) [18] (elsarticle-template.aux) ) 
+Here is how much of TeX's memory you used:
+ 4287 strings out of 493634
+ 62141 string characters out of 3143743
+ 126039 words of memory out of 3000000
+ 7591 multiletter control sequences out of 15000+200000
+ 12790 words of font info for 49 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 42i,7n,40p,1551b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb>
+Output written on elsarticle-template.pdf (18 pages, 4624892 bytes).
+PDF statistics:
+ 154 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+

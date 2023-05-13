@@ -1,0 +1,320 @@
+%%%*******************************************************************************
+%  Classe Latex SENAI CIMATEC, Version 0.0.0 16/04/2009
+%
+%  Define as normas e estilo das dissertaï¿½ï¿½es e teses do SENAI CIMATEC
+%
+%  Author : Hernane Pereira
+%%%-------------------------------------------------------------------------------
+
+%%%-------------------------------------------------------------------------------
+% Changes log
+%%%-------------------------------------------------------------------------------
+% Version 1.1.1 - 08/03/2005
+% - Added support for amsmath, amsthm, amsfonts and amssymb as default
+%
+% Version 1.1.0 - 22/07/2004
+% - updated university front page format
+%
+% Version 1.1.0 - 20/06/2003
+% - Initial version
+%%%-------------------------------------------------------------------------------
+
+%%%-------------------------------------------------------------------------------
+%  DOCUMENTATION WITH EXAMPLE
+%%%*******************************************************************************
+
+%%%-------------------------------------------------------------------------------
+%%% Thesis default options
+%%%-------------------------------------------------------------------------------
+%\documentclass[subook]{Classes/PPGMCTI}
+%\documentclass[sureport]{Classes/PPGMCTI}
+
+%%%-------------------------------------------------------------------------------
+%%% Thesis custom options
+%%%-------------------------------------------------------------------------------
+
+%%% Fancy page headings
+%\documentclass[fancyheadings, subook]{Classes/PPGMCTI}
+%\documentclass[fancyheadings, sureport]{Classes/PPGMCTI}
+
+%%% Fancy chapters and sections headings
+%\documentclass[fancychapter, subook]{Classes/PPGMCTI}
+%\documentclass[fancychapter, sureport]{Classes/PPGMCTI}
+
+%%% Fancy page , chapters and sections headings
+%\documentclass[fancyheadings, fancychapter, subook]{Classes/PPGMCTI}
+%\documentclass[fancyheadings, fancychapter, sureport]{Classes/PPGMCTI}
+\documentclass[fancyheadings, fancychapter, sureport]{PPGMCTI}
+
+%%%-------------------------------------------------------------------------------
+%%% Thesis Commands (ONLY with fancy page headings)
+%%%-------------------------------------------------------------------------------
+
+%%%Page header line width
+%\footlinewidth{value}
+
+%%%Page footer line width
+%\headlinewidth{value}
+
+%%%Page header and footer line width
+%\headingslinewidth{value}
+
+%%%Page header and footer lines without text
+%\headingslinesonly
+
+%%%The default line width is 0.3pt.
+%%%Set the value to 0pt to remove the page header and/or footer line
+
+%%%-------------------------------------------------------------------------------
+%%% SUThesis Supported Graphic Formats
+%%%-------------------------------------------------------------------------------
+% The figures formats supported depend upon the selected output file
+% Include your figure without the extention, the SUThesis will automatically
+% search the predefined `Figures' directory tree for the right file format.
+%
+% - The pdfLaTEX (PDF) supports graphics inclusions in PDF, JPG, PNG, and
+%   MetaPost (with .mps extention) formats.
+%
+% - The Latex (DVI) supports graphics inclusions in EPS and PS formats.
+%%%-------------------------------------------------------------------------------
+
+
+%%%-------------------------------------------------------------------------------
+%%% ï¿½rvore de diretï¿½rio PPGMCTI
+%%%-------------------------------------------------------------------------------
+%  Diretï¿½rio
+%       \Classes        (requerido)
+%       \Figures        (requerido) --------------------------------->
+%       \Figures\PDF    (optional)
+%       \Figures\JPG    (optional) Figures located within these
+%       \Figures\PNG    (optional) folders are searched automatically
+%       \Figures\MPS    (optional)  by the PPGMCTI class.
+%       \Figures\EPS    (optional)
+%       \Figures\PS     (optional) <--------------------------------
+%       \Tables         (requerido)
+%       \Others         (requerido)
+%       \Chapters       (requerido)
+%       \Appendices     (optional)
+%       \References     (requerido)
+%%%-------------------------------------------------------------------------------
+
+%%%-------------------------------------------------------------------------------
+%%% PDF File Summary
+%%%-------------------------------------------------------------------------------
+\ifpdf
+    \hypersetup{ % backref,
+                colorlinks  = true,
+                pdftitle    = Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um Shed,                pdfauthor   = {Fernando Ferraz Ribeiro,ffribeiro@gmail.com},
+                pdfsubject  = Mestre em MCTI,
+                pdfcreator  = Subtitulo,
+                pdfproducer = PDFLatex,
+                pdfkeywords = {Sistemas de Projeto Generativo, Grafostática, Geometria, Arquitetura ,Otimização}
+    }
+ \fi
+
+%%%-------------------------------------------------------------------------------
+%%% Required packages
+%%%-------------------------------------------------------------------------------
+% - ifthen
+% - setspace
+% - amsmath
+% - amsfonts
+% - amssymb
+% - amsthm
+% - eucal
+% - graphics
+% - fancyhdr
+%%%-------------------------------------------------------------------------------
+
+%%%-------------------------------------------------------------------------------
+%%% Optional packages
+%%%-------------------------------------------------------------------------------
+\usepackage[latin1]{inputenc}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float,subfigure}
+%\usepackage{cite}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+%\usepackage[alf,abnt-etal-list=1]{abntex2cite} 
+%\usepackage[alf,abnt-etal-list=5]{abntcite}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{ifpdf}
+
+\usepackage[procnames]{listings}
+\usepackage{listingsutf8}
+\usepackage{color}
+
+\usepackage[alf]{abntex2cite} 
+%\usepackage[style=authoryear-comp,
+%     hyperref,
+%     backend=biber,
+%     isbn=false,
+%     doi=false,
+%     url=false,     
+%     date=year]{biblatex}
+
+%\addbibresource{References/library.bib}
+%Tables and Figures Caption
+\setlength{\LTcapwidth}{\textwidth}
+
+%\newtheorem{theorem}{Teorema}
+%\newtheorem{definition}[theorem]{Defini\c{c}\~ao}
+
+
+%%%-------------------------------------------------------------------------------
+%%% Start thesis root document
+%%%-------------------------------------------------------------------------------
+\begin{document}
+
+
+
+
+    %%----------------------------------------------------------------------------
+    %% Define the title page
+    %%----------------------------------------------------------------------------
+    \university{SENAI CIMATEC}
+%    \faculty{Pro\-gra\-ma de P\'os-gra\-dua\-\c{c}\~ao em Mo\-de\-la\-gem Com\-pu\-ta\-cio\-nal e Tec\-no\-lo\-gia In\-dus\-trial}
+    \faculty{Pro\-gra\-ma de Pós-gra\-dua\-ção em Mo\-de\-la\-gem Com\-pu\-ta\-cio\-nal e Tec\-no\-lo\-gia In\-dus\-trial}
+%    \school{School of Mathematics}
+    \course{Mestrado em Modelagem Computacional e Tecnologia Industrial}
+    \typework{Disserta\c{c}\~ao de mestrado}
+%    \typework{Tese de doutorado}
+%    \course{Doutorado em Modelagem Computacional e Tecnologia Industrial}
+    \thesistitle{Sistema Generativo de Projeto Aplicado ao Desenho e Otimização da Estrutura de um \textit{Shed}}
+    \hidevolume
+    \thesisvolume{Volume 1 of 1}
+    \thesisauthor{Fernando Ferraz Ribeiro}
+    \thesisadvisor{Davidson Martins Moreira}
+%   \hidecoadvisor
+    \thesiscoadvisor{Arivaldo Leão de Amorim}
+    \thesisdegreetitle{Mestre em Modelagem Computacional e Tecnologia Industrial}
+%    \thesisdegreetitle{Doutor em Modelagem Computacional e Tecnologia Industrial}
+%    \thesismonthyear{M\^es de Ano}
+    \thesismonthyear{Abril de 2015}
+
+    \maketitlepage
+
+    %%----------------------------------------------------------------------------
+    %% Inserir Folha de rosto, Nota de estilo, folha de assinaturas, dedicatoria
+    %%----------------------------------------------------------------------------
+    \include{Others/FolhaRosto}
+    \include{Others/NotaEstilo}
+    \include{Others/FolhaAssinaturas}
+    \include{Others/dedicatoria}
+    \include{Others/agradecimentos}
+
+%%%-------------------------------------------------------------------------------
+%%% Definicao de comandos para apresentar algoritmos em portugues
+%%%-------------------------------------------------------------------------------
+\definecolor{keywords}{RGB}{0,0,255}
+\definecolor{comments}{RGB}{100,100,100}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+\definecolor{gray}{RGB}{120,120,120}
+ 
+\lstset{language=Python,
+        numbers=left,                   
+        numberstyle=\tiny\color{gray},  
+        stepnumber=4,
+        inputencoding=utf8/latin1, 
+        basicstyle=\ttfamily\small, 
+        keywordstyle=\color{keywords},
+        commentstyle=\color{comments},
+        stringstyle=\color{red},
+        showstringspaces=false,
+        identifierstyle=\color{green},
+        showlines = false,
+        breaklines = false,
+        procnamekeys={def,class}}
+ 
+
+
+
+\renewcommand{\listalgorithmname}{Lista de Algoritmos}
+
+\renewcommand{\algorithmicrequire}{\textbf{requer:}}
+\renewcommand{\algorithmicensure}{\textbf{garantir:}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{então}}
+\renewcommand{\algorithmicelse}{\textbf{senão}}
+\renewcommand{\algorithmicelsif}{\textbf{senão se}}
+\renewcommand{\algorithmicendif}{\textbf{fim se}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{faça}}
+\renewcommand{\algorithmicendfor}{\textbf{fim para}}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicendwhile}{\textbf{fim enquanto}}
+\renewcommand{\algorithmicloop}{\textbf{loop}}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{até}}
+\renewcommand{\algorithmicto}{\textbf{até}}
+\renewcommand{\algorithmiccomment}[1]{\hskip$\rightarrow$ #1}
+\floatname{algorithm}{Algoritmo}
+
+
+    %%----------------------------------------------------------------------------
+    %% Resumo/abstract, sumï¿½rio e siglas
+    %%----------------------------------------------------------------------------
+
+    \begin{romanpagenumbers}
+        \include{Others/resumo}
+        \include{Others/abstract}
+        % Make list of contents, tables and figures
+        \thesiscontents
+        %Include other required section
+        \include{Others/abbreviation}
+
+        %Switch the page numbering back to the default format
+    \end{romanpagenumbers}
+
+    %%----------------------------------------------------------------------------
+    %% Include thesis chapters
+    %%----------------------------------------------------------------------------
+    \parskip=\baselineskip
+    \include{Chapters/ChapterOne}
+    \include{Chapters/ChapterTwo}
+    \include{Chapters/ChapterThree}
+    \include{Chapters/ChapterFour}
+    \include{Chapters/ChapterFive}
+    %\include{Chapters/ChapterSix}
+    %\include{Chapters/ChapterSeven}
+    %\include{Chapters/ChapterEight}
+    \include{Chapters/ChapterConsideracoesfinais}
+    % include more chapters ...
+
+   %%----------------------------------------------------------------------------
+    %% Include thesis appendices
+    %%----------------------------------------------------------------------------
+
+    \begin{thesisappendices}
+        \include{Appendices/History}
+        \include{Appendices/Fitting}
+%        \include{Appendices/Design}
+        % include more appendices ...
+    \end{thesisappendices}
+
+    %%----------------------------------------------------------------------------
+    %% Configurar as referencias bibliograficas
+    %%----------------------------------------------------------------------------
+
+
+    \addcontentsline{toc}{chapter}{Referências Bibliográficas}
+    %\bibliographystyle{abnt-alf}
+    %\bibliographystyle{abntex2cite-alf}
+    \bibliography{References/library}
+    %\printbibliography 
+    %%----------------------------------------------------------------------------
+    %% Finishing
+    %%----------------------------------------------------------------------------
+
+    \include{Others/ultimafolha}
+\end{document}
+%%%-------------------------------------------------------------------------------
+%%% Here we finished with your thesis formating. Good luck with the contents
+%%%-------------------------------------------------------------------------------

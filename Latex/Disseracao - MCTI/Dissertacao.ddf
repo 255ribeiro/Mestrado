@@ -1,0 +1,24 @@
+[Settings]
+TeXFormat=LaTeX 2e
+Script=CP28591
+DrawHyperLinkBorder=true
+DrawHyperLinkBorderAlways=false
+ColorizeHyperAnchors=true
+[Info]
+OutlineSource=DDF
+OutlineEncoding=CP28591
+InputEncoding=CP1252
+Source=Dissertacao.tex
+[Layout]
+LeftMarging=1in
+TopMarging=1in
+Magnification=1
+PaperType=a4
+Orientation=Portrait
+[Colors]
+Clr1=0,0,0
+Clr2=128,0,0
+Clr3=0,0,128
+Clr4=0,0,255
+Clr7=255,255,255
+Clr9=0,0,0

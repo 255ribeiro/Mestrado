@@ -1,0 +1,2956 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.10.25)  14 JUN 2018 16:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Dissertacao.tex
+(./Dissertacao.tex
+LaTeX2e <2017-04-15>
+Babel <3.14> and hyphenation patterns for 84 language(s) loaded.
+(./PPGMCTI.cls
+Document Class: PPGMCTI 2009/04/15 v0.0.0
+---------------------------------------------------------
+Esta classe LaTeX está de acordo com os requerimentos do 
+programa de pós-graduação para a submissão de uma disser-
+tação de mestrado ou tese de doutorado ao SENAI Cimatec 
+implementada inicialmente por Israel Vieira para atender 
+os requisitos da University of Southampton e, posterior- 
+mente, modificada por Hernane Pereira. 
+---------------------------------------------------------
+(c:/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen102
+))
+(c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen103
+)
+(c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count79
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count80
+\leftroot@=\count81
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count82
+\DOTSCASE@=\count83
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen104
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count84
+\c@MaxMatrixCols=\count85
+\dotsspace@=\muskip10
+\c@parentequation=\count86
+\dspbrk@lvl=\count87
+\tag@help=\toks15
+\row@=\count88
+\column@=\count89
+\maxfields@=\count90
+\andhelp@=\toks16
+\eqnshift@=\dimen105
+\alignsep@=\dimen106
+\tagshift@=\dimen107
+\tagwidth@=\dimen108
+\totwidth@=\dimen109
+\lineht@=\dimen110
+\@envbody=\toks17
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(c:/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip44
+\thm@postskip=\skip45
+\thm@headsep=\skip46
+\dth@everypar=\toks24
+)
+(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/eucal.sty
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(c:/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+(c:/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip47
+\f@nch@O@elh=\skip48
+\f@nch@O@erh=\skip49
+\f@nch@O@olh=\skip50
+\f@nch@O@orh=\skip51
+\f@nch@O@elf=\skip52
+\f@nch@O@erf=\skip53
+\f@nch@O@olf=\skip54
+\f@nch@O@orf=\skip55
+)
+(c:/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+---------------------------------------------------------
+PPGMCTI usará a classe de documento -> report.
+PPGMCTI gerará um arquivo PDF.
+(c:/texlive/2017/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(c:/texlive/2017/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count91
+\c@chapter=\count92
+\c@section=\count93
+\c@subsection=\count94
+\c@subsubsection=\count95
+\c@paragraph=\count96
+\c@subparagraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip56
+\belowcaptionskip=\skip57
+\bibindent=\dimen111
+)
+---------------------------------------------------------
+(c:/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(c:/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(c:/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(c:/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen112
+\Hy@linkcounter=\count100
+\Hy@pagecounter=\count101
+
+(c:/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count102
+
+(c:/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+
+Package hyperref Warning: Values of option `pdfpagelayout':
+(hyperref)                * `SinglePage'
+(hyperref)                * `OneColumn'
+(hyperref)                * `TwoColumnLeft'
+(hyperref)                * `TwoColumnRight'
+(hyperref)                * `TwoPageLeft' (PDF 1.5)
+(hyperref)                * `TwoPageRight' (PDF 1.5)
+(hyperref)                * An empty value disables the option.
+(hyperref)                Unknown value `useoutlines' on input line 4374.
+
+Package hyperref Info: Option `bookmarks' set `true' on input line 4374.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4374.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4374
+.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4374.
+Package hyperref Info: Option `linktocpage' set `true' on input line 4374.
+
+Package hyperref Warning: Unexpected value `true'
+(hyperref)                of option `backref' instead of
+(hyperref)                `section', `slide', `page', `none',
+(hyperref)                or `false' on input line 4374.
+
+Package hyperref Info: Option `colorlinks' set `false' on input line 4374.
+Package hyperref Info: Option `hyperindex' set `true' on input line 4374.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count103
+(c:/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count104
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count105
+\c@Item=\count106
+\c@Hfootnote=\count107
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(c:/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count108
+\c@bookmark@seq@number=\count109
+
+(c:/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip58
+)
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+\rightmargin=\dimen118
+\botmargin=\dimen119
+
+(c:/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2017/10/04 3.14 The Babel package
+
+(c:/texlive/2017/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2017/10/04 3.14 Babel switching mechanism
+)
+(c:/texlive/2017/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(c:/texlive/2017/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2017/10/04 3.14 Babel common definitions
+
+(c:/texlive/2017/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2017/10/04 3.14 Babel switching mechanism
+)
+\babel@savecnt=\count110
+\U@D=\dimen120
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(c:/texlive/2017/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+(c:/texlive/2017/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(c:/texlive/2017/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip59
+\RaggedLeftLeftskip=\skip60
+\RaggedRightLeftskip=\skip61
+\CenteringRightskip=\skip62
+\RaggedLeftRightskip=\skip63
+\RaggedRightRightskip=\skip64
+\CenteringParfillskip=\skip65
+\RaggedLeftParfillskip=\skip66
+\RaggedRightParfillskip=\skip67
+\JustifyingParfillskip=\skip68
+\CenteringParindent=\skip69
+\RaggedLeftParindent=\skip70
+\RaggedRightParindent=\skip71
+\JustifyingParindent=\skip72
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 112.
+
+(c:/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
+
+(c:/texlive/2017/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(c:/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip73
+\LTright=\skip74
+\LTpre=\skip75
+\LTpost=\skip76
+\LTchunksize=\count111
+\LTcapwidth=\dimen121
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count112
+\LT@rows=\count113
+\c@LT@tables=\count114
+\c@LT@chunks=\count115
+\LT@p@ftn=\toks28
+)
+(c:/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip77
+\multirow@cntb=\count116
+\multirow@dima=\skip78
+\bigstrutjot=\dimen122
+)
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(c:/texlive/2017/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen123
+\WF@size=\dimen124
+\c@WF@wrappedlines=\count117
+\WF@box=\box32
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count118
+\float@exts=\toks30
+\float@box=\box33
+\@float@everytoks=\toks31
+\@floatcapt=\box34
+)
+(c:/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip79
+\subfigcapskip=\skip80
+\subfigcaptopadj=\dimen125
+\subfigbottomskip=\skip81
+\subfigcapmargin=\dimen126
+\subfiglabelskip=\skip82
+\c@subfigure=\count119
+\c@lofdepth=\count120
+\c@subtable=\count121
+\c@lotdepth=\count122
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(c:/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip83
+\subfig@bottom=\skip84
+)
+(c:/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count123
+\Gm@cntv=\count124
+\c@Gm@tempcnt=\count125
+\Gm@bindingoffset=\dimen127
+\Gm@wd@mp=\dimen128
+\Gm@odd@mp=\dimen129
+\Gm@even@mp=\dimen130
+\Gm@layoutwidth=\dimen131
+\Gm@layoutheight=\dimen132
+\Gm@layouthoffset=\dimen133
+\Gm@layoutvoffset=\dimen134
+\Gm@dimlist=\toks32
+)
+(c:/texlive/2017/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks33
+\c@algorithm=\count126
+)
+(c:/texlive/2017/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count127
+\c@ALC@line=\count128
+\c@ALC@rem=\count129
+\c@ALC@depth=\count130
+\ALC@tlm=\skip85
+\algorithmicindent=\skip86
+)
+(c:/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count131
+\lst@gtempboxa=\box35
+\lst@token=\toks34
+\lst@length=\count132
+\lst@currlwidth=\dimen135
+\lst@column=\count133
+\lst@pos=\count134
+\lst@lostspace=\dimen136
+\lst@width=\dimen137
+\lst@newlines=\count135
+\lst@lineno=\count136
+\lst@maxwidth=\dimen138
+
+(c:/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count137
+\lst@skipnumbers=\count138
+\lst@framebox=\box36
+)
+(c:/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(c:/texlive/2017/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
+Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
+
+(c:/texlive/2017/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+))
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(c:/texlive/2017/texmf-dist/tex/latex/abntex2/abntex2cite.sty
+Package: abntex2cite 2016/02/26 v-1.9.6 abnTeX2
+
+(c:/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen139
+\calc@Bdimen=\dimen140
+\calc@Askip=\skip87
+\calc@Bskip=\skip88
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count141
+\calc@Cskip=\skip89
+)
+(c:/texlive/2017/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
+\minimumbiblabelwidth=\skip90
+\ABCIauxlen=\skip91
+\c@ABCIaux=\count142
+\c@ABCImax=\count143
+
+(c:/texlive/2017/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\biblabelsep=\skip92
+LaTeX Info: Redefining \newblock on input line 591.
+LaTeX Info: Redefining \cite on input line 618.
+\ABCItoken=\toks35
+) (./Dissertacao.aux
+(./Others/FolhaRosto.aux) (./Others/NotaEstilo.aux)
+(./Others/FolhaAssinaturas.aux) (./Others/dedicatoria.aux)
+(./Others/agradecimentos.aux) (./Others/resumo.aux) (./Others/abstract.aux)
+(./Others/abbreviation.aux) (./Chapters/ChapterOne.aux)
+(./Chapters/ChapterTwo.aux) (./Chapters/ChapterThree.aux)
+(./Chapters/ChapterFour.aux) (./Chapters/ChapterFive.aux)
+(./Chapters/ChapterConsideracoesfinais.aux) (./Appendices/History.aux)
+(./Appendices/Fitting.aux) (./Others/ultimafolha.aux))
+\openout1 = `Dissertacao.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+
+(c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count144
+\scratchdimen=\dimen141
+\scratchbox=\box37
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen142
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks37
+) (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(c:/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.jpg,.mps,.pdf,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(c:/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box38
+Package hyperref Info: Link coloring ON on input line 171.
+
+(c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(c:/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count150
+)
+LaTeX Info: Redefining \ref on input line 171.
+LaTeX Info: Redefining \pageref on input line 171.
+LaTeX Info: Redefining \nameref on input line 171.
+
+(./Dissertacao.out) (./Dissertacao.out)
+\@outlinefile=\write3
+\openout3 = `Dissertacao.out'.
+
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 171.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-18.91173pt
+* \headheight=12.0pt
+* \headsep=20.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count151
+<Figures/LogoFIEBSENAI.png, id=438, 210.7875pt x 120.45pt>
+File: Figures/LogoFIEBSENAI.png Graphic file (type png)
+<use Figures/LogoFIEBSENAI.png>
+Package pdftex.def Info: Figures/LogoFIEBSENAI.png  used on input line 199. on 
+input line 199.
+Package pdftex.def Info: Requested size: 105.3935pt x 60.22484pt on input line 
+199.
+[1
+
+{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figures/LogoF
+IEBSENAI.png>]
+\openout2 = `Others/FolhaRosto.aux'.
+
+ (./Others/FolhaRosto.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+
+ []
+
+) [2
+
+]
+\openout2 = `Others/NotaEstilo.aux'.
+
+ (./Others/NotaEstilo.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+
+(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+
+(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 11--18
+
+ []
+
+) [3
+
+
+]
+\openout2 = `Others/FolhaAssinaturas.aux'.
+
+ (./Others/FolhaAssinaturas.tex
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+
+ []
+
+[4
+
+
+])
+\openout2 = `Others/dedicatoria.aux'.
+
+ (./Others/dedicatoria.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--42
+
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.207     \include{Others/dedicatoria}
+                                       [3
+
+
+]
+\openout2 = `Others/agradecimentos.aux'.
+
+ (./Others/agradecimentos.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208     \include{Others/agradecimentos}
+                                          [4
+
+
+]
+Package color Info: Redefining color red on input line 215.
+Package color Info: Redefining color green on input line 216.
+
+(c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+\openout2 = `Others/resumo.aux'.
+
+
+(./Others/resumo.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+) [1
+
+
+]
+\openout2 = `Others/abstract.aux'.
+
+ (./Others/abstract.tex) [2
+
+
+] (./Dissertacao.toc
+Overfull \hbox (2.30951pt too wide) in paragraph at lines 34--34
+ [][] []\OT1/cmr/m/n/12 Caso Tr^es - Re-solu^^Xc~ao de uma For^^Xca em uma Com-
+po-nente de Dire^^Xc~ao 
+ []
+
+[3
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.07225pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4])
+\tf@toc=\write4
+\openout4 = `Dissertacao.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.07225pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5] (./Dissertacao.lof
+Overfull \hbox (13.5547pt too wide) in paragraph at lines 47--47
+ [][] []\OT1/cmr/m/n/12 Dimens~ao de Haus-s-dorf - fonte: http://en.wikipedia.o
+rg/wiki/Fractal[]dimension [][]  
+ []
+
+
+LaTeX Warning: Citation `malcolm2009' on page vi undefined on input line 77.
+
+
+LaTeX Warning: Citation `malcolm2009' on page vi undefined on input line 80.
+
+
+LaTeX Warning: Citation `malcolm2009' on page vi undefined on input line 81.
+
+
+LaTeX Warning: Citation `malcolm2009' on page vi undefined on input line 84.
+
+
+LaTeX Warning: Citation `malcolm2009' on page vi undefined on input line 87.
+
+
+LaTeX Warning: Citation `malcolm2009' on page vi undefined on input line 90.
+
+[6
+
+])
+\tf@lof=\write5
+\openout5 = `Dissertacao.lof'.
+
+ [7]
+\openout2 = `Others/abbreviation.aux'.
+
+ (./Others/abbreviation.tex) [8
+
+]
+\openout2 = `Chapters/ChapterOne.aux'.
+
+ (./Chapters/ChapterOne.tex
+Cap\'{\i }tulo 1.
+
+LaTeX Warning: Citation `venturi1977' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `portoghesi2002' on page 1 undefined on input line 17.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 
+      [1
+
+
+
+]
+
+LaTeX Warning: Citation `Oxman2006' on page 2 undefined on input line 19.
+
+
+LaTeX Warning: Citation `picon2011' on page 2 undefined on input line 19.
+
+
+LaTeX Warning: Citation `mitchell2008' on page 2 undefined on input line 19.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 
+      [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+ (c:/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+<Figures/modelo.png, id=784, 743.29695pt x 388.0899pt>
+File: Figures/modelo.png Graphic file (type png)
+<use Figures/modelo.png>
+Package pdftex.def Info: Figures/modelo.png  used on input line 40. on input li
+ne 40.
+Package pdftex.def Info: Requested size: 409.71692pt x 213.92384pt on input lin
+e 40.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 
+      [3]
+
+LaTeX Warning: Citation `krish2011' on page 4 undefined on input line 49.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 
+      [4pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.52 
+      <./Figures/modelo.png>]
+Overfull \hbox (1.52022pt too wide) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/12 O as-pecto "quase es-que-cido"ser^^Sa con-tra-posto no de-sen
+-vol-vi-mento desta dis-serta^^Xc~ao. Tendo
+ []
+
+[5]
+<Figures/cortemercado.png, id=807, 406.683pt x 179.361pt>
+File: Figures/cortemercado.png Graphic file (type png)
+<use Figures/cortemercado.png>
+Package pdftex.def Info: Figures/cortemercado.png  used on input line 72. on in
+put line 72.
+Package pdftex.def Info: Requested size: 409.71692pt x 180.70978pt on input lin
+e 72.
+
+
+LaTeX Warning: Citation `shea2005' on page 6 undefined on input line 83.
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.84 
+      <./Figures/cortemercado.png>] [7] [8]
+<Figures/energybysector.jpg, id=836, 501.875pt x 331.2375pt>
+File: Figures/energybysector.jpg Graphic file (type jpg)
+<use Figures/energybysector.jpg>
+Package pdftex.def Info: Figures/energybysector.jpg  used on input line 146. on
+ input line 146.
+Package pdftex.def Info: Requested size: 318.66948pt x 210.33347pt on input lin
+e 146.
+
+
+LaTeX Warning: Citation `krish2011' on page 9 undefined on input line 152.
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.155 \end{quotation}
+                      <./Figures/energybysector.jpg>] [10]
+Overfull \hbox (1.53032pt too wide) in paragraph at lines 221--222
+\OT1/cmr/m/n/12 Lan^^Xcando m~ao de uma me-to-do-lo-gia ex-pe-ri-men-tal, a or-
+ga-niza^^Xc~ao ge-ral do al-go-ritmo baseou-
+ []
+
+<Figures/fluxogramametodologia.jpg, id=851, 316.0608pt x 391.2216pt>
+File: Figures/fluxogramametodologia.jpg Graphic file (type jpg)
+<use Figures/fluxogramametodologia.jpg>
+Package pdftex.def Info: Figures/fluxogramametodologia.jpg  used on input line 
+225. on input line 225.
+Package pdftex.def Info: Requested size: 341.43307pt x 422.66228pt on input lin
+e 225.
+[11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.238 
+       <./Figures/fluxogramametodologia.jpg>]) [13]
+\openout2 = `Chapters/ChapterTwo.aux'.
+
+ (./Chapters/ChapterTwo.tex
+Cap\'{\i }tulo 2.
+[14
+
+
+
+]
+<Figures/algorEgP0.png, id=889, 299.0055pt x 58.93262pt>
+File: Figures/algorEgP0.png Graphic file (type png)
+<use Figures/algorEgP0.png>
+Package pdftex.def Info: Figures/algorEgP0.png  used on input line 48. on input
+ line 48.
+Package pdftex.def Info: Requested size: 182.09486pt x 35.89038pt on input line
+ 48.
+<Figures/algorEgP1.png, id=890, 355.7669pt x 111.6618pt>
+File: Figures/algorEgP1.png Graphic file (type png)
+<use Figures/algorEgP1.png>
+Package pdftex.def Info: Figures/algorEgP1.png  used on input line 55. on input
+ line 55.
+Package pdftex.def Info: Requested size: 204.85846pt x 64.29703pt on input line
+ 55.
+<Figures/algorEgP2.png, id=891, 355.7669pt x 118.48558pt>
+File: Figures/algorEgP2.png Graphic file (type png)
+<use Figures/algorEgP2.png>
+Package pdftex.def Info: Figures/algorEgP2.png  used on input line 64. on input
+ line 64.
+Package pdftex.def Info: Requested size: 204.85846pt x 68.2263pt on input line 
+64.
+<Figures/algorEgP3.png, id=892, 355.7669pt x 118.48558pt>
+File: Figures/algorEgP3.png Graphic file (type png)
+<use Figures/algorEgP3.png>
+Package pdftex.def Info: Figures/algorEgP3.png  used on input line 71. on input
+ line 71.
+Package pdftex.def Info: Requested size: 204.85846pt x 68.2263pt on input line 
+71.
+<Figures/algorEgP4.png, id=893, 355.7669pt x 118.48558pt>
+File: Figures/algorEgP4.png Graphic file (type png)
+<use Figures/algorEgP4.png>
+Package pdftex.def Info: Figures/algorEgP4.png  used on input line 79. on input
+ line 79.
+Package pdftex.def Info: Requested size: 204.85846pt x 68.2263pt on input line 
+79.
+
+
+LaTeX Warning: Citation `mitchell2008' on page 15 undefined on input line 87.
+
+[15]
+
+LaTeX Warning: Citation `krish2011' on page 16 undefined on input line 91.
+
+
+LaTeX Warning: Citation `mitchell2008' on page 16 undefined on input line 93.
+
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.94 
+      <./Figures/algorEgP0.png> <./Figures/algorEgP1.png> <./Figures/algorEgP2.
+png> <./Figures/algorEgP3.png> <./Figures/algorEgP4.png>]
+
+LaTeX Warning: Citation `terzidis2006algorithmic' on page 17 undefined on input
+ line 99.
+
+
+LaTeX Warning: Citation `Santos2009' on page 17 undefined on input line 109.
+
+
+LaTeX Warning: Citation `Singh2012' on page 17 undefined on input line 109.
+
+[17]
+
+LaTeX Warning: Citation `stiny1972' on page 18 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Stiny1978' on page 18 undefined on input line 116.
+
+
+LaTeX Warning: Citation `stiny2008' on page 18 undefined on input line 125.
+
+[18]
+<Figures/shapegrammars.png, id=934, 1198.4775pt x 485.815pt>
+File: Figures/shapegrammars.png Graphic file (type png)
+<use Figures/shapegrammars.png>
+Package pdftex.def Info: Figures/shapegrammars.png  used on input line 129. on 
+input line 129.
+Package pdftex.def Info: Requested size: 455.24411pt x 184.53749pt on input lin
+e 129.
+
+
+LaTeX Warning: Citation `tepavcevic2012' on page 19 undefined on input line 134
+.
+
+
+LaTeX Warning: Citation `prusinkiewicz1996' on page 19 undefined on input line 
+140.
+
+
+Overfull \hbox (10.42351pt too wide) in paragraph at lines 140--141
+\OT1/cmr/m/n/12 Os \OT1/cmr/bx/it/12 Lin-den-mayer Sys-tems\OT1/cmr/m/n/12 , ou
+ sim-ples-mente \OT1/cmr/bx/it/12 L-Systems\OT1/cmr/m/n/12 , fo-ram con-ce-bi-d
+os pelo bot^anico
+ []
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.149 
+       <./Figures/shapegrammars.png>]
+<Figures/cantor.png, id=945, 398.99063pt x 154.32657pt>
+File: Figures/cantor.png Graphic file (type png)
+<use Figures/cantor.png>
+Package pdftex.def Info: Figures/cantor.png  used on input line 174. on input l
+ine 174.
+Package pdftex.def Info: Requested size: 182.09486pt x 70.43297pt on input line
+ 174.
+<Figures/Koch.png, id=946, 960.58875pt x 568.37344pt>
+File: Figures/Koch.png Graphic file (type png)
+<use Figures/Koch.png>
+Package pdftex.def Info: Figures/Koch.png  used on input line 181. on input lin
+e 181.
+Package pdftex.def Info: Requested size: 227.62206pt x 134.67787pt on input lin
+e 181.
+
+
+LaTeX Warning: Citation `prusinkiewicz1996' on page 20 undefined on input line 
+181.
+
+
+LaTeX Warning: Citation `prusinkiewicz1996' on page 20 undefined on input line 
+188.
+
+<Figures/eVolo072nd0.png, id=948, 803.0pt x 555.07375pt>
+File: Figures/eVolo072nd0.png Graphic file (type png)
+<use Figures/eVolo072nd0.png>
+Package pdftex.def Info: Figures/eVolo072nd0.png  used on input line 198. on in
+put line 198.
+Package pdftex.def Info: Requested size: 136.57462pt x 94.40363pt on input line
+ 198.
+<Figures/eVolo072nd1.png, id=949, 909.3975pt x 322.20375pt>
+File: Figures/eVolo072nd1.png Graphic file (type png)
+<use Figures/eVolo072nd1.png>
+Package pdftex.def Info: Figures/eVolo072nd1.png  used on input line 205. on in
+put line 205.
+Package pdftex.def Info: Requested size: 273.14923pt x 96.77986pt on input line
+ 205.
+
+LaTeX Warning: Citation `Pascal2006' on page 20 undefined on input line 213.
+
+
+Overfull \hbox (2.3411pt too wide) in paragraph at lines 213--214
+[]\OT1/cmr/bx/n/12 ??\OT1/cmr/m/n/12 ) prop~oem uma es-trat^^Segia de mo-de-la-
+gem pro-ce-du-ral de edif^^S^^Pcios ba-se-ado nas Gram^^Saticas
+ []
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.214 
+       <./Figures/cantor.png> <./Figures/Koch.png>]
+
+LaTeX Warning: Citation `wolfram2002' on page 21 undefined on input line 219.
+
+
+LaTeX Warning: Citation `pereira2010' on page 21 undefined on input line 219.
+
+
+Overfull \hbox (0.12894pt too wide) in paragraph at lines 221--222
+[]\OT1/cmr/m/n/12 Os aut^omatos ce-lu-la-res ele-men-ta-res con-sis-tem em ma-t
+ri-zes uni-di-men-si-o-nais onde as c^^Selulas
+ []
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.222 
+       <./Figures/eVolo072nd0.png> <./Figures/eVolo072nd1.png>]
+<Figures/regra90ac.png, id=971, 396.171pt x 45.99pt>
+File: Figures/regra90ac.png Graphic file (type png)
+<use Figures/regra90ac.png>
+Package pdftex.def Info: Figures/regra90ac.png  used on input line 225. on inpu
+t line 225.
+Package pdftex.def Info: Requested size: 364.19667pt x 42.27902pt on input line
+ 225.
+<Figures/regra90Sierpinski.png, id=980, 491.8375pt x 262.9825pt>
+File: Figures/regra90Sierpinski.png Graphic file (type png)
+<use Figures/regra90Sierpinski.png>
+Package pdftex.def Info: Figures/regra90Sierpinski.png  used on input line 236.
+ on input line 236.
+Package pdftex.def Info: Requested size: 273.14923pt x 146.05733pt on input lin
+e 236.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.242 
+       <./Figures/regra90ac.png>]
+<Figures/cero9prop.jpg, id=990, 231.55164pt x 105.3488pt>
+File: Figures/cero9prop.jpg Graphic file (type jpg)
+<use Figures/cero9prop.jpg>
+Package pdftex.def Info: Figures/cero9prop.jpg  used on input line 251. on inpu
+t line 251.
+Package pdftex.def Info: Requested size: 182.09486pt x 82.84846pt on input line
+ 251.
+<Figures/cero9alternativo.jpg, id=991, 232.27075pt x 218.60776pt>
+File: Figures/cero9alternativo.jpg Graphic file (type jpg)
+<use Figures/cero9alternativo.jpg>
+Package pdftex.def Info: Figures/cero9alternativo.jpg  used on input line 258. 
+on input line 258.
+Package pdftex.def Info: Requested size: 227.62206pt x 214.23413pt on input lin
+e 258.
+
+
+LaTeX Warning: Citation `Singh2012' on page 23 undefined on input line 269.
+
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.270 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.270 
+       <./Figures/regra90Sierpinski.png> <./Figures/cero9prop.jpg> <./Figures/c
+ero9alternativo.jpg>]
+
+LaTeX Warning: Citation `Zhang2005' on page 24 undefined on input line 280.
+
+
+LaTeX Warning: Citation `Yahya2014' on page 24 undefined on input line 280.
+
+
+LaTeX Warning: Citation `Luh2011' on page 24 undefined on input line 280.
+
+
+LaTeX Warning: Citation `Okabe2000' on page 24 undefined on input line 285.
+
+<Figures/voronoiRhino.png, id=1003, 888.31876pt x 748.7975pt>
+File: Figures/voronoiRhino.png Graphic file (type png)
+<use Figures/voronoiRhino.png>
+Package pdftex.def Info: Figures/voronoiRhino.png  used on input line 296. on i
+nput line 296.
+Package pdftex.def Info: Requested size: 204.85846pt x 172.67682pt on input lin
+e 296.
+<Figures/voronoi3D.png, id=1004, 888.31876pt x 748.7975pt>
+File: Figures/voronoi3D.png Graphic file (type png)
+<use Figures/voronoi3D.png>
+Package pdftex.def Info: Figures/voronoi3D.png  used on input line 303. on inpu
+t line 303.
+Package pdftex.def Info: Requested size: 204.85846pt x 172.67682pt on input lin
+e 303.
+[24]
+
+LaTeX Warning: Citation `pwtsite' on page 25 undefined on input line 312.
+
+<Figures/watercube.png, id=1018, 1700.3525pt x 595.22375pt>
+File: Figures/watercube.png Graphic file (type png)
+<use Figures/watercube.png>
+Package pdftex.def Info: Figures/watercube.png  used on input line 322. on inpu
+t line 322.
+Package pdftex.def Info: Requested size: 250.38564pt x 87.64488pt on input line
+ 322.
+<Figures/Jellyfish_house.jpg, id=1019, 401.5pt x 320.19624pt>
+File: Figures/Jellyfish_house.jpg Graphic file (type jpg)
+<use Figures/Jellyfish_house.jpg>
+Package pdftex.def Info: Figures/Jellyfish_house.jpg  used on input line 329. o
+n input line 329.
+Package pdftex.def Info: Requested size: 159.33821pt x 127.07463pt on input lin
+e 329.
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 
+       <./Figures/voronoiRhino.png> <./Figures/voronoi3D.png> <./Figures/waterc
+ube.png> <./Figures/Jellyfish_house.jpg>]
+
+LaTeX Warning: Citation `Singh2012' on page 26 undefined on input line 358.
+
+
+LaTeX Warning: Citation `Lodding2004' on page 26 undefined on input line 358.
+
+[26]
+<Figures/integated_design.jpg, id=1041, 475.7775pt x 654.445pt>
+File: Figures/integated_design.jpg Graphic file (type jpg)
+<use Figures/integated_design.jpg>
+Package pdftex.def Info: Figures/integated_design.jpg  used on input line 377. 
+on input line 377.
+Package pdftex.def Info: Requested size: 136.57462pt x 187.85689pt on input lin
+e 377.
+<Figures/GeneArch.jpg, id=1046, 584.1825pt x 584.1825pt>
+File: Figures/GeneArch.jpg Graphic file (type jpg)
+<use Figures/GeneArch.jpg>
+Package pdftex.def Info: Figures/GeneArch.jpg  used on input line 377. on input
+ line 377.
+Package pdftex.def Info: Requested size: 191.20169pt x 191.20305pt on input lin
+e 377.
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.387 
+       <./Figures/integated_design.jpg> <./Figures/GeneArch.jpg>]
+<Figures/hillclimbing.png, id=1073, 483.30562pt x 478.03593pt>
+File: Figures/hillclimbing.png Graphic file (type png)
+<use Figures/hillclimbing.png>
+Package pdftex.def Info: Figures/hillclimbing.png  used on input line 414. on i
+nput line 414.
+Package pdftex.def Info: Requested size: 204.85846pt x 202.62645pt on input lin
+e 414.
+<Figures/MINIMO_LOCAL.png, id=1074, 597.73312pt x 469.755pt>
+File: Figures/MINIMO_LOCAL.png Graphic file (type png)
+<use Figures/MINIMO_LOCAL.png>
+Package pdftex.def Info: Figures/MINIMO_LOCAL.png  used on input line 414. on i
+nput line 414.
+Package pdftex.def Info: Requested size: 204.85846pt x 160.99763pt on input lin
+e 414.
+<Figures/exponencial.png, id=1075, 284.3254pt x 132.17802pt>
+File: Figures/exponencial.png Graphic file (type png)
+<use Figures/exponencial.png>
+Package pdftex.def Info: Figures/exponencial.png  used on input line 429. on in
+put line 429.
+Package pdftex.def Info: Requested size: 204.85846pt x 95.23868pt on input line
+ 429.
+<Figures/SA_conceito.png, id=1076, 381.67593pt x 325.96782pt>
+File: Figures/SA_conceito.png Graphic file (type png)
+<use Figures/SA_conceito.png>
+Package pdftex.def Info: Figures/SA_conceito.png  used on input line 429. on in
+put line 429.
+Package pdftex.def Info: Requested size: 204.85846pt x 174.95558pt on input lin
+e 429.
+ [28] [29pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.2.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.442 
+       <./Figures/hillclimbing.png> <./Figures/MINIMO_LOCAL.png> <./Figures/exp
+onencial.png> <./Figures/SA_conceito.png>] [30]
+
+LaTeX Warning: Citation `Lamberti2008' on page 31 undefined on input line 473.
+
+
+LaTeX Warning: Citation `Sonmez2007' on page 31 undefined on input line 473.
+
+<Figures/grandEgyptianmuseum.png, id=1109, 878.28125pt x 461.725pt>
+File: Figures/grandEgyptianmuseum.png Graphic file (type png)
+<use Figures/grandEgyptianmuseum.png>
+Package pdftex.def Info: Figures/grandEgyptianmuseum.png  used on input line 49
+8. on input line 498.
+Package pdftex.def Info: Requested size: 323.22636pt x 169.92673pt on input lin
+e 498.
+<Figures/FederationSquare.png, id=1114, 501.875pt x 880.28876pt>
+File: Figures/FederationSquare.png Graphic file (type png)
+<use Figures/FederationSquare.png>
+Package pdftex.def Info: Figures/FederationSquare.png  used on input line 498. 
+on input line 498.
+Package pdftex.def Info: Requested size: 95.60431pt x 167.68642pt on input line
+ 498.
+
+LaTeX Warning: Citation `mandelbrot1983fractal' on page 31 undefined on input l
+ine 507.
+
+[31] [32pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.2.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.512 
+       <./Figures/grandEgyptianmuseum.png> <./Figures/FederationSquare.png>]
+<Figures/sierpinskigrasshopper.png, id=1136, 196.7715pt x 86.3955pt>
+File: Figures/sierpinskigrasshopper.png Graphic file (type png)
+<use Figures/sierpinskigrasshopper.png>
+Package pdftex.def Info: Figures/sierpinskigrasshopper.png  used on input line 
+521. on input line 521.
+Package pdftex.def Info: Requested size: 204.85846pt x 89.94806pt on input line
+ 521.
+<Figures/sierpinskigrasshopper3d.png, id=1137, 1422.31375pt x 626.34pt>
+File: Figures/sierpinskigrasshopper3d.png Graphic file (type png)
+<use Figures/sierpinskigrasshopper3d.png>
+Package pdftex.def Info: Figures/sierpinskigrasshopper3d.png  used on input lin
+e 528. on input line 528.
+Package pdftex.def Info: Requested size: 204.85846pt x 90.21008pt on input line
+ 528.
+<Figures/haussdorf.png, id=1140, 504.88625pt x 543.02875pt>
+File: Figures/haussdorf.png Graphic file (type png)
+<use Figures/haussdorf.png>
+Package pdftex.def Info: Figures/haussdorf.png  used on input line 540. on inpu
+t line 540.
+Package pdftex.def Info: Requested size: 227.62206pt x 244.81639pt on input lin
+e 540.
+
+[33pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.548 
+       <./Figures/sierpinskigrasshopper.png> <./Figures/sierpinskigrasshopper3d
+.png>] [34pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.2.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.560 
+       <./Figures/haussdorf.png>]
+
+LaTeX Warning: Citation `Milena2010a' on page 35 undefined on input line 567.
+
+[35]
+<Figures/sarahcupula.jpg, id=1177, 322.20375pt x 376.40625pt>
+File: Figures/sarahcupula.jpg Graphic file (type jpg)
+<use Figures/sarahcupula.jpg>
+Package pdftex.def Info: Figures/sarahcupula.jpg  used on input line 592. on in
+put line 592.
+Package pdftex.def Info: Requested size: 136.57462pt x 159.55412pt on input lin
+e 592.
+
+Underfull \hbox (badness 10000) in paragraph at lines 592--592
+[]\OT1/cmr/m/n/9 (a) Hos-pi-tal Sarah-RJ fonte:
+ []
+
+<Figures/trtcupula.jpg, id=1178, 1806.75pt x 1355.0625pt>
+File: Figures/trtcupula.jpg Graphic file (type jpg)
+<use Figures/trtcupula.jpg>
+Package pdftex.def Info: Figures/trtcupula.jpg  used on input line 592. on inpu
+t line 592.
+Package pdftex.def Info: Requested size: 213.96529pt x 160.4708pt on input line
+ 592.
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.600 
+       <./Figures/sarahcupula.jpg> <./Figures/trtcupula.jpg>] [37]
+<Figures/cupula03.png, id=1199, 1137.24875pt x 549.05125pt>
+File: Figures/cupula03.png Graphic file (type png)
+<use Figures/cupula03.png>
+Package pdftex.def Info: Figures/cupula03.png  used on input line 652. on input
+ line 652.
+Package pdftex.def Info: Requested size: 204.85846pt x 98.90036pt on input line
+ 652.
+<Figures/cupula02.png, id=1200, 1137.24875pt x 543.02875pt>
+File: Figures/cupula02.png Graphic file (type png)
+<use Figures/cupula02.png>
+Package pdftex.def Info: Figures/cupula02.png  used on input line 652. on input
+ line 652.
+Package pdftex.def Info: Requested size: 204.85846pt x 97.81552pt on input line
+ 652.
+<Figures/cupula01.png, id=1201, 1140.26pt x 547.04375pt>
+File: Figures/cupula01.png Graphic file (type png)
+<use Figures/cupula01.png>
+Package pdftex.def Info: Figures/cupula01.png  used on input line 667. on input
+ line 667.
+Package pdftex.def Info: Requested size: 204.85846pt x 98.27998pt on input line
+ 667.
+<Figures/cupula04.png, id=1202, 1136.245pt x 550.055pt>
+File: Figures/cupula04.png Graphic file (type png)
+<use Figures/cupula04.png>
+Package pdftex.def Info: Figures/cupula04.png  used on input line 667. on input
+ line 667.
+Package pdftex.def Info: Requested size: 204.85846pt x 99.16508pt on input line
+ 667.
+<Figures/cupula06.png, id=1203, 1137.24875pt x 543.02875pt>
+File: Figures/cupula06.png Graphic file (type png)
+<use Figures/cupula06.png>
+Package pdftex.def Info: Figures/cupula06.png  used on input line 681. on input
+ line 681.
+Package pdftex.def Info: Requested size: 204.85846pt x 97.81552pt on input line
+ 681.
+<Figures/cupula05.png, id=1204, 1137.24875pt x 543.02875pt>
+File: Figures/cupula05.png Graphic file (type png)
+<use Figures/cupula05.png>
+Package pdftex.def Info: Figures/cupula05.png  used on input line 681. on input
+ line 681.
+Package pdftex.def Info: Requested size: 204.85846pt x 97.81552pt on input line
+ 681.
+ [38pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.695 \item s
+             empre que $r$ for maior que $h$, a calota é menor do que a meta...
+ <./Figures/cupula03.png> <./Figures/cupula02.png> <./Figures/cupula01.png> <./
+Figures/cupula04.png> <./Figures/cupula06.png> <./Figures/cupula05.png>])
+[39]
+\openout2 = `Chapters/ChapterThree.aux'.
+
+ (./Chapters/ChapterThree.tex
+Cap\'{\i }tulo 3.
+
+LaTeX Warning: Citation `mccormac2009' on page 40 undefined on input line 17.
+
+[40
+
+
+
+]
+
+LaTeX Warning: Citation `sanjuan1951' on page 41 undefined on input line 25.
+
+
+LaTeX Warning: Citation `maxwell1965' on page 41 undefined on input line 28.
+
+
+LaTeX Warning: Citation `mccormac2009' on page 41 undefined on input line 28.
+
+
+LaTeX Warning: Citation `aag2010193' on page 41 undefined on input line 29.
+
+
+Overfull \hbox (1.69154pt too wide) in paragraph at lines 31--32
+\OT1/cmr/m/n/12 anal^^S^^Ptica se de-se-nha na en-ge-nha-ria ([][]GERHARDT; KUR
+-RER; PI-CH-LER[][], [][]2003[][]), a Est^^Satica
+ []
+
+
+LaTeX Warning: Citation `Tessmann2008' on page 41 undefined on input line 37.
+
+
+LaTeX Warning: Citation `Zanni2009' on page 41 undefined on input line 37.
+
+
+LaTeX Warning: Citation `Shearer2010' on page 41 undefined on input line 37.
+
+
+LaTeX Warning: Citation `aag2010193' on page 41 undefined on input line 37.
+
+[41]
+
+LaTeX Warning: Citation `panseri1952' on page 42 undefined on input line 42.
+
+<Figures/exemploprecisao1.jpg, id=1264, 294.8616pt x 151.5261pt>
+File: Figures/exemploprecisao1.jpg Graphic file (type jpg)
+<use Figures/exemploprecisao1.jpg>
+Package pdftex.def Info: Figures/exemploprecisao1.jpg  used on input line 57. o
+n input line 57.
+Package pdftex.def Info: Requested size: 182.09486pt x 93.57526pt on input line
+ 57.
+
+LaTeX Warning: Citation `sanjuan1951' on page 42 undefined on input line 57.
+
+
+LaTeX Warning: Citation `sanjuan1951' on page 42 undefined on input line 57.
+
+<Figures/exemploprecisao2.jpg, id=1265, 405.01312pt x 188.95593pt>
+File: Figures/exemploprecisao2.jpg Graphic file (type jpg)
+<use Figures/exemploprecisao2.jpg>
+Package pdftex.def Info: Figures/exemploprecisao2.jpg  used on input line 57. o
+n input line 57.
+Package pdftex.def Info: Requested size: 182.09486pt x 84.95729pt on input line
+ 57.
+
+LaTeX Warning: Citation `sanjuan1951' on page 42 undefined on input line 64.
+
+[42] [43pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.80 \item \textbf
+                  {Ponto de Aplicação:} o ponto do corpo em que a força age. <.
+/Figures/exemploprecisao1.jpg> <./Figures/exemploprecisao2.jpg>]
+<Figures/poligonodeforcas.png, id=1284, 490.83376pt x 436.63126pt>
+File: Figures/poligonodeforcas.png Graphic file (type png)
+<use Figures/poligonodeforcas.png>
+Package pdftex.def Info: Figures/poligonodeforcas.png  used on input line 109. 
+on input line 109.
+Package pdftex.def Info: Requested size: 204.85846pt x 182.23126pt on input lin
+e 109.
+<Figures/formageometrica.png, id=1285, 722.7pt x 582.175pt>
+File: Figures/formageometrica.png Graphic file (type png)
+<use Figures/formageometrica.png>
+Package pdftex.def Info: Figures/formageometrica.png  used on input line 109. o
+n input line 109.
+Package pdftex.def Info: Requested size: 204.85846pt x 165.02438pt on input lin
+e 109.
+ [44] [45pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.3.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.132 \section
+              {Condições de Equilíbrio} <./Figures/poligonodeforcas.png> <./Fig
+ures/formageometrica.png>] [46]
+<Figures/pf2a.png, id=1328, 378.41376pt x 382.42876pt>
+File: Figures/pf2a.png Graphic file (type png)
+<use Figures/pf2a.png>
+Package pdftex.def Info: Figures/pf2a.png  used on input line 199. on input lin
+e 199.
+Package pdftex.def Info: Requested size: 182.09486pt x 184.0247pt on input line
+ 199.
+<Figures/fg2a.png, id=1329, 381.425pt x 382.42876pt>
+File: Figures/fg2a.png Graphic file (type png)
+<use Figures/fg2a.png>
+Package pdftex.def Info: Figures/fg2a.png  used on input line 199. on input lin
+e 199.
+Package pdftex.def Info: Requested size: 182.09486pt x 182.57169pt on input lin
+e 199.
+ [47]
+<Figures/pf2b.png, id=1343, 406.51875pt x 343.2825pt>
+File: Figures/pf2b.png Graphic file (type png)
+<use Figures/pf2b.png>
+Package pdftex.def Info: Figures/pf2b.png  used on input line 221. on input lin
+e 221.
+Package pdftex.def Info: Requested size: 182.09486pt x 153.76855pt on input lin
+e 221.
+<Figures/fg2b.png, id=1344, 393.47pt x 360.34625pt>
+File: Figures/fg2b.png Graphic file (type png)
+<use Figures/fg2b.png>
+Package pdftex.def Info: Figures/fg2b.png  used on input line 221. on input lin
+e 221.
+Package pdftex.def Info: Requested size: 182.09486pt x 166.762pt on input line 
+221.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.229 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.229 
+       <./Figures/pf2a.png> <./Figures/fg2a.png> <./Figures/pf2b.png> <./Figure
+s/fg2b.png>]
+Overfull \hbox (2.24863pt too wide) in paragraph at lines 230--230
+[]\OT1/cmr/m/sl/14.4 Caso Tr^es - Re-solu^^Xc~ao de uma For^^Xca em uma Com-po-
+nente de Dire^^Xc~ao
+ []
+
+<Figures/pf3.png, id=1358, 588.1975pt x 368.37625pt>
+File: Figures/pf3.png Graphic file (type png)
+<use Figures/pf3.png>
+Package pdftex.def Info: Figures/pf3.png  used on input line 248. on input line
+ 248.
+Package pdftex.def Info: Requested size: 250.38564pt x 156.81358pt on input lin
+e 248.
+<Figures/fg3.png, id=1359, 330.23375pt x 341.275pt>
+File: Figures/fg3.png Graphic file (type png)
+<use Figures/fg3.png>
+Package pdftex.def Info: Figures/fg3.png  used on input line 248. on input line
+ 248.
+Package pdftex.def Info: Requested size: 136.57462pt x 141.14218pt on input lin
+e 248.
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.256 
+       <./Figures/pf3.png> <./Figures/fg3.png>]
+<Figures/pf4.png, id=1369, 280.04625pt x 259.97125pt>
+File: Figures/pf4.png Graphic file (type png)
+<use Figures/pf4.png>
+Package pdftex.def Info: Figures/pf4.png  used on input line 277. on input line
+ 277.
+Package pdftex.def Info: Requested size: 136.57462pt x 126.78802pt on input lin
+e 277.
+<Figures/fg4.png, id=1370, 503.8825pt x 348.30125pt>
+File: Figures/fg4.png Graphic file (type png)
+<use Figures/fg4.png>
+Package pdftex.def Info: Figures/fg4.png  used on input line 277. on input line
+ 277.
+Package pdftex.def Info: Requested size: 227.62206pt x 157.33998pt on input lin
+e 277.
+ [50pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.285 
+       <./Figures/pf4.png> <./Figures/fg4.png>]
+
+LaTeX Warning: Citation `malcolm2009' on page 51 undefined on input line 290.
+
+<Figures/TrExMal01.png, id=1382, 270.25969pt x 218.31563pt>
+File: Figures/TrExMal01.png Graphic file (type png)
+<use Figures/TrExMal01.png>
+Package pdftex.def Info: Figures/TrExMal01.png  used on input line 305. on inpu
+t line 305.
+Package pdftex.def Info: Requested size: 227.62206pt x 183.87688pt on input lin
+e 305.
+<Figures/TrExMal02.png, id=1383, 235.63031pt x 213.79875pt>
+File: Figures/TrExMal02.png Graphic file (type png)
+<use Figures/TrExMal02.png>
+Package pdftex.def Info: Figures/TrExMal02.png  used on input line 305. on inpu
+t line 305.
+Package pdftex.def Info: Requested size: 204.85846pt x 185.87943pt on input lin
+e 305.
+
+Overfull \hbox (2.78636pt too wide) in paragraph at lines 305--306
+ [] 
+ []
+
+
+LaTeX Warning: Citation `malcolm2009' on page 51 undefined on input line 308.
+
+
+LaTeX Warning: Citation `mccormac2009' on page 51 undefined on input line 315.
+
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.316 
+       <./Figures/TrExMal01.png> <./Figures/TrExMal02.png>]
+
+LaTeX Warning: Citation `mccormac2009' on page 52 undefined on input line 324.
+
+[52]
+<Figures/TrExMal03.png, id=1403, 196.48407pt x 170.88844pt>
+File: Figures/TrExMal03.png Graphic file (type png)
+<use Figures/TrExMal03.png>
+Package pdftex.def Info: Figures/TrExMal03.png  used on input line 355. on inpu
+t line 355.
+Package pdftex.def Info: Requested size: 204.85846pt x 178.18391pt on input lin
+e 355.
+
+
+LaTeX Warning: Citation `malcolm2009' on page 53 undefined on input line 356.
+
+[53pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.362 
+       <./Figures/TrExMal03.png>]
+<Figures/TrExMalNo01.png, id=1411, 206.27063pt x 97.86563pt>
+File: Figures/TrExMalNo01.png Graphic file (type png)
+<use Figures/TrExMalNo01.png>
+Package pdftex.def Info: Figures/TrExMalNo01.png  used on input line 376. on in
+put line 376.
+Package pdftex.def Info: Requested size: 182.09486pt x 86.39676pt on input line
+ 376.
+<Figures/TrExMalNo02.png, id=1412, 228.855pt x 140.02313pt>
+File: Figures/TrExMalNo02.png Graphic file (type png)
+<use Figures/TrExMalNo02.png>
+Package pdftex.def Info: Figures/TrExMalNo02.png  used on input line 376. on in
+put line 376.
+Package pdftex.def Info: Requested size: 182.09486pt x 111.41827pt on input lin
+e 376.
+
+
+LaTeX Warning: Citation `malcolm2009' on page 54 undefined on input line 379.
+
+
+LaTeX Warning: Citation `malcolm2009' on page 54 undefined on input line 383.
+
+<Figures/TrExMalNo03.png, id=1415, 221.32687pt x 85.06781pt>
+File: Figures/TrExMalNo03.png Graphic file (type png)
+<use Figures/TrExMalNo03.png>
+Package pdftex.def Info: Figures/TrExMalNo03.png  used on input line 400. on in
+put line 400.
+Package pdftex.def Info: Requested size: 182.09486pt x 69.99228pt on input line
+ 400.
+<Figures/TrExMalNo04.png, id=1416, 222.07968pt x 114.4275pt>
+File: Figures/TrExMalNo04.png Graphic file (type png)
+<use Figures/TrExMalNo04.png>
+Package pdftex.def Info: Figures/TrExMalNo04.png  used on input line 400. on in
+put line 400.
+Package pdftex.def Info: Requested size: 182.09486pt x 93.82416pt on input line
+ 400.
+
+LaTeX Warning: Citation `malcolm2009' on page 54 undefined on input line 403.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[54pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.408 
+       <./Figures/TrExMalNo01.png> <./Figures/TrExMalNo02.png>]
+<Figures/TrExMalNo05.png, id=1427, 211.54031pt x 86.57344pt>
+File: Figures/TrExMalNo05.png Graphic file (type png)
+<use Figures/TrExMalNo05.png>
+Package pdftex.def Info: Figures/TrExMalNo05.png  used on input line 426. on in
+put line 426.
+Package pdftex.def Info: Requested size: 182.09486pt x 74.52567pt on input line
+ 426.
+<Figures/TrExMalNo06.png, id=1428, 233.37187pt x 131.74219pt>
+File: Figures/TrExMalNo06.png Graphic file (type png)
+<use Figures/TrExMalNo06.png>
+Package pdftex.def Info: Figures/TrExMalNo06.png  used on input line 426. on in
+put line 426.
+Package pdftex.def Info: Requested size: 182.09486pt x 102.80069pt on input lin
+e 426.
+
+
+LaTeX Warning: Citation `malcolm2009' on page 55 undefined on input line 429.
+
+[55pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.434 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.434 
+       <./Figures/TrExMalNo03.png> <./Figures/TrExMalNo04.png> <./Figures/TrExM
+alNo05.png> <./Figures/TrExMalNo06.png>]
+<Figures/trelicaBalancoExemplo.png, id=1442, 635.37375pt x 374.39874pt>
+File: Figures/trelicaBalancoExemplo.png Graphic file (type png)
+<use Figures/trelicaBalancoExemplo.png>
+Package pdftex.def Info: Figures/trelicaBalancoExemplo.png  used on input line 
+451. on input line 451.
+Package pdftex.def Info: Requested size: 250.38564pt x 147.54025pt on input lin
+e 451.
+<Figures/trelicaBalancoExemploPF.png, id=1443, 510.90875pt x 434.62375pt>
+File: Figures/trelicaBalancoExemploPF.png Graphic file (type png)
+<use Figures/trelicaBalancoExemploPF.png>
+Package pdftex.def Info: Figures/trelicaBalancoExemploPF.png  used on input lin
+e 451. on input line 451.
+Package pdftex.def Info: Requested size: 182.09486pt x 154.90594pt on input lin
+e 451.
+
+Overfull \hbox (2.78635pt too wide) in paragraph at lines 451--452
+ [] 
+ []
+
+
+LaTeX Warning: Citation `malcolm2009' on page 56 undefined on input line 454.
+
+
+LaTeX Warning: Citation `malcolm2009' on page 56 undefined on input line 458.
+
+
+LaTeX Warning: Citation `zalewski1998shaping' on page 56 undefined on input lin
+e 458.
+
+[56pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.464 O
+        nó $E$, entretanto, não chega a ser formalmente calculado, e sim ser...
+ <./Figures/trelicaBalancoExemplo.png> <./Figures/trelicaBalancoExemploPF.png>]
+
+LaTeX Warning: Citation `malcolm2009' on page 57 undefined on input line 474.
+
+
+LaTeX Warning: Citation `sanjuan1951' on page 57 undefined on input line 474.
+
+
+LaTeX Warning: Citation `panseri1952' on page 57 undefined on input line 474.
+
+
+LaTeX Warning: Citation `aag2010193' on page 57 undefined on input line 474.
+
+
+LaTeX Warning: Citation `zalewski1998shaping' on page 57 undefined on input lin
+e 474.
+
+[57]
+
+LaTeX Warning: Citation `Shearer2010' on page 58 undefined on input line 484.
+
+
+LaTeX Warning: Citation `Shearer2010' on page 58 undefined on input line 490.
+
+[58]
+
+LaTeX Warning: Citation `lachauer2011a' on page 59 undefined on input line 492.
+
+
+) [59]
+\openout2 = `Chapters/ChapterFour.aux'.
+
+ (./Chapters/ChapterFour.tex
+Cap\'{\i }tulo 4.
+<Figures/rhinoInterface.jpg, id=1508, 1927.2pt x 1055.945pt>
+File: Figures/rhinoInterface.jpg Graphic file (type jpg)
+<use Figures/rhinoInterface.jpg>
+Package pdftex.def Info: Figures/rhinoInterface.jpg  used on input line 25. on 
+input line 25.
+Package pdftex.def Info: Requested size: 204.85846pt x 112.23898pt on input lin
+e 25.
+<Figures/rhinoGrassInterface.png, id=1509, 1927.2pt x 1052.93375pt>
+File: Figures/rhinoGrassInterface.png Graphic file (type png)
+<use Figures/rhinoGrassInterface.png>
+Package pdftex.def Info: Figures/rhinoGrassInterface.png  used on input line 25
+. on input line 25.
+Package pdftex.def Info: Requested size: 204.85846pt x 111.91891pt on input lin
+e 25.
+<Figures/interfaceghpython.png, id=1510, 1927.2pt x 1055.945pt>
+File: Figures/interfaceghpython.png Graphic file (type png)
+<use Figures/interfaceghpython.png>
+Package pdftex.def Info: Figures/interfaceghpython.png  used on input line 32. 
+on input line 32.
+Package pdftex.def Info: Requested size: 204.85846pt x 112.23898pt on input lin
+e 32.
+[60
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.44 
+      <./Figures/rhinoInterface.jpg> <./Figures/rhinoGrassInterface.png> <./Fig
+ures/interfaceghpython.png>]
+
+LaTeX Warning: Citation `Tibbits2011' on page 61 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Tessmann2008' on page 61 undefined on input line 50.
+
+
+LaTeX Warning: Citation `vettoretti2010' on page 61 undefined on input line 50.
+
+
+
+LaTeX Warning: Citation `Shearer2010' on page 61 undefined on input line 50.
+
+
+LaTeX Warning: Citation `1148846' on page 61 undefined on input line 50.
+
+
+LaTeX Warning: Citation `lachauer2011a' on page 61 undefined on input line 50.
+
+
+LaTeX Warning: Citation `lachauer2011a' on page 61 undefined on input line 58.
+
+[61]
+<Figures/grassExgh1.png, id=1535, 884.30376pt x 353.32pt>
+File: Figures/grassExgh1.png Graphic file (type png)
+<use Figures/grassExgh1.png>
+Package pdftex.def Info: Figures/grassExgh1.png  used on input line 81. on inpu
+t line 81.
+Package pdftex.def Info: Requested size: 204.85846pt x 81.84953pt on input line
+ 81.
+<Figures/grassExrs1.png, id=1536, 728.7225pt x 353.32pt>
+File: Figures/grassExrs1.png Graphic file (type png)
+<use Figures/grassExrs1.png>
+Package pdftex.def Info: Figures/grassExrs1.png  used on input line 81. on inpu
+t line 81.
+Package pdftex.def Info: Requested size: 204.85846pt x 99.32248pt on input line
+ 81.
+<Figures/grassExgh2.png, id=1537, 884.30376pt x 353.32pt>
+File: Figures/grassExgh2.png Graphic file (type png)
+<use Figures/grassExgh2.png>
+Package pdftex.def Info: Figures/grassExgh2.png  used on input line 94. on inpu
+t line 94.
+Package pdftex.def Info: Requested size: 204.85846pt x 81.84953pt on input line
+ 94.
+<Figures/grassExrs2.png, id=1538, 587.19376pt x 353.32pt>
+File: Figures/grassExrs2.png Graphic file (type png)
+<use Figures/grassExrs2.png>
+Package pdftex.def Info: Figures/grassExrs2.png  used on input line 94. on inpu
+t line 94.
+Package pdftex.def Info: Requested size: 204.85846pt x 123.2649pt on input line
+ 94.
+ [62pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.103 
+       <./Figures/grassExgh1.png> <./Figures/grassExrs1.png> <./Figures/grassEx
+gh2.png> <./Figures/grassExrs2.png>]
+
+LaTeX Warning: Citation `McCarthy1960' on page 63 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Steele:1996:EL:234286.1057818' on page 63 undefined on
+ input line 106.
+
+[63] [64]
+
+LaTeX Warning: Citation `ThepythonFoundation' on page 65 undefined on input lin
+e 127.
+
+) [65]
+\openout2 = `Chapters/ChapterFive.aux'.
+
+ (./Chapters/ChapterFive.tex
+Cap\'{\i }tulo 5.
+<Figures/fluxograma_geral_01.jpg, id=1583, 346.896pt x 275.8305pt>
+File: Figures/fluxograma_geral_01.jpg Graphic file (type jpg)
+<use Figures/fluxograma_geral_01.jpg>
+Package pdftex.def Info: Figures/fluxograma_geral_01.jpg  used on input line 17
+. on input line 17.
+Package pdftex.def Info: Requested size: 250.38564pt x 199.09023pt on input lin
+e 17.
+<Figures/algGeral.png, id=1585, 3452.39813pt x 1299.35437pt>
+File: Figures/algGeral.png Graphic file (type png)
+<use Figures/algGeral.png>
+Package pdftex.def Info: Figures/algGeral.png  used on input line 27. on input 
+line 27.
+Package pdftex.def Info: Requested size: 432.48051pt x 162.75595pt on input lin
+e 27.
+[66
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.34 
+      <./Figures/fluxograma_geral_01.jpg>]
+<Figures/trelicanomenclatura.jpg, id=1591, 562.7424pt x 166.9437pt>
+File: Figures/trelicanomenclatura.jpg Graphic file (type jpg)
+<use Figures/trelicanomenclatura.jpg>
+Package pdftex.def Info: Figures/trelicanomenclatura.jpg  used on input line 42
+. on input line 42.
+Package pdftex.def Info: Requested size: 432.48051pt x 128.30502pt on input lin
+e 42.
+ [67pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.49 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.49 
+      <./Figures/algGeral.png> <./Figures/trelicanomenclatura.jpg>]
+<Figures/eixos_01_rhino.jpg, id=1598, 557.9244pt x 467.8278pt>
+File: Figures/eixos_01_rhino.jpg Graphic file (type jpg)
+<use Figures/eixos_01_rhino.jpg>
+Package pdftex.def Info: Figures/eixos_01_rhino.jpg  used on input line 69. on 
+input line 69.
+Package pdftex.def Info: Requested size: 318.66948pt x 267.21428pt on input lin
+e 69.
+<Figures/eixos_01_grass.jpg, id=1599, 763.85374pt x 340.27126pt>
+File: Figures/eixos_01_grass.jpg Graphic file (type jpg)
+<use Figures/eixos_01_grass.jpg>
+Package pdftex.def Info: Figures/eixos_01_grass.jpg  used on input line 74. on 
+input line 74.
+Package pdftex.def Info: Requested size: 318.66948pt x 141.9576pt on input line
+ 74.
+ [68]
+[69pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.90 
+      <./Figures/eixos_01_rhino.jpg> <./Figures/eixos_01_grass.jpg>] [70]
+[71] [72]
+<Figures/paramVigaDist.png, id=1633, 1053.9375pt x 450.68375pt>
+File: Figures/paramVigaDist.png Graphic file (type png)
+<use Figures/paramVigaDist.png>
+Package pdftex.def Info: Figures/paramVigaDist.png  used on input line 150. on 
+input line 150.
+Package pdftex.def Info: Requested size: 341.43307pt x 146.00284pt on input lin
+e 150.
+ [73pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.178 \item A
+              linha guia do banzo superior $gs\_v1$ ou $gs\_v2$, aqui chamad...
+ <./Figures/paramVigaDist.png>] [74] [75]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 217.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 217.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 217.
+
+<Figures/rhinoVolume.png, id=1647, 746.79pt x 555.07375pt>
+File: Figures/rhinoVolume.png Graphic file (type png)
+<use Figures/rhinoVolume.png>
+Package pdftex.def Info: Figures/rhinoVolume.png  used on input line 240. on in
+put line 240.
+Package pdftex.def Info: Requested size: 364.19667pt x 270.70111pt on input lin
+e 240.
+<Figures/grassVolume.png, id=1648, 924.45375pt x 309.155pt>
+File: Figures/grassVolume.png Graphic file (type png)
+<use Figures/grassVolume.png>
+Package pdftex.def Info: Figures/grassVolume.png  used on input line 245. on in
+put line 245.
+Package pdftex.def Info: Requested size: 364.19667pt x 121.79175pt on input lin
+e 245.
+[76] [77pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.5.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.257 
+       <./Figures/rhinoVolume.png> <./Figures/grassVolume.png>] [78] [79]
+<Figures/VolumeCargas.png, id=1671, 1482.53876pt x 555.07375pt>
+File: Figures/VolumeCargas.png Graphic file (type png)
+<use Figures/VolumeCargas.png>
+Package pdftex.def Info: Figures/VolumeCargas.png  used on input line 327. on i
+nput line 327.
+Package pdftex.def Info: Requested size: 455.24411pt x 170.44489pt on input lin
+e 327.
+
+[80pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.334 
+       <./Figures/VolumeCargas.png>] [81]
+<Figures/comparaMercadoAlg.png, id=1684, 931.22906pt x 587.19376pt>
+File: Figures/comparaMercadoAlg.png Graphic file (type png)
+<use Figures/comparaMercadoAlg.png>
+Package pdftex.def Info: Figures/comparaMercadoAlg.png  used on input line 370.
+ on input line 370.
+Package pdftex.def Info: Requested size: 409.71692pt x 258.34813pt on input lin
+e 370.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/trelicaeixos01.png, id=1686, 1445.4pt x 475.7775pt>
+File: Figures/trelicaeixos01.png Graphic file (type png)
+<use Figures/trelicaeixos01.png>
+Package pdftex.def Info: Figures/trelicaeixos01.png  used on input line 395. on
+ input line 395.
+Package pdftex.def Info: Requested size: 204.85846pt x 67.42874pt on input line
+ 395.
+<Figures/trelica3d012.png, id=1687, 1254.6875pt x 463.7325pt>
+File: Figures/trelica3d012.png Graphic file (type png)
+<use Figures/trelica3d012.png>
+Package pdftex.def Info: Figures/trelica3d012.png  used on input line 395. on i
+nput line 395.
+Package pdftex.def Info: Requested size: 204.85846pt x 75.71297pt on input line
+ 395.
+<Figures/trelicaeixos02.png, id=1688, 1357.07pt x 455.7025pt>
+File: Figures/trelicaeixos02.png Graphic file (type png)
+<use Figures/trelicaeixos02.png>
+Package pdftex.def Info: Figures/trelicaeixos02.png  used on input line 410. on
+ input line 410.
+Package pdftex.def Info: Requested size: 204.85846pt x 68.79048pt on input line
+ 410.
+<Figures/trelica3d02.png, id=1689, 1079.03125pt x 545.03625pt>
+File: Figures/trelica3d02.png Graphic file (type png)
+<use Figures/trelica3d02.png>
+Package pdftex.def Info: Figures/trelica3d02.png  used on input line 410. on in
+put line 410.
+Package pdftex.def Info: Requested size: 204.85846pt x 103.4748pt on input line
+ 410.
+<Figures/trelicaeixos03.png, id=1690, 1087.06125pt x 468.75125pt>
+File: Figures/trelicaeixos03.png Graphic file (type png)
+<use Figures/trelicaeixos03.png>
+Package pdftex.def Info: Figures/trelicaeixos03.png  used on input line 426. on
+ input line 426.
+Package pdftex.def Info: Requested size: 204.85846pt x 88.33409pt on input line
+ 426.
+<Figures/trelica3d03.png, id=1691, 1144.275pt x 589.20125pt>
+File: Figures/trelica3d03.png Graphic file (type png)
+<use Figures/trelica3d03.png>
+Package pdftex.def Info: Figures/trelica3d03.png  used on input line 426. on in
+put line 426.
+Package pdftex.def Info: Requested size: 204.85846pt x 105.47626pt on input lin
+e 426.
+<Figures/trelicaeixos04.png, id=1692, 1097.09875pt x 554.07pt>
+File: Figures/trelicaeixos04.png Graphic file (type png)
+<use Figures/trelicaeixos04.png>
+Package pdftex.def Info: Figures/trelicaeixos04.png  used on input line 441. on
+ input line 441.
+Package pdftex.def Info: Requested size: 204.85846pt x 103.4567pt on input line
+ 441.
+<Figures/trelica3d04.png, id=1693, 1160.335pt x 650.43pt>
+File: Figures/trelica3d04.png Graphic file (type png)
+<use Figures/trelica3d04.png>
+Package pdftex.def Info: Figures/trelica3d04.png  used on input line 441. on in
+put line 441.
+Package pdftex.def Info: Requested size: 204.85846pt x 114.82935pt on input lin
+e 441.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[82]
+<Figures/trelicaReta.png, id=1702, 933.4875pt x 264.23718pt>
+File: Figures/trelicaReta.png Graphic file (type png)
+<use Figures/trelicaReta.png>
+Package pdftex.def Info: Figures/trelicaReta.png  used on input line 456. on in
+put line 456.
+Package pdftex.def Info: Requested size: 364.19667pt x 103.09239pt on input lin
+e 456.
+<Figures/trelicaAssimet.png, id=1703, 1162.3425pt x 264.23718pt>
+File: Figures/trelicaAssimet.png Graphic file (type png)
+<use Figures/trelicaAssimet.png>
+Package pdftex.def Info: Figures/trelicaAssimet.png  used on input line 461. on
+ input line 461.
+Package pdftex.def Info: Requested size: 364.19667pt x 82.79163pt on input line
+ 461.
+<Figures/trelicaAbaCurva.png, id=1704, 987.69pt x 273.27094pt>
+File: Figures/trelicaAbaCurva.png Graphic file (type png)
+<use Figures/trelicaAbaCurva.png>
+Package pdftex.def Info: Figures/trelicaAbaCurva.png  used on input line 466. o
+n input line 466.
+Package pdftex.def Info: Requested size: 364.19667pt x 100.76256pt on input lin
+e 466.
+<Figures/trelicaTunel01.png, id=1705, 967.36406pt x 451.6875pt>
+File: Figures/trelicaTunel01.png Graphic file (type png)
+<use Figures/trelicaTunel01.png>
+Package pdftex.def Info: Figures/trelicaTunel01.png  used on input line 471. on
+ input line 471.
+Package pdftex.def Info: Requested size: 364.19667pt x 170.05093pt on input lin
+e 471.
+<Figures/grafostaticagrass.png, id=1709, 1071.25218pt x 590.205pt>
+File: Figures/grafostaticagrass.png Graphic file (type png)
+<use Figures/grafostaticagrass.png>
+Package pdftex.def Info: Figures/grafostaticagrass.png  used on input line 490.
+ on input line 490.
+Package pdftex.def Info: Requested size: 455.24411pt x 250.8203pt on input line
+ 490.
+ [83pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.494 \end{figure}
+                   <./Figures/comparaMercadoAlg.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[84pdfTeX warning (ext4): destination with the same identifier (name{figure.5.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.497 
+       <./Figures/trelicaeixos01.png> <./Figures/trelica3d012.png> <./Figures/t
+relicaeixos02.png> <./Figures/trelica3d02.png> <./Figures/trelicaeixos03.png> <
+./Figures/trelica3d03.png> <./Figures/trelicaeixos04.png> <./Figures/trelica3d0
+4.png>]
+<Figures/Cargas_grafo.jpg, id=1730, 2342.7525pt x 904.37875pt>
+File: Figures/Cargas_grafo.jpg Graphic file (type jpg)
+<use Figures/Cargas_grafo.jpg>
+Package pdftex.def Info: Figures/Cargas_grafo.jpg  used on input line 501. on i
+nput line 501.
+Package pdftex.def Info: Requested size: 455.24411pt x 175.73906pt on input lin
+e 501.
+
+
+LaTeX Warning: Citation `malcolm2009' on page 85 undefined on input line 507.
+
+[85pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.508 
+       <./Figures/trelicaReta.png> <./Figures/trelicaAssimet.png> <./Figures/tr
+elicaAbaCurva.png> <./Figures/trelicaTunel01.png>] [86pdfTeX warning (ext4): de
+stination with the same identifier (name{figure.5.11}) has been already used, d
+uplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.508 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.508 
+       <./Figures/grafostaticagrass.png> <./Figures/Cargas_grafo.jpg>]
+<Figures/FgShed01.jpg, id=1744, 1868.9825pt x 1652.1725pt>
+File: Figures/FgShed01.jpg Graphic file (type jpg)
+<use Figures/FgShed01.jpg>
+Package pdftex.def Info: Figures/FgShed01.jpg  used on input line 530. on input
+ line 530.
+Package pdftex.def Info: Requested size: 227.62206pt x 201.20172pt on input lin
+e 530.
+<Figures/Pfshed01.jpg, id=1745, 1818.795pt x 1659.19875pt>
+File: Figures/Pfshed01.jpg Graphic file (type jpg)
+<use Figures/Pfshed01.jpg>
+Package pdftex.def Info: Figures/Pfshed01.jpg  used on input line 530. on input
+ line 530.
+Package pdftex.def Info: Requested size: 227.62206pt x 207.62718pt on input lin
+e 530.
+
+Overfull \hbox (25.54996pt too wide) in paragraph at lines 530--531
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[87]
+<Figures/sentidografo.png, id=1754, 1271.75125pt x 737.75626pt>
+File: Figures/sentidografo.png Graphic file (type png)
+<use Figures/sentidografo.png>
+Package pdftex.def Info: Figures/sentidografo.png  used on input line 547. on i
+nput line 547.
+Package pdftex.def Info: Requested size: 455.24411pt x 264.09483pt on input lin
+e 547.
+ [88pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.554 
+       <./Figures/FgShed01.jpg> <./Figures/Pfshed01.jpg>] [89pdfTeX warning (ex
+t4): destination with the same identifier (name{figure.5.14}) has been already 
+used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.559 
+       <./Figures/sentidografo.png>]
+<Figures/shedImpar.png, id=1776, 616.3025pt x 582.175pt>
+File: Figures/shedImpar.png Graphic file (type png)
+<use Figures/shedImpar.png>
+Package pdftex.def Info: Figures/shedImpar.png  used on input line 572. on inpu
+t line 572.
+Package pdftex.def Info: Requested size: 227.62206pt x 215.01051pt on input lin
+e 572.
+<Figures/shedPar.png, id=1777, 616.3025pt x 606.265pt>
+File: Figures/shedPar.png Graphic file (type png)
+<use Figures/shedPar.png>
+Package pdftex.def Info: Figures/shedPar.png  used on input line 572. on input 
+line 572.
+Package pdftex.def Info: Requested size: 218.51521pt x 214.95268pt on input lin
+e 572.
+
+Overfull \hbox (16.44312pt too wide) in paragraph at lines 572--573
+ [] 
+ []
+
+[90pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.581 
+       <./Figures/shedImpar.png> <./Figures/shedPar.png>] [91]
+<Figures/FgViga01.jpg, id=1796, 2258.4375pt x 847.165pt>
+File: Figures/FgViga01.jpg Graphic file (type jpg)
+<use Figures/FgViga01.jpg>
+Package pdftex.def Info: Figures/FgViga01.jpg  used on input line 599. on input
+ line 599.
+Package pdftex.def Info: Requested size: 409.71692pt x 153.68529pt on input lin
+e 599.
+<Figures/PfViga01.jpg, id=1797, 1092.08pt x 1567.8575pt>
+File: Figures/PfViga01.jpg Graphic file (type jpg)
+<use Figures/PfViga01.jpg>
+Package pdftex.def Info: Figures/PfViga01.jpg  used on input line 604. on input
+ line 604.
+Package pdftex.def Info: Requested size: 227.62206pt x 326.77174pt on input lin
+e 604.
+ [92] [93pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.5.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.618 
+       <./Figures/FgViga01.jpg> <./Figures/PfViga01.jpg>]
+<Figures/simetria01.png, id=1823, 1619.04875pt x 348.30125pt>
+File: Figures/simetria01.png Graphic file (type png)
+<use Figures/simetria01.png>
+Package pdftex.def Info: Figures/simetria01.png  used on input line 628. on inp
+ut line 628.
+Package pdftex.def Info: Requested size: 455.24411pt x 97.9329pt on input line 
+628.
+ [94pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+17}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.635 
+       <./Figures/simetria01.png>]
+<Figures/simetria02.png, id=1831, 1354.05875pt x 341.275pt>
+File: Figures/simetria02.png Graphic file (type png)
+<use Figures/simetria02.png>
+Package pdftex.def Info: Figures/simetria02.png  used on input line 638. on inp
+ut line 638.
+Package pdftex.def Info: Requested size: 455.24411pt x 114.74051pt on input lin
+e 638.
+<Figures/simetria03.png, id=1833, 1635.10875pt x 736.7525pt>
+File: Figures/simetria03.png Graphic file (type png)
+<use Figures/simetria03.png>
+Package pdftex.def Info: Figures/simetria03.png  used on input line 648. on inp
+ut line 648.
+Package pdftex.def Info: Requested size: 364.19667pt x 164.09834pt on input lin
+e 648.
+ [95pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.655 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5.19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.655 
+       <./Figures/simetria02.png> <./Figures/simetria03.png>]
+<Figures/simetria04.png, id=1839, 1014.79124pt x 704.6325pt>
+File: Figures/simetria04.png Graphic file (type png)
+<use Figures/simetria04.png>
+Package pdftex.def Info: Figures/simetria04.png  used on input line 658. on inp
+ut line 658.
+Package pdftex.def Info: Requested size: 364.19667pt x 252.88263pt on input lin
+e 658.
+<Figures/simetria05.png, id=1840, 1064.97874pt x 748.7975pt>
+File: Figures/simetria05.png Graphic file (type png)
+<use Figures/simetria05.png>
+Package pdftex.def Info: Figures/simetria05.png  used on input line 667. on inp
+ut line 667.
+Package pdftex.def Info: Requested size: 364.19667pt x 256.06169pt on input lin
+e 667.
+
+Overfull \hbox (8.54968pt too wide) in paragraph at lines 673--674
+\OT1/cmr/m/n/12 ini-cial est^^Sa gra-fada da es-querda para a di-reita, es-pe-l
+hando os ob-je-tos es-pe-ci-fi-ca-dos, encontra-
+ []
+
+[96pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.674 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5.21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.674 
+       <./Figures/simetria04.png> <./Figures/simetria05.png>]
+
+LaTeX Warning: Citation `nash1974resist' on page 97 undefined on input line 698
+.
+
+[97] [98] [99] [100] [101] [102] [103]) [104]
+\openout2 = `Chapters/ChapterConsideracoesfinais.aux'.
+
+
+(./Chapters/ChapterConsideracoesfinais.tex
+Cap\'{\i }tulo 6.
+[105
+
+
+
+]
+<Figures/exemploSimetria01.png, id=1929, 1740.5025pt x 793.96625pt>
+File: Figures/exemploSimetria01.png Graphic file (type png)
+<use Figures/exemploSimetria01.png>
+Package pdftex.def Info: Figures/exemploSimetria01.png  used on input line 58. 
+on input line 58.
+Package pdftex.def Info: Requested size: 204.85846pt x 93.44247pt on input line
+ 58.
+<Figures/exemploSimetria02.png, id=1930, 1739.49875pt x 797.98125pt>
+File: Figures/exemploSimetria02.png Graphic file (type png)
+<use Figures/exemploSimetria02.png>
+Package pdftex.def Info: Figures/exemploSimetria02.png  used on input line 58. 
+on input line 58.
+Package pdftex.def Info: Requested size: 204.85846pt x 93.97589pt on input line
+ 58.
+<Figures/exemploSimetria03.png, id=1931, 1742.51pt x 798.985pt>
+File: Figures/exemploSimetria03.png Graphic file (type png)
+<use Figures/exemploSimetria03.png>
+Package pdftex.def Info: Figures/exemploSimetria03.png  used on input line 73. 
+on input line 73.
+Package pdftex.def Info: Requested size: 204.85846pt x 93.92342pt on input line
+ 73.
+<Figures/exemploSimetria04.png, id=1932, 1739.49875pt x 799.98875pt>
+File: Figures/exemploSimetria04.png Graphic file (type png)
+<use Figures/exemploSimetria04.png>
+Package pdftex.def Info: Figures/exemploSimetria04.png  used on input line 73. 
+on input line 73.
+Package pdftex.def Info: Requested size: 204.85846pt x 94.21231pt on input line
+ 73.
+ [106pdfTeX warning (ext4): destination with the same identifier (name{figure.6
+.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.84 
+      <./Figures/exemploSimetria01.png> <./Figures/exemploSimetria02.png> <./Fi
+gures/exemploSimetria03.png> <./Figures/exemploSimetria04.png>] [107] [108])
+[109]
+\openout2 = `Appendices/History.aux'.
+
+ (./Appendices/History.tex
+Ap\^endice A.
+<Figures/SomaDeVetoresConcorrentes.png, id=1965, 1600.47937pt x 428.35031pt>
+File: Figures/SomaDeVetoresConcorrentes.png Graphic file (type png)
+<use Figures/SomaDeVetoresConcorrentes.png>
+Package pdftex.def Info: Figures/SomaDeVetoresConcorrentes.png  used on input l
+ine 12. on input line 12.
+Package pdftex.def Info: Requested size: 455.24411pt x 121.83926pt on input lin
+e 12.
+<Figures/clusterVisu.png, id=1966, 840.89156pt x 370.38374pt>
+File: Figures/clusterVisu.png Graphic file (type png)
+<use Figures/clusterVisu.png>
+Package pdftex.def Info: Figures/clusterVisu.png  used on input line 23. on inp
+ut line 23.
+Package pdftex.def Info: Requested size: 455.24411pt x 200.51852pt on input lin
+e 23.
+<Figures/Algfunicular01.png, id=1967, 1924.18875pt x 1047.915pt>
+File: Figures/Algfunicular01.png Graphic file (type png)
+<use Figures/Algfunicular01.png>
+Package pdftex.def Info: Figures/Algfunicular01.png  used on input line 36. on 
+input line 36.
+Package pdftex.def Info: Requested size: 455.24411pt x 247.923pt on input line 
+36.
+[110
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.A.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.40 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.A
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.40 
+      <./Figures/SomaDeVetoresConcorrentes.png> <./Figures/clusterVisu.png>]
+<Figures/Algfunicular01B.png, id=1974, 884.30376pt x 437.635pt>
+File: Figures/Algfunicular01B.png Graphic file (type png)
+<use Figures/Algfunicular01B.png>
+Package pdftex.def Info: Figures/Algfunicular01B.png  used on input line 43. on
+ input line 43.
+Package pdftex.def Info: Requested size: 341.43307pt x 168.97412pt on input lin
+e 43.
+)
+[111pdfTeX warning (ext4): destination with the same identifier (name{figure.A.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.296         \include{Appendices/History}
+                                          pdfTeX warning (ext4): destination wi
+th the same identifier (name{figure.A.4}) has been already used, duplicate igno
+red
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.296         \include{Appendices/History}
+                                           <./Figures/Algfunicular01.png> <./Fi
+gures/Algfunicular01B.png>]
+\openout2 = `Appendices/Fitting.aux'.
+
+ (./Appendices/Fitting.tex
+Ap\^endice B.
+<Figures/tsAg2d.png, id=1980, 983.17313pt x 447.92343pt>
+File: Figures/tsAg2d.png Graphic file (type png)
+<use Figures/tsAg2d.png>
+Package pdftex.def Info: Figures/tsAg2d.png  used on input line 13. on input li
+ne 13.
+Package pdftex.def Info: Requested size: 455.24411pt x 207.4074pt on input line
+ 13.
+<Figures/tsAg3D.png, id=1981, 1004.25188pt x 447.92343pt>
+File: Figures/tsAg3D.png Graphic file (type png)
+<use Figures/tsAg3D.png>
+Package pdftex.def Info: Figures/tsAg3D.png  used on input line 20. on input li
+ne 20.
+Package pdftex.def Info: Requested size: 455.24411pt x 203.05365pt on input lin
+e 20.
+<Figures/cupula_movel.png, id=1982, 1293.33188pt x 414.79968pt>
+File: Figures/cupula_movel.png Graphic file (type png)
+<use Figures/cupula_movel.png>
+Package pdftex.def Info: Figures/cupula_movel.png  used on input line 32. on in
+put line 32.
+Package pdftex.def Info: Requested size: 455.24411pt x 146.00487pt on input lin
+e 32.
+[112
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.B.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.36 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.B
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.36 
+      <./Figures/tsAg2d.png> <./Figures/tsAg3D.png>]) [113pdfTeX warning (ext4)
+: destination with the same identifier (name{figure.B.3}) has been already used
+, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.297         \include{Appendices/Fitting}
+                                           <./Figures/cupula_movel.png>]
+(./Dissertacao.bbl [114
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.07225pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[115]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.07225pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[116])
+Runaway argument?
+{http://www.routledge.com/books/details/9780415278201/{\\%}5Cnhttp://\ETC.
+! File ended while scanning use of \hyper@n@rmalise.
+<inserted text> 
+                \par 
+l.310     \bibliography{References/library}
+                                           
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Extra }, or forgotten \endgroup.
+\bibliography ...}\fi } \@input@ {\jobname .bbl} }
+                                                   
+l.310     \bibliography{References/library}
+                                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.311     \printbibliography
+                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.07225pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[117]
+\openout2 = `Others/ultimafolha.aux'.
+
+ (./Others/ultimafolha.tex
+Overfull \hbox (84.5975pt too wide) in paragraph at lines 1--41
+[]\OT1/cmr/m/n/12 %========================================================== 
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 1--41
+\OT1/cmr/m/n/12 % Do-cu-ment: PPGMCTI % File....: Ul-ti-ma-Fo-lha.TEX % 
+ []
+
+
+Overfull \hbox (84.5975pt too wide) in paragraph at lines 1--41
+\OT1/cmr/m/n/12 %========================================================== 
+ []
+
+) [118
+
+]
+
+! LaTeX Error: \begin{thebibliography} on input line 3 ended by \end{document}.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
+(./Dissertacao.aux (./Others/FolhaRosto.aux) (./Others/NotaEstilo.aux)
+(./Others/FolhaAssinaturas.aux) (./Others/dedicatoria.aux)
+(./Others/agradecimentos.aux) (./Others/resumo.aux) (./Others/abstract.aux)
+(./Others/abbreviation.aux) (./Chapters/ChapterOne.aux)
+(./Chapters/ChapterTwo.aux) (./Chapters/ChapterThree.aux)
+(./Chapters/ChapterFour.aux) (./Chapters/ChapterFive.aux)
+(./Chapters/ChapterConsideracoesfinais.aux) (./Appendices/History.aux)
+(./Appendices/Fitting.aux) (./Others/ultimafolha.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
+Package rerunfilecheck Info: File `Dissertacao.out' has not changed.
+(rerunfilecheck)             Checksum: 4EE49C543DD6BA50D41EE69499275CB7;9708.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
+ )
+(\end occurred inside a group at level 4)
+
+### semi simple group (level 4) entered at line 379 (\begingroup)
+### simple group (level 3) entered at line 375 ({)
+### semi simple group (level 2) entered at line 3 (\begingroup)
+### simple group (level 1) entered at line 310 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 12168 strings out of 492990
+ 184587 string characters out of 6136333
+ 312550 words of memory out of 5000000
+ 14754 multiletter control sequences out of 15000+600000
+ 17845 words of font info for 65 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,13n,45p,3131b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c
+:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><c:/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsl12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on Dissertacao.pdf (132 pages, 17935335 bytes).
+PDF statistics:
+ 2260 PDF objects out of 2487 (max. 8388607)
+ 1943 compressed objects within 20 object streams
+ 523 named destinations out of 1000 (max. 500000)
+ 1460 words of extra memory for PDF output out of 10000 (max. 10000000)
+

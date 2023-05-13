@@ -1,0 +1,409 @@
+\chapter{Small World Networks} \label{chpmwn}
+
+The dynamics associated with social interactions have been an object of fascination among
+scientists for many years and are experienced by individuals on they every day lives. The
+experience of meeting a complete strange with whom we have apparently little in common
+and finding unexpected that we have a mutual acquaintance is one with most of us are
+familiar with, \emph{it's a small-world}, we say. As a society we have become obsessed
+with connectedness, people no longer have meetings, they network, we no longer have many
+friends, we are well connected, but the truth of the matter is that we are struggling to
+make sense of the complex networks that have recently infiltrated our lives, networks
+that always existed for scientits but has never been so visible to ordinary individuals.
+
+The social network we are embedded today have immense reach, a structure we can only
+dimly perceive, its functioning bewilders us and its consequence affects everyone in the
+planet, from big names to ordinary citizens, a native Indian in the Amazon rain forest or
+an Eskimo. The connected age has left us confuse about the consequences of globalisation,
+panicking by the spread of severe acute respiratory syndrome (SARS) and bird flu on the
+fair East, complacent about the HIV/AIDS epidemic in the developing world, disoriented by
+the Internet, worried about contagion in the financial market and terrified of Al Qaeda.
+
+
+
+
+The experience of meeting a complete strange with whom we have apparently little in
+common and finding unexpected that we have a mutual acquaintance is one with most of us
+are familiar with, \emph{it's a small-world}, we say. As a society we have become
+obsessed with connectedness and are struggling to make sense of the complex networks that
+have recently infiltrated our lives, networks whose reach is immense, whose structure we
+can only dimly perceive, whose functioning bewilders us and whose consequence affects
+everyone in the planet, from big names to ordinary citizens, a native Indian in the
+Amazon rain forest or an Eskimo.
+
+The connected age has left us confuse about the consequences of globalisation, panicing
+by the spread of severe acute respiratory syndrome (SARS) and bird flu on the fair East,
+complacent about the HIV/AIDS epidemic in the developing world, disoriented by the
+Internet, worried about contagion in the financial market and terrified of Al Qaeda.
+
+Science itself reflects the networks zeitgeist, researches are only now beginning to
+unravel the structure of complex networks, from the nervous system of simple organisms to
+the spread of HIV around the world. The size of of these networks is often the problem:
+26,000 genes in the human genome [x,x1], billions of people on Earth and billions of
+pages on the Internet. Even if we were given the complete wiring diagram for any of there
+networks (a list of all nodes and the connections between them) one would not know what
+to compute, the mass of data would be overwhelming.
+
+The theory of social networks has come a long way and is one the has seen extensive
+development over the past four decades, yielding multiple measures both of individuals
+significance such as centrality [freeman x] and network efficiency [Yamaguchi], which may
+elucidate non-obvious such as ``key player" in an organisation or its optimal structure
+for say, information diffusion. Frequently, however, this research assumes linear models
+of social process such as Markov models of diffusion [x] and is generally applied to
+networks that consist of a relatively small number of components [x]. While many of the
+measures defined in the literature can in principle be applied to networks of arbitrary
+size and structure, the computational costs of doing so may be prohibitive (e.g.
+freeman's 1979 betweensess centrality) and the benefits are at any rate unclear if the
+process of interest is inherently non-linear, as it the case for information (or disease)
+contagion models involving threshold [Granovetter x] or refractory effects [Murray x].
+Hence the problem of analysing efficiently the structure of extreme large networks (in
+which components may easily number in the hundreds of thousands or more) and modelling
+the effects of structure on non-linear dynamical process, remain relatively unexplored.
+
+The traditional network theory is concerned with the relationships between individuals
+and the pattern of interaction [x]. The precise nature of the individuals is down played,
+or even suppressed, in hopes of uncovering deeper lows. A network theorist will look at
+any system of interlinked components and see an abstract pattern of dots connected by
+lines [x]. Its the pattern that matters, the architecture of relationships, not the
+identities of the dots themselves. Viewed from these lofty heights, many networks,
+seemingly unrelated, begin to look the same.
+
+The study of complex networks is only the next logical step in a large journey, the quest
+for a science of spontaneous order. The next step is to move to more general kinds of
+connectivity, where neighbours are defined in an abstract sense that need not be
+geographical. Just as spatial coupling between non-linear systems spawned a new form of
+collective behaviour (self-sustaining spiral and scroll waves) that could not occur in
+the simpler geometries [x], complex networks give rise to even richer forms of
+self-organisation. in fact, complex networks are the natural setting for the one of the
+most mysterious form of group behaviour facing science today in the connected age.
+
+\section{The Small World Phenomenon}
+The first evidence the the world might indeed be small was first presented by the
+psychologist Stanley Milgram in 1967 [x]. Milgram was interested in a unresolved
+hypothesis circulating in the sociological community of the day. The hypothesis was that
+the world, viewed as an enormous network of social acquaintances, was in a certain sense
+``small", that is, any one person in the world could be reached through a network of
+friends in only a few steps ( compared with the size of the entire network).
+
+\textbf{OPTIONAL}\emph{In 1967, Milgram \cite{Milgram1967} created what is today known as
+the ``small world phenomenon''. He conducted a quantitative study of the structure of
+social networks in the United States and concluded that on average a chain of six
+acquaintances can connect everyone in the world, a result that has entered folklore as
+the phrase ``Six degrees of separation''. Further studies have shown that any two
+randomly chosen people can be connected by a small chain of intermediate acquaintances,
+and this phenomena is referred to as the small-world effect \cite{Watts1998}}.
+
+Real-world networks show a relatively high degree of clustering and have low average
+distance between pairs of nodes within the network. A new model of the small-world
+phenomena has been recently proposed by Watts and Strogatz \cite{Watts1998}, which allows
+for the clustering properties of real social networks, in which the probability of two
+people knowing one another is greatly increased if they have a common acquaintance. In
+this model, the population lives in a ring lattice graph with \textit{n} vertices and
+\textit{k} edges ``connections'' per vertex. We them rewire each edge with probability
+\textit{p, \(0\leq p \leq 1\)}. This construction allows one to tune the graph between
+regularity \textit{\(p=0\)} and disorder  \textit{\(p=1\)}, and thereby to probe the
+intermediate region \textit{\(0<p<1\)} about which little is known. Figure
+\ref{smallword} shows the random rewiring procedure for interpolating between a regular
+ring lattice and a random network by tuning the probability  \textit{p}. In this example
+for clarity, \textit{n = 20} ``vertices'' and \textit{k = 4} ''edges''.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{smallworld}
+\caption{Small-world networks random rewiring procedure} \label{smallword}
+\end{center}
+\end{figure}
+
+Small world networks may play an important role in the study of the influence of network
+structure upon the dynamics of many social processes such as disease spreading, formation
+of public opinion, distribution of wealth, and transmission of culture traits.
+
+\subsection{Empirical Studies}
+The first empirical work was conducted by Milgram in 1967 [x] in the United States.
+Milgram was principally renowned throughout the world for his remarkable and disturbing
+work on the apparent submission of human ethical values to authority [x 1969], however he
+also conducted a highly innovative and less controvert test of the small-world
+hypothesis, which is thought to be the beginning of the today so called small-world
+theory. In this experiment, Milgram sent a number of packets to agreeable ``sources" in
+Nebraska and Kansas, with instructions to deliver these packets to one of two specific
+``target" persons in Massachusetts. The targets were named and described in terms of
+approximate location, profession and demography, but the sources were only allowed to
+send the packets directly to someone they by first name. The objective was to get the
+packets from source to target with as few of these ``first-name basis links" as possible.
+For more detailed discussion and information on this study see [x].
+
+The upshot of all this was that Milgram determined that an average of six intermediaries
+was all that required to get such a letter across the intervening expanse of geography
+and society, a result that has entered folklore as the phrase ``six degrees of
+separation". A second study by Korte and Milgram [1970] used essentially the same method
+to examine the length of acquaintances clans between white in Los Angeles and a mixed
+white-black target population in New York and found similar statistics. Whether this
+number is, in reality, too low or too high is a matter of debate, a detailed discursion
+about Milgram's work and finding is given by xx [x]. In any event, Milgram seemed to have
+demonstrated that whatever the precise number was, it was not very big, compared with the
+overall magnitude of the population.
+
+Although the study of social networks and their use as a tool for examining the structure
+of societies already had a considerable history by the time Milgram did his initial
+experiments [Mitchell 1969], but none of this work had looked at the question of path
+length in the same light as had Milgram. It also seems that very little work of this
+nature and scale has occurred since, even though results did (and still do) spier
+considerable interest. In fact, it seems that more empirical effort has been devoted to
+the lower-level question of the number of acquaintances that the typical person
+possesses. Effort in this department have been made by Freeman and Thompson (1989),
+Bernard et al (1989) and the inverse small-world [x], but it turns out to be a difficult
+exercise. It seems unlikely that even if such a number and its variance could be
+convincing determined for any given definition of acquaintance, that it would play nearly
+so as important a role in the understanding of networks as a comparable advance in the
+understanding of network structure.
+
+Recent empirical work [x] has generated the claim to a wider range of nonsocial network.
+However, much about the small-world hypothesis continues to be empirically
+unsubstantiated. In particular individuals in real social networks have only limited
+local information about global social network and therefore finding short paths
+represents a non-trivial search effort [,x,x]. Moreover, and contrary to accepted wisdom,
+experimental evidence for short global chain length is extremely limited [x,x]. Almost
+all other empirical studies of large-scale networks [4 -9, 16-19] have focused either on
+non-social networks or on crude proxies of social interaction such as scientific
+collaboration [x], actors and films [x] and e-mail networks within single institution
+[x].
+
+The last attempt to empirical quantify the small-world effect on social networks has just
+recently been published [x]. This study conducted a global social-search experiment in
+which more than 60,000 e-mail users attempted to reach one of 18 target persons in 13
+different counties by forwarding messages to acquaintances. Once again no much surprising
+has come out relating the magic number of six acquaintances, the study concluded that
+social searches can reach their targets in a median of five to seven steps, depending on
+the separation of source and target teachability. The study also concluded that
+successful social search is conducted primarily through intermediate to weak strength
+ties, does not require highly connected ``hubs" to succeed, in contrast to unsuccessful
+social search, which disproportionately relies on professional relationships and that
+although global social networks are, in principle, searchable, actual success depends
+sensitively on individual incentive, reenforcing the principle that network structure
+alone is not everything.
+
+\subsection{Theoretical Studies}
+The theoretical research specific to the small-world phenomenon has start about the same
+time as the empirical one by Milgram in the 1960s with the formulation and initial
+mathematical investigation of the problem by Pool and Kochen [x, 1978]. Although their
+results only appear in published form well after Milgram's experiment, the ideas have
+been in circulation for some ten years beforehand. These authors made substantial
+progress on the problem, estimating both the average number of acquaintances that people
+posses and the probability of two randomly selected members of a society being connected
+by a chain of acquaintances consisting of one or two intermediates. They developed these
+approximation under a variety of assumptions about the level of social structure and
+stratification present in the population and concluded (speculatively) that even quite
+structured populations would have acquaintance chains whose characteristic path lengths
+are not much longer than those of completely unstructured populations (where the
+probability of A knowing C, given that A knows B, is independent of whether or not B
+knows C). For a population about of the United States (in the 60s) and an estimated
+average number of acquaintances per person of about a thousand, Pool and Kochen estimated
+that any member of the population could be connected to any other with a chain of
+associates consisting of at most two intermediaries (hence three degrees of separation).
+
+The study of distances in social networks however, has begun over twenty-five years
+before the publication of Pool and Kochen's work, with Anotol Rapoport and his colleagues
+at the University of Chicago. In a series of papers in the 1950s and 1960s, published in
+the ``Bulletin of Mathematical Biophysics", Rapoport and colleagues established the
+theory of ``random-biased nets", which described the statistics of disease spreading
+through populations with varying degrees of structure. Although the early researches did
+make significant gains on the issue of the effective size of social networks, their
+progress was hampered by a number of difficulties that arose from both the questions they
+chose to ask and the methodologies they used to seek answer. The result of Pool and
+Kochen are highly suggestive of the small-world property's holding true in real
+societies, but their results are highly sensitive the assumptions about conditional
+probability in different parts of the population. A more recent article by Kochen in
+1989, reports little progress on the essential theoretical difficulty. It turns out that
+this is a problem faced by all theoreticians who find themselves exploring systems that
+operate in the intermediate regime between order and randomness [x]. The problem arises
+in many fields, notable fluid dynamics and the dynamics of coupled, nonlinear oscillators
+[x], but in terms of social networks, the only network whose statistical properties are
+analytical tractable are those that are either completely ordered or completely
+random[x].
+
+Although these cases are at opposite extremes of the structural spectrum, they both share
+the essential characteristic that their local structure mirrors (either exact or
+statistically) their global structure and hence analysis based on strictly local
+knowledge is sufficient to capture the statistics of the entire network. That is, in an
+important sense, they ``look" the same everywhere [x].
+
+A new model of the small-world phenomenon has been recently proposed by Watts and Strogtz
+[x], which allows for the clustering properties of real networks, in which the
+probability of two people knowing one another is greatly increased if they have a common
+acquaintance. This new formulation has given new life to the small-world phenomenon
+theory and created a new network model called small-world networks.
+
+\subsection{Formal Definition of the Small-World}
+The phases small-world phenomenon, small-world problem and six degrees of separation have
+long been an object of popular fascination and anecdotal report. At this stage, it is
+necessary to agree on precisely what is meant by the small-world phenomenon, what is
+known about it and when such a thing should be surprising in the first place. In general,
+there is no unique and precise definition to what one mean when he or she says that the
+world is ``small", but in this thesis, ``small" means that almost every element of the
+network is somehow ``close" to almost every other element, even those that are perceived
+as likely to be far away. This conjecture between reality and perception is what makes
+the small-world phenomenon surprising to us. But why should one perceive the world to be
+anything other than small in first place? The answer to this is fourfold:
+\begin{enumerate}
+    \parskip=0pt
+    \item The network is numerically large in the sense that the world contains
+    \emph{N} $\gg$ 1 people. In real world, \emph{N} is on the order of billions.
+    \item The network is sparse in the sense that each person is connected to
+    an average of only \emph{k} other people, which is, at most on the order of
+    thousands [x], hundreds of of thousands of times smaller than the world
+    population.
+    \item The network is decentralised in that there is no dominant central
+    vertex to which most other vertices are directly connected. This implies a
+    strong condition than sparseness: not only must the average degree \emph{k}
+    be much less than \emph{N}, but the maximal degree \emph{k$_max$} over all
+    vertices must also be much less than \emph{N}.
+    \item The network is highly clustered in that most friendship circles are
+    strong overlapping. That is, one expects that many of his or her friends
+    are friends also of each other.
+\end{enumerate}
+
+All four criteria are necessary for the small-world phenomenon to exist and be
+remarkable. If the world did not contain many people, them it would not be surprising if
+they were all closely associated, e.g. as in a small town. If most people knew most other
+people then, once again, it would no be surprising to find that two strangers had a
+acquaintance in common. If the network were not clustered, that is, if each person close
+their friends independently of any of their friends' choice, then it follows from random
+graphs theory [Bollobás 1985] that most people would be only a few degrees of separation
+apart even for very large \emph{N}. In fact, a random graph is a close approximation to
+the smallest possible graph for any given \emph{N} and \emph{k} (where \emph{k$_max$}
+$\ll$ \emph{N} and the variance in \emph{k} is not too large)[x].
+
+These criteria are also satisfied by the real world. Given that the population of the
+planet is seven billions and that even the most generous estimates of how many
+acquaintances an average person can have is only a few thousand [Kochen 1989], then the
+first two criteria are likely to be satisfied. The last two conditions are harder to be
+sure of and certainly harder to measure, but they also seem quite reasonable in the light
+of everyday experience. Some people are clearly more significant players than others, but
+even the most gregarious individuals are constrained by time and energy to know a tiny
+fraction of the entire population. What significance these individuals have must be due
+to other more subtle and interesting reason. Finally, while it might be difficult to
+determine in practice how many of a given person's friends are also friends with each
+other and even more difficult to measure this for a large population, common sense tells
+us that whatever this fraction is, it is much larger than that which one would expect for
+a randomly connected network. To be more explicit about this, if the world were randomly
+connected, then one's acquaintances would be just likely to come from a different
+country, occupation and socioeconomic class as one's own. Clearly this is not the case
+among human in real life.
+
+\subsubsection{Small-World Graphs}
+Although regular networks and random graphs are both useful idealisation, many real world
+networks lie somewhere between the extremes of order and randomness. Real-world networks
+show a relatively high degree of clustering and have low average distance between pairs
+of actors within the network. A new model of the small-world phenomenon has been recently
+proposed by Watts and Strogatz [x], which allows to clustering properties of real social
+networks, in which the probability of two people knowing one another is greatly increased
+if they have a common acquaintance. In this model, the population lives in a ring lattice
+graph with \emph{N} vertices and \emph{k} edges connections per vertex. They them rewire
+each edge with probability \emph{p} (0 $\leq$ p $\leq$ 1). This construction allows one
+to ``tune" the graph between regularity (\emph{p}=0) and disorder (\emph{p}=1) and
+thereby to probe the intermediate region (0
+ $<$ \emph{p} $<$ 1) about which little is known.
+
+\subsection{Small-World in the Real World}
+
+\section{Models of Small-World Networks}
+
+\subsection{Quantifying Small-World Networks}
+The small-world network model by Watts and Strogtz [x] has borrowed some definitions from
+graph theory in order to make the notation precise. For simplicity, the networks are
+represented as connected sparse graphs, consisting solely of undifferentiated vertices
+and unweighed, undirected edges.
+
+The first characteristic of interest for a given graph is the characteristic path length
+\emph{L}, defined as the average number of edges that must be transverses in the shortest
+path between any pairs of vertices in the graph. In terms of Milgram's experiment,
+\emph{L} would be the chain length averaged over all possible sources in the network and
+all possible targets. \emph{L} them is a measure of the global structure of the graph as
+one requires information about the entire graph in order to define the shortest path
+between any two vertices. By contrast, the clustering coefficient \emph{C} is a measure
+of the local graph structure. Specially, if a vertex \emph{v} has \emph{k} immediate
+neighbours, them this neighbourhood defines a subgraph in which at most
+\emph{k$_v$}(\emph{k$_v$} - 1)/2 edges can exist (if the neighbourhood is fully
+connected). \emph{C$_v$} is them the fraction of this maximum that is realised in
+\emph{k}'s actual neighbourhood and \emph{C} is this fraction averaged over all vertices
+in the graph. Equivalently, \emph{C} can be regarded as the probability that any two
+vertices (\emph{u,v}) will be connected, given that each is also connected to a ``mutual
+friend" \emph{w}.
+
+Watts and Strogatz conjectured that these two properties (short paths and high
+clustering) would hold also for many natural and technological networks. Furthermore,
+they conjectured that dynamical system coupled in this way would display enhanced signal
+propagation speed, synchronisability and computational power, as compared with regular
+lattices of the same size. The intuition is that the short path could provide high-speed
+communication channels between distant parts of the system, thereby facilitating any
+dynamical process (like synchronisation or computation) that requires global coordination
+and information flow.
+
+Research on small-world networks has proceeded along several fronts since the publication
+of Watts and Strogatz study. Perhaps the strongest response has come from statistical
+physics, who sense immediately [10] that the Watts and Strogatz model would yield to
+their techniques. The path length \emph{L} in the original model [x] was soon found to be
+poorly formulated, since it is possible that some part of the graph might become detached
+through the rewiring process and the distance of the particular part of the graph will
+therefore become infinite [x]. A fix to this problem was suggested by Newman and Watts
+[x], were in its improved form, the model starts with a ring of \emph{N} vertices, each
+connected to its nearest \emph{k} and next-nearest neighbours out to some range \emph{k}.
+Shortcut links are them added (rather than rewired) between randomly selected pairs of
+vertices with probability \emph{p} per edge on the underlying lattice, thus there are
+typically \emph{Nkp} shortcuts in the graph. Most of the recent work on models of
+small-world networks have been performed using this variant, although both version are
+referred as small-world network models or small-world graphs.
+
+\begin{center}Figure x (complex network, figure 4) goes here \end{center}
+
+When dealing with real social networks, there are four main limitation in both models:
+\begin{enumerate}
+    \parskip=0pt
+    \item The fully connected property of the network, which does not match
+    social networks, where people are likely to be unattached for some time;
+    \item The assumption that vertices ``actors" are equally considered for
+    rewiring or shortcut, which is not likely in the real world as the level of
+    interaction that a individual possess will not be the same for other
+    individuals;
+    \item Neither model characterise the ``ties" properties of edges, which is
+    essential to capture the social behaviour of individuals within the
+    network;
+    \item And finally, neither model provides a measurement of information
+    propagation through the network connections, essential for the statistical
+    analysis of the network efficiency.
+\end{enumerate}
+
+\subsubsection{Harmony and Efficiency of Small-World Networks}
+
+\subsection{Classes of Small-World Networks}
+
+\subsection{Epidemics in a Small-World}
+
+The spread of STDs and, in particular, HIV results from a complex network of social
+interactions and other factors related to culture, sexual behaviour, demography,
+geography and disease characteristics, as well as the availability, accessibility and
+delivery of public healthcare.
+
+Mathematical models characterising the dynamics of STD transmission indicate that
+heterogeneity in sexual activity allow them to persist even when the typical behaviour of
+the population would not support endemicity. This suggests that more attention should be
+focused on the properties of the distribution of sexual activity within a population
+\cite{Watts1998}. The nodal properties such as gender, ethnicity or relationship status
+are of fundamental importance for the formation of networks \cite{Newman2000}. In
+addition, to deal with STDs models, other network properties like concurrency, which
+allows simultaneous partnerships to be formed, play a fundamental role in epidemics on
+social networks \cite{Newman1999}.
+
+In order to accommodate differential selectivity, ``nodal properties'', sexual contacts
+behaviour ``edge properties'' and network properties such as performance and concurrency,
+fundamental for the modelling of human sexual contact network and the spread of STDs,
+I've modified the original Watts and Strogatz \cite{Watts1998} topological model as
+follows:
+\parskip=0pt
+\begin{itemize}
+    \item Relaxed the connectedness restriction;
+    \item Relaxed the fix number of edges per vertex to allow concurrency;
+    \item Added properties for each vertex based upon their population;
+    \item Added conditions that two vertices must hold in order to be connected;
+    \item Added properties for each edge in order to catch sexual behaviour changes.
+\end{itemize}
+\parskip=\baselineskip

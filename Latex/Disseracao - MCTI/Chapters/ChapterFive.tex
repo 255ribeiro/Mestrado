@@ -1,0 +1,863 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = pt_BR
+\chapter{Trabalho experimental e desenvolvimento da pesquisa}
+\label{chapter:trabalhoexperimental}
+
+
+\begin{flushright}
+  "\textit{With four parameters I can fit an elephant,\\
+  and with five I can make him wiggle his trunk.}"
+  \\(John von Neumann)
+\end{flushright}
+
+Analisando o experimento, levando-se em conta as potencialidades e limitações do ambiente de implementação e imaginando uma estratégia de trabalho, optou-se pela subdivisão do problema em três algoritmos interconectados. A Figura \ref{figura:fluxograma_geral_01} mostra como esses algoritmos relacionam-se, e como o projetista interage e manipula os parâmetros e regras para explorar as possíveis soluções do problema. Tendo por base o fluxograma apresentado na Figura \ref{figura:fluxogramametodologia}, restringindo-se porem as relações entre os algoritmos e o usuário.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.55\textwidth]{fluxograma_geral_01.jpg}
+\caption{Fluxograma Geral do Experimento}
+\label{figura:fluxograma_geral_01}
+\end{center}
+\end{figure}
+
+Comparando com o modelo teórico, mostrado na Figura \ref{figura:mod}, os componentes "Algoritmos de Geração dos Eixos" e "Algoritimo de Geração da Volumetria" controlam as "flexões possíveis do modelo geométrico"; o "Algoritmo de Análise Grafostática" corresponde à "Grafostática", marcada na área de interseção entre a Física e a Geometria no modelo teórico; ao "Projetista" cabe escolher a forma final de projeto uma otimização hibrida de objetivos quantitativos e qualitativos.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{algGeral.png}
+\caption{Captura de tela dos componentes onde os algoritmos foram implementados}
+\label{figura:algGeral}
+\end{center}
+\end{figure}
+
+As formas geradas pelo "Algoritmo de Geração dos Eixos" são usadas, junto com outros parâmetros, tanto para a geração da volumetria, quanto para a análise da estrutura. O "Algoritimo de Geração da Volumetria" é lido junto com a forma dos eixos pelo "Algoritmo de Análise Grafostática" e o conjunto dos resultados é avaliado pelo projetista para que decisões sejam tomadas. Nesta capítulo serão apresentados cada um dos algoritmos que compõem o experimento, bem como sua atuação em conjunto, validação e uma análise dos resultados obtidos.
+
+\section{Divisão da Treliça em Elementos e Nomenclatura Utilizada}
+\label{section:Nomenclaturadaviga}
+
+As treliças desenhadas pelos Algoritmos são subdivididas em elementos para manipulação e estudo. Na figura \ref{figura:Nomenclaturadaviga}(esq.)  vemos  a nomenclatura padrão dos elementos de uma treliça. Os elementos no limite superior e inferior das vigas são chamados de banzos. os elementos internos são chamados e diagonais.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{trelicanomenclatura.jpg}
+\caption{Fluxograma Geral do Experimento}
+\label{figura:Nomenclaturadaviga}
+\end{center}
+\end{figure}
+
+A mesma solução é desenhada na Figura \ref{figura:Nomenclaturadaviga}(dir.) com os seus elementos separados em 4 grupos para melhor entendimento, juntamente com a nomenclatura proposta. A treliça foi dividida em três vigas e um elemento de ligação entre estas, denominado de Conector. Este último, ao centro, liga as três vigas geradas e possui cinco elementos, quatro deles de borda, formando um quadrilátero, e um central sempre na orientação vertical, chamado de eixo do conector. Os pontos do conector de mesma coordenada $x$ são referidos como $ptX1$ (superior)  e $ptX2$ (inferior), e os de mesma coordenada $y$ foram chamados de $ptY1$ (coincidindo com o último nó do banzo superior de v1) e $ptY2$ (coincidindo com o último nó do banzo superior de v2). A viga "v3", também chamada de "viga do shed", suporta a cobertura que protege a abertura de ventilação e iluminação.  As vigas "v1" e "v2" são construídas a partir de curvas simétricas em relação ao eixo do conector. A simetria porem, so é completa se ambas apresentarem o mesmo número de diagonais e a mesma altura na porção próxima aos respectivos apoios, informações definidas entre os parâmetros de entrada do algoritmo de geração dos eixos. Nas três vigas são mostrados os elementos dos banzos e diagonais, de acordo com a ordem com que são numerados, assim como os nós.
+
+Para os banzos superiores foi adotado a nomenclatura $bs$ seguida do número, em sequência que parte do elemento mais próximo ao apoio, nos casos das vigas "v1" e "v2", e mais próximos no conector, no caso da viga "v3". A numeração vai de 0 (zero) até n-1 (sendo n o número de elementos do banzo superior de cada viga). Por fim, o nome de cada viga é acrescentado separado pelo caractere \textit{underscore}. Para os elementos do banzo superior da viga "v1" tem-se a sequência: bs0\_v1, bs1\_v1 ... bs(n-1)\_v1.
+
+Para as diagonais e banzos inferiores substitui-se o prefixo "bs" por "dg" e "bi", mantendo os mesmos critérios para o restante da nomenclatura. Para o banzo inferior tem-se :  bi0\_v1, bi1\_v1 ... bi(n-1)\_v1. Pra as diagonais :  dg0\_v1, dg1\_v1 ... dg(n-1)\_v1.
+
+Os nós são nomeados de forma semelhante aos elementos, acrescentando um "n" no prefixo:
+nbs0\_v1, nbs1\_v1 ... nbs(n)\_v1. Cada nó pode ser nomeado de duas maneiras, uma em relação ao banzo a que pertence e outra em referência a diagonal. Os nós do conector também coincidem com nós das vigas.
+
+
+
+\section{Algoritmo de Geração dos Eixos}
+\label{section:AlgorEixos}
+
+A modelagem de estruturas através dos eixos dos componentes é utilizada pela grande maioria dos métodos de cálculo e também pelas mais comuns estratégias de detalhamento e construção. O primeiro componente deste trabalho tem por principal função o desenho dos eixos dos componentes da treliça, mas também traça os eixos da cobertura, levando em conta a abertura do shed, e testa a determinação Estática da treliça gerada.
+
+\begin{figure}[!ht]
+\begin{center}
+      \subfigure[Eixos Gerados pelo Componente - \textit{Rhinoceros}]
+         {\label{figura:eixos_01_rhino}
+          \includegraphics[width=.70\textwidth]{eixos_01_rhino.jpg}
+         }
+
+        \subfigure[Componente de Geração dos Eixos - \textit{Grasshopper} ]
+           {\label{figura:eixos_01_grass}
+            \includegraphics[width=.70\textwidth]{eixos_01_grass.jpg}
+           }
+\end{center}
+\caption{Algoritmo de Geração dos Eixos}
+\label{figura:eixos_01}
+\end{figure}
+
+
+Na Figura \ref{figura:eixos_01_rhino} vemos uma solução gerada pelo algoritmo com as variáveis ajustadas como mostrado na Figura \ref{figura:eixos_01_grass}. As onze entradas (\textit{inputs}) do algoritmo e as implicações destas na forma gerada serão comentadas em seguida.
+
+
+\subsection{Parâmetro 1: Curva}
+\label{subsection:paramCurva}
+
+O primeiro parâmetro (Figura \ref{figura:eixos_01_grass}) de cima para baixo), denominado "Curva", é um dos parâmetros obrigatórios do algoritmo, e de crucial importância para o experimento. Na Figura \ref{figura:eixos_01_rhino}, vê-se um objeto descrito com o texto "Selecionado na entrada Curva". Inicia-se o trabalho desenhando uma curva no ambiente do \textit{Rhinoceros}, selecionando no componente "Crv"(Figura \ref{figura:eixos_01_grass}) que alimenta a entrada "Curva" do algoritmo.
+
+A curva define o formato dos banzos superiores da treliça. Para melhor visualização e manipulação, optou-se por mover o desenho dos eixos 10 unidades acima da curva selecionada. Isso pode ser visto na Figura \ref{figura:eixos_01_rhino}, onde a curva inicial está nomeada como 'Selecionado na entrada "Curva"'. Na citada figura, além de ser movida em 10 unidades, a curva inicial está sendo reduzida por um fator de escala definido pelo parâmetro "VigaDist". 
+
+O parâmetro aceita tanto curvas \textit{nurbs} (\textit{Non Uniform Rational Basis Spline}); quanto polilinhas, formadas por seguimentos retos e policurvas, que podem ser geradas a partir da união de arcos, curvas e retas. Uma restrição importante é quanto ao sentido de grafia da curva. Em um sistema CAD as linhas e curvas são armazenadas na ordem em que os pontos são inseridos. Para o correto funcionamento dos algoritmos, o sentido da curva deve partir do ponto inicial do banzo superior da viga "v1" e segui na direção do ponto final do banzo superior da viga "v3". No \textit{Rhinoceros} o sentido da curva pode ser visualizado pelo comando \textit{direction} e invertido pela opção \textit{flip} do mesmo comando.
+
+Esta curva é a principal ligação do método de trabalho proposto com as práticas de projeto tradicionais, e tem efeito predominante sobre o aspecto estético da treliça. A curva pode ser desenhada diretamente no \textit{Rhinoceros}, criada a partir da junção de segmentos, ou rascunhada em papel e digitalizada, seguindo a metodologia preferida do projetista.
+
+Um \textit{offset} (denominação de comando ou função existente em diversas plataformas CAD, que realiza uma cópia paralela de uma reta ou curva á uma certa distância) a 0.2 unidades da curva é gerado e nomeado como $Cob1$, representando o eixo da cobertura sobre as vigas "v1" e "v3".
+
+\subsection{Parâmetro 2: Eixo de Simetria}
+\label{subsection:paramEixosim}
+
+O segundo parâmetro opera diretamente sobre o parâmetro anterior. Sua função é definir o ponto $ptX1$, coincidente com o ponto inicial do banzo superior da viga "v3" e que é o primeiro ponto do eixo de simetria $ptX1 - ptX2$ e determina, não só o eixo do conector, mas também o eixo de simetria entre as curvas guias dos banzos superiores das vigas "v1" e "v2".
+
+O parâmetro pode receber dois tipos de entrada : um número real entre 0 e 1, ou uma reta. No primeiro caso o ponto $ptX1$ é definido pela proporção $L \times p$ onde $L$ é o comprimento total da curva inicial e $p$ o valor numérico entre 0 e 1. No segundo caso, para permitir a seleção de um ponto específico e preciso sobre a curva inicial, o ponto é determinado pela intersecção de uma reta com a curva inicial. Neste caso, a reta e a curva inicial precisam estar no mesmo plano.
+
+\subsection{Parâmetro 3: HV1}
+\label{subsection:paramHV1}
+
+O terceiro parâmetro representa a medida do segmento $ptX1 \quad ptX2$. Recebe um valor real positivo. O ponto $ptX2$ é gerado pela cópia no sentido $-y$ do plano de desenho à uma distância correspondente ao valor do parâmetro "HV1", e uma linha é traçada entre os pontos. Esta linha representa um elemento do conector, e também o eixo em que a curva inicial é dividida em duas, uma que serve de guia para o banzo superior da viga "v1", outro como guia do banzo superior de "v3". A primeira parte é espelhada em relação ao eixo do conector gerando assim a linha guia do banzo superior de "v2".
+
+As curvas guias descritas acima fazem parte das "geometrias ocultas" usadas pelo algoritmo para a geração das formas finais, e serão denominadas como $gs\_v1$, $gs\_v3$ e $gs\_v2$ respectivamente. O termo "geometrias ocultas" aqui empregado refere-se a uma série de objetos geométricos que são gerados pelo algoritmo, e representam estágios intermediários da série de passos que, ao seu final, apresentarão as geometrias que o processo tem por objetivo. Apenas as formas geométricas endereçadas à uma das saídas do componente são visualizadas pelo usuário.
+
+Um offset da curva $gs\_v2$ á 0.2 unidades é gerado e denominado como $Cob2$, representando o eixo da cobertura sobre a viga "v2". Antes de ser endereçada para a saída "Cobertura", a curva $Cob2$ é editada conforme descrito na Seção \ref{subsection:paramNoshed}.
+
+Duas geometrias ocultas são geradas após a definição do ponto $ptX2$. As distâncias entre o ponto $ptX2$ e as curvas $gs\_v1$ e $gs\_v2$ são calculadas e um \textit{Offset} de cada uma das curvas ($gs\_v1$ e $gs\_v2$) é criado de acordo com as distâncias encontradas, respectivamente referidas como $gi1\_v1$ e $gi1\_v2$, e seccionadas no ponto $ptX2$. As curvas $gs\_v1$ e $gs\_v2$ também são seccionadas, tendo o ponto sobre a corva mais próximo de $ptX2$ como ponto de corte. Esses pontos também são utilizados para o desenho das bordas do conector, o ponto sobre a curva $gs\_v1$ é o ponto $ptX1$, e o ponto sobre $gs\_v2$ é $ptX2$.
+
+Ligam-se os pontos $ptX1$, $ptY1$, $ptX2$ , $ptY2$ e fecha-se o quadrilátero no ponto inicial $ptX1$ com uma polilinha, gerando assim as bordas do conector.
+
+Um \textit{offset} da curva $gs\_v3$ é gerado, na distância ela e o ponto $ptY2$, denominada de $gi\_v3$. 
+
+
+\subsection{Parâmetros 5 e 7: HV2 e HV3}
+\label{subsection:paramHV2HV3}
+
+O parâmetro HV2 recebe um valor real maior que zero, representando a altura da viga "v1" no extremo do apoio.
+
+O parãmetro HV3 recebe um valor real maior que zero, representando a altura da viga "v2" no extremo do apoio.
+
+A altura no extremo do apoio é controlada através das curvas auxiliares $gi2\_v1$, para a viga v1, e $gi2\_v2$ em v2. Os banzos inferiores das vigas v1 e v2 são determinados com o auxilio de duas curvas guias cada. Assim como a curva guia $gi1\_v1$ (cuja criação é comentada na Seção \ref{subsection:paramHV1}), a curva $gi2\_v1$ é gerada por um \textit{offset} da curva guia do banzo superior, $gs\_v1$, a uma distância correspondente ao valor do parâmetro HV2. O mesmo vale para as curvas $gi1\_v2$ e $gi1\_v2$, gerados a partir da curva $gs\_v2$ tendo como distância o parâmetro HV3, na viga v2. 
+
+Os parâmetros HV2 e HV3 são opcionais, caso nenhum valor seja recebido por uma das entradas citadas, o valor de HV1 é usado, forçando uma viga de altura constante entre o apoio e o conector. A maneira como as linhas guias são usadas para o desenho das treliças esta descrito na Seção \ref{subsection:funcV1V2}.
+
+\subsection{Parâmetros 4, 6 e 8: diagV1, diagV2 e diagV3}
+\label{subsection:paramdiagV1diagV2diagV3}
+
+Os parâmetros diagV1, diagV2 e diagV3 definem respectivamente o número de diagonais das vigas "v1", "v2" e "v3". As entradas diagV2 e diagV3 são opcionais, caso não recebam valor  diagV2 assume o mesmo valor de diagV1 e diagV3 é carregado com o valor nove.
+
+
+\subsection{Parâmetro 9: No\_Shed}
+\label{subsection:paramNoshed}
+
+Determina em que nó da viga "v2" termina a cobertura sobre esta, e começa a abertura de iluminação e ventilação do \textit{Shed}. Recebe um valor inteiro e maior que zero. O número recebido pelo parâmetro corresponde ao ultimo nó do banzo superio de "v2" á servir de apoio para a cobertura, contado no sentido inverso, ou seja, partindo do nó mais próximo do conector, em direção ao mais próximo do apoio, no citado banzo. A curva $Cob2$ é cortada no ponto mais próximo do nó definido por No\_Shed.
+
+
+\subsection{Parâmetro 10: VigaDist}
+\label{subsection:paramVigaDist}
+
+O parâmetro VigaDist fixa o valor para o vão (distância entre apoios) da treliça. A Figura \ref{figura:paramVigaDist} apresenta duas soluções geradas sem que o parâmetro VigaDist tenha recebido um valor. Neste caso não existe distância fixa para o vão. As duas soluções foram geradas a partir da mesma curva, apresentada na parte inferior da figura, e respectivos valores de $0.60$ e $0.65$ para o parâmetro Eixo\_de\_ Simetria. Todos os demais parâmetros de entrada receberam valores iguais nas duas soluções.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{paramVigaDist.png}
+\caption{Variação do Vão em Função do Parâmetro Eixo de Simetria}
+\label{figura:paramVigaDist}
+\end{center}
+\end{figure}
+
+Já que a a curva guia $gs\_v2$ da viga "v2" é definida por um espelhamento da porção da curva inicial que se encontra antes do ponto $ptX1$, se o citado ponto encontra-se mais próximo do ponto de origem da curva inicial ($0.60$ no exemplo apresentado) as porções simétricas serão menores em relação às geradas com um ponto $ptX1$ mais distante da origem ($0.65$).
+
+Se o parâmetro VigaDist recebe um valor (um número real positivo), a curva inicial é submetida à um fator de escala definido por $ \frac{VigaDist\times 0.5}{D1}$, onde $D1$ corresponde à distancia horizontal entre o ponto $ptX1$ e o ponto de origem da curva inicial.
+Desta forma o espelhamento da curva guia $gs\_v1$ em $gs\_v2$ definirá um vão com a distância igual ao valor lido na entrada VigaDist.
+
+Embora treliças possam ser geradas sem a sua utilização, o parâmetro tem grande importância na aplicação do algoritmo em situações de projeto, visto que, na prática profissional, os vãos vencidos pela treliça são geralmente definidos pela malha de pilares e vigas em um passo anterior. Caso ocorram mudanças no espaçamento desses elementos, pode-se adaptar rapidamente o desenho da treliça.
+
+
+
+
+\subsection{Parâmetro 11: Plano}
+\label{subsection:paramPlano1}
+
+O parâmetro Plano, como o nome sugere, define o plano em que a curva inicial é desenha e , portando , o desenho dos eixos das soluções será gerado. Caso não receba nenhum valor, o algoritmo considera as coordenadas $XY$ do ambiente do \textit{Rhinoceros} como plano de desenho. 
+
+
+\subsection{Função 01: Geração dos Eixos das Vigas v1 e v2}
+\label{subsection:funcV1V2}
+Uma função foi pensada para o desenho dos eixos das vigas "v1" e "v2". As entradas da função são:
+
+
+\begin{itemize}
+\item A linha guia do banzo superior $gs\_v1$ ou $gs\_v2$, aqui chamado simplesmente de $gs$.
+\item O número de diagonais, $dn$.
+\item A distância HV1.
+\item A distância HV2 ou HV3, dependendo de qual viga esteja sendo desenhada, identificada aqui como HV2.
+\item O ponto $ptX2$ é passado como ponto de referência para orientação de direções de desenho. 
+\end{itemize}
+
+Duas curvas auxiliares são construídas com o intuito de servirem como guias para o desenho do banzo inferior. Um \textit{offset} da cuva $gs$ na distância HV1, denominada $g1$, e outro , da mesma curva, com a distância HV2, referida como $gi2$.
+
+Sendo $N$ o número e diagonáis, a linha guia do banzo superior é dividida em $2 \times N$.
+gerando uma lista de pontos. O primeiro ponto é movido na distância HV2 e retirado da lista. A lista de pontos ainda deve ser reduzida a $0.5 \times N$. isso é feito através de uma máscara binária na forma (False , True , False, False). Essa lista é aplicada em \textit{loop} até o último elemento da lista de pontos gerando a lista $ptB1$.
+
+A estratégia de dividir o banzo em um número maior de partes e reduzir permite afastar o ponto inicial do banzo superior do apoio no banzo inferior de forma a gerar um desenho melhor distribuído das diagonais. a proporção foi encontrada através de testes e alterações no código fonte.
+
+O ponto de apoio é o primeiro a ser incorporado para a lista de pontos do banzo inferior. Os demais pontos são gerados pelo seguinte processo:
+
+Uma linha é traçada entre os pontos consecutivos da lista do banzo superior. O ponto médio dessas linhas é encontrado e utilizado para calcular os pontos sobre as curvas $gi1$ e $gi2$
+mais próximos deste ponto médio. Uma linha auxiliar liga os pontos sobre as curvas no sentido $gi2$, $gi1$. Um ponto escolhido sobre a linha auxiliar na proporção $\frac{d}{l} = \frac{D}{L}$ onde $l$ é o comprimento total da linha auxiliar, $d$ a distância entre o ponto inicial da linha auxiliar e o ponto a ser escolhido, $D$ é o comprimento da curva $gi2$ até o ponto a partir de onde foi traçada a linha auxiliar e $L$ o comprimento total da curva $gi2$. Com a curva $gi2$ e a linha auxiliar traçadas pelos métodos acima descritos, nota-se que a única incógnita desta equação é $d$. Quanto mais próximo do ponto inicial da curva $gi2$ se encontrar a linha auxiliar, mais próximo da origem da citada linha estará o ponto escolhido, portanto mais próximo do valor de HV2. A medida que os pontos se distanciam da origem de $gi2$, se aproximarão da curva $gi1$, onde se encontra o ponto final da linha auxiliar, convergindo, portando, á distância HV1.
+
+Com o nó dos dois banzos definidos, o desenho da viga é uma questão de manipulação e criação de polilinhas entre eles.
+
+\subsection{Função 02: Geração dos Eixos da Viga v3}
+\label{subsection:funcV3}
+
+Uma função foi pensada para o desenho dos eixos da viga "v3", também chamada de viga do \textit{shed}. As entradas da função são:
+
+\begin{itemize}
+\item A linha guia do banzo superior $gs\_v3$.
+\item O número de diagonais, $dn$.
+\item O ponto $ptX2$ é passado como ponto de referência para orientação de direções de desenho. 
+\end{itemize} 
+
+O processo é semelhante ao de geração das vigas "v1" e "v2". Apenas um \textit{offset} da curva $gs\_v3$ é criada, com a distância entre o ponto $ptY2$ e a citada curva. As linhas auxiliares são traçadas entre as duas curvas e o ponto sobre as linhas são encontrados pela fórmula  $\frac{d}{l} = \frac{D}{L} \times 0.75$. Desta forma os pontos mais distantes da origem das curvas (na proximidade do conector) apresenta ums solução para o valor de $d$ próximos à zero. Aproximando-se do final da curva, a distância entre os banzos aproximasse de $0.75 \times $ a distância do \textit{offset}. 
+
+\subsection{Teste de Determinação Estática}
+\label{subsection:detEstatica}
+
+Como descrito na Seção \ref{section:determinacaoestatica}, duas características e uma condição de igualdade deve ser satisfeitas para verificar a isostaticidade de treliças. As características são analisadas pela inspeção visual das formas. Depois do desenho dos eixos, é bastante simples extrair o número de nós e barras, e a igualdade pode ser checada por uma condicional (\textit{if}) é um aviso de "determinação estática", juntamente com os valores de $m$ e $j$ é impresso na saída \textit{out}. O algoritmo de geração dos eixos foi pensado de forma a gerar sempre treliças que atendam a igualdade, portanto o teste condicional serve apenas para provar que este aspecto da determinação estática é sempre atingido. As duas características da forma, entretanto, devem ser observadas sempre que houverem alterações na geometria dos eixos. Tendo como principal elemento de definição uma curva as implicações das sinuosidades no desenho das peças deve ser levado em cota e observado a cada caso. O objetivo do algoritmo é desenhar treliças coerentes com critérios construtivos, a combinação de parâmetros que resultam em grandes distorções dos elementos da treliça deve ser devidamente analisado e, sendo o caso, descartado.
+
+Imaginando-se uma tangente à curva inicial no ponto de interseção com o eixo de simetria, nota-se que, quando a inclinação da tangente se aproxima dos $45 \textdegree $, as bordas do conector se aproximam de um quadrado. Quando a referida inclinação se aproxima de $0 \textdegree $ ou $90 \textdegree $, a tendência é que o algoritmo distorça o conector e a viga do \textit{shed}, falhando em produzir uma treliça válida.
+
+\subsection{Saídas do Algoritmo}
+\label{subsection:eixosSaida}
+
+\begin{itemize}
+\item \textbf{Out :} uma saída padrão dos componentes programáveis. É possível mostrar resultados e textos através dos comandos de exibição de texto (comando \textit{print}). O teste de determinação Estática é mostrado na saída do componente.
+\item \textbf{Cobertura :} linhas de eixo da cobertura são mostradas através desta saída.
+\item \textbf{Eixos :} os eixos dos elementos da treliça.
+\item \textbf{Plano :} retorna o plano utilizado para a construção do desenho dos eixos.
+\end{itemize} 
+
+
+\section{Algoritmo de Geração da Volumetria}
+\label{section:AlgorVolumetria}
+
+Devido a grande importância dos eixos da treliça, tanto para o cálculo, quando para o detalhamento e execução, optou-se pelo componente específico para sua implementação. Um dos maiores benefícios de se usar computação gráfica para projetos é a possibilidade de visualizar em 3D as formas em estudo. Enquanto no espaço bidimensional do papel, os volumes podem ser vistos apenas sob um angulo de visão para cada perspectiva desenhada, os ambientes computacionais, a partir da definição do conjunto de objetos tridimensionais, permitem a análise de suas formas por todos os ângulos possíveis pela simples variação do ponto de observação. 
+
+\begin{figure}[!ht]
+\begin{center}
+      \subfigure[Volumes Gerados pelo Componente - \textit{Rhinoceros}]
+         {\label{figura:rhinoVolume}
+          \includegraphics[width=.8\textwidth]{rhinoVolume.png}
+         }
+
+        \subfigure[Componente de Geração dos Volumes - \textit{Grasshopper} ]
+           {\label{figura:grassvolume}
+            \includegraphics[width=.8\textwidth]{grassVolume.png}
+           }
+\end{center}
+\caption{Algoritmo de Geração dos Eixos}
+\label{figura:volumes_01}
+\end{figure}
+
+Apesar de, através dos eixos, ser possível imaginar as dimensões, proporções e volumes, o modelo tridimensional é a forma mais completa e direta de se analisar os rebatimentos técnicos e estéticos, como pode ser visto na Figura \ref{figura:rhinoVolume}. As dimensões e distâncias necessárias para transformar os eixos bidimensionais em um volume são as mesmas variáveis que seriam necessárias para a determinação das cargas usadas no cálculo das reações devido ao carregamento e peso próprio da estrutura. Por conta disto, optou-se por realizar os cálculos das citadas cargas também neste componente(Figura \ref{figura:grassvolume}).
+
+\subsection{Parâmetro 1: Mostrar Volume}
+\label{subsection:volParmam_Mostrar_volume}
+
+O primeiro parâmetro recebe um valor booleano: verdadeiro (\textit{True}) ou falso (\textit{False}). Funciona como um controle de exibição e, mais especificamente, como um controle de fluxo do algoritmo. Quando o valor inserido é \textit{True}, ou quando nenhum valor é recebido pela entrada do componente, a geometria 3D é calculada e exibida. Quando o valor é \textit{False}, não so os volumes não são mostrados, mas todo o código utilizado para sua geração é ignorado. A bateria ligada à entrada "Mostrar\_volume" é denominada \textit{Boolean Toggle} e permite a rápida alteração entre os valores \textit{True} e \textit{False} por um duplo clique. Esse controle permite tanto a alternância entre visualizações do volume e dos eixos, quanto a economia de recursos computacionais. Ainda que o tempo de processamento não seja elevado, a economia de alguns segundos na execução dos componentes pode proporcionar um conforto maior para o trabalho em um ambiente \textit{CAD}.
+
+As cargas e áreas dos elementos, contudo, são sempre calculadas, independentemente do valor lido pela entrada "Mostrar\_volume".
+
+\subsection{Parâmetro 2: N\_Tr}
+\label{subsection:volParmam_N_Tr}
+
+O parâmetro N\_Tr recebe um valor inteiro e maior que zero. Controla quantas treliças serão geradas. É um recurso de visualização, permitindo analisar um trecho da cobertura onde o  número de treliças pretendido é gerado. 
+
+\subsection{Parâmetro 3: Cobertura}
+\label{subsection:volParmam_Cobertura}
+
+Recebe os eixos das coberturas gerados pelo componente do algoritmo de geração dos eixos.
+
+\subsection{Parâmetro 4: Eixos}
+\label{subsection:volParmam_Eixos}
+
+Recebe os eixos dos elementos da treliça (vigas "v1", "v2" ,"v3" e conector) gerados pelo componente do algoritmo de geração dos eixos.
+
+\subsection{Parâmetro 5: Dist\_entre\_eixos}
+\label{subsection:volParmam_dist_Entre_Eixos}
+
+A distância entre eixos de duas treliças adjacentes da cobertura. Determina também, juntamente com as curvas da cobertura, a área de influência da cobertura sobre a treliça.
+
+\subsection{Parâmetro 6: Peso\_cobertura}
+\label{subsection:volParmam_Peso_cobertura}
+
+O peso estimado da cobertura por unidade de área. Caso nenhum valor seja recebido, adota a estimativa de $20 \quad Kg/m^{2}$.
+
+\subsection{Parâmetro 7: Peso\_esp\_Tr}
+\label{subsection:volParmam_Peso_esp_tr}
+O peso específico do material da treliça. Caso não receba valor, é adotado o peso específico do aço: $7800 \quad Kg/m^{3}$.
+
+\subsection{Parâmetro 8: Fator\_de\_Conv}
+\label{subsection:volParmam_fatorConv}
+Fator que converte as unidades de massa em unidades de força. Como o quilograma é usado como padrão, caso o parâmetro não receba valores, é utilizado o valor de 10, que converte as unidades para Newtons (o valor de $10 \quad m/s^{2}$ é a aproximação da aceleração da gravidade amplamente adotada no cálculo de estruturas).
+
+\subsection{Parâmetros 9 e 10: Diag\_e e Diag\_l}
+\label{subsection:volParmam_diag}
+Respectivamente a espessura e largura dos elementos das diagonais
+
+\subsection{Parâmetros 11 e 12: Bz\_e e Bz\_l}
+\label{subsection:volParmam_BZ}
+
+Respectivamente a espessura e largura dos elementos dos banzos. Caso o parâmetro Bz\_l não receba valor, é adotado o mesmo valor de Diag\_l.
+
+
+\subsection{Parâmetro 13: Plano}
+\label{subsection:volParmam_Plano}
+
+Plano do de desenho dos eixos da Treliça. Igual ao parâmetro de mesmo nome do componente de geração dos eixos.
+
+\subsection{Função 01: Geração dos volumes}
+\label{subsection:volParmam_func01}
+Uma função foi pensada para o desenho dos volumes dos elementos e da cobertura. As entradas da função são:
+
+\begin{itemize}
+\item Os eixos dos elementos.
+\item A espessura dos elementos, $e$.
+\item A largura dos elementos, $l$.
+\end{itemize}
+
+A função cria uma cópia do eixo a uma distância  $l/2$ na direção -Z, em relação as coordenadas XYZ do plano de desenho. A partir da cópia do eixo, são gerados dois \textit{offsets} no plano de desenho com distância $e/2$ nas duas direções. Uma superfície é gerada tendo como bordas os dois \textit{offsets}. A superfície é transformada em um sólido sendo extrudado com uma dimensão $l$ na direção Z do sistema de coordenadas XYZ do plano de desenho.
+
+Os elementos dos banzos e das diagonais são separados e recebem os respectivos valores de espessura e largura. O volume do conector é gerado pelos mesmos valores atribuídos aos banzos. A cobertura recebe a distância entre eixos das vigas como largura e um valor fixo de $0.01 \quad m$ (um centímetro) como espessura. Assim todos os volumes são gerados de forma esquemática, porem suficiente para a visualização e interpretação dos objetos a serem construídos.
+
+\subsection{Funções 02 e 03: Cargas}
+\label{subsection:volParmam_cargas}
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{VolumeCargas.png}
+\caption{Ilustração do Cálculo das Cargas}
+\label{figura:VolumeCargas}
+\end{center}
+\end{figure}
+
+Duas funções são responsáveis pela definição das cargas nos nós superiores da treliça. Uma calcula as cargas nas vigas "v1" e "v2", e outro para a viga "v3". A Figura \ref{figura:VolumeCargas} mostra os critérios usados para determinar as cargas provenientes do peso próprio e do carregamento da cobertura. As linhas azuis representam a direção das cargas (sempre com o sentido da gravidade) as brancas a treliça e as curvas vermelhas a cobertura. O mecanismo básico das funções é separar os elementos de acordo com a proximidade à cada nó. Os banzos superiores são divididos ao meio e esses pontos servem de referência para a divisão da cobertura em trechos que tem maior influência sobre o nó analisado. O comprimento de cada elemento é multiplicado pela área de sua respectiva seção, e este resultado é multiplicado pelo peso específico do material da treliça. As curvas dos eixos das coberturas tem seu comprimento multiplicado pelo parâmetro " Dist\_entre\_eixos" e pelo peso por $m^{2}$ da cobertura.
+
+Os estremos de cada treliça são analisados de acordo com suas particularidades. Nas extremidades próximas ao conector o número (par ou impar) de diagonais em cada treliça é levado em conta, como ilustrado na Figura \ref{figura:VolumeCargas}.
+
+\subsection{Funções 04 e 05: Áreas e Momentos de Inércia Mínimos}
+\label{subsection:areasInercia}
+
+Para a espessura e largura de cada uma das peças, uma função calcula as áreas das seções planas das peças. Esses valores são passados para a saída \textbf{Areas} em forma de uma lista, na sequência [Banzo, Diagonal].
+
+Uma função calcula os momentos de inércia das seções planas dos banzos e diagonais. Para cada elemento é aplicada a fórmula do cálculo para seções quadradas (Equação \ref{equacao:inerciaquad}). Alternando os valores de espessura e largura como base $b$ e altura $h$ para cada peça. 
+
+\begin{equation}
+\label{equacao:inerciaquad}
+I = \frac{ b \times h ^ 3}{ 12 }
+\end{equation}
+
+Os resultados são comparados e a função retorna o menor valor encontrado para os banzos e o menor para as diagonais. Uma lista na mesma sequência da de áreas é gerada e direcionada também para a saída \textbf{Areas}, que acaba por fornecer para o componente de análise, não só a medida quadrada da superfície, como uma importante propriedade da seção plana dos elementos.
+
+\subsection{Saídas do Algoritmo}
+\label{subsection:volParmam_saidas}
+
+\begin{itemize}
+\item \textbf{Out :} Mostra o peso próprio total da treliça e a carga total da cobertura. 
+\item \textbf{Tr\_3D :} O modelo tridimensional da treliça e do trecho da cobertura que representa a área de influência sore a treliça.
+\item \textbf{Tr\_copias} As cópias da treliça e da área de influência da cobertura.
+\item \textbf{Cargas :} Lista com as cargas em cada nó, ordenadas por viga e na numeração crescente dos nós do banzo superior
+\item \textbf{Areas :} Uma lista com a área dos elementos dos banzos e diagonais da treliça e os respectivos momentos de inercia mínimos para cada seção.
+\end{itemize}
+
+
+\section{Aplicação e Validação Dos Algoritmos de Geração dos Eixos e dos Volumes}
+\label{section:AlgorEixoVolValida}
+
+Como estabelecido anteriormente, o conceito de Algoritmo Generativo aplicado à Arquitetura está ligado tanto a capacidade do algoritmo de gerar formas à serem construídas, quanto à ideia de se estabelecer um método de trabalho propício à aplicação em projetos. Nos objetivos da pesquisa foi posto que o experimento deveria resultar em uma ferramenta de trabalho e uma metodologia de atuação. A maneira mais eficaz de se explicar um método de trabalho é mostrando-o. A variedade de treliças válidas é vasta, isso porém, não significa que qualquer curva ou configuração de parâmetros resultará necessariamente em uma treliça válida. A experiência do projetista deve guiar o processo para que as formas geradas resultem em proposta para construção.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=.9\textwidth]{comparaMercadoAlg.png}
+\caption{Comparação entre a treliça do Mercado São Miguel e a gerada pelo algoritmo}
+\label{figura:comparaMercadoAl}
+\end{center}
+\end{figure}
+
+As formas geradas pelos algoritmos foram inspiradas ne treliça de cobertura do projeto do Mercado São Miguel. A primeira experiência realizada foi a de ajustar os parâmetros para aproximar as formas do algoritmo o máximo possível do desenho que o inspirou. A Figura \ref{figura:comparaMercadoAl} mostra as linhas usadas como entrada (dir. abaixo), a treliça gerada pelo algoritmo (dri. acima), um detalhe do \textit{shed} do projeto do mercado (esq. acima), e as configurações dos parâmetros do algoritmo (esq. abaixo). Algumas simplificações foram adotadas no desenho, principalmente na viga "v3", mas também nos extremos próximos aos apoios banzos superiores de "v1" e "v2". Um eixo foi adicionado ao conector dividindo-o em dois triângulos. A justificativa para essas mudanças estão na intenção de se gerar treliças isostáticas, passiveis de análise estrutural pelos métodos escolhidos.
+
+\begin{figure}[!h]
+\begin{center}
+  \mbox{
+      \subfigure[]
+         {
+            \label{figura:trelicaeixos01}
+            \includegraphics[width=0.45\textwidth]{trelicaeixos01.png}
+         }
+         
+         
+         
+
+        \subfigure[]
+           {
+              \label{figura:trelica3d01}
+              \includegraphics[width=0.45\textwidth]{trelica3d012.png}
+           }
+         }
+         
+  \mbox{
+           \subfigure[]
+                      {
+                         \label{figura:trelicaeixos02}
+                         \includegraphics[width=0.45\textwidth]{trelicaeixos02.png}
+                      }
+                      
+                      
+           \subfigure[]
+                                 {
+                                    \label{figura:trelica3d02}
+                                    \includegraphics[width=0.45\textwidth]{trelica3d02.png}
+                                 }
+    }
+ 
+ 
+ \mbox{
+            \subfigure[]
+                       {
+                          \label{figura:trelicaeixos03}
+                          \includegraphics[width=0.45\textwidth]{trelicaeixos03.png}
+                       }
+                       
+                       
+            \subfigure[]
+                                  {
+                                     \label{figura:trelica3d03}
+                                     \includegraphics[width=0.45\textwidth]{trelica3d03.png}
+                                  }
+     }
+
+ \mbox{
+            \subfigure[]
+                       {
+                          \label{figura:trelicaeixos04}
+                          \includegraphics[width=0.45\textwidth]{trelicaeixos04.png}
+                       }
+                       
+                       
+            \subfigure[]
+                                  {
+                                     \label{figura:trelica3d04}
+                                     \includegraphics[width=0.45\textwidth]{trelica3d04.png}
+                                  }
+     }
+\end{center}
+\caption{Variações na Geração de Treliças}
+\label{figura:exemploTrelicas}
+\end{figure}
+
+
+Outro aspecto da validação é a capacidade de gerar soluções alternativas para o projeto. Os passos necessários para se desenhar e explorar as possíveis soluções foram registrados em vídeos.O primeiro, \href{https://www.youtube.com/watch?v=hgHxjgR4OGs}{02 - Modo de trabalho 01}, mostra aspectos básicos do desenho assistido pelo algoritmo generativo. O segundo desta série, \href{https://www.youtube.com/watch?v=OHUYTQkkLFs}{03 - Modo de trabalho 02}, mostra o funcionamento dos parâmetros obrigatórios, o vídeo seguinte, \href{https://www.youtube.com/watch?v=ArcR9vWXesY}{04 - Modo de trabalho 03}, apresenta os opcionais e, em sequência, o vídeo \href{https://www.youtube.com/watch?v=kIoJBWcv7aM}{05 - Modo de trabalho 04} enfatiza as atividades de desenho e redesenho da curva inicial como ferramenta de criação de formas.
+
+
+\begin{figure}[!ht]
+\begin{center}
+      \subfigure[Treliça Gerada por Polilinha Reta no Parâmetro da Curva Inicial]
+         {\label{figura:trelicaReta}
+          \includegraphics[width=.8\textwidth]{trelicaReta.png}
+         }
+
+        \subfigure[treliça Gerada por Retas e Curva no Parâmetro da Curva Inicial]
+           {\label{figura:trelicaAssimet}
+            \includegraphics[width=.8\textwidth]{trelicaAssimet.png}
+           }
+           
+        \subfigure[Treliça com 'Abas' Curvadas]
+           {\label{figura:trelicaAbaCurva}
+            \includegraphics[width=.8\textwidth]{trelicaAbaCurva.png}
+           }
+           
+        \subfigure[Treliça 'Tunel']
+           {\label{figura:trelicaTunel01}
+            \includegraphics[width=.8\textwidth]{trelicaTunel01.png}
+           }
+           
+\end{center}
+\caption{Outros Exemplos de Variações na Geração de Treliças}
+\label{figura:outrastrelicas}
+\end{figure}
+
+
+Construções que levam à falha do algoritmo foram apresentadas na Seção \ref{subsection:detEstatica}. Estas representam limitações do código e não necessariamente falhas do SGP. Se uma quantidade considerável de alternativas pode ser rapidamente explorados no processo, pode-se afirmar que o sistema cumpriu seu papel.
+
+A Figura \ref{figura:exemploTrelicas} mostra rebatimentos de flexões dos parâmetros na geração de formas. Os exemplos apresentados são apenas um pequeno conjunto de variações possíveis, baseada em um conceito de cobertura que foi traduzido em algoritmo de geração de formas associado à uma estratégia de trabalho. Juntando os exemplos das imagens e as estratégias e recursos de desenho apresentado nos vídeos, é possível vislumbrar a criação de incontáveis variações de um mesmo tema. A Figura \ref{figura:outrastrelicas} apresenta quatro direcionamentos diferentes para o desenho das formas, encontradas a partir da exploração de possíveis entradas no parâmetro da curva inicial. 
+
+
+
+\section{Algoritmo de Análise Grafostática}
+\label{section:AlgorGrafostatica}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=1\textwidth]{grafostaticagrass.png}
+\caption{Componente de Análise Grafostática}
+\label{figura:grafostaticagrass}
+\end{center}
+\end{figure}
+
+Em linhas gerais, o algoritmo de análise grafostática recebe informações sobre a geometria, as cargas, características dos materiais e coeficiente de segurança adotado no projeto, e calcula as tensões nos elementos das barras. Algumas simplificações foram adotadas na execução do cálculo. A principal é considerar a treliça o que é definido por \citeonline[p. 83]{johnson1908} como treliça ideal. Consistindo em uma estrutura onde: o atrito nas articulações pode ser desconsiderado, que o peso das barras seja modelado considerando que este atue apenas nas suas extremidades e que outras cargas sejam aplicadas exclusivamente nas articulações. Partindo dessas assunções, o autor conclui que apenas compressão e tração pura atuam nos elementos.
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{Cargas_grafo.jpg}
+\caption{Carregamento da Treliça}
+\label{figura:grafostaticaCargas}
+\end{center}
+\end{figure}
+
+A relevância dos deslocamentos na posição dos nós e provocados pelas deformações foi, ao longo da história do cálculo, desconsiderada na investigação de treliças cuja geometria proporciona maior rigidez do conjunto. Uma lista ilustrada de algumas dessas geometrias pode ser vista em \citeonline[p. 67]{malcolm2009}. A treliça em questão não pertence a nenhum dos tipos definidos pela literatura. Sendo gerada a partir de uma curva, simplificada em uma série de seguimentos de reta, a forma da curva inicial é responsável, tanto pela leitura estética particular presente em cada uma das possíveis soluções, quanto pela maior ou menor suscetibilidade à deformações do conjunto inteiro. Além das deformações, os esforços proveniente da ação dos ventos, as cargas móveis (e.g. funcionários de manutenção transitando pela cobertura), a análise dinâmica das vibrações que podem afetar a estrutura, as forças sísmicas, entre outras, são desconsideradas.  
+
+A aplicabilidade do algoritmo está direcionada á fase de projeto ligada à definição das formas e pré dimensionamento dos elementos. Na sequencia tradicional da elaboração de projetos, a definição das necessidades da edificação é sucedida por esboços genéricos da relação entre os espaços e o todo. Esses conceitos traduzidos em desenhos são sequencialmente desenvolvidos e, a medida que as formas vão se transformando em detalhes, estes últimos são confrontados com o todo e entre si, com o objetivo de minimizar interferências e resolver conflitos entre elementos de projeto. O fluxo de trabalho raramente é linear. Na busca pela otimização (quantitativa e qualitativa) do projeto não é raro que desenhos anteriormente definidos sejam alterados em prol da harmonia entre as partes.
+
+A Figura \ref{figura:grafostaticagrass} mostra o carregamento da treliça, calculado pelo componente responsável também pela volumetria das treliças e grafado por linhas em escala definida pelo algoritmo de análise. Dois critérios de simplificação foram usados na definição das cargas.
+
+O primeiro, relativo ao peso próprio da estrutura, assume que as cargas podem ser consideradas atuantes apenas nos nós do banzo superior. essa simplificação é largamente reconhecida e aplicada em modelos de cálculo estrutural. Suficiente para dimensionamento e, por conseguinte, para o almejado pré dimensionamento. Quando calculado por sistemas computacionais de cálculo, contudo, pela natureza \textit{black box} da maioria das ferramentas adotadas pelo mercado, é impreciso afirmar que critério semelhante tenha sido adotado ou não.
+
+O segundo critério de simplificação diz respeito ao pontos de aplicação das cargas provenientes da cobertura. A modelagem de cargas mais próxima do real deveria levar em conta a localização das peças da cobertura que transmitem os carregamentos para a treliça, denominadas terças. Uma gama de possibilidades construtivas pode solucionar a questão, mas não necessariamente teremos uma terça à cada nó. Levando em conta as treliças que serviram de inspiração para este trabalho, a cobertura seria formada por telhas metálicas em folhas curvadas por um equipamento industrial conhecido como calandra. Os critérios de locação das terças levam e conta a posição dos nós do banzo superior e o vão útil máximo das folhas da cobertura. Para atender as necessidades de um dimensionamento preliminar entretanto, a definição dos pesos da cobertura divididos por todos os nós do banzo superior é aceitável e suficiente.
+
+
+\begin{figure}[!h]
+\begin{center}
+\mbox{
+      \subfigure[Forma Geométrica - Shed]
+         {\label{figura:FgShed01}
+          \includegraphics[width=.5\textwidth]{FgShed01.jpg}
+         }
+
+        \subfigure[Polígono de Forças - Shed]
+           {\label{figura:Pfshed01}
+            \includegraphics[width=.5\textwidth]{Pfshed01.jpg}
+           }
+      }
+\end{center}
+\caption{Diagramas Recíprocos do Shed (viga v3)}
+\label{figura:DiagRecipShed}
+\end{figure}
+
+Para a realização da análise, a treliça foi dividida em duas partes: a primeira, mostrada na Figura \ref{figura:DiagRecipShed}, vemos que o \textit{shed} foi isolado das demais partes e, nos pontos onde descarrega sobre o conector, duas reações ($RA$ e $RB$) são calculadas. Considerando que apenas tração ou compressão pura atua nas barras, o desenho das treliças com seus carregamentos e reações representa completamente o diagrama da forma geométrica ( Figura \ref{figura:FgShed01}) e o reciproco polígono de forças aparece representado na Firura \ref{figura:Pfshed01}.
+
+Enquanto no PF apenas a nomenclatura dos elementos, carregamentos e reações é anotada, na FG a nomenclatura é acompanhada pelo valor da tração ( sinal positivo ) ou compressão (sinal negativo) atuante no elemento. A viga do \textit{shed} é abordada como uma estrutura em balanço, e sua solução segue os algoritmos de desenho descritos na Seção \ref{section:trelicaBalGarfo} para resolução de treliças em balanços com dois pontos de apoio.
+
+\subsection{Definição do Sentido de Seleção das Linhas de Ação}
+\label{subsection:DesenhoDiagrecip}
+
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{sentidografo.png}
+\caption{Sentido de Seleção das Forças}
+\label{figura:sentidografo}
+\end{center}
+\end{figure}
+
+A definição de um sentido (conforme descrito na Seção \ref{section:Sentido_select}), de natureza intuitiva para a percepção humana, necessita de uma estratégia para o apropriado funcionamento no algoritmo. A Figura \ref{figura:sentidografo} ilustra como os sentidos de desenho são escolhidos pelo algoritmo. O critério utilizado baseia-se na direção da curva inicial (em azul). Um círculo (em vermelho) é desenhado através de três pontos na seguinte ordem: o apoio da viga "v1", o ponto $ptX1$ e o apoio na viga "v2". Recordando que a curva inicial tem obrigacionalmente direção partindo do ponto de apoio da viga "v1", seguindo para o ponto vinal da viga "v3", caso essa curva seja desenhada da esquerda para a direita, a seleção dos três pontos gera um círculo no sentido horário, no caso inverso, no sentido anti-horário como pode ser visto na Figura \ref{figura:sentidografo} onde as setas (em branco) indicam o sentido de desenho dos círculos e das curvas iniciais. As forças externas são ordenadas sempre segundo o mesmo critério: para a viga "v3" seguem a ordem crescente de sua numeração. para as vigas "v1" e "v2" seguem ordem crescente para "v1", seguindo pela carga $P0\_v3$ somada com a reação $RB$ da treliça do\textit{shed}, e ordem decrescente para "v2" (a carga no último nó de "v2" é somada com a reação $RA$ da viga do \textit{shed}). Os círculos fazem parte das geometrias invisíveis e não são grafados no ambiente do \textit{Rhinoceros} pelo algoritmo, mas servem como parâmetro para as funções que ordenam as forças em cada nó.
+
+\subsection{Método Grafostático Aplicado à Viga do \textit{Shed}}
+\label{subsection:grafostaticaShed}
+
+A viga do \textit{shed} é resolvida pela implementação do algoritmo descrito na Seção \ref{section:trelicaBalGarfo}. Os vídeos \href{https://www.youtube.com/watch?v=0fDi8jLN1lU}{06 - Shed impar pt1}, \href{https://www.youtube.com/watch?v=7SpKQBZAAAs}{07 - Shed impar pt2}, \href{https://www.youtube.com/watch?v=kN73jWCeSZg&list=UUCkMaRdD7PBWhs4JgH5s6_w}{08 - Shed par pt1} e \href{https://www.youtube.com/watch?v=ErmTKx63AZI&list=UUCkMaRdD7PBWhs4JgH5s6_w}{09 - Shed par pt2} em anexo são ao mesmo um recurso didático para auxiliar a explicação dos métodos utilizados, como importante instrumento de validação dos resultados. A ideia consiste na consciência da Grafostática se tratar de um campo da ciência devidamente comprovado e descrito desde meados do século XIX. Estes métodos são formulações gráficas dos princípios da mecânica clássica que, no escopo e aplicações requisitadas pela engenharia das estruturas, permanece incontestavelmente coerente e eficiente. As operações gráficas modeladas em algoritmo foram testadas manualmente e sequencialmente nos vídeos apresentados e a ordem de suas operações conferidas nos diversos materiais bibliográficos citados. Ao final dos vídeos, os resultados do desenho manual é validado e se mostra coerente com a pesquisa bibliográfica e os diagramas gerados pelo algoritmo são sobrepostos perfeitamente, mostrando que a sequência de operações realizadas pelo algoritmo está de acordo com as regras estabelecidas pela Estática Gráfica.
+
+\begin{figure}[!ht]
+\begin{center}
+\mbox{
+      \subfigure[\textit{Shed} com Número Impar de Diagonais]
+         {\label{figura:shedImpar}
+          \includegraphics[width=.5\textwidth]{shedImpar.png}
+         }
+
+        \subfigure[\textit{Shed} com Número Par de Diagonais]
+           {\label{figura:shedPar}
+            \includegraphics[width=.48\textwidth]{shedPar.png}
+           }
+      }
+\end{center}
+\caption{Resolução de Reações em \textit{Sheds} com Números Pares e Impares de Diagonais}
+\label{figura:shedparimpar}
+\end{figure}
+
+Os procedimentos para determinação das reações para diferentes números de diagonais respondem ás mesmas premissas, porem foram testados e apresentados em sequencias distintas, afim de validar os dois caminhos previstos no algoritmo. A Figura \ref{figura:shedparimpar} mostra a FG de uma treliça do \textit{shed} com número impar(Figura \ref{figura:shedImpar} ) e com número par de diagonais (Figura \ref{figura:shedPar} ). Os primeiros passos, nos dois casos, consistem em transpor os vetores das cargas para o PF, com exceção da força $P0\_v3$, cuja ação é considerada diretamente sobre o conector. Na Figura \ref{figura:Pfshed01} pode-se ver as forças $P1\_v3$ à $P4\_v3$ da treliça com sete diagonais mostrada na Figura \ref{figura:FgShed01}. Com as forças em posição de soma, um polo é definido e os raios polares são traçados. Com as direções dos raios polares traça-se o funicular na FG. Fechando o funicular, um ponto da resultante dos carregamentos é definido, a direção da força é a mesma da soma grafada no PF. na Figura \ref{figura:shedparimpar} as linhas vermelhas representam as respectivas resultantes na FG. Assim como no método analítico, as resultantes são calculadas pela adoção de um momento nulo na estrutura, portanto a resultante e as duas reações ( em azul) devem se anular. No caso de treliças impares temos a reação $RB$ definida em direção, no outro caso, a reação $RA$ é definida. Estende-se então a reação definida em direção até o seu ponto de interseção com a linha de ação da resultante, para a definição da direção da reação restante, liga-se o ponto de aplicação desta até o ponto de interseção encontrado.
+
+Com as direções definidas, deve-se então utilizar o sentido de seleção para determinar a posição das forças no PF. Pelo sentido horário, partindo da força conhecida (resultante) obtemos a ordem, $RA$ e $RB$. Na Figura \ref{figura:Pfshed01} tem-se, portanto a reação $RA$ posicionada no extremo final da soma das cargas e $RB$ no ponto inicial. Estendendo cada uma das direções até o ponto de interseção delas, defini-se a magnitude das reações na escala adotada.
+
+Os sentidos são atribuídos automaticamente pelo algoritmo. A reação $RA$ combate a compressão e reage no sentido acendente, e $RB$ descendente. Em ambos os casos uma das barras da treliça é determinada imediatamente como igual e contrária a uma das reações. No caso de número impar de diagonais, a reação $RB$ se anula com  o primeiro elemento do banzo superior e no caso par, $RA$ e o primeiro elemento do banzo inferior são iguais e opostas.
+
+A sequencia de resolução das demais barras é definida pela literatura pelos nós das diagonais pela sua numeração crescente. Para cada nó o sentido das forças é definido e os elementos já conhecidos são seguidos em ordem pelo algoritmo encontrando os pontos inicial e final do polígono aberto. A primeira das forças desconhecidas parte do ponto final até o ponto de interseção com a direção da segunda força desconhecida, com direção que começa no mesmo ponto de interseção até o ponto inicial do polígono aberto. A definição da natureza dos esforços (tração ou compressão) é definida pelos critérios apresentados na Seção \ref{section:forcasExemplo}. As forças desenhadas no PF são transportadas para a FG utilizando-se uma linha com ponto inicial no extremo final da linha do  PF e ponto final no nó em análise. A distância entre o ponto inicial do vetor movido e o ponto médio do eixo recíproco na FG é armazenado em uma variável denominada $D1$. O valor de $D1$ é comparado com o valor de $C1$ obtido por $C1 = L2/2 + L1$, onde $L1$ é o comprimento do vetor no PF e $L2$ o comprimento do eixo recíproco na FG. Caso $C1$ seja menor que $D1$, existe sobreposição das linhas e a natureza do esforço é de compressão, caso sejam iguais, a solicitação é de tração. Optando usar o ponto médio do eixo na FG é a metade no comprimento de $L1$ não é necessário saber se o eixo do elemento está escrito a partir do nó ou em direção ao nó. 
+
+O processo segue inalteradamente até o penúltimo nó da diagonal. Neste, apenas uma força permanece desconhecida, bastando unicamente ligar ordenadamente o último ponto do polígono aberto ao primeiro fechando completamente o PF. Neste ponto da execução o método gráfico apresenta dois mecanismos visuais de conferência do modelo construído: a primeira é a aferição do paralelismo entre a ultima força desenhada no PF pela ligação de dois pontos com sua recíproca na FG. Foi implementado no próprio algoritmo um teste de paralelismo para esses casos e os resultados foram positivos em todos as configurações testadas. A segunda diz respeito as forças que atuam no último nó. O fechamento do penúltimo nó implicara necessariamente na construção de um polígono fechado no PF cujos lados correspondem as forças atuantes no último nó, fato que pode ser observado em todas as simulações.
+
+\section{Método Grafostático Aplicado às Vigas v1, v2 e Conector}
+\label{section:grafov1v2Conector}
+
+A divisão do problema em dois pares de diagramas recíprocos foi a estratégia imaginada para formatar o experimento proposto dentro do arcabouço fornecido pelos diversos algoritmos geométricos encontrados no levantamento bibliográfico. Este tipo de abordagem é largamente utilizada na prática profissional dos escritórios que lidam com estruturas. A própria ideia de análise estrutural carrega em sí o conceito de dividir o problema em partes que, embora sejam simplificações do todo, traduzam em suas inter-relações e resultados as características estruturais das formas imaginadas.
+
+\begin{figure}[!ht]
+\begin{center}
+%\mbox{
+      \subfigure[Forma Geométrica - Vigas v1 e v2]
+         {\label{figura:Fgvigas01}
+          \includegraphics[width=.9\textwidth]{FgViga01.jpg}
+         }
+
+        \subfigure[Polígono de Forças - Vigas v1 e v2]
+           {\label{figura:Pfvigas01}
+            \includegraphics[width=.5\textwidth]{PfViga01.jpg}
+           }
+%      }
+\end{center}
+\caption{Diagramas Recíprocos das Vigas v1 e v2 }
+\label{figura:DiagRecipVigas}
+\end{figure}
+
+Uma premissa fundamental para o sucesso da análise é adotar uma modelo que leve em consideração as influencias de um dos elementos da análise nos demais. No caso específico, as reações $RA$ e $RB$ determinadas para a viga do \textit{shed}, mostradas na Figura \ref{figura:DiagRecipShed} tem seus pontos de aplicação coincidentes perspectivante com o dos carregamentos do último nó da viga "v2" e com a força $P0\_v3$ ( que atua diretamente sobre o ponto $ptX1$ do conector). O vídeo \href{https://www.youtube.com/watch?v=TWKjLepw9UM}{10 - cargas} mostra a validação destas duas somas de vetores. O processo é simples e direto: as reações aplicadas aos nós do \textit{shed} são iguais e contrarias às reações exercidas nos mesmos nós quando o restante da treliça é analisado. A determinação da soma é realizada graficamente, as reações são revertidas e movidas pelos seus pontos finais para os pontos iniciais das respectivas forças. uma linha ligando o ponto inicial da reação movida e o ponto de aplicação da carga representa o carregamento em cada um desses dois pontos críticos, como pode ser visto na Figura \ref{figura:Fgvigas01}.
+
+Com as contribuições do \textit{shed} devidamente computadas, o próximo passo é determinar as reações nos apoios da treliça. O método utilizado para determinar as reações de apoios é o mesmo apresentado para a treliça apresentada na Seção \ref{section:reacExemplo}. A aplicabilidade deste algoritmo para a presente etapa do experimento foi detectada após o cálculo da resultante dos carregamentos no PF (Figura \ref{figura:Pfvigas01}), quando resultantes perfeitamente verticais foram verificadas independentemente das combinações dos parâmetros fornecidos. Depois de observado, o motivo de tal comportamento pareceu óbvio: em primeiro lugar, todas as cargas utilizadas no experimento são verticais e as únicas forças com componentes horizontais são as reações $RA$ e $RB$. Estas contudo, foram determinadas como componentes da resultante vertical das cargas atuantes no \textit{shed}. Portanto é seguro dizer que as componentes horizontais das duas forças se anulam e que as demais cargas não possuem componentes horizontais. 
+
+Embora a nulidade das componentes horizontais possa ser verificada tanto pelos procedimentos analíticos quanto gráficos, a simplicidade visual dos diagramas da grafostática tornam a investigação das estruturas intuitiva e acurada. A determinação das reações foi registrada no vídeo \href{https://www.youtube.com/watch?v=YHHoQwJRfB4}{11 - Reações Pilares}.
+
+Com o conhecimento das reações, os cálculos dos elementos das vigas "v1" e "v2" podem ser efetuados. Assim como o exemplo mostrado na Seção \ref{section:forcasExemplo} e a grande maioria das treliças estudadas na bibliografia, os cálculos tem início nos nós onde as reações atuam. Na Figura \ref{figura:Fgvigas01} podemos identificar o primeiro nó da viga "v1" onde atua a reação $R\_v1$ e os esforços nos elementos $dg0\_v1$ e $bi0\_v1$ selecionados na ordem apresentada sendo $R\_v1$ a única força conhecida e, as demais definidas na direção e desconhecidas no módulo e sentido. No nó seguinte da mesma viga temos em ordem $dg0\_v1$ e o carregamento $P0\_v1$ como conhecidas e os elementos $bs0\_v1$ e $dg1\_v1$ respectivamente. Na viga $v2$ o processo é análogo e parte  $R\_v2$, mas seguindo o mesmo sentido (horário) da viga "v1" o elemento do banzo inferior $bi0\_v2$ aparecerá como a primeira incógnita e a diagonal $dg0\_v2$ como segunda. No segundo nó a ordem dos componentes conhecidos começa pela carga ($P0\_v2$) e tem sequencia na diagonal $dg0\_v2$, as incógnitas, em ordem são $dg1\_v2$ e $bs0\_v2$. O diagrama recíproco \ref{figura:Pfvigas01} mostra as construções resultantes desta seleção. As regras para o fechamento dos polígonos são as mesmas utilizadas no exemplo apresentado na Seção \ref{section:forcasExemplo} e a construção do diagrama pode ser conferido nos vídeos \href{https://www.youtube.com/watch?v=RnDPnAqX70s}{12 - viga v1} e  \href{https://www.youtube.com/watch?v=BsfiVaj26Iw}{13 - viga v2}.
+
+O processo mostrado nos vídeos segue a ordem dos nós das diagonais de cada viga até o penúltimo. Neste ponto da execução todos os elementos de cada uma das vigas estão determinados e os algoritmos passam para a resolução dos elementos do conector, $bc0\_c$ e $bc1\_c$ na sequência da viga "v1" e $bc2\_c$ e $bc3\_c$ para a viga "v2". Para tanto, o último nó do  banzo superior de cada viga é analisado. Neste último nó, para as vigas com número impar de diagonais, deve-se levar em conta a última diagonal, como mostrado no vídeo \href{https://www.youtube.com/watch?v=BsfiVaj26Iw}{13 - viga v2}, fato que não ocorre no exemplo mostrado no vídeo \href{https://www.youtube.com/watch?v=RnDPnAqX70s}{12 - viga v1}.
+
+Após os cálculos dos elementos das bordas das diagonais por ambos os lados, o eixo do conector é resolvido pelo ponto $ptX1$ construindo um polígono na sequência  $bc0\_c$, $F0$ $bc3\_c$, tendo apenas o elemento $bc4\_c$ como incógnita.  O vídeo \href{https://www.youtube.com/watch?v=3Y2ibbWiTME}{14 - Eixo do Conector} mostra o processo que gera uma linha vertical no PF, paralela à sua recíproca no FG. O ponto $ptX2$ é o ponto de conferência, as forças atuantes devem se anular também neste ponto, formando um polígono fechado.
+
+\section{Validação para Treliças Geradas por Curvas Iniciais no Sentido Dirieta-Esquerda}
+\label{section:ValidacaoSimetria}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=1\textwidth]{simetria01.png}
+\caption{Sentido de Desenho das Curvas Iniciais}
+\label{figura:simetria01}
+\end{center}
+\end{figure}
+
+Nas seções anteriores foi mostrado como o algoritmo implementado atua de acordo com as regras apresentadas nos fundamentos da Grafostáticas, cuja prova matemática pode ser vista nos tratados de \citeonline{cremona1890graphical}. A sobreposição exata dos diagramas gerados nos vídeos, obedecendo rigorosamente as regras dos cálculos gráficos com os diagramas gerados pelo algoritmo mostra a correspondência do código com o método. A medida que se adquire prática e fluência nas regras de execução dos desenhos, a aferição dos resultados gerados pelo algoritmo pode ser feita visualmente, observando os sentidos, paralelismos e pontos de interseção das linhas do PF.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{simetria02.png}
+\caption{Treliças Simétricas}
+\label{figura:simetria02}
+\end{center}
+\end{figure}
+
+Todos os resultados apresentados até agora mostram diagramas gerados a partir de treliças onde a direção da viga "v1" foram grafadas da esquerda para a direita. Também foi dito que o sentido de grafia das curvas iniciais deve partir do ponto de apoio da viga "v1" na direção do ponto final da treliça do \textit{shed}, podendo ser tando no sentido esquerda-direita, quanto no direita-esquerda (Figura \ref{figura:simetria01}). Considerando o segundo caso, como exposto previamente, o sentido de seleção das forças ao redor do nó sera anti-horário.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=.8\textwidth]{simetria03.png}
+\caption{PFs e FGs dos \textit{Sheds} Simétricos}
+\label{figura:simetria03}
+\end{center}
+\end{figure}
+
+A validação para esses segundos casos pode ser feita pelos mesmos métodos usados no tratamento do primeiro, contudo a inversão do sentido da viga acompanhada da inversão do sentido de seleção das linhas de ação cria uma situação particular e interessante que pode ser usada para verificar o algoritmo: Se espelharmos uma curva inicial em relação ao eixo $y$ do plano de desenho e o mesmo espelhamento seja aplicado aos pontos inicial e polo dos PFs obteremos diagramas simétricos para as treliças geradas respectivamente para os objetos originais e espelhados. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=.8\textwidth]{simetria04.png}
+\caption{FGs das Vigas v1 e v2 Simétricas}
+\label{figura:simetria04}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=.8\textwidth]{simetria05.png}
+\caption{PFs das Vigas v1 e v2 Simétricas}
+\label{figura:simetria05}
+\end{center}
+\end{figure}
+
+Considerando devidamente validadas as construções geométricas nos casos onde a curva inicial está grafada da esquerda para a direita, espelhando os objetos especificados, encontra-se simetria em todas as linhas desenhadas, correspondência nos valores calculados e na natureza (tração ou compressão) das solicitações atuantes nos componentes. Esse simples procedimento soma-se às vantagens do método gráfico, onde a consciente avaliação dos desenhos é um importante instrumento de correção, verificação e validação dos cálculos realizados.
+
+\section{Teste do Dimensionamento dos Menbros da Treliça}
+\label{section:elementosPassFail}
+
+Após o cálculo da força em cada elemento da treliça, uma função (teste\_elemento) testa se as dimensões atribuídas as seções de cada membro são capazes de suportar a solicitação que estes estão submetidos. São realizados dois testes: um para s peças tracionadas e outro para as comprimidas.
+
+Para as peças tracionadas, a tensão admissível é calculada a partir da tensão limite de escoamento do material (parâmetro T\_Trac) dividido pelo coeficiente de segurança (parâmetro coe\_Trac). A carga atuante na peça e dividida pela área da seção e, caso o valor obtido seja menor que a tensão limite, o elemento passa no teste e seu texto é grafado na cor verde, caso contrario a peça precisa ser redimensionada e é escrita na cor magenta.
+
+Para os elementos comprimidos, a tensão crítica de flambagem é comparada com a tensão atuante na peça. O índice de esbeltez da peça ($\lambda$) é obtido pela equação \ref{equacao:esbeltez}, onde $l$ corresponde ao comprimento de flambagem da peça (para elementos com fixações articuladas em ambos os extremos o comprimento de flambagem corresponde ao comprimento total do eixo da peça), $r$ é o raio de giração, $I$ o menor momento de inercia da peça e $A$ a área da seção.
+
+\begin{equation}
+\label{equacao:esbeltez}
+\lambda = \frac{ l}{ r }
+\verb| , sendo |
+r=\sqrt{ \frac{ I}{ A }}
+\end{equation}
+
+O valor de $\lambda$ é comparado com um valor mínimo (lido no parâmetro esb\_min). Caso $\lambda$ seja maior que o mínimo, utiliza-se a fórmula de Euler para determinação carga crítica. A Equação \ref{equacao:eulerTensao} apresenta a fórmula de Euler na forma que retorna a tensão admissível ($\bar{\sigma}_{fl}$), sendo $E$ é o módulo de elasticidade do material (parâmetro Mod\_E) e $s$ o coeficiente de segurança para a flambagem (parâmetro coe\_Comp).
+
+\begin{equation}
+\label{equacao:eulerTensao}
+\bar{\sigma}_{fl}  = \frac{ \pi ^2 \times E}{ \lambda ^2 \times s }
+\end{equation}
+
+Quando o valor de $\lambda$ é menor que o mínimo, a fórmula de Euler não pode ser aplicada. Utiliza-se então uma das fórmulas empíricas para determinação da tenção admissível. Optou-se pela Equação \ref{equacao:flmbagemAISC}, conhecida como fórmula parabólica do I.A.S.C. (\textit{American Institute of Steel Construction}). O resultado de ($\bar{\sigma}_{fl}$) obtido já leva em conta coeficientes de segurança, entretanto deve-se ter em mente que os valores assim calculados tem por unidade $lb/in ^2$, um fator de conversão é utilizado para comparar com os valores em Pa da tensão atuante em cada barra \cite[p. 267-269]{nash1974resist}.
+
+\begin{equation}
+\label{equacao:flmbagemAISC}
+\bar{\sigma}_{fl}  = 17000 - 0,485 \times \lambda
+\end{equation}
+
+Assim como para as peças tracionadas, a tensão atuante na peça ($P/A$) é comparada com o valor admissível calculado e as mesmas cores são atribuídas para os casos em que o dimensionamento é confirmado ou descartado.
+
+Além das cores, mensagens são direcionadas para a saída \textit{Out} do componente indicando o nome do elemento que não foi aprovado pelo teste e se a verificação falhou na análise da tensão admissível para tração ou para flambagem.
+
+\section{Parâmetros do Algoritmo de Análise Grafostática}
+\label{section:grafoParam}
+
+\begin{enumerate}
+\item \textbf{Iniciar\_Analise:} Funcionamento análogo ao do parâmetro Mostrar\_Volume do Algoritmo de Geração dos Volumes. Recebe uma variável booleana (True or False) que ativa e desativa a execução da análise estrutural da treliça.
+
+\item \textbf{Cargas:} Recebe três listas com os valores dos carregamentos em cada nó do banzo superior, provenientes da saída de mesmo nome do Algoritmo de Geração dos Volumes. As listas contem os valores numéricos ordenados das cargas para cada uma das treliças.
+
+\item \textbf{Areas:} Uma lista com a área dos elementos dos banzos e diagonais da treliça e os respectivos momentos de inercia mínimo para cada seção. Recebe os valores da saída de mesmo nome do Algoritmo de Geração dos Volumes.
+
+\item \textbf{T\_Trac:} Recebe um número real correspondente à tensão de escoamento do material da treliça.
+
+\item \textbf{coe\_Trac:} O coeficiente de segurança é um valor real que serve como fator de majoração no cálculo da tensão admissível dos elementos submetidos á tração. Os valores dos coeficientes de segurança para o aço recomendados pela literatura costumam variar entre 1,5 e 2,0. Caso nenhum valor seja lido pela entrada, o algoritmo assume o valor do coeficiente como 2,0.
+\item \textbf{Mod\_E:} Módulo de elasticidade do material. Caso nenhum valor seja designado para o parâmetro, assume-se 200 GPa. 
+
+\item \textbf{coe\_Comp:} Coeficiente de segurança para cálculo de elementos submetidos a flambagem. Caso nenhum valor seja lido pela entrada, o algoritmo assume o valor do coeficiente como 2,0.
+
+\item \textbf{esb\_min:} Índice de esbeltez mínimo, utilizado pelo teste de resistência à flambagem. Caso nenhum valor seja lido pela entrada, o algoritmo assume o valor do coeficiente como 105.
+
+\item \textbf{Escala:} Define as escalas em que as forças serão grafadas nos diagramas. Caso nenhum valor seja lido pela entrada, o algoritmo assume o valor de 0,0001 (1/1000 em notação convecional de escalas). Significando que o comprimento das linhas será 1000 (mil) vezes menor do que a força representada por esta.
+
+\item \textbf{Eixos:} Os eixos da treliça. Rebebe a geometria ds saída de mesmo nome do Algoritmo de geração dos Eixos.
+
+\item \textbf{polo\_1:} Recebe o ponto que sera usado como polo do PF da treliça do \textit{shed}.
+
+\item \textbf{pto\_inicial\_1:} Recebe o ponto que sera usado como ponto inicial do primeiro carregamento transportado da FG para o PF da treliça do \textit{shed}. Os pontos polo\_1 e pto\_inicial\_1 devem ser coplanares em um plano paralelo ao plano de desenho.
+
+\item \textbf{pto\_base\_FG1:} Ponto base pelo qual pode-se mover a FG da treliça do \textit{shed}.
+
+\item \textbf{polo\_2:} Recebe o ponto que sera usado como polo do PF das treliças "v1", "v2" e conector.
+
+\item \textbf{pto\_inicial\_2:} Recebe o ponto que sera usado como ponto inicial do primeiro carregamento transportado da FG para o PF das treliças "v1", "v2" e conector. Os pontos polo\_2 e pto\_inicial\_2 devem ser coplanares em um plano paralelo ao plano de desenho.
+\item \textbf{pto\_base\_FG2:} Ponto base pelo qual pode-se mover a FG das treliças "v1", "v2" e conector.
+
+\item \textbf{Plano:} Plano de desenho. recebe valores da saída de mesmo nome do Algoritmo de geração dos Eixos e tem função Análoga à entrada de mesmo nome do Algoritmo de Geração dos Volumes.
+
+\end{enumerate}
+
+\section{Funções do Algoritmo de Análise Grafostática}
+\label{section:grafoFunc}
+
+\begin{enumerate}
+\item \textbf{estendeCorda:}
+\begin{itemize}
+\item Entradas:(linha, ponto, indice).
+\item Função: Quando os raios polares são ordenadamente movidos do PF para a FG, para o desenho correto do diagrama, a nova linha (corda) deve ter seu comprimento determinado pelas interseções de duas linhas de ação de forças consecutivas. A função reescreve a linha para que seja assim delimitada. 
+\item Saídas: A corda em sua posição e dimensões apropriadas.
+\end{itemize}
+\item \textbf{Linha\_force\_extena:}
+\begin{itemize}
+\item Entradas:(no, peso, conv)
+\item Função: Desenha uma linha em escala representando o vetor de uma força externa, com ponto final coincidindi com o nó.
+\item Saídas: Uma reta representando a linha de ação da força.
+\end{itemize}
+\item \textbf{Linhas\_de\_Cargas:}
+\begin{itemize}
+\item Entradas:(vigas, cargas, nome)
+\item Função: Pega os valores coletados no parâmetro \textbf{Cargas} e transforma em linhas ordenadas e devidamente locadas no respectivo nó. Usa a função \textbf{Linha\_force\_extena} para cada uma das cargas. Também nomeia as forças em ordem crescente. A entrada "nome" é usada para gerar o sufixo da viga em questão (\_v1, \_v2, \_v3).
+\item Saídas: Uma lista de retas (vetores) e uma lista de triplas para nomear as cargas
+\end{itemize}
+\item \textbf{Elementos\_vigas:}
+\begin{itemize}
+\item Entradas:(lista de polilinhas que forma uma das 3 vigas)
+\item Função: As vigas, recebidas pela entrada \textbf{Eixos}, são escritas como polilinhas. A função gera as listas ordenadas dos elementos do banzo superior, inferior e diagonais, bem como a lista de nós dos mesmos. 
+\item Saídas: listas dos elementos e dos nós para o banzo superior, banzo inferior e diagonais de uma viga.
+\end{itemize}
+\item \textbf{SentidoNo:} 
+\begin{itemize}
+\item Entradas:(CirDir, no, plano , raio)
+\item Função: desenha um círculo ao redor do nó na mesma direção do círculo mostrado na Seção \ref{subsection:DesenhoDiagrecip}. para ser usado pela função que ordena as forças ao redor do nó.
+\item Saídas: círculo
+\end{itemize}
+\item \textbf{TraComp:}
+\begin{itemize}
+\item Entradas:(no, linha do PF, recíproca na FG)
+\item Função: Testa a naturaza do esforço do elemento (tração ou compressão).
+\item Saídas: retorna o valor $1$ para tração e $-1$ para compressão.
+\end{itemize}
+\item \textbf{teste\_elemento:}
+\begin{itemize}
+\item Entradas:(nome, carga, linfg)
+\item Função: Testa se o elemento resiste às forças internas atuantes, como apresentado na Seção \ref{section:elementosPassFail}
+\item Saídas: retorna um código RGB. Caso o elemento seja capaz de suportar a tensão aplicada, o código da cor ciano é passado. Caso contrário, o código RGB da cor magenta e retornado como saída.
+\end{itemize}
+\item \textbf{elemntos\_node:}
+\begin{itemize}
+\item Entradas: (no, lista de elementos, prefixo da lista, sufixo da viga)
+\item Função: Dada uma lista de elementos ou carregamentos quaisquer e um nó, a função determina quais dentre os membros da lista atuam diretamente sobre o nó em questão.
+\item Saídas: Uma lista dos elementos que atuam sobre o nó e uma lsita na mesma ordem com a nomenclatura de cada um dos elementos.
+\end{itemize}
+\item \textbf{OrdenaLinhasDeAcao:}
+\begin{itemize}
+\item Entradas: (no, CirDir, Linhas, nomes, dicPF, Plano)
+\item Função: Coloca as linhas de ação na ordem correta para a determinação dos elementos desconhecidos no PF. Recebe com uma lista de linhas da FG que atuam no nó e seus respectivos nomes. Acha o menor segmento da lista e usa metade do valor do comprimento como raio do círculo desenhado pela função \textbf{SentidoNo} com centro no próprio nó. Na interseção das linhas com o círculo, é medido o comprimento do arco entre um ponto da circunferência considerado como inicial e o ponto de interseção com cada reta. A lista de linhas e a de nomes é ordenada de maneira crescente em relação a medida deste comprimento de arco. A entrada dicPF é uma estrutura de dados chamada dicionário, que consiste em associar objetos (no caso, as linhas das forças no PF) á textos (nomenclatura atribuída a cada barra). A função testa se o primeiro item da lista de nomes já está no dicionário do PF. Em caso positivo, o primeiro elemento das listas de nomes e linhas é reposicionado para o final da lista. O teste é repetido até que o primeiro elemento elemento das listas não esteja no PF. Um teste semelhante é feito então, procurando elementos que não estejam no PF. Encontrando assim uma sequência de linhas, no sentido estabelecido, que começa nos elementos já calculados e termina no(s) não calculado(s).
+\item Saídas: Lista de elementos, lista com os nomes dos elementos, número de elementos já calculados no PF e número de elementos por calcular no nó.
+\end{itemize}
+\item \textbf{Cremona2:}
+\begin{itemize}
+\item Entradas:(no, nomes, linhas, countPF , dicPF)
+\item Função: Caso o número de incógnitas nó seja de duas forças, esta função é chamada para solução do nó. O dicionário do PF é usado para , através da lista de nomes ordenada pela função \textbf{OrdenaLinhasDeAcao:} encontrar os pontos extremos dos lados abertos do polígono das recíprocas das forças no PF.
+\item Saídas: Um dicionário com as duas forças calculadas aqui para atualização do dicionário do PF, duas triplas contendo as informações de nomenclatura. 
+\end{itemize}
+\item \textbf{Cremona1:}
+\begin{itemize}
+\item Entradas:(no, nomes, linhas, countPF , dicPF)
+\item Função:Caso o número de incógnitas nó seja de uma força, esta função é chamada para solução do nó. Um teste de paralelismo é realizado entre as reciprocas da incógnita no PF e na FG. Caso sejam paralelas, a \textit{string} "PARALELISMO" é impressa na saída \textit{out} do componente.
+\item Saídas:Um dicionário com a força calculada aqui para atualização do dicionário do PF, uma tripla contendo as informações de nomenclatura.
+\end{itemize}
+\item \textbf{PF\_funic:}
+\begin{itemize}
+\item Entradas:(pto\_inicial, polo, carreg, nomes\_cargas)
+\item Função: Desenha os carregamentos no PF, os raios polares e o funicular ainda aberto na FG. Nesta função o dicionário do PF é criado e contem inicialmente apenas os vetores dos carregamentos ligados aos nomes.
+\item Saídas: Dicionário do PF, lista dos raios polares, lista das cordas do funicular, A resultante no PF e triplas para nomenclatura.
+\end{itemize}
+\item \textbf{Grafo\_Shed:}
+\begin{itemize}
+\item Entradas:( viga do shed, carregamentos, Plano, DicPF, CirDir, nome da viga)
+\item Função: Percorre os nós das diagonais, determinando a nomenclatura, ordenando os elementos , calculando as forças internas das barras e atualizando o dicionário do PF.
+\item Saídas: Dicionário do PF atualizado, triplas para a nomenclatura
+\end{itemize}
+\item\textbf{ Grafo\_Viga:}
+\begin{itemize}
+\item Entradas:( viga , carregamentos, Plano, DicPF, CirDir, nome da viga)
+\item Função: Mesmo que a função \textbf{Grafo\_Shed:} para os cálculos das vigas "v1" e "v2"
+\item Saídas: Dicionário do PF atualizado, triplas para a nomenclatura
+\end{itemize}
+\end{enumerate}
+
+\section{Saídas do Algoritmo de Análise Grafostática}
+\label{section:grafoSaidas}
+
+\begin{itemize}
+\item \textbf{Out:\textit{}} Imprime os testes de paralelismo para as soluções encontradas com a função \textbf{Cremona1}.
+\item \textbf{Linhas\_de\_Carga:} As linhas representando os vetores de carregamento são desenhadas em escala sobre os respectivos pontos dos eixos gerados pelo componente de geração dos eixos. 
+\item \textbf{txt\_pontos:} Nomenclatura dos elementos. A saída apresenta uma lista de triplas, sendo o primeiro valor um ponto que sera usado para a inserção do texto, a \textit{string} do texto e a cor em que ele deve ser escrito. Um conjunto de componentes, conectados à direita desta saída, escreve os textos no ambiente do \textit{Rhinoceros} atravéz destas 3 informações. 
+\item  \textbf{FG1:} A FG para a viga do \textit{shed}.
+\item  \textbf{PF1:} O PF para a viga do \textit{shed}.
+\item \textbf{raios\_1:} Os raios polares para a viga do \textit{shed}.
+\item \textbf{funicular\_1:} O funicular desenhado para a viga do \textit{shed}.
+\item \textbf{resultante\_1:} As resultantes  para a viga do \textit{shed}.
+\item  \textbf{FG2:} A FG das vigas v1, v2 e conector.
+\item  \textbf{PF2:} O PF das vigas v1, v2 e conector.
+\item \textbf{raios\_2:} Os raios polares do PF das vigas v1, v2 e conector.
+\item \textbf{funicular\_2:} O funicular desenhado para as vigas v1, v2 e conector.
+\item \textbf{resultante\_2:} As resultantes para as vigas v1, v2 e conector.
+
+\end{itemize}
+
+
+\section{Aplicação do Algoritmo de Análise Grafostática}
+\label{section:AlgorGrafoAplica}
+
+O uso do componente de análise grafostática segue um modelo semelhante ao do desenho das formas. As informações fornecidas para o início dos trabalhos do algoritmo estão apresentadas no vídeo \href{https://www.youtube.com/watch?v=u9NDa8uhQ7U&list=UUCkMaRdD7PBWhs4JgH5s6_w}{15 - Análise Grafostática pt1} O papel das análises das características, no método de trabalho apresentado, é a de antecipar comportamentos e realimentar etapas de trabalho que, no método tradicional, precederiam a análise em si. O trabalho de modelagem das formas executado antes da análise, caso os resultados desta pretendam ser usados, não simplesmente como avaliação \textit{pass or fail} (como mostradas no vídeo \href{https://www.youtube.com/watch?v=DD5FKfY0EHk&list=UUCkMaRdD7PBWhs4JgH5s6_w}{16 - Análise Grafostática pt2}), mas como informações a serem usadas  para a melhoria de aspectos do projeto, teria que ser, em muitos pontos refeito. A maneira imediata com que as informações da análise podem guiar mudanças e ajustes da forma é descrito no vídeo \href{https://www.youtube.com/watch?v=xZz3Nv2hDKs&list=UUCkMaRdD7PBWhs4JgH5s6_w}{17 - Análise Grafostática pt3}. 
+
+O entendimento dos significados de cada linha nos diagramas recíprocos, assim como o estudo analítico de estruturas, requer um tempo considerável de dedicação aos seus conceitos fundantes e ao conhecimento das sequências de execução, objetivos e inter-relações dos seus algoritmos de desenho. A medida que os parâmetros são flexionados e instantaneamente os rebatimentos tanto da forma quanto da análise são gerados, é possível observar e concluir pela simples tendência de contração ou dilatação do polígono de forças os efeitos sobre a forma e o comportamento analisado. Embora não abranja todo o escopo de cálculo necessário para a completa verificação da treliça, o método se apresenta aberto ao julgamento da equipe de projeto, sendo submetido à critérios subordinados ao conhecimento teórico, prático e estético destes profissionais. 

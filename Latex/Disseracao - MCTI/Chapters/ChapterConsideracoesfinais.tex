@@ -1,0 +1,136 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = pt_BR
+\chapter{Considera\c{c}\~oes finais}
+\label{chapter:consideracoesfinais}
+
+\begin{flushright}
+  "Learn from yesterday, live for today, hope for tomorrow.\\ The important thing is to not stop questioning." 
+  \\
+  (Albert Einstein)
+\end{flushright}
+
+%Chegou a hora de apresentar o apanhado geral sobre o trabalho de
+%pesquisa feito, no qual s\~ao sintetizadas uma s\'erie de
+%reflex\~oes sobre a metodologia usada, sobre os achados e
+%resultados obtidos, sobre a confirma\c{c}\~ao ou recha\c{c}o da
+%hip\'otese estabelecida e sobre outros aspectos da pesquisa que
+%s\~ao importantes para validar o trabalho. Recomenda-se n\~ao
+%citar outros autores, pois a conclus\~ao \'e do pesquisador.
+%Por\'em, caso necess\'ario, conv\'em cit\'a-lo(s) nesta parte e
+%n\~ao na se\c{c}\~ao seguinte chamada \textbf{Conclus\~oes}.
+
+Uma considerável gama de conhecimento foi abordada ao longo do processo que culminou na proposição do Sistema Generativo de Projeto desenvolvido ao longo do experimento. Esse SGP, que engloba os três algoritmos propostos e as possibilidades e limitações de um ambiente computacional capaz de dar suporte ao projeto, foi desenvolvido com o objetivo principal de apresentar uma forma de trabalho exequível. Especialmente voltada para as primeiras etapas de elaboração de projetos, levou-se em consideração a profundidade das implicações que estas etapas exercem sobre todo o resultado.
+
+No caso específico do desenho de uma cobertura tipo \textit{shed}, imaginou-se que a medida do vão vencido pela treliça estaria previamente determinado em uma etapa ainda anterior de projeto. Uma funcionalidade recorrente dos algoritmos baseados em parâmetros e restrições é a possibilidade de rapidamente atualizar uma etapa de trabalho em função das demandas de outra. Caso a modulação dos pilares seja alterada, é fácil notar que, com poucas alterações nos parâmetros de controle da forma, é possível atingir esse objetivo. Outros elementos construtivos serão adicionados e os conflitos gerados não podem ser completamente previstos. Nesses casos conta-se basicamente com a capacidade do algoritmo de produzir variações.
+
+No que diz respeito ao Algoritmo de Análise Grafostática, com as limitações do método e do escopo teórico devidamente postas, algumas questões devem ser levantadas. O componente de análise grafostática foi escrito sob medida para as saídas dos outros dois. Dentro do ponto de vista dos SGP é uma estratégia possível. Cabe uma rápida observação sobre a extensão de cada algoritmo: enquanto, entre linhas de comando e comentários, os dois primeiros algoritmos possuem menos de 300 linhas cada um, o terceiro tem pouco menos de 900. Considerando que o objetivo de um SGP deve ser o suporte ao trabalho na atividade fim, e não a elaboração de um \textit{software}, o tempo despendido na programação deve ser pesado de acordo com os benefícios oferecidos ao projeto. Caso a grafostática seja eleita como ferramenta de análise estrutural, é apropriado direcionar a programação para a elaboração de uma biblioteca de funções que possam ser reaproveitadas em códigos futuros. Entre as funções apresentadas na seção \ref{section:grafoFunc}, apenas as duas últimas são especialmente escritas para o problema em foco, e portanto precisariam passar por reescrita para sua aplicação, as demais poderiam fazer parte de análises para diferentes problemas.
+
+\section{Conclusões}
+\label{section:conclusoes}
+
+%Brevemente comentada no texto acima, nesta se\c{c}\~ao o
+%pesquisador (i.e. autor principal do trabalho cient\'ifico) deve
+%apresentar sua opini\~ao com respeito \`a pesquisa e suas
+%implica\c{c}\~oes. Descrever os impactos (i.e.
+%tecnol\'ogicos,sociais, econ\^omicos, culturais, ambientais,
+%políticos, etc.) que a pesquisa causa. N\~ao se recomenda citar
+%outros autores.
+
+Os algoritmos de geração da forma tem como principal ferramenta de variação a curva inicial. O desenho desta pode partir do que costuma chamar-se de gesto: um movimento de desenho grafado por um lápis no papel ou em bites no ambiente computacional. O gesto representa o que existe de mais humano na concepção de um projeto e relaciona-se com algumas propostas artísticas de criação arquitetônica. Os algoritmos de parâmetros e restrições propostos são calcados em um sequência de construções geométricas semelhantes às apresentadas na Figura \ref{figura:algorEg}, estendendo-se porem, até esboçarem uma ideia de um objeto a ser construído. As flexões dos parâmetros representam etapas do algoritmo em que decisões podem ser imediatamente revistas. Seguindo a mesma partitura, as mudanças nessas decisões produzem significativas variações do mesmo tema e transformam os dados em formas geométricas coerentes para a análise e construção. O parâmetro "eixo\_de\_simetria" produz uma variação particular nas formas. As pequenas mudanças no seu valor geram surpreendentes rebatimentos no desenho da treliça, principalmente se levarmos em conta que tudo que o parâmetro faz é escolher um ponto sobre a curva inicial e fornecê-lo para os passos seguintes do algoritmo. A Figura \ref{figura:exemploSimetria01-04} mostra quatro treliças iguais em todos os parâmetros, exceto pelo eixo de simetria, que assume os valores de $.75 $, $.70 $, $.65 $ e $.60 $.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[]
+                 {
+                      \label{figura:exemploSimetria01}
+                      \includegraphics[width=0.45\textwidth]{exemploSimetria01.png}
+                 }
+         
+         
+         
+
+        \subfigure[]
+                   {
+                        \label{figura:exemploSimetria02}
+                        \includegraphics[width=0.45\textwidth]{exemploSimetria02.png}
+                   }
+         }
+         
+  \mbox{
+           \subfigure[]
+                      {
+                         \label{figura:exemploSimetria03}
+                         \includegraphics[width=0.45\textwidth]{exemploSimetria03.png}
+                      }
+                      
+                      
+           \subfigure[]
+                      {
+                         \label{figura:exemploSimetria04}
+                         \includegraphics[width=0.45\textwidth]{exemploSimetria04.png}
+                      }
+    }
+ 
+ 
+ 
+     
+\end{center}
+\caption{Variações do Eixo de Simetria de uma Treliça}
+\label{figura:exemploSimetria01-04}
+\end{figure}
+
+As aplicações computacionais para Arquitetura e Engenharia marcaram seu território nos escritórios e empresas de construção e projeto por todo o mundo, e a computação, na sua relação com o complexo mundo contemporâneo serve de fonte de inspiração para muitos projetos. Esta pesquisa porem, concorda com os autores que afirmam que os algoritmos generativos não definem um estilo arquitetônico. Embora as apreciações estéticas não façam parte do escopo do trabalho, os exemplos de utilização de algoritmos na Arquitetura perpassam a linha do tempo das vilas de Paládio às formas orgânicas contemporâneas, mostrado métodos de trabalho aplicáveis à concepção de projetos dos mais variados estilos.
+
+Do início das civilizações aos dias atuais a atividade de construir contou com a constante companhia da Geometria. Alguns dos modelos de algoritmos apresentados na seção \ref{section:tiposag}, como os autômatos celulares, os diagramas de Voronoi e as gramáticas de forma, possuem uma clara representação geométrica, os algoritmos de otimização e de inteligência artificial só são viáveis como algoritmos generativos quando apresentam um rebatimento geométrico, já o termo "Geometria Fractal" fala pro si.
+
+Na análise estrutural, os elementos construtivos são representados por formas geométricas, as forças, definidas como vetores, podem ser assim representados. A Grafostática contudo, transforma o próprio cálculo em um processo de construção geométrica. Ao invés de traduzir uma geometria em equações, os métodos da Estática Gráfica relacionam formas a serem construídas a diagramas que representam o comportamento estrutural do objeto projetado.
+
+Muitas informações podem ser capturadas pela análise do modelo e seus diagramas. Na Figura \ref{figura:exemploSimetria01-04}, temos quatro treliças geradas apenas pela variação do valor do parâmetro do eixo de simetria. As vigas "v1" e "v2" da treliça são perfeitamente simétricas. Os diagramas do PF mostrados seriam também simétricos (em relação a um eixo horizontal no ponto de interseção das reações), caso os carregamentos também fossem. A maior contribuição de forças assimétricas vem das reações da viga do \textit{shed}. Quanto menor o valor do parâmetro analisado, maior será o \textit{shed} e maiores serão os carregamentos provocados por suas reações, a assimetria do PF e a magnitude das solicitações (principalmente nos elementos mais próximos do \textit{shed}). Este conjunto de análises pode ser alcançado por métodos gráficos, analíticos e numéricos(ou pelo conhecimento bem estruturado dos fundamentos da mecânica das estruturas), porem a noção de como a estrutura se comporta em relação à mudanças (anda que pequenas) em seus parâmetros pode ser observada em tempo real no SGP proposto. A informação das consequências, nas formas e análises, destas interferências fornecem ao projetista uma visão única sobre o rebatimento de pequenas decisões na forma e comportamento do elemento construtivo analisado.
+
+
+
+\section{Contribuições}
+\label{section:contribuicoes}
+
+%Apresentar as contribui\c{c}\~oes te\'oricas e pr\'aticas que a
+%pesquisa e o(s) seu(s) resultado(s) trazem.
+
+O trabalho contribui no debate sobre os Sistemas Generativos de Projeto nos seus aspectos teóricos e práticos. Apresentando um quadro geral dos modelos e procurando uma definição para o conceito de Algoritmos Generativos, onde se ve alguns modelos computacionais que despertaram grande interesse científico nas últimas décadas, aplicados na geração de formas para a indústria da construção civil. O painel formado pelas diversas abordagens de modelagem dos problemas tratados pelos SGP evidenciam a abrangência e multidisciplinaridade destas aplicações, e corroboram com o já alardeado potencial desses modelos na resolução e tratamento de questões complexas.
+
+No aspecto prático, o experimento testa uma das maneiras de se direcionar a investigação das soluções possíveis de projeto com o auxílio dos SGP. A forma inicial é estabelecida junto com o conjunto de regras que permitem a flexão das formas e a criação de variações.
+
+O algoritmo de análise grafostática, escolhido como instrumento de avaliação do desempenho estrutural da treliça, apresenta uma modelagem bastante particular e interessante por ser também um modelo de parâmetros e restrições. Não pode ser considerado como Algoritmo Generativo já que as formas geradas não tem objetivo de serem construídas, mas de servirem como instrumentos de análise e tomada de decisões. A natureza geométrica do método permite uma fácil conexão com a variação das formas. A pesquisa procurou no seu levantamento bibliográfico tanto autores atuais que defendem a importância e aplicação dos métodos da Estática Gráfica, quanto os manuais que apresentam os diversos algoritmos desenvolvidos ao longo da história do método.
+
+A associação da Grafostática com um SGP em um ambiente de implementação dinâmico enfatiza as características cognitivas do método. As flexões dos parâmetros da treliça implicam diretamente na alteração da forma do polígono de forças. Essa constatação valida a hipótese que os mecanismos do algoritmo baseado na Estática Gráfica teriam semelhanças com os SGP. Pela intercomunicação destes modelos, as implicações das mudanças da formas nos desempenhos estruturais é percebida visualmente pelas alterações no comprimentos das linhas do PF. A noção das consequências que implicam cada alteração de parâmetros é percebida dentro do contexto das interdependências das características modeladas.
+
+\subsection{Principais Produtos e Algoritmos Desenvolvidos}
+\label{section:contribProd}
+
+\begin{itemize}
+\item O SGP e os vídeos registrando seu funcionamento e operação, apresentados no Capítulo \ref{chapter:trabalhoexperimental}, constituem os produtos fundamentais desta pesquisa.
+
+\item Os algoritmos de geração do Triângulo de Sierpinski e seu análogo tridimensional, utilizados para ilustrar a Seção \ref{subsection:fractais} e apresentados no Apêndice \ref{Apend2:triSierp}.
+
+\item O algoritmo de geração de cúpulas móveis, exemplificando os conceitos dos MPR na Seção \ref{subsection:agParam} e apresentado no Apêndice \ref{Apend2:cupula}.
+
+\item O algoritmo de Desenho do PF, FG, Funicular e cálculo da Resultante e Momento, e o vídeo que registra seu funcionamento, apresentado na Seção \ref{section:condicaodeequilibrio} e Apêndice \ref{Apend1:funicular1} como recurso didático para o entendimento das propriedades dos polígonos funiculares.
+
+\item  O algoritmo de soma de vetores e cálculo da equilibrante, descrito na Seção \ref{section:grasshopper} e Apêndice \ref{Apend1:somavetconcorre}.
+
+
+\end{itemize}
+\section{Atividades Futuras de Pesquisa}
+\label{section:atividadesfuturaspesquisa}
+
+%Esta \'e uma se\c{c}\~ao breve, uma vez que o pesquisador
+%apresenta as id\'eias que ser\~ao desenvolvidas e/ou as atividades
+%que j\'a est\~ao em andamento, de maneira que a pesquisa realizada
+%seja complementada ou ampliada. Com esta se\c{c}\~ao, o
+%pesquisador indica implicitamente que o trabalho n\~ao acabou e
+%que seu interesse continua ativo.
+Os sistemas generativos de projeto são um campo de pesquisa vasto e complexo. Grande interesse tem se mostrado, particularmente na criação de ferramentas de desenho para formas orgânicas e complexas. O desejo de contribuir neste contexto passa pela ideia de, não simplesmente desenhar e detalhar essas formas, mas de propor SGPs que tenham a capacidade de analisar os desempenhos destas em toda a sua complexidade.
+
+A Grafostática despertou bastante interesse principalmente pela sua natureza geométrica e seu caráter intuitivo. Sob o ponto de vista cognitivo, a aplicação destes métodos no ensino das disciplinas de estrutura deve ser explorado, e potencializado com as estratégias de programação. Dos muitos algoritmos encontrados na pesquisa bibliográfica, os que tratam das flechas e deformações de estruturas seriam o próximo passo para ampliar a eficacia da análise.
+
+Das formas geradas pelos algoritmos muitos passos devem ser seguidos até a execução plena da treliça. Folgas entre as peças, chanfros e recortes nas peças metálicas deverão ser considerados para possibilitar os encaixes e as soldas que manterão a estrutura coesa. Uma das linhas de pesquisa atuais no campo da construção, denominada de \textit{Design Optimization and Fabrication} (DOF), incorpora etapas de construção controladas por computadores (cortes de chapa, impressões 3D) e aproxima o projeto da atividade fim. 

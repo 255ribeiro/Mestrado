@@ -1,0 +1,128 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = pt_BR
+\chapter{Ambiente de Implementação}\label{chapter:ambientedeimplementacao}
+
+
+\begin{flushright}
+\textit{"If you want to teach people a new way of thinking, \\don't bother trying to teach them.\\ Instead, give them a tool, the use of which\\ will lead to new ways of thinking."} \\ (R. Buckminster Fuller)
+\end{flushright}
+
+A ideia de aproximar a programação de formas e análises à atividade de projeto vem ganhando força e espaço, principalmente nos grandes escritórios de arquitetura ao redor do mundo. O \textit{"Specialist Modeling Group"} do escritório \textit{Foster and Partners'} ou o \textit{"CODE unit"} de \textit{Zaha Hadid Architects} são exemplos de departamentos de programação, criados em firmas de arquitetura para trabalhar em cooperação e sincronia com os demais setores, na elaboração de propostas e projetos \cite{ceccato2010mbg}.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Interface do \textit{Rhinoceros 3D} 5.0 ]
+         {\label{figura:rhinoInterface}
+          \includegraphics[width=0.45\textwidth]{rhinoInterface.jpg}
+         }
+         
+         
+        \subfigure[Interface do \textit{Grasshopper} e \textit{Rhinoceros 3D} 5.0 ]
+           {\label{figura:rhinoGrassInterface}
+            \includegraphics[width=0.45\textwidth]{rhinoGrassInterface.png}
+           }
+       }
+        
+  \mbox{
+        \subfigure[Interface do \textit{GH.Python}]
+                   {\label{figura:interfaceghpython}
+                    \includegraphics[width=0.45\textwidth]{interfaceghpython.png}
+                   }
+       }
+
+\end{center}
+\caption{Ambiente de Implementação}
+\label{figura:ambienteimplem}
+\end{figure}
+
+
+As demandas de programação entretanto, devem se adaptar aos cronogramas e prazos da atividade fim. Por isso, as linguagens de código e \textit{scripts} devem ter fácil interação com os ambientes computacionais de projeto, permitindo trabalho rápido, eficiente, manipulação de entidades gráficas vetoriais e reaproveitamento de algoritmos em diferentes atividades.
+
+
+Dentre os muitos possíveis sistemas \textbf{CAD} que poderiam ser utilizados para a implementação do experimento, foi escolhido o \textit{Rhinoceros 3D} 5.0 e o  \textit{plug-in} \textit{Grasshopper}, com ênfase no ambiente de  \textit{Python Script} suportado por ambos (Figura \ref{figura:ambienteimplem}).
+
+\section{\textit{Rhinoceros 3D}}
+\label{section:rhinoceros3d}
+
+O \textit{Rhinoceros 3D} , assim como o \textit{Autodesk Autocad}, \textit{BricsCAD}, \textit{LibreCAD}, entre outros,  é um \textbf{CAD} de interface baseada em linha de comando (marcada com a letra "A" na figura \ref{figura:rhinoInterface}). Com características mais adaptadas à modelagem 3D, principalmente de curvas e superfícies complexas, é usado em diversos ramos do \textit{design} industrial e foi adotado pelo mercado de arquitetura \cite{ceccato2010mbg}, desempenhado papeis importantes nas etapas iniciais de concepção de projeto. Um dos motivos que levaram à esse uso está no fato do programa ser construído como um conjunto de bibliotecas gráficas envoltas por uma interface CAD, potencializada por \textit{plug-ins}. A principal dessas bibliotecas é a \textit{OpenNurbs}, desenvolvida e mantida pela empresa responsável pelo \textit{Rhinoceros} e \textit{Grasshopper} (\textit{Robert McNeel \& Associates}) porem com licença \textit{open source}, nela estão os métodos de gravação e leitura dos arquivos .3dm e a representação das formas geométricas do programa. O desenvolvimento de novas funcionalidades do \textit{software} são feitas através de \textit{plug-ins}, usado o mesmo IDE disponível para programadores terceiros, as funções e métodos de gravação e manipulação de entidades gráficas podem ser acessadas tanto em C++, a linguagem de programação em que o programa é escrito, quanto em linguagens interpretadas (\textit{C\#, VB.net }e \textit{Python}) que permitem mais rápida criação e manipulação de algoritmos \cite{Tibbits2011}.
+
+Essas características atraíram também o interesse de trabalhos acadêmicos e pesquisas, que usam a plataforma para implementação e testes de seus algoritmos. \cite{Tessmann2008},  \cite{Block2009}, \cite{vettoretti2010}, \cite{Shearer2010}, \cite{1148846}, \cite{lachauer2011a},  \cite{dalvi2011}, \cite{Block2014}.
+
+
+
+
+\section{\textit{Grasshopper}}
+\label{section:grasshopper}
+
+Um dos \textit{plug-ins} desenvolvido pela \textit{Robert McNeel \& Associates} para expansão das capacidades do \textit{Rhinoceros 3D} é o \textit{Grasshopper}, uma interface visual de programação e criação de modelos paramétricos \cite{lachauer2011a}. A interface do \textit{plug-in}, mostrada na Figura \ref{figura:rhinoGrassInterface}, permite a elaboração de algoritmos pela interligação de componentes, também chamados de baterias (\textit{batteries}), que desempenham papeis de armazenamento de informações (variáveis e objetos), ou de funções que manipulam objetos geométricos. Existem três aspectos importantes da integração entre programa e \textit{plug-in} que precisam ser entendidos:
+
+\begin{itemize}
+\item \textbf{Comunicação \textit{Rhinoceros/Grasshopper}}: todas as geometrias desenhadas no \textit{Rhinoceros}, pontos, curvas, superfícies, sólidos e combinações de elementos, podem ser selecionados a partir de um componente do \textit{Grasshopper}, usadas como variáveis ou objetos, e manipuladas pelos componentes seguintes do algoritmo proposto.
+\item \textbf{Ambiente de Modelagem do \textit{Grasshopper}}: todas as formas geradas pelos algoritmos do \textit{Grasshopper} são, por padrão, mostradas na janela no \textit{Rhinoceros}, mas apenas os elementos desenhados no \textit{Rhinoceros} podem ser editadas por este. As geometrias criadas pelo algoritmo são dinamicamente alteradas pela edição de uma geometria selecionada em uma bateria do \textit{plug-in}, ou pela alteração de qualquer elemento do algoritmo. Essa velocidade de geração das variações é que torna o sistema interessante como ferramenta para avaliação de alternativas de projeto.
+\item \textbf{Comunicação \textit{Grasshopper/Rhinoceros}}: qualquer geometria gerada pelos componentes do \textit{Grasshopper} pode ser copiada, em uma configuração específica dos parâmetros que a geraram, como uma geometria do \textit{Rhinoceros}, podendo então, ser editada como qualquer outra.
+\end{itemize}
+
+
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Exemplo 1 - \textit{Grasshopper}]
+         {\label{figura:grassExgh1}
+          \includegraphics[width=0.45\textwidth]{grassExgh1.png}
+         }
+         
+         
+        \subfigure[Exemplo 1 - \textit{Rhinoceros 3D}]
+           {\label{figura:grassExrs1}
+            \includegraphics[width=0.45\textwidth]{grassExrs1.png}
+           }
+       }
+        
+  \mbox{
+        \subfigure[Exemplo 2 - \textit{Grasshopper}]
+           {\label{figura:grassExgh2}
+            \includegraphics[width=0.45\textwidth]{grassExgh2.png}
+           }
+           
+           
+          \subfigure[Exemplo 2 - \textit{Rhinoceros 3D}]
+             {\label{figura:grassExrs2}
+              \includegraphics[width=0.45\textwidth]{grassExrs2.png}
+             }
+         }
+
+\end{center}
+\caption{Grasshopper - Componentes e listas }
+\label{figura:ghexemplos}
+\end{figure}
+
+
+Outro conceito importante é que a grande maioria das entradas e saídas dos componentes são tratados como listas numeradas. Cada elementos de uma lista com $N$ valores recebe uma numeração, chamada de índice, partindo de zero até $N - 1$. A Figura \ref{figura:ghexemplos} mostra o mesmo algoritmo com apenas uma reta armazenada no componente \textit{"Crv"} (Figura \ref{figura:grassExgh1}) e com duas curvas selecionadas no mesmo componente (Figura \ref{figura:grassExgh2}), bem como as respectivas geometrias resultantes (Figuras \ref{figura:grassExrs1} e \ref{figura:grassExrs2}). A organização padrão dos componentes do \textit{Grasshopper} é que as entradas e saídas são feitas pela "conexão de fios" no sentido esquerda-direita. Nos exemplos da Figura \ref{figura:ghexemplos}, o componente \textit{"Divide"} recebe como entrada a(s)  curva(s) do componente \textit{"Crv"} (segmentos de retas desenhadas no \textit{Rhinoceros}, selecionadas e armazenadas) e um valor inteiro no componente \textit{"Count"}. Os segmentos selecionados em "Crv" são lidos pela entrada $C$ do componente \textit{"Divide"} e são divididos em $N$ partes iguais, tendo o número inteiro fornecido por \textit{"Count"} como a quantidade de partes. Se na esquerda do componente \textit{"Divide"} se conectam as listas de entrada, na direita são lidas as saídas. No exemplo em questão, apenas a saida $P$, com lista(s) de pontos que dividem o(s) seguimento(s), é usada. Os componentes \textit{"Count"}, "h pilastas" e \textit{"Radius"} são chamados de \textit{sliders}, pois o valor numérico passado por estes pode ser alterado deslizando o elemento gráfico que marca sua posição. enquanto o primeiro desses é uma variável inteira, os outros são números reais que controlam respectivamente a altura dos elementos cilíndricos e seu raio. Uma diferença visível entre o mesmo algoritmo nas Figuras \ref{figura:grassExrs1} e \ref{figura:grassExrs2} é a maneira como os "fios" que conectam as baterias são representados. Na primeira vemos uma linha simples ligando \textit{"Crv"} à \textit{"Divide"} representando que apenas um elemento (ou uma lista unitária) é passado como entrada para o componente, na saída $P$ uma linha dupla indica que uma lista com $N+1$ pontos (os pontos que dividem o segmento em $N$ partes contando com os extremos deste). Na segunda, uma linha dupla indica que mais de um elemento estão armazenados em "Crv", gerando duas listas numeradas (uma para cada conjunto de $N+1$ pontos que dividem os segmentos) na saida $P$, neste caso, a primeira curva selecionada recebe o índice zero (0), e a segunda é numerada como um (1). As linhas duplas e tracejadas que saem de $P$ no segundo exemplo são usadas para indicar que um conjunto de listas numeradas (\textit{Data Tree}) está sendo transmitido entra as saídas e entradas das respectivas baterias.
+
+O componente \textit{"Move"} recebe a(s) Lista(s) de pontos e um vetor para move-los oriundo da combinação do \textit{slider} "h pilastras" com um vetor unitário na direção "Z". Cada elemento da lista $P$ é movido em módulo, direção e sentido do vetor e a saída $G$ é preenchida com lista(s) cuja numeração corresponde aos respectivos índices dos elementos à serem movidos na entrada $G$ . A bateria "Ln" cria segmentos de reta (pares ordenados de pontos) entre os valores recebidos pelas entradas $A$ e $B$, segundo a ordem dos índices de cada elemento. A bateria \textit{"Pipe"}, por fim, cria as geometrias equivalentes à translação de um círculo, cujo raio é definido pela entrada $R$, ao londo da(s) curva(s) que alimentam a entrada $C$.
+
+A vantagem do sistema descrito é que a simples alteração do valor de um \textit{slider} ou a edição e/ou substituição de um objeto geométrico selecionado é imediatamente reprocessada pelo \textit{constraint solver} que calula as geometrias no \textit{plug-in}, proporcionando uma rápida visualização das alternativas de projeto. Lógicas semelhantes podem ser encontradas no editor paramétrico de texturas do \textit{Software Maya 3D} ou na modelagem paramétrica do pacote de efeitos especiais para o cinema Houdini. Na área de arquitetura, o \textit{plug-in} \textit{Dinamo}, para \textit{Revit} e \textit{Vassari}, apresenta interface e lógica semelhantes ao \textit{Grasshopper}. As ferramentas de criação de algoritmos do \textit{plug-in} se aproximam dos paradigmas que originaram a linguagem de programação Lisp, presentes no artigo clássico de \citeonline{McCarthy1960}, no que tange as listas e no aspecto não destrutivo desta manipulação (no exemplo da Figura \ref{figura:ghexemplos}, vê-se que os pontos transformados pelo componente \textit{"Move"} não destroem a lista de pontos que serve de entrada), se afastam porem, no que diz respeito ao conceito de recursividade (uma das formas de se criar um \textit{loop} em programação). O paradigma Lisp é frenquentemente associado á criatividade na programação. \citeonline{Steele:1996:EL:234286.1057818} relacionam este fato ao perfil dos usuários da linguagem (bastante aplicada á área de inteligencia artificial). De maneira otimista, pode-se esperar que criatividade também apareça na manipulação de listas por profissionais de projeto.
+
+Não existe uma maneira de se implementar um \textit{loop} com os componentes do pacote básico do \textit{Grasshopper}. O componente \textit{Hoopsnake}, desenvolvido por \citeonline{hoopsnake} e instalado como um \textit{Add-on}, foi usado nos exemplos apresentados no Apêndice \ref{figura:tsAg2d} para submeter às transformações geométricas à um \textit{loop} semelhante ao \textit{For} com um contador como critério de parada. A manipulação de listas é a principal ferramenta lógica de programação do \textit{plug-in}. No Apêndice \ref{Apend1:somavetconcorre}
+temos um teste feito com os componentes padrão do \textit{Grasshopper}, modelando a soma de vetores e o cálculo da equilibrante. O recurso encontrado para a colocação dos vetores em posição de soma foi:
+
+\begin{enumerate}
+\item Criar uma lista de segmentos de reta que ligam os vetores com o ponto de coordenadas 0,0,0;
+\item Mover os vetores tendo como parâmetro as respectivas linhas que o ligam à origem do espaço cartesiano;
+\item Extrair uma lista dos extremos finais dos vetores movidos. Os valores de x,y,z nestes extremos, correspondem ás componentes dos respectivos vetores decompostos nas 3 direções;
+\item O ponto inicial do PF é acrescentado no início da lista de extremos. O ponto final da mesma lista é retirado;
+\item Um componente de soma em massa é utilizado. Ele recebe a lista gerada no passo anterior e retorna uma lista contendo: no índice zero, o valor do índice zero da lista original; no índice um a soma dos valores de índices zero e um; e assim sucessivamente, até que no índice $N$ temos a soma dos $N$ valores na lista inicial.
+\item Os vetores são movidos a partir do seu ponto inicial, até cada um dos pontos da lista obtida no passo anterior.
+\end{enumerate}
+
+Apesar do interessante desafio lógico de se estabelecer um algoritmo contando unicamente com manipulações de listas, sem utilizar explicitamente um \textit{Loop}, do ponto de vista prático é bastante trabalhoso. Portanto, uma linguagem de \textit{script} foi escolhida para integrar o processo. 
+
+
+
+\section{\textit{Python Script}}
+\label{section:ghPython}
+
+\textit{Python} é uma linguagem de programação \textit{open source}, interpretada, altamente dinâmica, multi-paradigma e multi-plataforma, implementada por Guido van Rossum a partir de 1989 e desenvolvida pela fundação sem fins lucrativos chamada de \textit{The Python Software Foundation}. Possui sintaxe simples e dinâmica, proporcionando fácil implementação, manutenção e adaptação de códigos. Plenamente adaptada as bibliotecas do \textit{OpenNurbs, Rhinoceros e Grasshopper}, o aspecto multi-paradigma da linguagem é um diferencial do \textit{Python} em relação ás outras linguagens \textit{script} disponíveis. Pode-se dizer, em suma, que tanto \textit{loops} semelhantes aos encontrados em linguagens como $C$ e manipulação de listas semelhantes ás do paradigma Lisp, podem ser facilmente implementados em \textit{Python} \cite{ThepythonFoundation}.
+

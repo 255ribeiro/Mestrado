@@ -1,0 +1,704 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = pt_BR
+\chapter{Algoritmos Generativos e Sistemas Generativos de Projeto}
+\label{chapter:sistemasgenerativosdeprojeto}
+
+\begin{flushright}
+  \textit{"A man provided with paper, \\pencil, and rubber,\\ and subject to strict discipline,\\ is in effect a universal machine."}
+  \\
+  (Alan Turing)
+\end{flushright}
+
+Os componentes essenciais de um SGP são: os algoritmos generativos e o ambiente computacional onde estes serão executados. Envolvendo os sistemas operacionais, os programas, as linguagens de programação, os computadores e demais dispositivos empregados (\textit{hardware}) e as interfaces com usuários, os ambientes de implementação são corresponsáveis pelos limites e possibilidades entre os quais operam os SGP. No caso específico desta pesquisa, a praticidade de se gerar formas em um ambiente CAD utilizado no mercado de desenho de projetos, a capacidade de se implementar algoritmos de maneira rápida e eficiente, e a facilidade de ver os resultados das alterações dos parâmetros em tempo real, tiveram grande importância na escolha. Já os Algoritmos Generativos determinam principalmente a lógica que rege a criação de formas. As características básicas do ambiente computacional escolhido são apresentadas no Capítulo \ref{chapter:ambientedeimplementacao}. As definições, conceitos e principais os modelos computacionais dos AG aplicados á Arquitetura formam o conteúdo deste capítulo.
+
+
+\section{Definição de Algoritmo e Algoritmos Generativos}
+\label{section:definiAlgor}
+
+A palavra "algoritmo" tem sua origem no nome do matemático e astrônomo árabe Mohammed ibu-Musa al-Khowarizmi (século VII). A tradução latina de um de seus livros, sobre a "arte hindu de calcular", foi responsável por difundir o sistema de numeração que chamamos de hindu-arábicos na Europa. Embora não revindicasse a autoria do sistema, a "nova" notação, começou a ser referida como a de "al-Khowarizmi" ou "algorismi" e posteriormente "algorismo" ou "algoritmo". Com o passar do tempo a palavra "algoritmo" passou a significar processo, regra, método (e.g. O algoritmo de Euclides para encontrar o máximo divisor comum de um número) \cite[p. 166]{boyer1974}.
+
+\citeonline[p. 1-8]{knuth1997art} define o conceito atual do termo como um conjunto finito de regras que fornece uma sequência de operações para a solução de um problema específico, e que deve atender cinco requisitos:
+
+\begin{itemize}  
+\item{Finitude}  
+\item{Precisão}  
+\item{Entrada de Informação}
+\item{Saída de Informação}
+\item{Efetividade} 
+\end{itemize}
+
+Em consonância com os assuntos abordados por esse trabalho, na função de ilustrar o conceito, foi escolhido um exemplo de algoritmo proveniente da geometria e desenho técnico, em lugar de uma abordagem puramente numérica: o método de divisão de uma seguimento de reta $\overline{AB}$ qualquer em uma quantidade finita de seguimentos iguais, representada pelo número inteiro $N$. O processo é realizado com  êxito seguindo os cinco passos da "receita" descrita abaixo e representados graficamente na Figura \ref{figura:algorEg}:
+
+\begin{enumerate}  
+\item{Dado o segmento de reta $\overline{AB}$ desenhar, a partir do ponto A, uma semi-reta não paralela à $\overline{AB}$.}  
+\item{Dado o número $N$ de divisões, utilizando o compasso com uma mesma abertura qualquer,  partindo do ponto $A$, marcar $N$ pontos consecutivos e equidistantes sobre a semi-reta traçada no passo anterior.}  
+\item{Traçar um segmento unindo o "N-ésimo" ponto marcado no passo anterior com a extremidade B do segmento $\overline{AB}$.}
+\item{ Traçar paralelas ao segmento desenhado no passo 3, passando pelos pontos definidos no passo 2 e interceptando o segmento de reta $\overline{AB}$.}
+\item{FIM} 
+\end{enumerate}
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Dados Iniciais]
+         {
+            \label{figura:algorEgP0}
+            \includegraphics[width=0.40\textwidth]{algorEgP0.png}
+         }
+  }
+  \mbox{
+      \subfigure[Passo 1]
+         {
+            \label{figura:algorEgP1}
+            \includegraphics[width=0.45\textwidth]{algorEgP1.png}
+         }
+  }
+
+
+\mbox{
+      \subfigure[Passo 2]
+         {
+            \label{figura:algorEgP2}
+            \includegraphics[width=0.45\textwidth]{algorEgP2.png}
+         }
+  }
+  \mbox{
+        \subfigure[Passo 3]
+           {
+              \label{figura:algorEgP3}
+              \includegraphics[width=0.45\textwidth]{algorEgP3.png}
+           }
+    }
+    
+    \mbox{
+          \subfigure[Passo 4]
+             {
+                \label{figura:algorEgP4}
+                \includegraphics[width=0.45\textwidth]{algorEgP4.png}
+             }
+      }
+\end{center}
+\caption{Exemplo de algoritmo - subdivisão de um seguimento em um número finito (5) de partes iguais}
+\label{figura:algorEg}
+\end{figure}
+
+Comparando o exemplo com a definição acima, nota-se que o método de divisão de segmentos tem um fim. A precisão diz respeito a clareza das instruções que, no caso citado, são suficientemente claras para o entendimento humano. Por entrada de informações temos o número inteiro de divisões e o objeto seguimento de reta $\overline{AB}$. Por saída podemos considerar os pontos que dividem o seguimento em $N$ partes ou os $N$  seguimentos de reta justapostos sobre o seguimento $\overline{AB}$. E a efetividade, a capacidade de lograr êxito na execução do seu propósito, pode ser aferida analisando a Figura \ref{figura:algorEgP4} comparada com o teorema descrito por Tales: um feixe de paralelas cortado por duas transversais quaisquer as divide em seguimentos proporcionais.
+
+O pioneiro dos sistemas generativos de projeto aplicados à Arquitetura, William J. \citeonline[p.61-64]{mitchell2008} afirma que todo o trabalho de desenho geométrico/técnico é fundamentado em algoritmos (e.g. os métodos descritos em "Os Elementos" de Euclides). O vocabulário algorítmico do desenho é absorvido pelo projetista e, pela combinação de uma gama de procedimentos, vão surgindo não só formas gradativamente mais elaboradas, como uma linguagem técnica do desenho de projetos. Palavras como perpendicular, paralela, ponto central, tangente, etc passam a resumir uma série de instruções e descrever algoritmos inteiros. Nos primórdios do projeto assistido por computador, esse era o papel dos programadores: A transposição dos algoritmos de desenho para o ambiente digital.
+
+
+
+Os Algoritmos Generativos são um campo de estudo novo e, embora estejam sendo abraçados pelos grandes escritórios de Arquitetura do mundo e estejam sendo estudados e ensinados em muitos centros acadêmicos de Arquitetura \cite{krish2011}, ainda está a procura de uma definição clara e completa. A simples formulação de que são algoritmos voltados a geração de forma, cai por terra pelo simples falto de todo o desenho técnico ser construído a partir de algoritmos.
+
+A simples transcrição dos algoritmos de desenho a ferramenta computacional também não é suficiente para definir o termo. Em seguida, partiu-se para novos domínios como relatado no mesmo texto de \citeauthoronline{mitchell2008}:
+
+\begin{quotation}
+(...) Com o apoio das habilidades de programação mais do que inventividade mecânica, programadores gráficos primeiro replicaram as funções de instrumentos de desenho tradicional, depois foram muito além. Isso disponibilizou para os projetistas um ainda maior vocabulário gráfico junto com uma sintaxe mais elaborada - em suma, uma mais rica e potencialmente mais expressiva linguagem gráfica e espacial.\footnote{\textit{Relying upon software skills rather than mechanical ingenuity, graphics programmers first replicated the functions of traditional drafting instruments, and then went far beyond them. This has made a wider graphic vocabulary available to designers, together with a more elaborate syntax?in all, a richer and potentially more expressive graphic and spatial language.}}  
+\end{quotation}
+
+\citeonline[p. 37-64]{terzidis2006algorithmic} classifica os problemas de projeto como: passíveis de solução (\textit{problem-solving}), referindo-se ao conceito tradicional de encontrar um caminho entre os pontos $A$ e $B$, ou de abordagem (\textit{problem-adressing}). Problemas como a forma inicial, estética ou planejamento não tem uma solução definitiva, mas estratégias de trabalho que podem atingir resultados mais ou menos satisfatórios. Para o autor, projetar é uma forma de pensar. É uma atividade intrinsecamente atada as características mais existencialmente humanas como a lógica, criatividade e identidade. E acaba por conferir à certos algoritmos a capacidade de explorar além, em paralelo ou no lugar de maneiras tradicionais e estabelecidas de se pensar o projeto.
+
+\citeonline{DIno2012} elenca quatro características presentes nos AG: Os parâmetros de entrada, os mecanismos generativos (regras e algoritmos), a geração de variações de formas (saída), e a escolha da melhor variação. Os dois primeiros requisitos estão presentes de maneira idêntica na definição de algoritmo, os outros estão mais ligados à forma de aplicação das ferramentas. Gerar uma saída de dados processados é também uma característica  dos algoritmos. Entradas diferentes produzem saídas variantes em qualquer problema, trabalhar com variações e escolher entre estas, como é pontuado nos dois últimos requisitos, fazendo com que as propriedades de um AG diferenciem-se das características básicas de um algoritmo apenas por uma maior especificidade no que diz respeito ao modo de utilização da ferramenta.
+
+Em suma, os autores concordam que, além da geração de formas, os Algoritmos Generativos possibilitam a aplicação de uma metodologia diferente de trabalho. Parte importante do que caracteriza um AG é a possibilidade de se escolher uma solução de projeto a partir da variabilidade gerada pelos parâmetros e regras. O desafio teórico, que esta pesquisa não encontrou resposta definitiva, é formular uma definição mais precisa, que abarque as referidas novas formas de se trabalhar e eleger uma solução de projeto.
+
+
+\section{Principais Modelos de Algoritmos Generativos Aplicados à Arquitetura e ICC}
+\label{section:tiposag}
+
+Os AG são sim algoritmos capazes de gerar formas, mas também de trazer algo novo para esse antigo jogo. Procurando revelar mais sobre a natureza destes métodos, uma lista dos principais tipos de AGs e algumas de suas aplicações na Arquitetura aparece como o caminho eficaz. Algumas revisões de literatura serviram como base para a elaboração desta lista (\citeonline{ fasoulaki2008}; \citeonline{Santos2009}; \citeonline{daly2009}; \citeonline{Singh2012}), bem como artigos fundamentais e atuais sobre os diversos modelos utilizados. Aplicações dos principais algoritmos foram buscados tanto nos artigos científicos quando em projetos construídos e propostas. 
+
+Curiosamente a maioria desses métodos tem relação direta com aspectos da natureza, a fonte de inspiração dos primeiros construtores, dotados apenas da geometria que estavam formulando e de instrumentos rudimentares de desenho e construção, e repetidamente interpretada por todas as gerações de projetistas. No "Ensaio sobre a Arquitetura" de 1753, o Abade Laugier revisita o conceito fundamental da "cabana primitiva", quatro pilares de trocos de árvore suatentando uma cobertura rústica de duas águas. Uma apologia à simplificação das formas. Segundo \citeonline[p. 5]{frampton2000}, foi um ponto crucial na sucessão de fatos que nos levam ao lema "ornamento é crime" do arquiteto Adolf Loos no início do século XX. Um elo na cadeia de eventos que transformou as formas detalhadamente esculpidas de colunas clássicas em sólidos platônicos como o cilindro e o prisma. Porém o que grande parte dos métodos aqui apresentados explora são justamente os elementos que o platonismo, a Geometria, as ciências e a Arquitetura tinham deixado de lado, e que passaram a ser discutidos cientificamente pelos estudos relacionados com o fim do modelo mecanicistas do universo (Sistemas Complexos, Teoria do Caos Determinístico, etc).
+
+\subsection{Gramáticas de Forma (GF)}
+\label{subsection:agGF}
+
+Introduzido por George Stiny e James Gips em 1971 \cite{stiny1972} nos campos da Pintura e Escultura e seguidamente aplicado à Arquitetura por \citeonline{Stiny1978}, é considerado o primeiro Sistema Generativo aplicado ao projeto. Os quatro elementos básicos de uma gramatica de formas são:
+
+\begin{itemize}
+\item um conjunto finito de formas;
+\item um conjunto finito de símbolos;
+\item um conjunto finito de regras de formas;
+\item uma forma inicial.
+\end{itemize}
+
+Partindo da forma inicial, as soluções são geradas pela modificação (adição, subtração, substituição) de elementos ( membros do conjunto finito de formas) obedecendo as regras presentes no conjunto finito de regras de formas \cite{stiny2008}.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{shapegrammars.png}
+\caption{Árvore Evolutiva das Gramáticas de Forma } \label{figura:gramaticadeformas}
+\end{center}
+\end{figure}
+
+A Figura \ref{figura:gramaticadeformas} \cite{tepavcevic2012} mostra uma árvore evolutiva das GF onde destacam-se as implementações capazes de simular "estilos" de arquitetos notáveis (Palladio, Terragni, Siza...). No caso da GF baseada na Casa Malagueira do arquiteto português Álvaro Siza, \citeonline{duarte2005} relata que o próprio autor teve dificuldade de distinguir entre o projeto de sua autoria e algumas das simulações a ele apresentadas. 
+
+ 
+\subsection{\textit{L-Systems} (LS)}
+\label{subsection:ls}
+
+Os \textit{\textbf{Lindenmayer Systems}}, ou simplesmente \textit{\textbf{L-Systems}}, foram concebidos pelo botânico Aristid Lindenmayer como um modelo matemático do crescimento de plantas. O conceito inicial, embora não tivesse ainda uma representação geométrica, rapidamente evoluiu tornando-se, não só um versátil modelador de plantas e estruturas orgânicas, como uma ferramenta rápida para visualização de fractais \cite{prusinkiewicz1996}. Os LS possuem 3 componentes:
+
+\begin{itemize}
+\item um conjunto finito de símbolos;
+\item um conjunto finito de regras de reescrita;
+\item uma configuração inicial dos símbolos.
+\end{itemize}
+
+Como exemplo podemos ter um conjunto de símbolos composto pelas letras "A" e "B", uma configuração inicial apenas com o símbolo "A" e duas regras de escrita:
+
+\begin{itemize}
+\item todo símbolo "A" deve ser reescrito como "ABA";
+\item todo símbolo "B" deve ser reescrito como "BBB".
+\end{itemize}
+
+Partindo da configuração inicial e operando por três gerações geramos:
+\begin{center}
+A \\
+ABA\\
+ABABBBABA \\
+ABABBBABABBBBBBBBBABABBBABA
+\end{center}
+
+Para gerar gráficos a partir desta ferramenta basta que se associe formas a cada um dos símbolos. Se no exemplo acima o "A" representasse uma linha horizontal ininterrupta e o "B" uma interrupção na linha, este LS desenharia o fractal "Conjunto de Cantor" (Figura\ref{figura:cantor}).
+
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Conjunto de Cantor]
+         {
+            \label{figura:cantor}
+            \includegraphics[width=0.40\textwidth]{cantor.png}
+         }
+  }
+  \mbox{
+      \subfigure[Curva de Koch - fonte : \citeonline{prusinkiewicz1996}]
+         {
+            \label{figura:Koch}
+            \includegraphics[width=0.50\textwidth]{Koch.png}
+         }
+  }
+
+\end{center}
+\caption{Exemplos de aplicações dos L-Systems}
+\label{figura:LSexemplo}
+\end{figure}
+
+Embora os LS sejam definidos como um método de escrita, através de símbolos que representam as formas, uma abordagem gráfica destes modelos foi também exposta no livro "The Algorithmic Beaulty of Plants"\cite{prusinkiewicz1996} coescrito pelo autor da proposta original. A Figura \ref{figura:Koch} mostra aa configuração inicial (\textit{initiator}) onde cada linha do triângulo é substituída pelo elemento "\textit{generator}"(que corresponde graficamente à regra de reescrita) na primeira geração. O mesmo acontece nas quatro gerações seguintes, cada linha é redesenhada, mantendo o tamanho e colocando o "\textit{generator}" em escala proporcional ao da linha que este substitui. estas operações resultam no fractal conhecido como Curva de Koch.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Volumetria dos arranha-céus]
+         {
+            \label{figura:eVolo072nd0}
+            \includegraphics[width=0.30\textwidth]{eVolo072nd0.png}
+         }
+  }
+  \mbox{
+      \subfigure[Diagrama estrutural dos arranha-céus]
+         {
+            \label{figura:eVolo072nd1}
+            \includegraphics[width=0.60\textwidth]{eVolo072nd1.png}
+         }
+  }
+
+\end{center}
+\caption{Inverted Skyscraper Typology - fonte: \citeonline{inveskytopo}}
+\label{figura:LSexemplo1}
+\end{figure}
+
+
+\citeonline{Pascal2006} propõem uma estratégia de modelagem procedural de edifícios baseado nas Gramáticas de Chomsky e em L-Systems, objetivando ampla variação das formas e grande nível de detalhe, aplicado a grandes áreas. \citeonline{daly2009} cita como aplicação dos LS na Arquitetura a proposta do arquiteto Yi Cheng Pan, premiada com o segundo lugar na edição de 2007 do concurso de arranha-céus promovido pelo periódico de Arquitetura eVolo. A ideia consiste na criação de grandes edifícios que ocupem uma área diminuta em sua base, liberando o terreno como espaço público, e que gradativamente, a medida em que se distancia do chão, a área útil de cada pavimento possa aumentar (Figura \ref{figura:eVolo072nd0}). O diagrama estrutural dos prédios, representado na Figura \ref{figura:eVolo072nd1}, baseia-se nas formas encontradas nas ramificações dos galhos de árvores. A aplicação dos LS se justifica neste caso pela eficiência do método na simulação do crescimento de plantas. 
+
+
+\subsection{Autômatos Celulares (AC)}
+\label{subsection:autoCel}
+
+Os autômatos celulares são um poderoso e simples modelo matemático/computacional com aplicações importantes em diversas áreas do conhecimento (e.g. Física, Biologia, Tecnologia, Artes, Ciências Humanas) \cite{wolfram2002}. A teoria dos autômatos celulares tem seu início em meados do século XX, nos trabalhos de von Neumann e Morgenstern. O que se buscava era uma formalização matemática e lógica, capaz de contribuir para o entendimento tanto dos sistemas naturais, quanto da computação. Podem ser definidos como uma regra evolutiva fixa para um grupo de células de uma matriz ou grade, onde o tempo é discreto e o estado de cada célula e alterado dependendo apenas dos estados anteriores (geralmente apenas o imediatamente anterior), dos seus vizinhos e dela própria \cite{pereira2010}. Posteriormente os fundamentos desta teoria foram estruturados por Wolfram, tendo por base os autômatos celulares elementares.
+
+Os autômatos celulares elementares consistem em matrizes unidimensionais onde as células podem apresentar apenas dois estados ( 0 ou 1, "preto" ou "branco"). O estado de cada célula depende apenas do estado anterior dela própria e das vizinhas. Levando em conta que cada célula pode apresentar apenas 2 estados, existem oito ($ 2 \times 2 \times 2 $) combinações possíveis para o estado de três casas consecutivas. Cada uma destas combinações determinará um dos dois valores possíveis para a célula central, o que totaliza 256 regras ($2^8=256$).
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.80\textwidth]{regra90ac.png}
+\caption{Ilustração da regra 90 dos AC elementares } \label{figura:regra90ac}
+\end{center}
+\end{figure}
+
+A Figura \ref{figura:regra90ac} ilustra a regra 90 dos autômatos celulares elementares. Na linha superior temos as oito combinações possíveis, e na linha inferior os resultados de cada combinaçõa para a regra 90. Na Figura \ref{figura:regra90Sierpinski} cada linha representa uma passagem de tempo onde o valor de cada célula é alterado (ou mantido) segundo a regra 90. Partindo de um único ponto com o valor "preto", e colocando cada uma das passagens de tempo como se vê na Figura \ref{figura:regra90Sierpinski}, o desenho formado é uma imagem semelhante ao fractal "Triangulo de Sierpinski".
+
+Parindo-se da primeira linha da Figura \ref{figura:regra90Sierpinski}, procura-se determinar qual valor cada uma das células deve assumir na linha seguinte pela aplicação da regra descrita na Figura \ref{figura:regra90ac}. O procedimento consiste em, para cada célula, considerar o valor dela própria e de suas duas vizinhas imediatas (esquerda e direita), na ordem que elas aparecem na linha (vizinha à esquerda, célula a ser reescrita, vizinha à direita). Sempre que as três células tiverem o valor "branco", aplica-se a oitava posição da Figura \ref{figura:regra90ac} e escreve-se "branco" no estado subsequente da célula em questão. Ao analisar a célula imediatamente à esquerda do elemento "preto" central da primeira linha da Figura \ref{figura:regra90Sierpinski}, aplica-se a sétima posição da regra: para a sequência de valores "branco", "branco", "preto", o estado seguinte da célula analisada será "preto". Para a célula central da primeira linha aplica-se a sexta posição da regra 90 e o novo estado da célula central é "branco". Para definir o novo estado da célula imediatamente à direita do centro aplica-se a quarta posição da regra e o valor "preto" é encontrado. As linhas sucessivas da Figura \ref{figura:regra90Sierpinski} são determinadas da mesma maneira: observa-se o valor da vizinha à esquerda, da própria célula e a da imediatamente á direita, procura-se na regra a mesma sequência de valores, e utiliza-se o valor de novo estado para essa ordem descrito na regra. 
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.60\textwidth]{regra90Sierpinski.png}
+\caption{Resultados obtidos a partir de sucessivas aplicações da regra 90 dos AC elementares - Triangulo de Sierpinski } \label{figura:regra90Sierpinski}
+\end{center}
+\end{figure}
+
+\citeonline{Herr2007} apresentam uma adaptação dos AC para proporcionar maior interação do projetista com o processo, ao invés de deixar o desenho ser unicamente guiado pelas regras de reescrita primariamente definidas. O emprego do AC aparece como um "movimento" opcional de projeto fazendo uso da sua capacidade de gerar variedade formal. Durante o processo é oferecido ao usuário a premissa de aceitar as mudanças propostas pelas regaras e/ou intervir no modelo para direcionar a solução do passo seguinte. Um experimento de redesenho de uma proposta para um conjunto de prédios proposto para a cidade de Aomori, no norte do Japão, pelo grupo de arquitetos espanhóis Cero9 em 2001 (Figura \ref{figura:cero9prop}). Um projeto inspirado em CA onde a inclinação de cada andar é alterada em função da inclinação dos andares adjacentes, com os volumes gerados pela adaptação da mesma proposta com o auxílio do algoritmo descrito no experimento (Figura \ref{figura:cero9alternativo}) obtendo um jogo volumétrico bastante semelhante.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Poposta do Grupo Cero9]
+         {
+            \label{figura:cero9prop}
+            \includegraphics[width=0.40\textwidth]{cero9prop.jpg}
+         }
+  }
+  \mbox{
+      \subfigure[Alternativa por Herr e Kvan(2007)]
+         {
+            \label{figura:cero9alternativo}
+            \includegraphics[width=0.50\textwidth]{cero9alternativo.jpg}
+         }
+  }
+
+\end{center}
+\caption{Duas propostas para o conjunto de prédios em Aomori/japão - fonte: Herr e Kvan(2007)}
+\label{figura:Aomori}
+\end{figure}
+
+
+\subsection{\textit{Swarm Intelligence} (SI)}
+\label{subsection:si}
+
+\textit{Swarm Intelligence} (inteligência de enxame) é um conjunto de modelos de inteligência artificial baseado no comportamento de coletivos descentralizados e auto-organizados. Lançando mão de Agentes (elementos de programação capazes de atuar com autonomia e de acordo com seus próprios critérios) que interagem, competem e colaboram e assim levam o sistema global ao objetivo almejado \cite{Singh2012}.
+
+Os algoritmos de SI são comummente nomeados e classificados em referência aos seres ou coletivo que os inspirou, entre eles temos:
+
+\begin{itemize}
+\item Colônia de Formigas (\textit{Ant Colony});
+\item Colônia de Abelhas  (\textit{Artificial Bee Colony});
+\item Algoritmos das Abelhas (\textit{The Bees Algorithm});
+\item Enxame de Partículas (\textit{Particle Swarm}).
+\end{itemize}
+
+As virtudes dos SI nos campos da organização do trabalho, divisão de tarefas e cronogramas, são investigadas também quando esses campos são usados pela Indústria da Construção Civil. A atividade fim da ICC não se passa em um ambiente projetado e planejado como uma planta industrial convencional, mas no terreno escolhido e servido pelo entorno existente (densamente povoado, urbano, rural, etc), o que acarreta em um grade grau de incerteza quanto a qual seria o melhor planejamento para cada caso. \citeonline{Zhang2005} propõem a aplicação do modelo baseado em "Enxame de Partículas" para a definição do cronograma de trabalho em atividades de construção com limitações no acesso aos recursos necessários. Na mesma linha, porem com um rebatimento formal, \citeonline{Yahya2014} fazem uso de um algoritmo "Colônia de Abelhas" para o planejamento dos espaços de um canteiro de obra. Na geração de formas a serem construídas, o trabalho de \citeonline{Luh2011} apresenta um algoritmo para otimização topológica de estruturas, baseando-se em um \textit{Particle Swarm} binário. \citeonline[p. 62-71]{aranda2006} discutem estratégias de geração de formas pela aplicação de algoritmos inspirados nos coletivos dos pássaros (\textit{Flock of Birds}).
+
+\subsection{Diagramas de Voronoi (DV)}
+\label{subsection:voronoi}
+
+Definidos de maneira simples e intuitiva: Para um conjunto finito de pontos isolados em um espaço contínuo ($\mathbb{D}^{n}$), associa-se todos os pontos do espaço ao elemento mais próximo do conjunto de pontos \cite[p. 1]{Okabe2000}. Na Figura \ref{figura:voronoi2d} vemos um DV bi-dimensional com polígonos demarcando a região do espaço em que qualquer dos pontos internos ao perímetro estão mais próximos do pontos gerador contido no mesmo polígono do que de qualquer outro. Os lados do polígono ($\mathbb{D}^{n-1}$) estão equidistante a dois geradores e os vértices ($\mathbb{D}^{n-2}$) equidistantes a três pontos. Nos Diagramas 3D, Figura
+\ref{figura:voronoi3d}, as faces dos sólidos ($\mathbb{D}^{n-1}$) representam a região equidistante à dois, as arestas ($\mathbb{D}^{n-2}$) à três e os vértices ($\mathbb{D}^{n-3}$) à quatro pontos geradores.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Diagrama de Voronoi 2D]
+         {
+            \label{figura:voronoi2d}
+            \includegraphics[width=0.45\textwidth]{voronoiRhino.png}
+         }
+  }
+  \mbox{
+      \subfigure[Diagrama de Voronoi 3D]
+         {
+            \label{figura:voronoi3d}
+            \includegraphics[width=0.45\textwidth]{voronoi3D.png}
+         }
+  }
+
+\end{center}
+\caption{Gerados no \textit{Software \textit{Rhinoceros} 3D}}
+\label{figura:voronoi2d-3d}
+\end{figure}
+
+A descoberta dos DV (também chamados de Tesselagem de Dirichlet) é frequentemente atribuída à Dirichlet (1850) e ao matemático Georgy Voronoi (1907) embora tenham sido tratados por Descartes em um estudo sobre a fragmentação cósmica, publicado em 1644. Uma estrutura geométrica versátil com aplicações em Geografia, Física, Astronomia, Robótica, Biologia e muitas outras áreas \cite[p. 147-161]{deberg2008}.
+
+Essas malhas ganharam o interesse de arquitetos pelo seu apelo estético orgânico, complexo e, ao mesmo tempo, ordenado. O desenho começa pela escolha dos pontos geradores do diagrama, o algoritmo desenha a manha do Voronoi, avalia-se o resultado e intervem na disposição dos pontos para direcionar o desenho. Sua aplicação na arquitetura pode ser observada no Centro de Esportes Aquáticos da olimpíada de Pequim (\citeauthor{pwtsite}, Figura \ref{figura:watercube}), onde seu uso busca conferir sensação de fluidez ao involucro do prédio.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Centro de Esportes Aquáticos - Pequim, China]
+         {
+            \label{figura:watercube}
+            \includegraphics[width=0.55\textwidth]{watercube.png}
+         }
+  }
+  \mbox{
+      \subfigure[Jellyfish House]
+         {
+            \label{figura:Jellyfish_house}
+            \includegraphics[width=0.35\textwidth]{Jellyfish_house.jpg}
+         }
+  }
+
+
+\end{center}
+\caption{Exemplos de Diagrmas de Voronoi na Arquitetura}
+\label{figura:VoronoiArq}
+\end{figure}
+
+
+
+O escritório californiano \citeauthor{IwamotoSite} propôs a \textit{Jellyfish House} (Figura \ref{figura:Jellyfish_house} ) para uma exibição de conceitos sobre o futuro próximo das \textit{smart houses}. O fechamento externo apresenta ramificações orgânicas, desenhadas com a sobreposição de um DV e uma outra malha gerada pela triangulação de Delauney.
+
+
+\subsection{Algoritmos de Otimização Estocástica}
+\label{subsection:algorEstoc}
+
+Tudo que é calculado ou representado em computação; a altura de um prédio, O raio de um circulo, a inclinação de um telhado, a largura de uma rua, o calor do sol, a velocidade do vento, etc; é feito através de variáveis. A otimização é a procura dos valores ideais de variáveis, para que o cenário descrito por elas possa ser configurado da melhor maneira possível. Quando o problema é simples e bem definido (e.g. qual a menor quantidade em $m^2$ de paredes e laje de uma caixa-d'água para armazenar 5.000 litros de água?), os métodos determinísticos são suficientes para se encontrar com exatidão o resultado ideal. Quando o número de variáveis é grande e/ou a função que relaciona estas à grandeza que se pretende otimizar é muito complexa ou o que se entende por "melhor cenário possível" não é muito bem determinado, a otimização determinística não é suficiente para solucionar o problema e outros modelos ganham importância.
+ 
+A otimização estocástica refere-se aos métodos de procura por uma solução ideal (em relação a um objetivo determinado) onde a aleatoriedade está envolvida de forma construtiva. Os principais algoritmos de otimização estocástica são \cite{Fouskakis2002}:
+
+\begin{itemize}
+\item Algoritmos Genéticos
+\item \textit{Simulated Annealing} 
+\item \textit{Tabu Search}
+\end{itemize}
+
+\subsubsection{Algoritmos Genéticos}
+\label{subsection:algorEstocAG}
+
+Os Algoritmos Genéticos são, dentre os métodos de otimização estocásticos, os mais aplicados na Arquitetura \cite{Singh2012}. Propostos por John Holland em 1975 \cite{Lodding2004}, estes algoritmos são modelos computacionais inspirados nos conceitos darwinianos de sobrevivência dos mais aptos \cite{Caldas2002}. Operações de seleção e recombinações são aplicadas entre as soluções candidatas na procura dos que apresentam um melhor desempenho. A terminologia usada também faz analogia com a teoria da evolução das espécies: as soluções candidatas são chamadas de indivíduos, os grupos de indivíduos existentes em cada estado é denominado de população, cada vez que uma nova população é criada, chama-se de geração. As principais operações realizados por um algoritmo genético são: a reprodução, o \textit{crossover} e a mutação.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[\textit{Integrated Design} - \citeonline{fasoulaki2008}]
+         {
+            \label{figura:integated_design}
+            \includegraphics[width=0.30\textwidth]{integated_design.jpg}
+         }
+         
+         \quad
+         \quad
+
+        \subfigure[Fachadas Escolhidas, Gene Arch - \citeonline{Caldas2008} ]
+           {
+              \label{figura:GeneArch}
+              \includegraphics[width=0.42\textwidth]{GeneArch.jpg}
+           }
+    }
+
+\end{center}
+\caption{Exemplo de Aplicações de Algoritmos Genéticos na Arquitetura}
+\label{figura:geneticos}
+\end{figure}
+
+Inicialmente o algoritmo gera aleatoriamente uma população inicial de indivíduos, um conjunto de possíveis configurações das variáveis do problema. Em seguida aplica-se a função objetivo, também chamada de \textit{fitness function} ou função de aptidão, para todos os candidatos gerados no passo anterior. A \textit{fitness function} alude ao conceito evolucionista em que os mais aptos sobrevivem. Na série de trabalhos desenvolvidos por \citeonline{caldas1999}, (\citeyear{cladas2001}), (\citeyear{Caldas2002}),  (\citeyear{Caldas2008}) o que se pretende analisar é a temperatura e iluminação resultante das dimensões das janelas de fachadas com orientações distintas, em diferentes cidades do mundo. Os indivíduos são configurações das fachadas com variadas dimensões de abertura para  cada fachada. A \textit{fitness function} se alimenta pelos valores de  iluminação e temperatura analisada pelo software DOE2.1E. Simulando as características climáticas de uma cidade específica, o \textit{software} recebe os parâmetros de cada individuo e calcula a sensação térmica e a iluminação em um cômodo com essas configurações e a energia gasta para que, com iluminação e controle térmico artificiais, o ambiente se aproxime de condições definidas como ideais. A partir desses dados, ordenam-se os indivíduos de acordo com a eficiência energética de cada análise, medindo-se assim a aptidão à "sobrevivência" de cada candidato. As melhores soluções são eleitas para a próxima fase. O \textit{crossover} permite reorganizar partes de duas soluções eleitas, gerando uma nova configuração, um novo individuo integrante de uma nova geração e mutações ocorrem com definida probabilidade sobre os indivíduos da população. Os trabalhos evoluem e um \textit{software} de otimização baseado em algoritmos genéticos para Arquitetura, o \textit{Gene Arch}, é apresentado \ref{figura:GeneArch}.
+
+Mutação é um evento aleatório que ocorre com uma probabilidade definida pelo usuário para alguns indivíduos da população. É aplicada para garantir a diversidade genética da nova geração \cite{fasoulaki2005}\footnote{\textit{Mutation is a random event, occurring with a user-defined probability to only some of the new offspring. It is used to maintain genetic diversity by altering only a little piece of the new offspring.}}. As operações são repetidas seguidamente, de geração à geração, analisando candidatos até que os critérios de parada do algoritmo sejam atendidos e a solução otimizada seja escolhida.
+
+No experimento proposto por \citeonline{fasoulaki2008} quatro características de um edifício em Nova York são otimizadas: o insolejamento, a estrutura, a ventilação e maximização da área construída de acordo com as limitações do código de obras da cidade. O modelo é parametrizado em sete pavimentos de controle elípticos igualmente distantes. Neles O desempenho térmico e a iluminação são avaliados. A volumetria é criada a partir da interpolação de uma superfície entre as linhas de contorno de cada pavimento de controle. A área das interseções de planos na altura de cada andar (para este cálculo não são utilizados apenas os pavimentos de controle) é somada para se aferir o valor da área construída . Avalia-se através de uma planilha o custo estimado da estrutura de cada candidato. Os genes controlam a posição e rotação de cada pavimento de controle e as mutações transformam pavimentos elípticos em circulares. A função de aptidão é avaliada após normalizarem-se os valores de cada análise entre zero e um, atribuindo-se pesos para cada uma das quatro características estudadas. O método, intitulado \textit{Integrated Design} (Figura )\ref{figura:integated_design}), defende uma negociação entre os diversos profissionais envolvidos no projeto, ouvindo especialistas de cada área para que se definam os pesos. A grosso modo, é a tentativa de estabelecer uma proporção entre o benefício de uma melhor insolação com o custo estrutural que isso acarreta, por exemplo.
+
+
+\subsubsection{\textit{Simulated Annealing} (SA)}
+\label{subsection:algorEstocSA}
+
+Supondo que, em um problema de otimização onde se procura o valor mínimo de uma função utilize-se o seguinte método: uma configuração inicial, representada pelo ponto $P1$ é fornecida para o problema. Outros pontos são escolhidas aleatoriamente na vizinhança do $P1$, chamados aqui genericamente de $Pn$. A função objetivo $F(x)$ é avaliada para os novos pontos. Caso o valor da função objetivo para $Pn$ seja menor que o valor da função objetivo em $P1$, a configuração $Pn$ é armazenada como um candidato possível para melhor solução. Se $F(P1)<F(Pn)$, o ponto $Pn$ é descartado.
+
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[\textit{Hill Climbing}]
+         {
+            \label{figura:hillclimbing}
+            \includegraphics[width=0.45\textwidth]{hillclimbing.png}
+         }
+         
+         
+         
+
+        \subfigure[Mínimo Local e Gobal]
+           {
+              \label{figura:MINIMO_LOCAL}
+              \includegraphics[width=0.45\textwidth]{MINIMO_LOCAL.png}
+           }
+         }
+         
+  \mbox{
+           \subfigure[Curva Exponencial]
+                      {
+                         \label{figura:exponencial}
+                         \includegraphics[width=0.45\textwidth]{exponencial.png}
+                      }
+                      
+                      
+           \subfigure[\textit{Simulated Annealing}]
+                                 {
+                                    \label{figura:SA_conceito}
+                                    \includegraphics[width=0.45\textwidth]{SA_conceito.png}
+                                 }
+    }
+ 
+
+\end{center}
+\caption{\textit{Simulated Annealing} - Conceituação}
+\label{figura:baseSA}
+\end{figure}
+
+O método descrito acima se chama \textit{hill climbing}, ilustrado na Figura \ref{figura:hillclimbing}. Apresenta grande velocidade de convergência, caso o problma seja bem definido, a função objetivo seja simples ou o ponto inicial seja convenientemente escolhido. Em casos onde a função apresenta uma curva menos previsível, apresentando mínimos locais e um mínimo global, como no exemplo da Figura \ref{figura:MINIMO_LOCAL}, dependendo do ponto inicial escolhido, o procedimento apresentado pode convergir para um mínimo local e ficar estacionado. Em funções objetivos complexas e com número de variáveis maior que dois, a determinação da região que faria o resultado do \textit{hill climbing} convergir para o mínimo global costuma ser impreciso.
+
+O \textit{Simulated Annealing}, ou recosimento simulado, propõe uma alteração no algoritmo \textit{hill climbing} baseando-se no processo metalúrgico do recosimento (\textit{annealing}) e no algoritmo Metropolis-Hastings. O objetivo desta implementação é um método de otimização que consiga executar uma varredura mais completa no espaço de soluções do problema, evitando que o resultado fique sujeito à convergência em mínimos locais.
+
+O recosimento é um processo metalúrgico de se resfriar gradualmente um corpo, com uma queda lenta e controlada da temperatura para que as moléculas formem cristais, a acomodação que acarreta em uma menor energia para o sistema. Caso a queda da temperatura seja brusca, a tendência é vitrificar, equivalendo a mínimos locais no que diz respeito á minimização da energia do sistema.
+
+O algoritmo Metópolis-Hastings, ou simplesmente o algoritmo Metrópolis, se encaixa perfeitamente na analogia criada por se tratar de uma aplicação do algoritmo probabilístico de Monte-Carlo para simular a configuração energética mais provável das moléculas de um sistema em equilíbrio térmico. O modelo físico utilizado para relacionar energia com temperatura foi a distribuição de Boltzmann, descrita na equação \ref{equacao:sa}:
+
+
+\begin{equation}
+\label{equacao:sa}
+P(E)= e^{x}
+\verb| , sendo |
+x=\frac{-\Delta E}{k \times T}
+\end{equation}
+
+
+
+A distribuição de Boltzmann parte da noção Física de que as partículas de um sistema em equilíbrio térmico não tem todas a merma energia. A distribuição desta energia não acontece por igual, de forma que a soma de pequenas partes iguais resultem na temperatura do sistema. Calcula-se aqui a probabilidade, $P()$, de uma dessas moléculas ter determinada energia, $E$, em função da variação da energia global, $\Delta E$, e da temperatura do sistema, $T$. O $k$ é a chamada constante de Boltzmann ($1,38 \times 10\mathbb{}^{-23} J/K$), e a curva da probabilidade, $P(E)$ apresenta a forma de uma exponencial, $e^{x}$, mostrada na Figura \ref{figura:exponencial}. 
+
+Os algoritmos SA possuem três requisitos básicos:
+
+\begin{itemize}
+\item uma função objetivo;
+\item uma configuração inicial das variáveis;
+\item uma agenda de resfriamento.
+\end{itemize}
+
+Semelhante ao modelo \textit{Hill Climbing}, configurações aleatórias são escolhidas na vizinhança da configuração inicial. Caso o valor da função objetivo seja menor em um ponto sorteado na vizinhança do que na configuração inicial, esse ponto é aceito no conjunto das configurações, caso contrario, o ponto não é imediatamente descartado como no \textit{Hill Climbing}, mas se aceita ou refuta o candidato de acordo com uma probabilidade baseada na distribuição de Boltzmann (Figura \ref{figura:SA_conceito} ).
+
+Para os pontos com função objetivo maior que á inicial, a probabilidade de ingresso no conjunto de candidatos aceitos é definida por uma avaliação da função $P(E)$, tendo por $\Delta E$ a variação da função objetivo para $P(1)$ e $P(n)$ e $T$ a temperatura atual da agenda de resfriamento. A temperatura tem importância determinante no valor da probabilidade e permanência do novo ponto. Se $T$ tem um valor muito alto, $x$ será um valor negativo muito baixo, levando a função $e^x$ assumir posição próxima a 1 no gráfico da Figura \ref{figura:exponencial}. a medida que $T$ diminui, o valor de $e^x$ se aproxima de zero. Com a probabilidade calculada, um número entre zero e 1 é sorteado (algoritmo pseudo-randômico). Se a probabilidade é maior que o número sorteado, o ponto é aceito, caso contrario é descartado. E o processo reinicia tendo os membros do conjunto dos candidatos aceitos como configuração inicial.
+
+A agenda de resfriamento define de quantos em quantos \textit{loops} a temperatura sera controladamente reduzida, e quais valores vai assumir ao longo do tempo de execução do SA. Os critérios são definidos pelo usuário é podem variar de acordo com o problema a ser otimizado.
+
+No início de sua execução, a probabilidade de aceitação de valores rejeitados pelo \textit{Hill Climbing} é muito grande, permitindo ao SA explorar amplamente o espaço de soluções possíveis. Com o resfriamento simulado no algoritmo, menos candidatos com $P(1)<P(n)$ são aceitos e os candidatos tendem a convergir para diversos mínimos locais, eventualmente encontrando o mínimo global do sistema \cite{Kirkpatrick1983}.
+
+\citeonline{Lamberti2008} propõe uma variação do SA denominada CLMPSA (\textit{Corrected Multi-Level Multi-Point Simulated Annealing}), descrevendo detalhadamente a estrutura do algoritmo para a otimização estrutural de treliças. O método procura mover configurações de maior valor para a função objetivo antes de fazer o teste probabilístico, mostra um critério de definição da agenda de resfriamento em função das variações da energia do sistema e compara os resultados com implementações do SA alternativas e outros métodos de otimização. \citeonline{Sonmez2007} usa o SA para otimização de forma estrutural submetida a carregamento quasi-estático representada em duas dimensões.
+
+
+%\subsubsection{\textit{Tabu Search}}
+%\label{subsection:algorEstocTS}
+
+
+\subsection{Fractais}
+\label{subsection:fractais}
+
+Embora não seja exatamente um algoritmo, mas possam ser gerados por uma gama destes, os fractais são uma das mais importantes descobertas  cientificas do século XX. Uma particularidade interessante é que estas formas geométricas atraíram a atenção não só de cientistas, mas também de artista e \textit{designers}. Na Arquitetura não foi diferente. O escritório \citeonline{hparc}, por exemplo, no projeto do \textit{Grand Egyptian Museum} em Gizé no Egito, utiliza do Triângulo de Sierpinski em uma fachada lateral translúcida tanto como uma alusão à emblemática imagem histórica das pirâmides quanto como um contraponto estético contemporâneo.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[\textit{Grand Egyptian Museum} Gizé, Egito - fonte: \citeonline{hparc}]
+         {\label{figura:grandEgyptianmuseum}
+          \includegraphics[width=0.71\textwidth]{grandEgyptianmuseum.png}
+         }
+         
+         
+        \subfigure[\textit{Federation Square of Melbourne} - fonte: \citeonline{Hammer2006} ]
+           {\label{figura:fsm}
+            \includegraphics[width=0.21\textwidth]{FederationSquare.png}
+           }
+       }
+
+\end{center}
+\caption{Exemplos de Utilização dos Fractais na Arquitetura}
+\label{figura:fractaisArqExemplos}
+\end{figure}
+
+
+
+O termo fractal foi cunhado pelo matemático Benoit Mandelbrot em um artigo publicado em 1975. Tem por raiz a palavra \textit{fractus}, oriunda do latim, significando "quebrado" ou "fragmentado". Aplicando processos de computação gráfica para estudar o comportamento de métodos iterativos na resolução de certas equações complexas (tendo por base alguns trabalhos do matemático Gastón Julia), gerou-se  uma série de gráficos onde propriedades geométricas divergentes das estabelecidas nos estudos euclidianos foram encontradas, estudadas e mesuradas. Ao ramo da Matemática que trata dos elementos que possuem estas propriedades foi dado o nome de Geometria Fractal.  O livro "The Fractal Geometry of Nature" de Benoit Mandelbrot \cite{mandelbrot1983fractal} que, segundo o prefácio do autor, é uma extensão e correção de seus artigos anteriores sobre o tema; parte da ideia de que uma montanha não é um cone e as nuvens não são esferas, propondo uma abordagem científica aplicável ao estudo de formas não euclidianas. Como principais características dos fractais estão a auto-similaridade (ligada ao conceito de escala),  replicabilidade infinita e  a dimensão de Hausdorff diferente da dimensão euclidiana (muitas vezes não sendo um número inteiro).
+
+Para facilitar a apreensão dos conceitos básicos, tomou-se como exemplo o fractal proposto pelo matemático polonês Waclaw Franciszek Sierpinski em 1915, o Triângulo de Sierpinski. Embora a figura proposta seja anterior à criação deste ramo da geometria, não esta só entre as construções matemáticas preexistentes que se encaixam no conceito.
+
+Sua construção se dá pelo desenho inicial de um triangulo, a partir do qual um segundo triangulo é formado pela ligação dos pontos médios dos lados do primeiro. Considera-se que este segundo triângulo é uma subtração da área do original (quebra ou fragmentação). Tem-se agora três triângulos e um vazio triangular(Figura \ref{figura:sierpinskigrasshopper2D}). Em cada um dos triângulos o procedimento é refeito, gerando mais três triângulos para cada. Repete-se a operação infinitas vezes e a cada etapa se dá o nome de iteração, numerando-as a partir da primeira vez que a forma inicial é subdividida (primeira iteração).
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Triângulo de Sierpinski 2D]
+         {
+            \label{figura:sierpinskigrasshopper2D}
+            \includegraphics[width=0.45\textwidth]{sierpinskigrasshopper.png}
+         }
+  }
+  \mbox{
+      \subfigure[Análogo 3D do Triângulo de Sierpinski]
+         {
+            \label{figura:sierpinskigrasshopper3D}
+            \includegraphics[width=0.45\textwidth]{sierpinskigrasshopper3d.png}
+         }
+  }
+
+\end{center}
+\caption{Gerados no \textit{Rhino3d/Grasshopper} utilizando o \textit{add-on Hoopsnake} para uma e cinco iterações}
+\label{figura:sierpinskigrasshopper}
+\end{figure}
+
+
+A partir da Figura \ref{figura:sierpinskigrasshopper}, gerada no ambiente \textit{Rinoceros / Grasshopper} (ver Apêndice \ref{Apend2:triSierp}) pode-se aferir pela simples observação duas das características básicas dos fractais e calcular a terceira. Nota-se que pequenos pedaços do desenho reproduzem o todo. Tendo em mente a ideia de uma constante aproximação da figura, de tal forma que a escala dos triângulos menores vai aumentando e, em dado momento, um deles assume o tamanho do triangulo inicial. É intuitivo perceber que a imagem encontrada é semelhante ou mesmo igual (caso não se possa enxergar qualquer pedaço contido nos outros triângulos gerados na mesma iteração, e o número de iterações seja equivalente para se ter o mesmo nível de detalheda imagem) à figura como era vista antes da aproximação. A capacidade dos fractais de carregar em suas partes a representação do todo se dá o nome de auto-similaridade.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.50\textwidth]{haussdorf.png}
+\caption{Dimensão de Haussdorf - fonte: http://en.wikipedia.org/wiki/Fractal\_dimension} \label{figura:haussdorf}
+\end{center}
+\end{figure}
+
+Um dos interesses científicos  no estudo dos Fractais é a sua ocorrência na natureza. Uma planta onde suas estruturas ramificam-se  repetindo em escala reduzida formas semelhantes ao todo (ou a parte do todo) é o que se observa no triângulo de Sierpinski sob o conceito de auto-similaridade (uma parte representa o todo). A replicabilidade infinita, a possibilidade de observar elementos recorrentes independentemente de quantas (infinitas) aproximações (iterações) sejam efetuadas, só é encontrada em fractais da Matemática. O raciocínio que embasa o cálculo da dimensão fractal, também chamada de dimensão de Haussdorf,  é ilustrado na Figura  \ref{figura:haussdorf}. Para cada uma das dimensões cartesianas desenhou-se uma figura que a representasse (uma reta, um quadrado e um cubo).  Cada uma das dimensões  de cada figura é dividida em um número qualquer (porem igual para cada dimensão) de vezes.
+
+Sendo $r$ o número de subdivisões em cada dimensão e $N$ o número de figuras semelhantes à inicial geradas por $r$ subdivisões, tem-se $N=r^{D}$, onde $D$ é a dimensão euclidiana da figura. A variável $r$ pode também ser escrita como $L/u$, onde $L$ é o tamanho de cada dimensão da figura e $u$ o tamanho de cada subdivisão. Coloca-se $D$ em evidência encontra-se a equação \ref{equacao:haussdorf}.
+
+\begin{equation}
+\label{equacao:haussdorf}
+D= \frac{\log{N}}{ \log{L/u}}
+\end{equation}
+
+ 
+Para todas as formas e divisões mostradas na Figura \ref{figura:haussdorf} o valor $D$ calculado será igual ao número de dimensões euclidianas que cada geometria representa (um para a reta, dois para o quadrado, três para o cubo). Aplicando a equação \ref{equacao:haussdorf} para calcular a dimensão fractal do Triângulo de Sierpinski, onde cada lado $L$ é dividido duas vezes por iteração, $L/u=2$, formando três figuras semelhantes a inicial, $N=3$. Logo $D=\frac{\log{3}}{\log{2}}$. Portanto a dimensão de Haussdorf do fractal é de $1,5849$.
+
+Mas os números não importam por enquanto. Em um nível mais profundo do estudo, esses números traduzem informações sobre a natureza das coisas. Primeiramente é recomendável entender o significado do que eles medem: a maneira como o espaço se dobra, a quantidade da rugosidade de uma superfície, a textura das formas da natureza, as curvas da linha entre a praia e o mar, o detalhe de como certos tipos de matéria se agrega. Imagens direta ou indiretamente presentes nos pensamentos sobre a construção. A dimensão fractal é uma quantidade numérica que aproxima as ramificações dos galhos da árvore à seu todo.
+
+Em 1997 o escritório de arquitetura londrino \textit{Lab Architectural Studio} ganhou o concurso internacional para o projeto de um centro cultural, o \textit{Federation Square} na cidade de Melbourne, Austrália. A Figura \ref{figura:fsm} mostra um detalhe da fachada de um três prédios principais do conjunto (abaixo) e a estratégia utilizada na subdivisão dos triângulos sucessivamente em cinco triângulos menores (acima), mantendo sempre a proporção de 1:2 entre os lados perpendiculares. Os triângulos são construídos de três materiais: vidro, arenito e zinco. Um mosaico multifacetado e multicolorido, segmentando, absorvendo, refletindo e enquadrando a luz e definindo os espaços de forma peculiar e fragmentada \cite{Hammer2006}.
+
+
+\subsection{Modelos de Parâmetros e Restrições (MPR)}
+\label{subsection:agParam}
+
+Todos os algoritmos generativos, bem como toda computação, baseiam-se em parâmetros. Os modelos paramétricos, contudo se diferenciam dos demais por colocar a ênfase na manipulações destes \cite{DIno2012}. A modelagem paramétrica permite alteração a qualquer momento de algumas variáveis e o automático rebatimento desta alteração no modelo. Desenhando um prisma quadrangular reto (paralelepípedo), deve-se fornecer valores reais para a altura, largura e profundidade. Na modelagem paramérica é permitido alterar qualquer uma dessas variáveis, redesenhado o prisma automaticamente.
+
+Os modelos paramétricos de projeto pode ser divididos em dois tipos: conceituais e construtivos. Os últimos tem por principais parâmetros as informações envelopadas em formas 3D predeterminadas. Esses modelos desempenham papel crucial na implementação do conceito de BIM, visto que seu objetivo é agregar o maior número de informações construtivas possíveis dentre os seus parâmetros. Nos modelos conceituais os parâmetros de projeto são definidos em primeira etapa e guiam a procura pela forma. Representando uma mudança mais radical no processo de projetar que os modelos paramétricos construtivos \cite{Milena2010a}. Essa mudança no processo coloca os modelos paramétricos conceituais dentro do campo de estudo dos Algoritmos Generativos. 
+
+As duas categorias, porem não são estanques. \citeonline{Donath2009}, por exemplo, desenvolvem um modelo paramétrico conceitual para projeto da forma externa de prédios residenciais isolados e de grande altura que, desde a instigação inicial, apoia-se em uma ferramenta especializada em modelos paramétricos construtivos, tornando evidente a facilidade com que as informações construtivas poderão ser inseridas durante o processo.
+
+Dentre as principais qualidades de um Modelo Paramétrico está a capacidade de resolver questões bem definidas, com um objetivo claramente descrito, quando de abordar questões pouco definidas e complexas que apresentam diversas soluções viáveis \cite{DIno2012}.
+
+Os Modelos Paramétricos Conceituais são aqui tratados como Modelos de Parâmetros e Restrições por razões técnicas e metodológicas. A ideia é enfatizar na nomenclatura a importância tanto dos parâmetros quanto das regras implementadas na forma de algoritmos, que geram as formas geométricas à serem estudadas. Essas regras, falando especificamente da Modelagem Paramétrica Conceitual, podem ser entendidas como restrições. Esta abordagem mostrou-se eficiente, do ponto de vista metodológico, na elaboração das regras e de sua transcrição nos algoritmos desenvolvidos durante este trabalho.
+
+Do ponto de vista técnico a enfase nas restrições se justifica pelo modelo computacional baseado em \textit{Constraint Solvers}. Este modelo lida com problemas de satisfação de restrições (\textit{constraint satisfaction problems}), onde um conjunto finito de variáveis, cada uma delas restritas á um domínio finito, tem os valores que podem assumir concomitantemente definidos por restrições \cite{Bartk01theoryand}.  Modelos estes que, desde sua introdução no mercado, pelo \textit{software} \textit{Pro/Engineer} na década de 1980, foram adotados pela pelos mais importantes sistemas CAD disponíveis, representando uma grande mudança na maneira que os usuários interagem com suas ferramentas de projeto. A criação e manipulação de formas geométricas através dos \textit{Constraint Solvers} tem forte relação com a demonstração de teoremas em Geometria \cite{Hoffmann2005}.
+
+Para ilustrar essa características, um exemplo de MPR foi elaborado e será apresentado em seguida. Inspirado em duas obras do arquiteto João Filgueiras Lima (Lelé), este MPR descreve as cúpulas móveis usadas no auditório da unidade do Rio de Janeiro da Rede Sarah de Hospitais (Figura \ref{figura:sarahcupula}), e no Auditório e plenário da sede do Tribunal Regional do Trabalho, em Salvador - Ba (Figura \ref{figura:trtcupula}).
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Hospital Sarah-RJ fonte: http://www.sarah.br/]
+         {\label{figura:sarahcupula}
+          \includegraphics[width=0.30\textwidth]{sarahcupula.jpg}
+         }
+         \qquad
+         
+        \subfigure[Perspectiva TRT-Ba fonte: Acervo do Instituto Habitat]
+           {\label{figura:trtcupula}
+            \includegraphics[width=0.47\textwidth]{trtcupula.jpg}
+           }
+       }
+
+\end{center}
+\caption{Cúpulas móveis do Arquiteto João Filgueiras Lima (Lelé)}
+\label{figura:mprExemplos}
+\end{figure}
+
+As cúpulas móveis permitem o controle da iluminação e exaustão nos auditórios. Possibilitando Tanto que ocorram de maneira natural, economizando energia, quanto artificiais, para que, por exemplo, se possa fazer melhor uso de mídias projetadas em telões. O número de pétalas, o raio de base da cúpula e a altura da calota esférica variam entre os dois projetos. Entre os parâmetros passiveis de otimização estão: 
+
+\begin{itemize}
+\item o número de pétalas;
+\item o raio da base;
+\item a altura da cúpula.
+\end{itemize}
+
+O número de pétalas tem relação direta com os mecanismos (motores) de operação das cúpulas. Uma quantidade maior de pétalas, menor o peso de cada uma e um maior número de motores elétricos responsáveis pela articulação de cada peça. O raio implica diretamente na área da abertura de iluminação e exaustão. As três variáveis tem implicação direta no aspecto visual da cúpula, sendo exigidas na abordagem do problema estético. O exemplo aqui proposto apresenta um algoritmo capaz de desenhar as cúpulas de ambos os projetos e variações destas. Além das três variáveis, duas foram acrescentadas: o ponto central do círculo de base da calota, e o ângulo de rotação da abertura das pétalas. O método segue as seguintes etapas:
+
+\begin{enumerate}
+\item O círculo $C1$ é desenhado partindo do ponto central $PC$ com raio $r$.
+
+
+\item $C1$ é dividido em $N$ partes iguais. Os pontos divisores são armazenados em uma lista de pontos $Lp1$, ordenados no sentido anti-horário, partindo de um ponto inicial.
+
+\item Cria-se um ponto $PH$ movendo o ponto $PC$ com uma distância $h$ ao longo do vetor perpendicular ao plano do círculo $C1$.
+
+\item Uma lista de segmentos de reta $Llin1$ é criada ligando o ponto $PC$ a cada um dos pontos da lista $Lp1$.
+
+\item Uma lista de arcos $Larc1$ é criada partindo do ponto $PH$ sendo tangente aos vetores representados pelos segmentos orientados da lista $Llin1$ e com ponto final os da lista $Lp1$.
+
+\item uma lista de superfícies $Ls1$ é criada pelo método de revolução. Rotacionando os arcos da  lista $Larc1$ em torno de um eixo definido pelos pontos $PC$ e $PH$ ao longo de um ângulo de $360/N$ e sentido anti-horário.
+
+\item uma lista de pontos $Lp2$ é criada a partir da lista $Lp1$ extraindo o primeiro elemento da lista e colocando no final: sendo a lista $Lp1$ composta por $Lp1_{0};Lp1_{1};Lp1_{2}...Lp1_{N}$ nesta ordem, em $Lp2$ os elementos de $Lp1$ na sequência $Lp1_{1};Lp1_{2}...Lp1_{N};Lp1_{0}$.
+
+\item Uma lista de segmentos de reta $Llin2$ é criada ligando os pontos de mesmo índice das listas $Lp1$ e $Lp2$.
+ 
+ \item O ângulo $\alpha$ é definido pelo usuário. 
+ 
+ \item Cada elemento da lista de superfícies $Ls1$ é rotacionado um ângulo $\alpha$ em torno do elemento correspondente da lista de segmentos de reta $Llin2$.
+ 
+ \item Fim.
+
+\end{enumerate}
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[]
+         {
+            \label{figura:cupula01}
+            \includegraphics[width=0.45\textwidth]{cupula03.png}
+         }
+         
+         
+         
+
+        \subfigure[]
+           {
+              \label{figura:cupula02}
+              \includegraphics[width=0.45\textwidth]{cupula02.png}
+           }
+         }
+         
+  \mbox{
+           \subfigure[]
+                      {
+                         \label{figura:cupula03}
+                         \includegraphics[width=0.45\textwidth]{cupula01.png}
+                      }
+                      
+                      
+           \subfigure[]
+                                 {
+                                    \label{figura:cupula04}
+                                    \includegraphics[width=0.45\textwidth]{cupula04.png}
+                                 }
+       }
+\mbox{
+           \subfigure[]
+                      {
+                         \label{figura:cupula05}
+                         \includegraphics[width=0.45\textwidth]{cupula06.png}
+                      }
+                      
+                      
+           \subfigure[]
+                                 {
+                                    \label{figura:cupula06}
+                                    \includegraphics[width=0.45\textwidth]{cupula05.png}
+                                 }
+    }
+ 
+
+\end{center}
+\caption{Cúpulas móveis geradas por MPR - \textit{Rhinoceros/Grasshopper} }
+\label{figura:exemplocupgrass}
+\end{figure}
+
+
+O algoritmo foi implementado no ambiente \textit{Rhinoceros/Grasshopper} e pode ser visto no Apêndice \ref{Apend2:cupula}. A Figura \ref{figura:exemplocupgrass} mostra algumas formas geradas pelo processo. Os parâmetros de entrada são: o ponto $PC$, o raio $r$, a distância de deslocamento $h$, o número de pétalas $N$ e o ângulo de rotação $\alpha$. A criação do ponto $PH$, perpendicular ao plano do círculo $C1$, é uma exemplo de restrição. O método de criação das geratrizes $Larc1$, em função das tangentes dos vetores em $Llin1$, restringe a forma da cúpula fechada à uma calota esférica, com ponto central pertencente à reta que passa pelos pontos $PC$ e $PH$.
+
+Aproximando-se do conceito de demonstração de um teorema em Geometria, nota-se uma importante relação entre variáveis $r$ e $h$:
+\begin{itemize}
+\item sempre que $r$ for igual à $h$, a calota é uma semiesfera e o centro da esfera coincide com o ponto $PC$;
+\item sempre que $r$ for maior que $h$, a calota é menor do que a metade da esfera e o seu centro está abaixo do ponto $PC$;
+\item sempre que $r$ for menor que $h$, a calota é maior do que a metade da esfera  seu centro está acima do ponto $PC$;
+\item quando o valor de $r$ ou de $h$ é igual a zero, o algoritmo falha na geração de formas, tornando essas configurações invalidas para a solução do problema.  
+\end{itemize}
+
+Ampliando essas relações para todo o conjunto de parâmetros, é possível afirmar que, para cada configuração válida destes, existe uma  única cúpula como resposta. O mesmo pode ser dito para qualquer MPR que não utilize, de alguma forma, a aleatoriedade em seu conjunto de regras. Cada pétala é representada computacionalmente como uma curva \textit{nurbs} e, assim como cada uma das geometrias auxiliares utilizadas pelo algoritmo, é composta por um conjunto de variáveis cujos valores são definidos pela atuação do \textit{constraint solvers}. Os parâmetros são variáveis especiais que alimentam e manipulam o conjunto de restrições que guiam a criação das formas.
+
+Enquanto os parâmetros de entrada podem ser dinamicamente modificados pelo usuário, as restrições só podem ser alteradas pela modificação do algorítimo. A criação das formas é guiada por um diálogo entre os valores explicitamente controlados pelos projetistas e as restrições impostas pelas regras transcritas no algoritmo. Enquanto os primeiros garantem a criação de variedade pela simples alteração de valores, também chamadas de flexões do modelo, as últimas garantem que a forma gerada faz parte de um conjunto de resultados específicos, compatíveis com o problema abordado, e apresenta as intenções de projeto, não como forma, mas como ideia. 
+
+

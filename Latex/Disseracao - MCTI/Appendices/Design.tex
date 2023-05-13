@@ -1,0 +1,208 @@
+% Thesis Appendix -------------------------------------------------------
+
+\chapter{Software Design Specifications}\label{chpsoftware}
+
+This appendix defines the software design specifications for the HIVacSim model requirements,
+as described in Chapter \ref{chpmodel}. The installation files and a short guide on how
+to use the implemented simulation model are included in the accompanying CD.
+
+\section{User Cases}
+
+A use case describes the events of an actor (an entity external to the system who in some
+way participates in the user case definition) using the system to complete a process. In
+this context, use cases describe the process of a user creating and maintaining
+simulation scenarios, using HIVacSim to simulate the population over time and saving the
+simulation results. Table \ref{tabusercases} defines the user cases for HIVacSim.
+
+\begin{longtable}{|c|p{12.5cm}|}
+\caption{User cases for HIVacSim}\label{tabusercases}\\\hline
+\endfirsthead
+\multicolumn{2}{c} {{\tablename} \thetable{} -- Continued} \\\hline
+\endhead
+\multicolumn{2}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+
+\textbf{User Case} & \textbf{Simulation Scenario} \\\hline
+Actors      & User \\\hline
+Purpose     & Capture the process of handling the simulation scenario files \\\hline
+Overview    & The user creates a new simulation scenario (core groups, infection,
+              intervention types and intervention strategies) and then saves it with a
+              given file name to a predefined location. The user can load an existent
+              scenario file, modify, and save it with same name or different name and
+              location. \\\hline
+Complexity  & Medium \\\hline\hline
+
+\textbf{Use Case}  & \textbf{Configure Simulation} \\\hline
+Actors      & User \\\hline
+Purpose     & Capture the HIVacSim configuration options \\\hline
+Overview    & The user sets the simulation options before running the model \\\hline
+Complexity  & Low \\\hline\hline
+
+\textbf{Use Case} & \textbf{Simulation Executive} \\\hline
+Actors      & User \\\hline
+Purpose     & Capture the process of running the simulation \\\hline
+Overview    & The user runs the simulation for the predefined configuration and
+              scenario; HIVacSim presents a summary of the current interaction and
+              run as its progresses through time. \\\hline
+Complexity  & High \\\hline\hline
+
+\textbf{Use Case}   & \textbf{Simulation Results} \\\hline
+Actors      & User \\\hline
+Purpose     & Capture the process of presenting the simulation results \\\hline
+Overview    & The model makes the results available as comma separated values.
+              The user then can save both the network characteristics and the
+              population data grouped by simulation interaction and clock.\\\hline
+Complexity  & Medium \\\hline
+\end{longtable}
+
+Figure \ref{appcusercase} shows the HIVacSim's use cases and their relationships.
+\begin{figure}[!h]
+\center{\includegraphics[width=\textwidth]{appcusercase}
+\caption{HIVacSim user case diagram} \label{appcusercase}}
+\end{figure}
+
+\section{Activity Diagram}
+
+The activity diagram shows the internal working flows of the use cases activities,
+representing a dynamic view of the system as shown Figure \ref{appcactivity}.
+\begin{figure}[h]
+\center{\includegraphics[width=\textwidth]{appcactivity}
+\caption{HIVacSim activity diagram} \label{appcactivity}}
+\end{figure}
+
+\newpage
+\section{Class Diagram}
+
+The class diagram shows the internal structure of HIVacSim modules, classes and
+interfaces. It illustrates how they are related to one another statically using
+association and inheritance. Table \ref{listofclasses} provides a description of the
+classes, structures and enumerates implemented within HIVacSim.
+
+\begin{longtable}{|l|p{10cm}|}
+\caption{HIVacSim list of classes}\label{listofclasses}\\\hline
+
+\textbf{Class Name }  & \textbf{Description} \\\hline
+\endfirsthead
+\multicolumn{2}{c} {{\tablename} \thetable{} -- Continued} \\\hline
+\textbf{Class Name }  & \textbf{Description} \\\hline
+\endhead
+\multicolumn{2}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+AdjList             & Adjacency list data structure class to hold the individuals’
+                      list of partners. \\\hline
+BookList            & Adjacency list data structure class to hold the individuals’
+                      list of acquaintances. \\\hline
+Disease             & Defines the characterise of the sexually transmitted disease to be
+                      transmitted over the network.  \\\hline
+DistributionEditor  & GUI to help the definition of probability distributions \\\hline
+DistributionValueEditor & Supports GUIs editing probability distributions. \\\hline
+EGender             & Enumerates the gender options \\\hline
+EHIVTest            & Enumerates the HIV testing results \\\hline
+EPartners           & Enumerates the types of partnership \\\hline
+ERelation           & Enumerates the possible partnership status \\\hline
+ESimClock           & Enumerates the simulation clock options \\\hline
+ESimEvent           & Enumerates the simulation events \\\hline
+ESimExit            & Enumerates the simulation run-time exit conditions \\\hline
+ESimStatus          & Enumerates the run-time status of the simulation\\\hline
+ESTDStatus          & Enumerates the possible STD infection status of the individuals \\\hline
+EStrategy           & Enumerates the scope of the intervention strategies \\\hline
+ETopology           & Enumerates the population structure topologies \\\hline
+EWarmup             & Enumerates the warm-up options \\\hline
+Group               & Defines the structure of a population group as a simple, unweighted
+                      and undirected graph.  \\\hline
+ITVTimer \footnote{Classes provided by the ITVMathLib library.}
+                    & Implements a high-resolution timer.\\\hline
+ITVDev\footnotemark[1] & Implements random number generators from 27 standard
+                      probability distributions. \\\hline
+HIVacSimGUI \footnote{Class implementing the HIVacSimGUI.exe application.}
+                    & HIVacSim graphical user interface implementation for the windows platform. \\\hline
+ListOfIds           & Implements a dynamic list of integers (unique ids) class. \\\hline
+Node                & Defines a element within the AdjList, BookList and PQueue lists. \\\hline
+Person              & Defines the characteristics of a person, the basic entity of the model \\\hline
+Point3d\footnotemark[1] & Defines a structure to represent a point in the three dimensional space.\\\hline
+Population          & Defines a population container to hold the groups as a weighted and directed graph. \\\hline
+PQueue              & Implements a FIFO queue to hold individuals using a linked list. \\\hline
+Relation            & Define the characteristics of the partnerships, the edges of the graph. \\\hline
+RIntArray           & Implements an one-dimension array of integers for random sampling individuals' index. \\\hline
+RPair               & Implements a structure to hold a pair of persons within RPairArray. \\\hline
+RPairArray          & Holds an one-dimension array of RPair for random sampling  \\\hline
+RPrsArray           & Implements an one-dimension array of persons for random sampling \\\hline
+Scenario            & Defines the simulation scenario class, the manager of the simulation
+                      data and file I/O. \\\hline
+SimData             & Defines a structure to hold the simulation output data.\\\hline
+SimEventArgs        & Defines the simulation event argument. \\\hline
+SimEventHandler     & Simulation event handler delegate  \\\hline
+Simulation          & Implements the simulation executive, the HIVacSim model kernel.\\\hline
+SimulationException & HIVacSim run-time exception message class.\\\hline
+Stochastic\footnotemark[1] & Implements the stochastic data structure representing a
+                      probability distribution.\\\hline
+Strategies          & Defines the intervention strategies container class.\\\hline
+Strategy            & Defines a preventive intervention strategy.\\\hline
+SWNInfo             & Defines a structure to hold the characteristics of a small world network.\\\hline
+TriangArray         & Implements a triangular array, which represents a symmetric square matrix
+                      in memory using only half of the normally required space. \\\hline
+Vaccine             & Defines the characteristics of a preventive vaccine.\\\hline
+Vaccines            & Defines a container to hold the preventive vaccines.\\\hline
+\end{longtable}
+
+Figure \ref{appcclass} shows the HIVacSim class diagram. For clarity, the properties and
+methods within each class will not be shown in the diagram, the detailed documentation of
+each class is provided electronically in the accompanying CD.
+
+\begin{figure}[h]
+\center{\includegraphics[width=\textwidth]{appcclass}
+\caption{HIVacSim class diagram} \label{appcclass}}
+\end{figure}
+
+\clearpage
+Figure \ref{appcinheritance} shows the HIVacSim class inheritance diagram.
+
+\begin{figure}[!h]
+\includegraphics[width=\textwidth]{appcinheritance}
+\caption{HIVacSim class inheritance diagram} \label{appcinheritance}
+\end{figure}
+\clearpage
+
+\section{Collaboration Diagram}
+Figure \ref{appccollaboration} shows the role played by each object within the HIVacSim
+model, highlighting how they collaborate in order to achieve the common goal of
+representing social interaction and the spread of infectious diseases.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{appccollaboration}
+\caption{HIVacSim collaboration diagram} \label{appccollaboration}
+\end{figure}
+
+\section{Sequence Diagram}
+Figure \ref{appcsequence} shows the sequence of actions that occur in the system, the
+collaboration between objects in the sequential order that those interactions occur
+within the HIVacSim model. \clearpage
+\begin{landscape}
+\begin{figure}[ht]
+\center{\includegraphics[height=14.5cm]{appcsequence}
+\caption{HIVacSim sequence diagram}
+\label{appcsequence}}
+\end{figure}
+\end{landscape}
+
+\section{Component Diagram}
+
+Figure \ref{appccomponent} shows the run-time components of HIVacSim and their
+relationship.
+\begin{figure}[h]
+\center{\includegraphics[width=7.5cm]{appccomponent}
+\caption{HIVacSim component diagram}
+\label{appccomponent}}
+\end{figure}
+
+\section{Deployment Diagram}
+
+Figure \ref{appcdeploy} shows the the HIVacSim run-time software components configuration
+for deployment on the windows platform.
+\begin{figure}[!h]
+\center{\includegraphics[width=9.5cm]{appcdeploy}
+\caption{HIVacSim deployment diagram}
+\label{appcdeploy}}
+\end{figure}

@@ -1,0 +1,717 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[Aranda, Lasch e Balmond 2007]{aranda2006}
+\abntrefinfo{Aranda, Lasch e Balmond}{ARANDA; LASCH; BALMOND}{2007}
+{ARANDA, B.; LASCH, C.; BALMOND, C. \emph{{Tooling (Pamphlet Architecture
+  Series {\#}27)}}. Princeton Architectural Press, 2007.  (Pamphlet
+  architecture).
+ISBN 9781568985473. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=MG8xfIe55t0C}.}
+
+\bibitem[Bart{\'{a}}k 2001]{Bartk01theoryand}
+\abntrefinfo{Bart{\'{a}}k}{BART{\'{A}}K}{2001}
+{BART{\'{A}}K, R. {Theory and Practice of Constraint Propagation}. In:
+  \emph{In Proceedings of the 3rd Workshop on Constraint Programming in
+  Decision and Control (CPDC 2001)}. [S.l.: s.n.], 2001. p. 7--14.
+ISSN 00029629.}
+
+\bibitem[Baumgart 2000]{baumgart2000}
+\abntrefinfo{Baumgart}{BAUMGART}{2000}
+{BAUMGART, F. {Graphical statics a forgotten tool for solving plane mechanical
+  problems}.
+\emph{Injury}, v.~31, p. 24--85, may 2000.
+ISSN 00201383.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S0020138300800418}.}
+
+\bibitem[Bayle 1966]{Bayle1966}
+\abntrefinfo{Bayle}{BAYLE}{1966}
+{BAYLE, J. \emph{{Est{\'{a}}tica Gr{\'{a}}fica}}. Barcelona: Editorial Hispano
+  Europea, 1966. 248~p.}
+
+\bibitem[Berg et al. 2008]{deberg2008}
+\abntrefinfo{Berg et al.}{BERG et al.}{2008}
+{BERG, M.~D. et al. \emph{{Computational Geometry: Algorithms and Applications
+  (3rd)}}. 2. ed. Springer, 2008. v.~40. 388~p.
+ISSN 14337851.
+ISBN 9783540779735. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=tkyG8W2163YC}.}
+
+\bibitem[Block 2009]{Block2009}
+\abntrefinfo{Block}{BLOCK}{2009}
+{BLOCK, P.
+\emph{{Thrust Network Analysis : exploring three-dimensional equilibrium}}.
+155~p. Tese (Doutorado) --- MIT, 2009.
+Dispon{\'\i}vel em: \url{http://hdl.handle.net/1721.1/49539}.}
+
+\bibitem[Block, Ciblac e Ochsendorf 2006]{Block2006}
+\abntrefinfo{Block, Ciblac e Ochsendorf}{BLOCK; CIBLAC; OCHSENDORF}{2006}
+{BLOCK, P.; CIBLAC, T.; OCHSENDORF, J. {Real-time limit analysis of vaulted
+  masonry buildings}.
+\emph{Computers {\&} Structures}, v.~84, n. 29-30, p. 1841--1852, nov 2006.
+ISSN 00457949.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0045794906002227}.}
+
+\bibitem[Block e Lachauer 2014]{Block2014}
+\abntrefinfo{Block e Lachauer}{BLOCK; LACHAUER}{2014}
+{BLOCK, P.; LACHAUER, L. {Three-dimensional funicular analysis of masonry
+  vaults}.
+\emph{Mechanics Research Communications}, v.~56, p. 53--60, mar 2014.
+ISSN 00936413.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0093641313002012}.}
+
+\bibitem[{BLOCK Research Group}]{BLOCKResearchGroup}
+\abntrefinfo{{BLOCK Research Group}}{{BLOCK Research Group}}{}
+{{BLOCK Research Group}. \emph{{eQUILIBRIUM}}.
+Dispon{\'\i}vel em: \url{http://block.arch.ethz.ch/equilibrium/}.}
+
+\bibitem[Bohnacker, Gross e Laub 2012]{bohnacker2012}
+\abntrefinfo{Bohnacker, Gross e Laub}{BOHNACKER; GROSS; LAUB}{2012}
+{BOHNACKER, H.; GROSS, B.; LAUB, J. \emph{{Generative Design: Visualize,
+  Program, and Create with Processing}}. New York, NY, USA: Princeton
+  Architectural Press, 2012. 472~p.  (Princeton Architectural Press).
+ISBN 9781616890773. Dispon{\'\i}vel em:
+  \url{http://www.amazon.com/Generative-Design-Visualize-Program-Processing/dp/1616890770/ref=pd{\\_}sim{\\_}sbs{\\_}b{\\_}1?ie=UTF8{\&}refRID=10QEF}.}
+
+\bibitem[Boyer e Gomide 1974]{boyer1974}
+\abntrefinfo{Boyer e Gomide}{BOYER; GOMIDE}{1974}
+{BOYER, C.~B.; GOMIDE, E.~F. \emph{{Hist{\'{o}}ria da Matem{\'{a}}tica}}.
+  S{\~{a}}o Paulo: Edgard Blucher, 1974.}
+
+\bibitem[Burr e Falk 1908]{burr}
+\abntrefinfo{Burr e Falk}{BURR; FALK}{1908}
+{BURR, W.~H.; FALK, M. \emph{{The Graphic Method by Influence Lines for Bridge
+  and Roof Computations}}. New York, NY, USA: JOHN WILEY $\backslash${\&} SONS,
+  1908. Dispon{\'\i}vel em:
+  \url{https://ia600602.us.archive.org/11/items/graphicmethodbyi00burr/graphicmethodbyi00burr.pdf}.}
+
+\bibitem[Caldas 2008]{Caldas2008}
+\abntrefinfo{Caldas}{CALDAS}{2008}
+{CALDAS, L. {Generation of energy-efficient architecture solutions applying
+  GENE{\_}ARCH: An evolution-based generative design system}.
+\emph{Advanced Engineering Informatics}, v.~22, n.~1, p. 59--70, jan 2008.
+ISSN 14740346.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S1474034607000493}.}
+
+\bibitem[Caldas e Norford 2001]{cladas2001}
+\abntrefinfo{Caldas e Norford}{CALDAS; NORFORD}{2001}
+{CALDAS, L.; NORFORD, L. {Architectural Constraints in a Generative Design
+  System: interpreting energy consumption levels}.
+\emph{Proc. of Building Simulation 2001}, Rio de Janeiro, p. 1397--1404, 2001.
+Dispon{\'\i}vel em:
+  \url{http://www.ibpsa.org/proceedings/bs2001/bs01{\\_}1397{\\_}14}.}
+
+\bibitem[Caldas e Norford 1999]{caldas1999}
+\abntrefinfo{Caldas e Norford}{CALDAS; NORFORD}{1999}
+{CALDAS, L.~G.; NORFORD, L.~K. {A multi-objective genetic algorithm for robust
+  design optimization}. In:  \emph{ACADIA '99}. Salt Lake City: Acadia'99,
+  1999. p. 250--261.
+ISBN 1595930108.
+ISSN 1615147X. Dispon{\'\i}vel em:
+  \url{http://portal.acm.org/citation.cfm?doid=1068009.1068140}.}
+
+\bibitem[Caldas e Norford 2002]{Caldas2002}
+\abntrefinfo{Caldas e Norford}{CALDAS; NORFORD}{2002}
+{CALDAS, L.~G.; NORFORD, L.~K. {A design optimization tool based on a genetic
+  algorithm}.
+\emph{Automation in Construction}, v.~11, n.~2, p. 173--184, feb 2002.
+ISSN 09265805.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0926580500000960}.}
+
+\bibitem[Ceccato 2010]{ceccato2010mbg}
+\abntrefinfo{Ceccato}{CECCATO}{2010}
+{CECCATO, C. {The Master-Builder-Geometer}. In:  CECCATO, C.; HESSELGREN, L.;
+  PAULY, M. (Ed.). \emph{Advances in Architectural Geometry 2010}. [S.l.]:
+  Springer, 2010. p. 9--14.}
+
+\bibitem[Chatzikonstantinou 2014]{hoopsnake}
+\abntrefinfo{Chatzikonstantinou}{CHATZIKONSTANTINOU}{2014}
+{CHATZIKONSTANTINOU, Y. \emph{{Hoopsnake for Grasshopper}}. 2014.
+Dispon{\'\i}vel em: \url{http://yconst.com/software/hoopsnake/}.}
+
+\bibitem[Corbusier 1994]{lecorbusier2000}
+\abntrefinfo{Corbusier}{CORBUSIER}{1994}
+{CORBUSIER, L. \emph{{Por uma arquitetura.}} S{\~{a}}o Paulo: Perspectiva,
+  1994.}
+
+\bibitem[Costa 1974]{costa1974}
+\abntrefinfo{Costa}{COSTA}{1974}
+{COSTA, E.~V. \emph{{Exerc{\'{i}}cios de resist{\^{e}}ncia dos materiais com
+  elementos e grafost{\'{a}}tica e de energia de deforma{\c{c}}{\~{a}}o}}.
+  S{\~{a}}o Paulo: Editora Nacional, 1974. v.~2. 365~p.}
+
+\bibitem[Crapo 1979]{Crapo}
+\abntrefinfo{Crapo}{CRAPO}{1979}
+{CRAPO, H. {Structural Rigidity}.
+\emph{Structural Topology Vol.1}, v.~1, n.~1, p. 26--45, 1979.
+ISSN 8750-7587.}
+
+\bibitem[Cremona 1890]{cremona1890graphical}
+\abntrefinfo{Cremona}{CREMONA}{1890}
+{CREMONA, L. \emph{{Graphical statics: two treatises on the graphical calculus
+  and reciprocal figures in graphical statics}}. Clarendon press, 1890.
+  Dispon{\'\i}vel em: \url{http://books.google.com.br/books?id=IvNJAAAAMAAJ}.}
+
+\bibitem[Dalvi 2011]{dalvi2011}
+\abntrefinfo{Dalvi}{DALVI}{2011}
+{DALVI, S.
+\emph{{THE SUBSEQUENT EVOLUTION OF SPACE PLANNING The power of selecting and
+  delivering discoveries.}}
+Tese (Doutorado) --- Savannah College of Art and Design, Savannah, GA, 2011.}
+
+\bibitem[Daly 2009]{daly2009}
+\abntrefinfo{Daly}{DALY}{2009}
+{DALY, H. M. T.~E.
+\emph{{Revisiting Algorithms in Architectural Design: Towards New Computational
+  Methods}}.
+261~p. Tese (Doutorado) --- Ain Shams University, Cairo, 2009.}
+
+\bibitem[DIno 2012]{DIno2012}
+\abntrefinfo{DIno}{DINO}{2012}
+{DINO, I.~G. {Creative Design Exploration By Parametric Generative Systems In
+  Architecture}.
+\emph{Metu Journal of the Faculty of Architecture}, v.~1, p. 207--224, jun
+  2012.
+ISSN 02585316.
+Dispon{\'\i}vel em:
+  \url{http://jfa.arch.metu.edu.tr/archive/0258-5316/2012/cilt29/sayi{\\_}1/207-224.}}
+
+\bibitem[Donath e Lobos 2009]{Donath2009}
+\abntrefinfo{Donath e Lobos}{DONATH; LOBOS}{2009}
+{DONATH, D.; LOBOS, D. {Plausibility in Early Stages of Architectural Design: A
+  New Tool for High-Rise Residential Buildings}.
+\emph{Tsinghua Science {\&} Technology}, Tsinghua University Press, v.~14,
+  n.~1, p. 327--332, jun 2009.
+ISSN 10070214.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S1007021409700483}.}
+
+\bibitem[Duarte 1999]{duarte1999arquitetura}
+\abntrefinfo{Duarte}{DUARTE}{1999}
+{DUARTE, F. \emph{{Arquitetura e Tecnologias de Informa{\c{c}}{\~{a}}o: da
+  Revolu{\c{c}}{\~{a}}o Industrial {\`{a}} Revolu{\c{c}}{\~{a}}o Digital}}.
+  Annablume, 1999.  (Selo universidade).
+ISBN 9788574190624. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=AgLyViiB65UC}.}
+
+\bibitem[Duarte 2005]{duarte2005}
+\abntrefinfo{Duarte}{DUARTE}{2005}
+{DUARTE, J.~P. {A discursive grammar for customizing mass housing: the case of
+  Siza's houses at Malagueira}.
+\emph{Automation in Construction}, v.~14, n.~2, p. 265--275, mar 2005.
+ISSN 09265805.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0926580504000810}.}
+
+\bibitem[Eddy 1877]{eddy2010new}
+\abntrefinfo{Eddy}{EDDY}{1877}
+{EDDY, H.~T. \emph{{New Constructions in Graphical Statics}}. New York, NY,
+  USA: D. van Nostrand, 1877.
+ISBN 9781141555536. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=kUJWRAAACAAJ}.}
+
+\bibitem[Eisenman, Dobney e {Eisenman Architects.} 1995]{eisenman1996}
+\abntrefinfo{Eisenman, Dobney e {Eisenman Architects.}}{EISENMAN; DOBNEY;
+  {Eisenman Architects.}}{1995}
+{EISENMAN, P.; DOBNEY, S.; {Eisenman Architects.} \emph{{Eisenman Architects :
+  selected and current works}}. The Images Publishing Group, 1995. 256 p.~p.
+ISBN 1875498214$\backslash$r1320-7253 ;. Dispon{\'\i}vel em:
+  \url{http://www.amazon.com/Eisenman-Architects-Selected-Current-Architect/dp/1875498214?SubscriptionId=0JYN1NVW651KCA56C102{\&}tag=techkie-20{\&}linkCode=xm2{\&}camp=2025{\&}creative=165953{\&}creative}.}
+
+\bibitem[EVolo 2009]{inveskytopo}
+\abntrefinfo{EVolo}{EVOLO}{2009}
+{EVOLO. \emph{{Inverted Skyscraper Typology}}. 2009.
+Dispon{\'\i}vel em:
+  \url{http://www.evolo.us/competition/inverted-skyscraper-typology/}.}
+
+\bibitem[Fasoulaki 2007]{fasoulaki2005}
+\abntrefinfo{Fasoulaki}{FASOULAKI}{2007}
+{FASOULAKI, E. {Genetic Algorithms in Architecture : a Necessity or a Trend ?}
+\emph{Design}, 2007.
+Dispon{\'\i}vel em:
+  \url{http://www.generativedesign.it/on/cic/papersGA2007/09.pdf}.}
+
+\bibitem[Fasoulaki 2008]{fasoulaki2008}
+\abntrefinfo{Fasoulaki}{FASOULAKI}{2008}
+{FASOULAKI, E.
+\emph{{Integrated Design: A Generative Multi-Performative Design Approach}}.
+72~p. Tese (Doutorado) --- MIT, Cambrige, 2008.}
+
+\bibitem[Florio 2012]{Florio2011}
+\abntrefinfo{Florio}{FLORIO}{2012}
+{FLORIO, W. {Modelagem Param{\'{e}}trica, Criatividade E Projeto: Duas
+  Experi{\^{e}}ncias Com Estudantes De Arquitetura}.
+\emph{Gest{\~{a}}o {\&} Tecnologia de Projetos}, v.~6, n.~2, p. 43--66, 2012.
+ISSN 1981-1543.
+Dispon{\'\i}vel em:
+  \url{http://www.revistas.usp.br/gestaodeprojetos/article/view/51010}.}
+
+\bibitem[Fouskakis e Draper 2002]{Fouskakis2002}
+\abntrefinfo{Fouskakis e Draper}{FOUSKAKIS; DRAPER}{2002}
+{FOUSKAKIS, D.; DRAPER, D. {Stochastic Optimization: A Review}.
+\emph{International Statistical Review / Revue Internationale de Statistique},
+  v.~70, n.~3, p.~315, dec 2002.
+ISSN 03067734.
+Dispon{\'\i}vel em:
+  \url{http://www.jstor.org/stable/10.2307/1403861?origin=crossref}.}
+
+\bibitem[Frampton 2008]{frampton2000}
+\abntrefinfo{Frampton}{FRAMPTON}{2008}
+{FRAMPTON, K. \emph{{Hist{\'{o}}ria cr{\'{i}}tica da arquitetura moderna}}. 1a.
+  ed. S{\~{a}}o Paulo: Martins Fontes, 2008. 470~p.
+ISBN 9788533624269 8533624263.}
+
+\bibitem[Gerhardt, Kurrer e Pichler 2003]{gerhardt2003}
+\abntrefinfo{Gerhardt, Kurrer e Pichler}{GERHARDT; KURRER; PICHLER}{2003}
+{GERHARDT, R.; KURRER, K.~E.; PICHLER, G. {The methods of graphical statics and
+  their relation to the structural form}. In:  HUERTA, S. (Ed.).
+  \emph{Proceedings of the First International Congress on Construction
+  History}. Madrid: Instituto Juan de Herrera, SEHC, COAC, CAATC, 2003.}
+
+\bibitem[Gondenh{\'{o}}rn 1943]{goldenhorn1943}
+\abntrefinfo{Gondenh{\'{o}}rn}{GONDENH{\'{O}}RN}{1943}
+{GONDENH{\'{O}}RN, S. \emph{{Elementos de Estatica Grafica}}. Buenos Aires:
+  Talleres Gr{\'{a}}ficos Argentinos L.J. Rosso, 1943. 320~p.}
+
+\bibitem[GREENWOLD]{GREENWOLD}
+\abntrefinfo{GREENWOLD}{GREENWOLD}{}
+{GREENWOLD, S. \emph{{ActiveStatics}}.
+Dispon{\'\i}vel em:
+  \url{http://acg.media.mit.edu/people/simong/statics/Start.html}.}
+
+\bibitem[Hammer 2006]{Hammer2006}
+\abntrefinfo{Hammer}{HAMMER}{2006}
+{HAMMER, J. {From Fractal Geometry to Fractured Architecture : The Federation
+  Square of Melbourne}.
+\emph{The Mathematical Inteligencer}, v.~28, n.~4, p. 44--48, 2006.}
+
+\bibitem[Harding e Shepherd 2011]{Harding2012}
+\abntrefinfo{Harding e Shepherd}{HARDING; SHEPHERD}{2011}
+{HARDING, J.; SHEPHERD, P. {Structural Form Finding using Zero-Length Springs
+  with Dynamic Mass}. In:  \emph{2011 IASS Annual Symposium: IABSE-IASS 2011:
+  Taller, Longer, Lighter}. London: [s.n.], 2011. p. International Association
+  for Shell and Spatial St.}
+
+\bibitem[{Heneghan Peng Architects} 2014]{hparc}
+\abntrefinfo{{Heneghan Peng Architects}}{{Heneghan Peng Architects}}{2014}
+{{Heneghan Peng Architects}. \emph{{Heneghan Peng Architects - Website}}. 2014.
+Dispon{\'\i}vel em: \url{www.hparc.com}.}
+
+\bibitem[Henkel 1953]{henkel1953}
+\abntrefinfo{Henkel}{HENKEL}{1953}
+{HENKEL, O. \emph{{Est{\'{a}}tica Gr{\'{a}}fica}}. 4{\textordfeminine}
+  edi{\c{c}}{\~{a}}o. ed. Barcelona: Editorial Labor S.A., 1953. 402~p.}
+
+\bibitem[Herr e Kvan 2007]{Herr2007}
+\abntrefinfo{Herr e Kvan}{HERR; KVAN}{2007}
+{HERR, C.~M.; KVAN, T. {Adapting cellular automata to support the architectural
+  design process}.
+\emph{Automation in Construction}, v.~16, n.~1, p. 61--69, jan 2007.
+ISSN 09265805.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0926580505001494}.}
+
+\bibitem[Hoffmann e Joan-Arinyo 2005]{Hoffmann2005}
+\abntrefinfo{Hoffmann e Joan-Arinyo}{HOFFMANN; JOAN-ARINYO}{2005}
+{HOFFMANN, C.~M.; JOAN-ARINYO, R. {A brief on constraint solving}.
+\emph{Computer-Aided Design and Applications}, v.~2, n.~5, p. 655--663, 2005.
+ISSN 16864360.}
+
+\bibitem[Hoskins 1899]{Hoskins1899}
+\abntrefinfo{Hoskins}{HOSKINS}{1899}
+{HOSKINS, L. \emph{{Elements of Graphic Statics}}. London: The Macmillan
+  Company, 1899.}
+
+\bibitem[{Iwamoto-Scott Architecture}]{IwamotoSite}
+\abntrefinfo{{Iwamoto-Scott Architecture}}{{Iwamoto-Scott Architecture}}{}
+{{Iwamoto-Scott Architecture}. \emph{{Iwamoto-Scott Architecture - Website}}.
+Dispon{\'\i}vel em: \url{http://www.iwamotoscott.com/}.}
+
+\bibitem[Johnson 1908]{johnson1908}
+\abntrefinfo{Johnson}{JOHNSON}{1908}
+{JOHNSON, L.~J. \emph{{Statics by Algebraic and Graphic Methods: Intended
+  Primarily for Students of Engineering and Architecture}}. New York, NY, USA:
+  J. Wiley $\backslash${\&} sons, 1908. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=jlRDAAAAIAAJ}.}
+
+\bibitem[Kilian]{Kilian}
+\abntrefinfo{Kilian}{KILIAN}{}
+{KILIAN, A. \emph{{CADenary}}.
+Dispon{\'\i}vel em:
+  \url{http://www.designexplorer.net/newscreens/cadenarytool/cadenarytool.html}.}
+
+\bibitem[Kirkpatrick, Gelatt e Vecchi 1983]{Kirkpatrick1983}
+\abntrefinfo{Kirkpatrick, Gelatt e Vecchi}{KIRKPATRICK; GELATT; VECCHI}{1983}
+{KIRKPATRICK, S.; GELATT, C.~D.; VECCHI, M.~P. {Optimization by Simulated
+  Annealing}.
+\emph{Science}, v.~220, n.~4598, p. pp. 671--680, 1983.
+ISSN 00368075.
+Dispon{\'\i}vel em: \url{http://www.jstor.org/stable/1690046}.}
+
+\bibitem[Kneip, Winzer e Killmann 1939]{Kneip1939}
+\abntrefinfo{Kneip, Winzer e Killmann}{KNEIP; WINZER; KILLMANN}{1939}
+{KNEIP karl; WINZER, G.; KILLMANN, P. \emph{{Mec{\'{a}}nica Resist{\^{e}}ncia
+  de Materiais Grafost{\'{a}}tica}}. 2{\textordfeminine}. ed. Buenos Aires:
+  Editorial Labor S.A., 1939. 530~p.}
+
+\bibitem[Knuth 1997]{knuth1997art}
+\abntrefinfo{Knuth}{KNUTH}{1997}
+{KNUTH, D. \emph{{Fundamental Algorithms. The Art of Computer Programming}}.
+  3rd. ed. Massachusetts: Pearson Education, 1997. v.~1. 435--455~p.
+ISBN 9780321635747. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=x9AsAwAAQBAJ}.}
+
+\bibitem[Kolarevic 2003]{kolarevic2003}
+\abntrefinfo{Kolarevic}{KOLAREVIC}{2003}
+{KOLAREVIC, B.~e. \emph{{Architecture in the Digital Age: Design and
+  Manufacturing}}. London: Spon press, 2003. 320~p.
+ISSN 15905896.
+ISBN 9780415278201. Dispon{\'\i}vel em:
+  \url{http://www.routledge.com/books/details/9780415278201/{\\%}5Cnhttp://books.google.pt/books/p/tandf{\\_}uk-aa{\\_}balkema2?id=H3LRfJJQlkAC{\&}printsec=frontcover{\&}hl=pt-PT{\&}source=gbs{\\_}ViewAPI{\&}redir{\}.}
+
+\bibitem[Krish 2011]{krish2011}
+\abntrefinfo{Krish}{KRISH}{2011}
+{KRISH, S. {A practical generative design method}.
+\emph{Computer-Aided Design}, Elsevier Ltd, v.~43, n.~1, p. 88--100, jan 2011.
+ISSN 00104485.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0010448510001764}.}
+
+\bibitem[Lachauer, Jungjohann e Kotnik 2011]{lachauer2011a}
+\abntrefinfo{Lachauer, Jungjohann e Kotnik}{LACHAUER; JUNGJOHANN; KOTNIK}{2011}
+{LACHAUER, L.; JUNGJOHANN, H.; KOTNIK, T. {Interactive Parametric Tools for
+  Structural Design}. In:  \emph{Proc IABSE-IASS}. London, UK: [s.n.], 2011.
+  Dispon{\'\i}vel em:
+  \url{http://www.schwartz.arch.ethz.ch/Publikationen/Dokumente/InteractiveTools.pdf}.}
+
+\bibitem[Lachauer e Kotnik 2010]{aag2010193}
+\abntrefinfo{Lachauer e Kotnik}{LACHAUER; KOTNIK}{2010}
+{LACHAUER, L.; KOTNIK, T. {Geometry of Structural Form}. In:  CECCATO, C.;
+  OTHERS (Ed.). \emph{Advances in Architectural Geometry 2010}. [S.l.]:
+  Springer, 2010. p. 193--203.}
+
+\bibitem[Lamberti 2008]{Lamberti2008}
+\abntrefinfo{Lamberti}{LAMBERTI}{2008}
+{LAMBERTI, L. {An efficient simulated annealing algorithm for design
+  optimization of truss structures}.
+\emph{Computers {\&} Structures}, v.~86, n. 19-20, p. 1936--1953, oct 2008.
+ISSN 00457949.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0045794908000448}.}
+
+\bibitem[Lodding 2004]{Lodding2004}
+\abntrefinfo{Lodding}{LODDING}{2004}
+{LODDING, K.~N. {The Hitchhiker's Guide to Biomorphic Software}.
+\emph{Queue}, ACM, New York, NY, USA, v.~2, n.~4, p.~66, 2004.
+ISSN 15427730.
+Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/1016978.1016985}.}
+
+\bibitem[Luh, Lin e Lin 2011]{Luh2011}
+\abntrefinfo{Luh, Lin e Lin}{LUH; LIN; LIN}{2011}
+{LUH, G.-C.; LIN, C.-Y.; LIN, Y.-S. {A binary particle swarm optimization for
+  continuum structural topology optimization}.
+\emph{Applied Soft Computing}, Elsevier B.V., v.~11, n.~2, p. 2833--2844, mar
+  2011.
+ISSN 15684946.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.asoc.2010.11.013}.}
+
+\bibitem[Malcolm 1909]{malcolm2009}
+\abntrefinfo{Malcolm}{MALCOLM}{1909}
+{MALCOLM, C.~W. \emph{{A Text Book on Graphic Statics}}. 3. ed. New York, NY,
+  USA: THE MYRON C. CLARK PUBLISHING CO., 1909.
+ISBN 9781293168318. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=F{\\%}5C{\\_}-ZTP}.}
+
+\bibitem[Mandelbrot 1982]{mandelbrot1983fractal}
+\abntrefinfo{Mandelbrot}{MANDELBROT}{1982}
+{MANDELBROT, B.~B. \emph{{The fractal geometry of nature. 1982}}. Henry Holt
+  and Company, 1982.  (Einaudi paperbacks).
+ISBN 9780716711865. Dispon{\'\i}vel em:
+  \url{http://books.google.co.uk/books?id=0R2LkE3N7-oC}.}
+
+\bibitem[Masum 2002]{wolfram2002}
+\abntrefinfo{Masum}{MASUM}{2002}
+{MASUM, H. \emph{{Review of a new kind of science}}. [s.n.], 2002. v.~33. 15~p.
+ISSN 01635700.
+ISBN 1579550088. Dispon{\'\i}vel em:
+  \url{http://austms.org.au/Jobs/Reviews2.html}.}
+
+\bibitem[Maxwell 1965]{maxwell1965}
+\abntrefinfo{Maxwell}{MAXWELL}{1965}
+{MAXWELL, J.~C. \emph{{Maxwell Scientific Papers}}. [S.l.]: Dover Publications,
+  1965. 607~p.}
+
+\bibitem[McCarthy 1960]{McCarthy1960}
+\abntrefinfo{McCarthy}{MCCARTHY}{1960}
+{MCCARTHY, J. {Recursive functions symbolic expressions and their computation
+  by machine, Part I}.
+\emph{Communications of the ACM}, v.~3, n.~4, p. 184--195, 1960.
+ISSN 00010782.
+Dispon{\'\i}vel em: \url{http://dl.acm.org/citation.cfm?id=367199}.}
+
+\bibitem[Mccromac 2009]{mccormac2009}
+\abntrefinfo{Mccromac}{MCCROMAC}{2009}
+{MCCROMAC, J.~C. \emph{{An{\'{a}}lise Estrutural usando m{\'{e}}todos
+  Cl{\'{a}}ssicos e M{\'{e}}todos Matriciais}}. 4{\textordfeminine}. ed. Rio de
+  Janeiro: LTC, 2009. 500~p.
+ISBN 978-85-216-1686-3.}
+
+\bibitem[Milena e Ognen 2010]{Milena2010a}
+\abntrefinfo{Milena e Ognen}{MILENA; OGNEN}{2010}
+{MILENA, S.; OGNEN, M. {Application of Generative Algorithms in Architectural
+  Design}. In:  \emph{Advances in Mathematical and Computational Methods}.
+  [s.n.], 2010. p. 175--180.
+ISBN 9604742434. Dispon{\'\i}vel em:
+  \url{http://www.wseas.us/e-library/conferences/2010/Faro/MACMESE/MACMESE-27.pdf}.}
+
+\bibitem[Mitchell 2008]{mitchell2008}
+\abntrefinfo{Mitchell}{MITCHELL}{2008}
+{MITCHELL, W.~J. \emph{{World's Greatest Architect MAKING, MEANING, AND NETWORK
+  CULTURE}}. Cambrige: MIT Press, 2008. v.~40. 147~p.
+ISBN 9780262265409. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=DxszH9whFSIC}.}
+
+\bibitem[M{\"{u}}ller et al. 2006]{Pascal2006}
+\abntrefinfo{M{\"{u}}ller et al.}{M{\"{U}}LLER et al.}{2006}
+{M{\"{U}}LLER, P. et al. {Procedural modeling of buildings}.
+\emph{ACM Transactions on Graphics}, v.~25, n.~3, p.~614, 2006.
+ISSN 07300301.
+Dispon{\'\i}vel em:
+  \url{http://portal.acm.org/citation.cfm?doid=1141911.1141931}.}
+
+\bibitem[Nash e Silva 1974]{nash1974resist}
+\abntrefinfo{Nash e Silva}{NASH; SILVA}{1974}
+{NASH, W.~A.; SILVA, J.~F. \emph{{Resist{\^{e}}ncia de materiais}}. S{\~{a}}o
+  Paulo: McGraw-Hill, 1974.  (Schaum).}
+
+\bibitem[Okabe, Boots e Sugihara 1992]{Okabe2000}
+\abntrefinfo{Okabe, Boots e Sugihara}{OKABE; BOOTS; SUGIHARA}{1992}
+{OKABE, A.; BOOTS, B.; SUGIHARA, K. \emph{{Spatial Tesselation: Concepts and
+  Applications of Voronoi Diagrams}}. 2nd ed.. ed. [S.l.]: John Wiley and Sons,
+  Inc., 1992.  (Series in Probability and Statistics).}
+
+\bibitem[Oxman 2006]{Oxman2006}
+\abntrefinfo{Oxman}{OXMAN}{2006}
+{OXMAN, R. {Theory and design in the first digital age}.
+\emph{Elsevier}, v.~27, n.~3, p. 229--265, may 2006.
+ISSN 0142694X.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0142694X05000840}.}
+
+\bibitem[Panseri 1968]{panseri1952}
+\abntrefinfo{Panseri}{PANSERI}{1968}
+{PANSERI, E. \emph{{Curso medio de est{\'{a}}tica gr{\'{a}}fica}}. 4. ed.
+  Buenos Aires: Construcciones Sudamericanas, 1968. 445~p.}
+
+\bibitem[Pereira, Zebende e Moret 2010]{pereira2010}
+\abntrefinfo{Pereira, Zebende e Moret}{PEREIRA; ZEBENDE; MORET}{2010}
+{PEREIRA, H. B. D.~B.; ZEBENDE, G.~F.; MORET, M.~a. {Learning computer
+  programming: Implementing a fractal in a Turing Machine}.
+\emph{Computers and Education}, v.~55, n.~2, p. 767--776, sep 2010.
+ISSN 03601315.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.compedu.2010.03.009}.}
+
+\bibitem[Picon 2011]{picon2011}
+\abntrefinfo{Picon}{PICON}{2011}
+{PICON, A. {Ornament and its users: from the Vitruvian tradition to the digital
+  age}.
+\emph{Le Visiteur}, n.~17, p. 176--180, 2011.
+Dispon{\'\i}vel em: \url{http://dash.harvard.edu/handle/1/12638041}.}
+
+\bibitem[Portoghesi 2002]{portoghesi2002}
+\abntrefinfo{Portoghesi}{PORTOGHESI}{2002}
+{PORTOGHESI, P. \emph{{Depois da Arquitetura Moderna}}. S{\~{a}}o Paulo:
+  Martins Fontes, 2002.  (Cole{\{}{\c{c}}{\}}{\{}{\~{a}}{\}}o A).
+ISBN 9788533615762. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=QBiWPgAACAAJ}.}
+
+\bibitem[Prusinkiewicz e Lindenmayer 1997]{prusinkiewicz1996}
+\abntrefinfo{Prusinkiewicz e Lindenmayer}{PRUSINKIEWICZ; LINDENMAYER}{1997}
+{PRUSINKIEWICZ, P.; LINDENMAYER, A. \emph{{The algorithmic beauty of plants}}.
+  Springer-Verlag, 1997. v.~122. 109--110~p.  (The Virtual Laboratory, 1).
+ISSN 01689452.
+ISBN 0387972978. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=QWKjQgAACAAJ}.}
+
+\bibitem[{PWT Architects}]{pwtsite}
+\abntrefinfo{{PWT Architects}}{{PWT Architects}}{}
+{{PWT Architects}. \emph{{PWT Architects - Website}}.
+Dispon{\'\i}vel em: \url{http://www.ptw.com.au/}.}
+
+\bibitem[Sanjuan 1951]{sanjuan1951}
+\abntrefinfo{Sanjuan}{SANJUAN}{1951}
+{SANJUAN, R.~I. \emph{{Elementos de Grafost{\'{a}}tica Integraci{\'{o}}n
+  Gr{\'{a}}fica y sus Aplicaciones a la Construcci{\'{o}}n}}. Barcelona:
+  Editorial Labor S.A., 1951.}
+
+\bibitem[Santos 2009]{Santos2009}
+\abntrefinfo{Santos}{SANTOS}{2009}
+{SANTOS, L. F. B. S.~D.
+\emph{{Sistemas Generativos de Projecto : Integra{\c{c}}{\~{a}}o de Ferramentas
+  Digitais no Projecto de Arquitectura Aplica{\c{c}}{\~{a}}o ao Caso de Estudo
+  : a Casa P{\'{a}}tio da Medina de Marrakech.}}
+155~p. Tese (Doutorado), 2009.}
+
+\bibitem[Shea, Aish e Gourtovaia 2005]{shea2005}
+\abntrefinfo{Shea, Aish e Gourtovaia}{SHEA; AISH; GOURTOVAIA}{2005}
+{SHEA, K.; AISH, R.; GOURTOVAIA, M. {Towards integrated performance-driven
+  generative design tools}.
+\emph{Automation in Construction}, v.~14, n.~2, p. 253--264, mar 2005.
+ISSN 09265805.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0926580504000809}.}
+
+\bibitem[Shearer 2010]{Shearer2010}
+\abntrefinfo{Shearer}{SHEARER}{2010}
+{SHEARER, M.~S.
+\emph{{Analyzing and Creating Forms : Rapid Generation of Graphic Statics
+  Solutions through RhinoScript by}}.
+Tese (Doutorado), 2010.}
+
+\bibitem[Singh e Gu 2012]{Singh2012}
+\abntrefinfo{Singh e Gu}{SINGH; GU}{2012}
+{SINGH, V.; GU, N. {Towards an integrated generative design framework}.
+\emph{Design Studies}, Elsevier Ltd, v.~33, n.~2, p. 185--207, mar 2012.
+ISSN 0142694X.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1016/j.destud.2011.06.001}.}
+
+\bibitem[Sonmez 2007]{Sonmez2007}
+\abntrefinfo{Sonmez}{SONMEZ}{2007}
+{SONMEZ, F.~O. {Shape optimization of 2D structures using simulated annealing}.
+\emph{Computer Methods in Applied Mechanics and Engineering}, v.~196, n. 35-36,
+  p. 3279--3299, jul 2007.
+ISSN 00457825.
+Dispon{\'\i}vel em:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0045782507000722}.}
+
+\bibitem[Steele e Gabriel 1993]{Steele:1996:EL:234286.1057818}
+\abntrefinfo{Steele e Gabriel}{STEELE; GABRIEL}{1993}
+{STEELE, G.~L.; GABRIEL, R.~P. {The Evolution of Lisp}. In:  {Bergin Jr.},
+  T.~J.; {Gibson Jr.}, R.~G. (Ed.). \emph{ACM SIGPLAN Notices}. New York, NY,
+  USA: ACM, 1993. v.~28, n.~3, cap. The Evolut, p. 231--270.
+ISBN 0-89791-570-4.
+Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/234286.1057818}.}
+
+\bibitem[Stiny 2008]{stiny2008}
+\abntrefinfo{Stiny}{STINY}{2008}
+{STINY, G. \emph{{Shape: talking about seeing and doing}}. Cambridge: Mit
+  Press, 2008. 432~p.
+ISBN 978-0262693677.}
+
+\bibitem[Stiny e Gips 1972]{stiny1972}
+\abntrefinfo{Stiny e Gips}{STINY; GIPS}{1972}
+{STINY, G.; GIPS, J. {Shape grammars and the generative specification of
+  painting and sculpture}. In:  PETROCELLI (Ed.). \emph{Information Processing
+  71 Proceedings of the IFIP Congress 1971. Volume 2}. Auerbach: [s.n.], 1972.
+  v.~71, p. 1460--1465.
+ISBN 0 7204 2063 6.}
+
+\bibitem[Stiny e Mitchell 1978]{Stiny1978}
+\abntrefinfo{Stiny e Mitchell}{STINY; MITCHELL}{1978}
+{STINY, G.; MITCHELL, W.~J. {The Palladian grammar}.
+\emph{Environment and Planning B}, Pion Ltd, v.~5, n.~1, p. 5--18, 1978.
+ISSN 0265-8135.
+Dispon{\'\i}vel em: \url{http://www.envplan.com/abstract.cgi?id=b050005}.}
+
+\bibitem[Strobbe et al. 2011]{1148846}
+\abntrefinfo{Strobbe et al.}{STROBBE et al.}{2011}
+{STROBBE, T. et al. {Metaheuristics in architecture}. In:  {Van Wittenberghe},
+  J. (Ed.). \emph{Sustainable Construction and Design}. [S.l.]: Ghent
+  University, Laboratory Soete, 2011. v.~2, p. 190--196.
+ISBN 9789490726010.
+ISSN 2032-7471.}
+
+\bibitem[Tepavcevic e Stojakovic 2012]{tepavcevic2012}
+\abntrefinfo{Tepavcevic e Stojakovic}{TEPAVCEVIC; STOJAKOVIC}{2012}
+{TEPAVCEVIC, B.; STOJAKOVIC, V. {Shape grammar in contemporary architectural
+  theory and design}.
+\emph{Facta universitatis - series: Architecture and Civil Engineering}, v.~10,
+  n.~2, p. 169--178, 2012.
+ISSN 0354-4605.
+Dispon{\'\i}vel em:
+  \url{http://www.doiserbia.nb.rs/Article.aspx?ID=0354-46051202169T}.}
+
+\bibitem[Terzidis 2006]{terzidis2006algorithmic}
+\abntrefinfo{Terzidis}{TERZIDIS}{2006}
+{TERZIDIS, K. \emph{{Algorithmic architecture}}. [S.l.]: Taylor
+  $\backslash${\&} Francis, 2006. v.~1. 159~p.
+ISBN 9780750667258.}
+
+\bibitem[Tessmann 2008]{Tessmann2008}
+\abntrefinfo{Tessmann}{TESSMANN}{2008}
+{TESSMANN, O.
+\emph{{Collaborative Design Procedures for Architects and Engineers}}.
+1--176~p. Tese (Doutorado), 2008.}
+
+\bibitem[{The python Foundation} 2014]{ThepythonFoundation}
+\abntrefinfo{{The python Foundation}}{{The python Foundation}}{2014}
+{{The python Foundation}. \emph{{Python.org}}. 2014.
+Dispon{\'\i}vel em: \url{https://www.python.org}.}
+
+\bibitem[Tibbits, Harten e Baer 2011]{Tibbits2011}
+\abntrefinfo{Tibbits, Harten e Baer}{TIBBITS; HARTEN; BAER}{2011}
+{TIBBITS, S.; HARTEN, A. van~der; BAER, S. \emph{{Python 101 for Rhinoceros}}.
+  Robert McNee and Associates, 2011. Dispon{\'\i}vel em:
+  \url{http://wiki.mcneel.com/developer/python}.}
+
+\bibitem[Venturi 1977]{venturi1977}
+\abntrefinfo{Venturi}{VENTURI}{1977}
+{VENTURI, R.
+Book; Book/Illustrated. \emph{{Complexity and contradiction in architecture}}.
+  2nd ed. ed. [S.l.]: London : Architectural Press, 1977. 132~p.
+ISBN 0870702815.}
+
+\bibitem[Vettoretti 2010]{vettoretti2010}
+\abntrefinfo{Vettoretti}{VETTORETTI}{2010}
+{VETTORETTI, A.~C.
+\emph{{Bancos para ler e conversar: par{\^{a}}metros de projeto para sistemas
+  de design generativo.}}
+226~p. Tese (Doutorado) --- UFRGS, Porto Alegre, 2010.
+Dispon{\'\i}vel em:
+  \url{http://www.lume.ufrgs.br/bitstream/handle/10183/31395/000780166.pdf?sequence=1}.}
+
+\bibitem[Yahya e Saka 2014]{Yahya2014}
+\abntrefinfo{Yahya e Saka}{YAHYA; SAKA}{2014}
+{YAHYA, M.; SAKA, M. {Construction site layout planning using multi-objective
+  artificial bee colony algorithm with Levy flights}.
+\emph{Automation in Construction}, v.~38, p. 14--29, mar 2014.
+ISSN 09265805.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S0926580513001945}.}
+
+\bibitem[Zalewski e Allen 1998]{zalewski1998shaping}
+\abntrefinfo{Zalewski e Allen}{ZALEWSKI; ALLEN}{1998}
+{ZALEWSKI, W.; ALLEN, E. \emph{{Shaping structures: statics}}. New York, NY,
+  USA: Wiley, 1998.
+ISBN 9780471283386. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=x-BRAAAAMAAJ}.}
+
+\bibitem[Zanni e Pennock 2009]{Zanni2009}
+\abntrefinfo{Zanni e Pennock}{ZANNI; PENNOCK}{2009}
+{ZANNI, G.; PENNOCK, G.~R. {A unified graphical approach to the static analysis
+  of axially loaded structures}.
+\emph{Mechanism and Machine Theory}, Elsevier Ltd, v.~44, n.~12, p. 2187--2203,
+  dec 2009.
+ISSN 0094114X.
+Dispon{\'\i}vel em:
+  \url{http://dx.doi.org/10.1016/j.mechmachtheory.2009.07.002}.}
+
+\bibitem[Zhang et al. 2005]{Zhang2005}
+\abntrefinfo{Zhang et al.}{ZHANG et al.}{2005}
+{ZHANG, H. et al. {Particle swarm optimization-based schemes for
+  resource-constrained project scheduling}.
+\emph{Automation in Construction}, v.~14, n.~3, p. 393--404, jun 2005.
+ISSN 09265805.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S0926580504001128}.}
+
+\end{thebibliography}

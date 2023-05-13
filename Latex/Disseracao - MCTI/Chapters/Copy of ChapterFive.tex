@@ -1,0 +1,1227 @@
+\chapter{Sexual Transmission of HIV in a Small World}\label{chpmodel}
+
+The spread of HIV throughout the world results from a complex network of population
+migration, social interactions and other local factors related to culture, sexual
+behaviour, education, demography and geography. All these social activities combined with
+the unique characteristics of the HIV, which enable it to hide and spread silently across
+geographical and social boundaries for long periods before its carriers become aware of
+their own status. This creates an unprecedented challenge to international, national and
+local community policy makes, responsible for the availability, accessibility and
+delivery of public healthcare.
+
+The risk of HIV infection of an individual is determined among other factors by one's
+position within the network; both local and global structure are determinants of the risk
+of infection \cite{Ghani2000}. The effect of network structure on HIV can be seen for
+example, in monogamous women who become infected with HIV through the bridge between
+their husbands and  commercial sex workers. In this case, the wives who do not practice
+risky behaviour themselves, are at risk of HIV infection because of their location in the
+network at a short distance from the high-risk core group. In such case prevention effort
+targeting only the sex workers would have little effect on reducing the wives' risk
+\cite{Morris1996}. Prevention has to be viewed in a global context while the action are
+taken locally toward the sources and targets of long range links in the network.
+
+The analysis of the effects of network structure on disease transmission has proven
+difficulty to traditional analysts, whose focus have been on developing generic laws for
+network structure that can be measured in the field. Unfortunately contact tracing only
+accounts for sexual partners and static data sets offer little help in understanding the
+dynamics of HIV transmission in large networks \cite{Watts2003}. It is not clear for
+example when two individuals have a sexual partnership as they may have very irregular
+frequency of contact. Do they have a partnership of several partnerships one after each
+other? The identity of individuals are not preserved, their cycle of acquaintances are
+not taken into account, the overall set of measures become fraught with so many
+difficulties. Nonetheless, researches in social networks have long identified the three
+main network characteristics, which provide the essential information about the way HIV
+spreads in social networks \cite{Kretzschmar2000}:
+\parskip=0pt
+\begin{enumerate}
+    \item The mean and variance of the number of ties per actor (degree distribution);
+    \item The clustering characteristic of the network;
+    \item The characteristic path length.
+\end{enumerate}
+\parskip=\baselineskip
+The problem emerges when only the first of these measures, which is essentially a
+description of actors neighbourhood, can be measured in sexual behaviour surveys. The
+other two are global measures. Tracing overlapping and long distance partnerships in a
+large network by first name at best, is almost an unattainable goal.
+
+The traditional approaches to quantify the spread HIV by epidemiologists are based on SIR
+models \ref{sirmodels}, where the population is assumed to mix homogenously; partnerships
+have no duration, and individual never contact each other more than once
+\cite{Diekmann1995,Kretzschmar2000}. As discussed previously, these assumptions are not
+appropriated for describing sexual interaction, where individuals are strongly
+heterogeneous in their sexual preferences and the length of partnerships are extremely
+variable as are the frequency and strength of their sexual activities.
+
+In order to deal with population heterogeneity, social network analysts have developed
+the so-called mixing models \ref{snwmodels}, where the population is stratified by level
+of sexual activity, the rate of sexual interaction between different groups is defined by
+a mixing matrix \cite{Morris1991,Anderson1999}. The concept of \emph{core group} has
+successfully dealt with the heterogeneity problem of SIR models, and can give a better
+understanding of the continuing persistence of STDs at relatively low levels of
+prevalence in populations where, on average, the rate of partner change is low
+\cite{Anderson1991}. However, these models do not properly quantify the clustering
+characteristic of real networks and also do not account for time. Therefore there is no
+duration of partnerships.
+
+A more explicit approach dealing with duration of partnership has been introduced by
+Dietz and Hadeler \cite{Dietz1988a}, the so-called pair formation model. This model adds
+two more states to SIR models. An individual can be also classified as being
+\emph{single} or \emph{paired} with another individual in the population, the transition
+between those states is governed by the rate of pair formation and separation as shown in
+Figure \ref{pairformation}.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{pairformation}
+\caption{A diagram illustrating the pair formation model} \label{pairformation}
+\end{center}
+\end{figure}
+
+The problem with this kind of model is that only monogamous partnership takes place in
+the population. There are no overlapping partnerships, and people not in a
+susceptible/infected partnership are effectively protected from infection. Relaxing this
+condition in the deterministic setting proved difficulty. Even in the simplest case the
+number of equations and parameters increase rapidly and the model becomes unsolvable
+\cite{Kretzschmar2000}.
+
+A solution to the limitations of pair formation models has been found in Monte Carlo
+simulation of stochastic and individual based models, which can describe the structure of
+sexual networks and the transmission of HIV through time along the network connections.
+The time dependent simulation models of sexual networks, accounting for duration of
+partnerships and both monogamous and concurrent partnerships have been introduced by
+Kretzschmar and Morris in 1995 \cite{Kretschmar1996,Morris1995}, and ever since continue
+to be developed \cite{morris1997,morrism1997,Kretzschmar2000}.
+
+These simulation models are much more flexible and have the advantage of producing
+results that can be directly compared with sexual behaviour survey and epidemiologic data
+\cite{Kretzschmar2000}. The problem with this modelling framework is the underlying
+network structure, which is based on random graphs. There is no community structure and
+only sexual partners are of interest. The social activities leading to the formation and
+dissolution of partnerships in the population are ignored all together.
+
+It is important to notice that the models discussed above are the standard in quantifying
+sexual networks and spread of diseases today. For example, a compartmental model is used
+by the UNAIDS to estimate the HIV/AIDS epidemic by country throughout the world
+\cite{UNAIDSRG2002}. Limitations apart, each of those models have contributed in some way
+to what we know today about HIV and sexual networks: SIR models defined the natural
+history of HIV infection and probabilities of transmission per sexual intercourse
+\cite{Anderson1988,Gupta1989,Gray2003}, pair formation models added duration and time
+between monogamous partnerships \cite{Dietz1988,Dietz1988a}, and simulation models
+introduced flexibility to sexual networks in order to quantify the effects of concurrent
+partnerships on the spread of HIV and other STDs
+\cite{Kretschmar1996,morrism1997,morris1997,Kretzschmar2000}.
+
+The following section introduces \textit{HIVacSim}, a simulation model for the control of
+the dynamics of HIV infection through vaccination. This simulation model combines the
+existing knowledge about the dynamics of sexual transmission of HIV thought social
+networks, community structure governing the formation and dissolution of partnerships,
+sexual behaviour of individuals and preventive HIV vaccination intervention in a single
+modelling framework. In particular it uses a SWN to represent the underline population
+structure as defined in the previous chapter.
+
+\section{HIVacSim Model Definitions}\label{hivacsim}
+
+The model starts by defining the simulation clock \emph{t} that moves in $\Delta t$ steps
+($\Delta t = month \| trimester \| semester \| year$), which guides the definition of the
+population structure, sexual behaviour of individuals and model outcomes. The information
+to be transmitted through the network over time is the HIV infection. The main activities
+associated with social interactions and sexual transmission of HIV are the
+formation/dissolution of partnership \cite{Kretzschmar2000}, the nature of the
+partnerships (duration, monogamy or concurrent) \cite{morris1997}, rate of sexual
+contacts \cite{Anderson1988, UNAIDSRG2002}, safe sex practice \cite{Ahmed2001,Gremy2004}
+and the HIV transmissibility \cite{Fauci1996, Donovan2000}. Figure \ref{hivactivity}
+summarises the main social activities leading to the sexual transmission of HIV.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{hivactivity}
+\caption{Sexual transmission of HIV activities} \label{hivactivity}
+\end{center}
+\end{figure}
+
+Each individual is classified according to their current HIV infection status, as:
+\parskip=0pt
+\begin{itemize}
+    \item [$\circ$] \emph{Susceptible}
+    \item [$\circ$] \emph{Infected}
+    \item [$\circ$] \emph{Protected}
+\end{itemize}
+\parskip=\baselineskip
+
+Partnership between individuals is a complex and selective process, which involves many
+social and behavioural issues such as gender, sexual preferences, age difference between
+partners and social status. The model accounts for both formation of sexual partnerships
+and friendship, known to be an important step toward the formation of new partnerships.
+Two types of partnership are defined within the model:
+\parskip=0pt
+\begin{itemize}
+    \item [$\circ$] \emph{Stable} - long term partnerships, equivalent to marriage, living together, etc;
+    \item [$\circ$] \emph{Casual} - shot term partnerships with sporadic sexual contacts.
+\end{itemize}
+The gender preconditions for establishing a partnership are:
+\begin{itemize}
+    \item [$\circ$]\emph{Heterosexual partners} - between male and female;
+    \item [$\circ$]\emph{Homosexual partners} - between males;
+    \item [$\circ$]\emph{Bisexual partners} - between female and homosexual male.
+\end{itemize}
+\parskip=\baselineskip
+
+In the case of HIV, \emph{lesbian sex} will not be considered by the model as the rate of
+transmission is very low. Up to the time of this writing, the biologic risk of HIV
+transmission through female-to-female sexual contact is unknown, there have been several
+reports in the medical literature indicating possible sexual transmission of HIV among
+lesbian \cite{Perry1989, Einhorn1994}. However AIDS surveillance data indicate that women
+with AIDS who are reported to have had sexual contact only with other women have also
+been reported to have injected drugs or to have received blood transfusions or blood
+components, therefore the source of infection is unclear \cite{Raiteri1994}.
+
+Although these risk factors do not preclude the possibility that the mode of transmission
+of HIV for these women was female-to-female sexual contact, the absence of cases in
+lesbian women without other established risk factors is striking \cite{Monzon1987}.
+Further more, studies from HIV surveys among women attending sexually transmitted disease
+clinics and women's health clinics also suggest that HIV infection in lesbian and
+bisexual women is closely associated with injection drug use or to sexual contact with
+men at increased risk of HIV infection. These data do not exclude the possibility of
+female-to-female sexual transmission of HIV, but they do indicate that it is uncommon
+\cite{Chu1994}.
+
+\subsection{Population}
+
+The population characteristics are defined as a function of the simulation clock
+\emph{t}, which can be tuned to reflect the data available. The level of detail to be
+included within the model will depend upon the availability of data. The following
+properties are defined as a minimum requirement:
+
+\begin{longtable}[c]{|r p{11.0cm}|l|}
+\caption{Population characteristics definition}\\ \hline
+ & \bfseries Variable definition & \bfseries Data type \\\hline\hline
+\endhead
+\multicolumn{3}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{tbpopulation}
+1 - & \emph{Size n} -- the size of the population in each core group; & Integer \\\hline
+
+2 - & \emph{Age distribution} -- the population's age distribution used to quantify the
+effects of HIV infection on individuals and/or to define age based population core groups;
+&  Stochastic \\\hline
+
+3 - & \emph{Life expectance} -- the distribution of life expectancy in the population
+without the effects of HIV infection; &  Stochastic \\\hline
+
+4 - & \emph{Gender} -- proportions of \emph{female}, \emph{male} and \emph{homosexuals}
+in the population -- used to define partnerships with the population; &  Decimal (0-1) \\\hline\hline
+
+5 - & \emph{HIV prevalence} -- the currently \emph{estimated} prevalence of HIV
+infection within the population; & Decimal (0,1) \\\hline
+
+6 - & \emph{HIV infection's age distribution} -- the age distribution of HIV infection
+among  people living with HIV/AIDS, used to quantify deaths caused by HIV infection;
+&  Stochastic \\\hline
+
+7 - & \emph{HIV testing rate} -- the proportion of people tested for HIV infection
+in the population, fundamental when making decisions about treatment and preventive
+intervention strategies; &  Decimal [0,1] \\\hline\hline
+
+8 - & \emph{Maximum number of concurrent partnerships} -- network property governing the
+overlapping of partnerships; &  Integer $\geq 1$ \\\hline
+
+9 - & \emph{Probability of concurrent partnership} -- population behaviour toward multiple
+sexual partners or extramarital partnerships;  &  Decimal [0,1] \\\hline
+
+10 - & \emph{Probability of a casual partnership} -- small world's probability \emph{p}
+-- social rule governing the network structure according with the nature of partnerships
+within the population; & Decimal [0,1] \\\hline
+
+11 - & \emph{ Probability of looking for a sexual partner at any time} -- available for
+partnership -- social rule accounting for individuals' desire to be involved in
+sexual partnerships, represent those who prefer to be alone, sexually isolated for some
+time;  & Decimal (0,1] \\\hline
+
+12 - & \emph{Probability of searching own group first for a casual partner} --
+network structure rule representing the community structure of the population,
+the cultural behaviour of individuals when looking for casual partnerships; &  Decimal
+[0,1] \\\hline\hline
+
+13 - & \emph{Duration of stable partnerships} -- the distribution of length of
+long term partnerships in the population, the duration of marriage, the family structure
+of the population; & Stochastic \\\hline
+
+14 - & \emph{Time between stable partnerships} -- the distribution of time between
+two consecutive stable partnerships, the mean time taken by individuals to find a new
+stable partner as described by the pair formation models \cite{Dietz1988a}, however in
+this model individuals can have casual partnerships in between;  &  Stochastic \\\hline
+
+15 - & \emph{Rate of sexual intercourse for stable partnership per unit of time} --
+the distribution of sexual contacts, the sexual behaviour of individuals when engaged
+in a long term partnership; & Stochastic \\\hline
+
+16 - & \emph{Probability of safe sex practice during sexual intercourse for stable
+partnership} -- the behaviour of individuals engaged in stable partnerships over condom
+use, especially those having extramarital partnerships, the bridges for HIV
+\cite{Morris1996}; & Decimal [0,1] \\\hline\hline
+
+17 - & \emph{Duration of casual  partnerships} -- the distribution of short term
+partnerships in the population;  & Stochastic \\\hline
+
+18 - & \emph{Rate of sexual intercourse for casual partnership per unit of time} --
+the distribution of sexual contacts between individuals when engaged in a short
+term sexual partnership; & Stochastic \\\hline
+
+19 - & \emph{Probability of safe sex practice during sexual intercourse for casual
+partnership} -- the behaviour of individuals over condom use, especially among young
+people \cite{Wellings1994} and those involved in multiple sexual partnerships.
+& Decimal [0,1] \\\hline
+\end{longtable}
+
+The variables defining the population structure can be divided into five groups:
+population identity (1-4); HIV infection status (5-7); network and social rules (8-12)
+governing the formation of partnerships, migration, concurrency and community structure;
+and sexual behaviour of individuals on stable (13-16) and casual (17-19) partnerships,
+quantifying the strength and frequency of social interactions as well as the dissolution
+of partnerships. The concurrency property of the network is governed by two variables
+[8-9], in order to account for both the network structure and the social behaviour
+respectively, a serious limitation of Morris model \cite{morrism1997}, which account only
+for the latter one, ignoring the network structure all together. The stochastic data type
+represents a sample from a known probability distribution.
+
+The duration of a partnership is governed by its type, stable or casual, and the sexual
+behaviour of the individual when involved on each kind of partnership. An individual can
+be in one of the following partnership status: \emph{Engaged, Available, Transitory}. The
+partnership status depends upon the social behaviour of the population and the network
+concurrency property as follows:
+\parskip=0pt
+\begin{itemize}
+    \item [$\circ$] \emph{Available} - stable or casual partnership can be established;
+    \item [$\circ$] \emph{Transitory} - available only for casual partnership (time between two consecutive stable
+partnerships);
+    \item [$\circ$] \emph{Engaged} - currently involved in a stable partnership.
+    \item [] If concurrent partnership is allowed then
+    \begin{itemize}
+        \item Engaged - available only for casual partnership;
+    \end{itemize}
+    \item [] Otherwise
+    \begin{itemize}
+        \item Engaged - no new partnership is allowed.
+    \end{itemize}
+\end{itemize}
+\parskip=\baselineskip
+Although in some cultures it may be acceptable for one to have multiple wives or families
+at the same time, this can be seen as a social exception and not a common rule in modern
+society, therefore within this model individuals are allowed to be involved only in a
+single stable partnership at a time. Concurrency partnerships may occur either involving
+one stable and a casual partners or among multiple casual partners according with the
+social rules governing the interactions as shown below.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{partnerstatus}
+\caption{Partnership status transition diagram} \label{partnerstatus}
+\end{center}
+\end{figure}
+
+The term \emph{safe sex practice} refers to consistent use of male latex condoms during
+sexual intercourse, the most efficient and available intervention to reduce the sexual
+transmission of HIV and other sexually transmitted infections \cite{WHO1998a}. The search
+for new preventive technologies such as HIV vaccines and microbicides continues to make
+progress, but condoms will remain the key preventive tool for many years to come. Condoms
+are a key component of the combination of prevention strategies that individuals can
+choose at different times in their lives to reduce their risks of sexual exposure to HIV.
+Policy makers can promote the use of condoms by making them accessible to people at no
+cost or at greatly subsidised prices, however the final decision about correct and
+consistent use of condoms relay on the individuals themselves.
+
+Laboratory studies have demonstrated that male latex condoms are essentially an
+impermeable barrier to infectious agents contained in genital secretions, however
+incorrect use of condoms account for about 5\% of breakage and slippage of condoms during
+the sexual act \cite{Carey1999}. Evidence from extensive epidemiological research among
+heterosexual couples in which one partner is infected with HIV have shown that correct
+and consistent condom use significantly reduces the risk of HIV transmission by up to
+95\% compared with inconsistent or non condom use \cite{Vincenzi1994, Ahmed2001,
+Holmes2004}.
+
+Empirical studies involving different populations throughout the world have suggested
+that consistence of condom usage among the general population varies greatly with the
+nature of partnerships, sexual activity, concurrency and level of exposure
+\cite{Macaluso2000, Johnson2001,Wellings2001,Wong2004,Shlay2004}, a effective condom
+promotion therefore must target not only the general population, but also the behaviour
+of individuals at higher risk of HIV exposure, especially women, young people, sex
+workers and their clients, injecting drug users and men who have sex with men.
+
+The availability of free HAART treatment creates the need and the opportunity for
+accelerated condom promotion. The success of HAART therapy in industrialised countries in
+reducing illness and prolonging life can alter the perception of risk associated with HIV
+\cite{Gremy2004}. A perception of low-risk and a sense of complacency can lead to
+unprotected sex through reduced or non-consistent condom use. Promotion of correct and
+consistent condom use within HAART treatment programmes is essential to reduce further
+opportunities for HIV transmission \cite{Holmes2004}.
+
+New effective treatments have direct impact on both the disease and behaviour of
+individuals, the oral treatment for erectile dysfunction in men sildenafil (Viagra) is
+starting to emerge as a potential risk for sexual transmission of HIV and other STDs
+\cite{Sherr2000,Kim2002}. The possibility that \emph{Viagra} may contribute to
+transmission of HIV and other sexual diseases among older adults opens a new front on the
+fight against HIV infection, particularly in the developed world where such drugs are
+wider accessible. Up to now, most empirical studies on HIV/AIDS worldwide have focused on
+populations between 15 and 50 years of age, however Viagra and other similar drugs
+developed in the past five years or so, are about to change that as they enable men to
+have more partners and also increase the duration of sexual exposure to infected
+partners, consequently people with up to the age of 71 are starting to emerge infected
+with HIV and other STDs \cite{Kim2002}.
+
+\subsubsection{Mixing}
+
+The overall population can be divided into \emph{z} core groups according with the risk
+of HIV infection or any other appropriated criteria, for each group the characteristics
+defined in Table \ref{tbpopulation}, should be specified such that they represent both
+the structure and behaviour of the group's population. The interactions between
+individuals in different core groups is governed by a mixing matrix $a_{ij}$, $(i,j =
+1,2,\ldots, z)$ in which each an entry $a_{ij}$, $(i \neq j)$ defines the probability of
+external partnerships involving individuals from group \emph{i} and those in group
+\emph{j} so that $\sum \limits_{i=1}^{z} a_{ij} = 0$ and $\sum \limits_{i=1}^{z} a_{ij} =
+1$ represent an \emph{isolated} and a \emph{mixed} population respectively as shown
+below.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{mixmatrix}
+\caption{Population mixing matrix representation} \label{mixmatrix}
+\end{center}
+\end{figure}\\
+
+The strength and frequency of the sexual interactions between individuals involved in
+external partnerships are balanced using the \emph{geometric mean} of the respectively
+sexual behaviour quantities defined for each core group (e.g. married men and sex
+workers). This ensures that part of each individual's sexual behaviour is preserved and
+accounts for the level of interaction that each individual possess. Although mixing is
+allowed, physical migration of individuals between core groups is forbidden.
+
+\subsubsection{List of Acquaintances}\label{listsize}
+
+The formation of new partnerships mimics the individuals' sexual behaviour and
+encapsulates the rules for establishing new partnerships according to each group's
+population definition. The size of the acquaintance list, or the maximum number of people
+that anyone knows, is governed by the following probability:
+\begin{equation}\label{nofriends}
+    Pr(x \leq \log (n)e^{-\alpha k})=\min(1,\log(n)e^{-\alpha k})
+\end{equation}
+where \emph{n} is the group's population size, \emph{k} the current number of people in
+the person's acquaintance list and $\alpha$ is a constant. $\alpha$ is set so that this
+probability, which decreases as \emph{k} increases, is very small (=0.0001) by the time
+\emph{k} reaches the maximum number of acquaintances expected for each individual to have
+within the population.
+
+For example, suppose that the maximum expected number of acquaintances is 30 in a
+population of 5000 people. Let us define a constant C = 0.0001 as the probability of a
+new acquaintance after having 30 already in the list, we have:
+\begin{equation}\label{egnofriends}
+    \log (n)e^{-\alpha k}= C.
+\end{equation}
+Solving equation \ref{egnofriends} for $\alpha$ we have
+\begin{equation}\label{solvealpha}
+ \alpha = -\frac{1}{k}\log\left(\frac{C}{\log(n)}\right) =
+          -\frac{1}{30}\log\left(\frac{0.0001}{\log(5000)}\right) = 0.3784\rm{.}
+\end{equation}
+Figure \ref{fignofriends} shows the probability of adding a new friend to one's list of
+acquaintance as the size of the list \emph{k} increases.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{nofriends}
+\caption{Probability of a new friend as \emph{k} increases} \label{fignofriends}
+\end{center}
+\end{figure}
+
+\subsubsection{Structure}\label{structure}
+
+The underline population structure of each core group can be represented by HIVacSim
+either as a \emph{metric} or a \emph{topological} network. In a metric network, refereed
+in this thesis as topology \emph{free}, there are no geographical closeness, people are
+near to each other only by social distances, who knows whom in the population, one's list
+of acquaintances as well as one's friends acquaintances up to \emph{three degrees of
+separation}. The rational about three and not six degrees of separation is that sexual
+networks are special (see \ref{netsearching}), the chances that one will meet a friend of
+a friend whose one does not know are high, however the chances that one will meet also
+someone else through this new friend that one's friends does not know are very slime, any
+further step beyond three degrees of separation are assumed to be fortunate.
+
+Topological networks account for both geographical and social distances as defined for
+metric networks, two topological structures are defined:
+\parskip=0pt
+\begin{itemize}
+    \item \emph{Circle} - the original small world topological model \cite{Watts1999},
+    where the population lives in a lattice ring with periodic boundaries conditions.
+    Geographically one is close to \emph{k} neighbours on one's left and right as
+    described in sections \ref{latticegraphs} and \ref{smgraphs}, socially one is close
+    to other people by acquaintances as for \emph{free} structure;
+    \item \emph{Sphere} - the population lives on the surface of a unit sphere. Socially
+    people are closely related by acquaintances as above, geographically one's
+    neighbourhood is defined by a radius on the surface of the sphere.
+\end{itemize}
+\parskip=\baselineskip
+
+The assumption that people live in a ring lattice by the original small world model
+\cite{Watts1999} and which has continued in almost any other variant developed ever since
+\cite{Newman1999, Boots1999,Moore2000, Newman2000a, Kuperman2001, Kleinberg2000,
+Kleinfeld2002} is a strong one for social networks. The spherical topology provides a
+more intuitive representation of the real world and will be assumed as the default
+population structure within this model. The other two structures (free and circle) are
+provided for backward compatibility and convenience, they can be used as baseline for
+comparison of experiments using the small world theory as the underline network
+structure.
+
+The unit sphere provides a robust and convenient mathematical representation of the
+network elements. Individuals are distributed uniformly on the surface of the sphere and
+geographical distances, one's geographical neighbourhood can be defined in terms of the
+unit sphere surface for efficient computation as well as real world geography, where the
+population lives and the metrics are meaningful for ordinary individuals to measure and
+validate. Figure \ref{figsphere} illustrates the spherical topology representation of a
+small world network and the geographical distance among individuals.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics{sphere}
+\caption{Geographical distances of the spherical topology} \label{figsphere}
+\end{center}
+\end{figure}
+
+Let \emph{A} and \emph{B} be two vectors representing one's position on the surface of
+the sphere and the geographical distance defining one's neighbourhood respectively,
+$\Phi$ is the angle between the two vectors and \emph{Q} the length from the centre of
+the sphere to the intersection of the spherical cap defined by \emph{B} on \emph{A} as
+shown above. The geographical distance among individuals in the surface of the sphere is
+given by
+\begin{equation}\label{spheredist}
+    A \bullet B = \cos(\Phi) = Q
+\end{equation}
+where A and B are neighbours if $A \bullet B \geq Q$. For example, people who are at less
+then 1000Km on the surface of the Earth (radius $\sim$ 6378Km
+\cite{Moritz1980,Groten2004}) are at less than 1000/6371 = 0.157 radians. The
+$\cos$(0.157 radians) = 0.988, therefore any two individuals who $A \bullet B \geq 0.988$
+are at a distance of less than 1000Km. Figure \ref{neigbourhood} summarises the spherical
+representation of a small world network.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{neigbourhood}
+\caption{Spherical topology representation of a network with 5000 vertices}
+\label{neigbourhood}
+\end{center}
+\end{figure}
+
+A more intuitive way to define one's geographical neighbourhood is to consider the
+population density instead of metric units such as kilometre in the example above. In
+order to define the searching distance as a function of the population density, all one
+needs to know or estimate is the expected number of neighbours in anyone's neighbourhood,
+denoted by \emph{E}. Let \emph{n} be the size of the core group's population, \emph{R}
+the radius of the real world sphere (e.g. Earth) and \emph{D} one's neighbourhood
+distance. The area of the unit sphere surface is given by
+\begin{equation}\label{areasphere}
+    S = 2\pi r \int\limits_{-1}^{1} rdx = 4\pi r^2\rm{,}
+\end{equation}
+where \emph{r} is the radius of the sphere. In the case of a unit sphere, \emph{r = 1},
+thus could be removed from the equation, but will be kept for formality. The fact that
+the area of the sphere turned out to be the same as that of the circumscribed cylinder is
+fortunate. The areas of the spherical caps defined at point \emph{b} are given by
+\begin{equation}\label{areacapup}
+  S_1 = 2\pi r \int\limits_{b}^{1} rdx = 2\pi r^2(1 - b)
+\end{equation}
+\begin{equation}\label{areacaplow}
+S_2 = 2\pi r \int\limits_{-1}^{b} rdx = 2\pi r^2(1 + b).
+\end{equation}
+The area of the spherical cap required to represent the expected number of neighbours,
+denoted by $S_c$, is defined as a function of group's population size and the area of the
+unit sphere,
+\begin{equation}\label{worldcap}
+    S_c = \frac{S \times E}{n},
+\end{equation}
+in order to represent the dimensions of the real world as a unit sphere, we normalise
+\emph{D} and \emph{R} to give \emph{b} in the unit sphere
+\begin{equation}\label{worldtounit}
+    b = \cos (\frac{D}{R}).
+\end{equation}
+
+Finally, substituting \emph{b} in Equation \ref{areacapup}, the neighbourhood distance on
+the surface of the unit sphere can be found by solving
+\begin{equation}\label{newareacapup}
+  2\pi r^2(1 - \cos (\frac{D}{R})) = S_c
+\end{equation}
+for \emph{D}, which gives us
+\begin{equation}\label{solvedistance}
+  D = \arccos\left(\frac{2\pi r^2 - S_c}{2\pi r^2}\right)R.
+\end{equation}
+
+The method used for distribute individuals uniformly on the surface of the unit sphere is
+due to Knuth \cite{Knuth1981} pages 130-131, it is based on the fact that the projection
+on any axis is uniformly distributed on [-1,1]. This method works only in 3-space, but it
+is very fast as it uses two-dimensional rejection, which gives a higher probability of
+acceptance compared to other algorithms in three dimensions such as Marsaglia
+\cite{Marsaglia1972}. It also avoids trigonometric calculations, although this is no
+longer a great problem for modern computes, the algorithm is the following:
+\parskip=0pt
+\begin{itemize}
+    \item [(a)] Choose \emph{u} and \emph{v} uniformly distributed on [-1,1];\\
+    \item [(b)] Let $s = u^2 + v^2$;\\
+    \item [(c)] If $s > 1$, return to step (a);\\
+    \item [(d)] Let $a = 2 \times \sqrt{1-s}$;\\
+    \item [(e)] The desired \emph{xyz} point is (\emph{au, av, 2s-1}).
+\end{itemize}
+\parskip=\baselineskip
+
+Now one can tune the spherical distance by giving only the expected number of neighbours
+for each individual in the population, the mean degree of individuals. This is a
+meaningful and intuitive quantity, which represents both social and geographical
+distances. Theoretically this method could be generalised to n-dimension, however the
+3-space seems to be the best match for representing social networks.
+
+\subsubsection{Searching}
+
+The nature of the social relations taking place within HIVacSim can be divided into
+\emph{friendship} and \emph{sexual partnerships}. The number of friends that one is
+allowed to have is defined by the rules governing the size of the acquaintances list as
+described in section \ref{listsize}. The formation of sexual partnership depends upon the
+individuals' sexual behaviour and the rules defined by one's population group regarding
+the for formation and dissolution of partnerships. The search for new friends or sexual
+partners is governed by tow constraints:
+\parskip=0pt
+\begin{itemize}
+    \item [a)] An integer \emph{m} = 1, 2 or 3 defining the maximum degree of separation
+    to search for a new friend or stable partnership in one's list acquaintances;
+    \item [b)] A function $f(n)=\beta \log (n)$, where \emph{n} is the group's population
+    size and $\beta$ is a constant, which defines the maximum number of trials when
+    searching for a new friend or partnership geographically or at random.
+\end{itemize}
+\parskip=\baselineskip
+
+Figure \ref{popsearch} summarises from a high level the formation of new friendships and
+partnerships within the simulation model. This procedure is evaluated for each individual
+node, in the population group, for every simulation interaction clock.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{popsearch}
+\caption{Formation of friendship and partnership activity diagram} \label{popsearch}
+\end{center}
+\end{figure}\\
+The search for a new friend of sexual partner in one's list of acquaintances requires
+special attention to balance the complexity of social preferences and computational
+feasibility. This search is affected by both the size of the population and list of
+acquaintances, depending on the model's configuration, when the size of the acquaintances
+list approaches its maximum \emph{n-1}, the entire population may take part in the search
+process. In order to deal with this problem, a sampling technique was developed such that
+it maximises social mixing and keeps the computation cost to acceptable level of
+usability. One can adjust the complexity of the sampling by tuning the value of the
+constraint \emph{m} and the parameter $\beta$ of $f(n)$ function.
+
+Let \emph{k} denote the size of one's list of acquaintance, \emph{sp}, \emph{tp} and
+\emph{tp1} be respectively a source and two different target persons when looking for a
+partnerships, \emph{Q} and \emph{Qt} are two first in first out (FIFO) queues, and
+\emph{i} and \emph{c} are counters. Assuming that there are no repetitions when selecting
+a random target person from one's list of acquaintances, Figure \ref{partnersearch}
+defines the searching algorithm for new stable partners.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{partnersearch}
+\caption{Searching list of acquaintances for a new stable partner} \label{partnersearch}
+\end{center}
+\end{figure}
+
+The precondition for establishing a new partnership or social rules regarding
+partnerships are evaluated for the \emph{source} and \emph{target} individuals before and
+during the searching for a sexual partner respectively, according with each one's core
+group definition. The following social and structural rules are predefined within
+HIVacSim, new ones can be added at any time as needed:
+\parskip=0pt
+\begin{itemize}
+    \item [a)] Both source and target must be available for sexual partnership (probability
+    of looking for a sexual partner at any time);
+    \item [b)] The source and target must agree within a stable partnership (probability
+    of a casual partnership);
+    \item [c)] The network concurrency (\ref{partnerstatus}) rules must hold true (maximum
+    number of concurrent partnerships and probability of concurrent partnership);
+    \item [d)] Source and target must not already be sexual partners;
+    \item [e)] The gender preconditions (\ref{hivacsim}) for establishing a partnership must hold.
+\end{itemize}
+\parskip=\baselineskip
+
+The search for a new friend within one's acquaintances follows a similar sampling
+strategy although different social and structural rules are applied, Figure
+\ref{friendsearch} summarises the searching algorithm for new friendships.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{friendsearch}
+\caption{Searching list of acquaintances for a new friend} \label{friendsearch}
+\end{center}
+\end{figure}
+
+The major differences are the social rules regarding the formation of friendship and the
+searching universe which excludes first degree individuals as they are already one's
+friends. The two social rules governing the formation of new friendship are:
+\parskip=0pt
+\begin{itemize}
+    \item [a)] The size of the list of acquaintances (\ref{listsize}) must hold;
+    \item [b)] Source and target must not already be friends.
+\end{itemize}
+These social and structural rules are a minimum requirement imposed by the model's
+definition in order for it to function, however new rules or preconditions governing the
+formation and dissolution of partnership and formation of friendship can be defined on
+the network configuration and population structure as necessary.
+\parskip=\baselineskip
+
+The geographical search depends on the population's network structure, in any case a
+maximum of \emph{f(n)} trials will be taken before  \emph{not found} is returned as the
+search outcome. The search for \emph{casual} partners is conducted by random trials
+independently of the network structure. The topology \emph{free}  structure has no
+physical distance, therefore the search for both casual and stable partners as well as
+friendships are conducted by uniform random sampling in the population; in the circle
+topology, the geographical search for stable partners and friends proceeds on the left
+and right sides of the source individual as defined in section \ref{smgraphs}; in the
+spherical topology the geographical search for stable partners and friends takes place
+inside one's neighbourhood as described in section \ref{structure}.
+
+\subsection{STD Definition}
+
+Although this thesis is concerned only with HIV, the model's structure allows for others
+STDs to be represented and evaluated. Table \ref{stddefinition} defines the variables
+required to represent the transmissibility and natural history of the STD infection.
+\begin{longtable}[c]{|r l|l|}
+\caption{STD characteristics definition}\\ \hline
+ & \bfseries Variable & \bfseries Description \\\hline\hline
+\endhead
+\multicolumn{3}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{stddefinition}
+1 -&\emph{Male} $\rightarrow$ \emph{Female} &Probability of transmission from male to female;\\\hline
+2 -&\emph{Female} $\rightarrow$ \emph{Male} &Probability of transmission from female to male;\\\hline
+3 -&\emph{Male} $\rightarrow$ \emph{Male}   &Probability of transmission from male to male, homosexual;\\\hline
+4 -&\emph{Life Infection}     &Is the STD infection lifelong?\\\hline
+5 -&\emph{Duration}           &The duration of the infection, if not lifelong;\\\hline
+6 -&\emph{Reinfection}        &Does the STD allow reinfection? (not lifelong only);\\\hline
+7 -&\emph{Mortality}          &The mortality rate associated with the STD infection;\\\hline
+8 -&\emph{Life Expectancy}    &The survival time from infection to death (Stochastic).\\\hline
+\end{longtable}
+
+The probabilities STD transmission are per single unprotected sexual intercourse, one
+could in theory go a step further on the breakdown sexual activities leading to STD
+transmission and include oral sex, insertive, receptive and so on \cite{Donovan2000},
+however the definition of such estimates are difficulty due to the nature of the subject,
+which makes the collection of such data impractical \cite{Mastro1994}.
+
+\subsection{Transmission of HIV}
+The sexual transmission of HIV between individuals currently in an active partnership is
+evaluated for each \emph{t} as a function of the current infection status of the
+individuals involved, the type of partnership, the rate of sexual intercourse and safe
+sex practice.
+
+Let \emph{u} and \emph{v}, $(u \neq v)$ be two individuals involved in a partnership at
+time \emph{t}, \emph{s} be the number of sexual intercourses between \emph{u} and
+\emph{v} during time $\Delta t$ according to the type of partnership, and \emph{h} be the
+probability of HIV transmission per single unprotected sexual intercourse. The
+probability of sexual transmission of HIV between \emph{u} and \emph{v} during time
+$\Delta t$, denoted by $Z_{uv}$, is given by
+\begin{equation}\label{probhiv}
+Z_{uv} = \left\{
+    \begin{array}{lcll}
+      0             &, & (u \vee v) \textrm{ practiced safe sex }& \vee \\
+                    &  & (u \vee v) \textrm{ is protected }      & \vee \\
+                    &  & (u \wedge v) \textrm{ are susceptible } & \vee \\
+                    &  & (u \wedge v) \textrm{ are intected }    &      \\
+                    &  & & \\
+      1 - (1-h)^s   &, & \textrm{Otherwise} & \\
+    \end{array}\right.
+\end{equation}
+
+The network \emph{efficacy} is calculated as a function of the HIV transmission over time
+through the network edges. In epidemiological terms this is the HIV incidence within the
+population.
+
+\subsection{HIV Vaccine and Intervention}
+
+A preventive vaccine against HIV infection is the most prominent hope to control the HIV
+pandemic, as discussed in section \ref{vaccine} it is unlikely that the first effective
+HIV vaccines will provide lifelong immunity against all distinct subtypes of the HIV
+virus, it may be effective just for some people or for a limited period of time.
+Partially effective vaccines can still have benefit because all vaccines derive their
+power from group immunity \cite{Esparza2001}. HIVacSim allows multiple preventive
+vaccines to be defined; however only a single HIV vaccine intervention can take place at
+a time within each core group. The model does not account for HIV subtypes, at this stage
+only limited information about the genetic structure of different HIV subtypes are
+available, little is known about the epidemiological characteristics of each subtype,
+their effects on transmission and the implications of multiple subtype infection.
+
+The definition of a preventive HIV vaccine requires basic information about the
+effectiveness of the vaccine in stopping the HIV transmission and the duration of the
+protection provided by the vaccine for those vaccinated individuals. Table
+\ref{vacinedefinition} summarises the required information when defining a preventive HIV
+vaccine.
+
+\begin{longtable}[c]{|r l|l|}
+\caption{HIV vaccine definition}\\ \hline
+ & \bfseries Variable & \bfseries Description \\\hline\hline
+\endhead
+\multicolumn{3}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{vacinedefinition}
+1 -& \textit{Effectiveness} & The effectiveness of the vaccine in stopping HIV transmission;\\\hline
+2 -& \textit{Protection}    & Is the vaccine a lifetime protection against HIV transmission?;\\\hline
+3 -& \textit{Length}        & Length of the vaccine protection if not lifetime (Stochastic).\\\hline
+\end{longtable}
+
+The implementation of different vaccination strategies can be define within the model
+according with core groups, available HIV vaccines, number of interventions, HIV testing
+and testing results. The cost of vaccination is most the time prohibitive for one to
+intervene in the entire population, intervention strategies therefore may target specific
+core groups and use different types of vaccines in order to minimise the costs and
+maximise the effectiveness. The following options can be used for intervention.
+\parskip=0pt
+\begin{itemize}
+    \item [$\bullet$] \textbf{Population to be vaccinated}
+    \item [$\circ$] All Groups
+    \item [$\circ$] Custom
+    \begin{itemize}
+    \item [$\checkmark$] Select specific groups
+    \end{itemize}
+    \item [$\triangleright$]Time for intervention as a function of the clock \emph{t}
+    \item [$\triangleright$] \% of population to be vaccinated [1 -- 100\%]
+    \item [$\triangleright$]Vaccine to be used (a single vaccine as defined in Table \ref{vacinedefinition})
+    \item [$\bullet$] \textbf{HIV Testing}
+    \begin{itemize}
+        \item [$\circ$] Not important
+        \item [$\circ$] Vaccine only tested individuals
+        \item [$\bullet$] \textbf{HIV Testing Results}
+        \begin{itemize}
+            \item [$\circ$] Not important
+            \item [$\circ$] Only HIV Negative
+            \item [$\circ$] Only HIV Positive
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\parskip=\baselineskip
+
+\subsection{Network Characteristics}
+
+The many characteristics of graphs and networks discussed in sections \ref{graphtheory}
+and \ref{swnetworks} are provided by HIVacSim in order to quantify the dynamics of sexual
+network interactions, social structure and transmission of infectious diseases. Table
+\ref{netproperties} summarises the network properties calculated by this model for each
+core group.
+
+\begin{longtable}[c]{|r l|c|}
+\caption{Small world networks characteristics }\\ \hline
+& \bfseries Characteristics & \bfseries Reference \\\hline\hline
+\endhead
+\multicolumn{2}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{netproperties}
+1 -& The number of edges                                             & \ref{graphtheory} \\\hline
+2 -& The number of vertices                                          & \ref{graphtheory} \\\hline
+3 -& Is the graph fully connected?                                   & \ref{subgraphs} \\\hline
+4 -& Mean degree distribution of the vertices                        & \ref{degree} \\\hline
+5 -& The concurrency index - $k_2$                                   & \ref{k2rel} \\\hline
+6 -& Diameter of the network (connected network only)                & \ref{geodesic} \\\hline
+7 -& Mean geodesic length - \emph{L} (connected network only)        & \ref{apsp} \\\hline
+8 -& Clustering coefficient - \emph{C}                               & \ref{mcluster} \\\hline
+9 -& Global efficiency of the network - $E_g$                        & \ref{smgefficiency}\ref{smgefficiency}\\\hline
+10 -& Global variance of the network efficiency                      & N/A \\\hline
+11 -& Global standard error of the network efficiency                & N/A \\\hline
+12 -& Local  efficiency of the network - $E_l$                       & \ref{smeloc}\\\hline
+13 -& Expected clustering coefficient for a regular network          & \ref{latticecluster}\\\hline
+14 -& Expected characteristic path length for a regular network      & \ref{latticepath}\\\hline
+15 -& Expected clustering coefficient for a random network           & \ref{rndcluster}\\\hline
+16 -& Expected characteristic path length for a random network       & \ref{rndpath}\\\hline
+\end{longtable}
+
+
+Although most of the network properties in Table \ref{netproperties} can be easily
+calculated numerically, finding the exactly value for mean geodesic length (characteristic path
+length) and global efficiency of the network can be very expensive in computation terms
+and becomes impractical for large values of \emph{n} as discussed in section
+\ref{geodesic}. In order to deal with this problem, a sampling method will be introduced
+to enable one to estimate the true value of these quantities within a desired
+accuracy and confident level independently of population size.
+
+The mean geodesic length \emph{L} is provided here only for compatibility with the
+original small world model \cite{Watts1998} definition, this quantity is valid only for
+fully connected network, which is not always the case within sexual networks, therefore
+the global efficiency measure $E_g$ will be used instead as it can be measured for both connected
+and disconnected networks. The global variance and standard error (10 and 11) are
+provided only for exact solutions, they can be used to define the minimum sample size
+needed in order to estimate $E_g$ within a given accuracy and confidence limit. Two
+standard graph traversing algorithms are used to find an exact solution for the global
+network efficiency:
+\parskip=0pt
+\begin{enumerate}
+    \item [a)] \emph{Floyd-Warshall's all-pair shortest path} \cite{Floyd1962,Warshall1962},
+    finds the geodesics of an entire network by multiplying its adjacency matrix
+    representation;
+    \item [b)] \emph{Breadth-First Search} (BFS), single-source to all
+    shortest path tree search algorithm, uses a FIFO queuing strategy for
+    traversing or searching in an undirected and unweighed network.
+\end{enumerate}
+\parskip=\baselineskip
+
+The Floyd-Warshall's algorithm takes the dynamic programming approach, that is,
+independent sub-problems are solved and the results are stored in a \emph{n}x\emph{n}
+matrix for later use. The basic concept is simple, if for a path from vertex \emph{u} to
+vertex \emph{v} of a network and its length estimate $d(u,v)$, one can take a detour via
+\emph{w} and shorten the path, than it should be taken. This translates into the
+following equation:
+\begin{equation}\label{floydalgo}
+    d(u,v) = \min[d(u,v),d(u,w),d(w,v)]
+\end{equation}
+Initially $d(u,v)$ is the length of a direct edge from \emph{u} to \emph{v}. In the case
+of unweighed networks, $d(u,v)= 1$, if there is a edge between vertices \emph{u} and
+\emph{v}, otherwise $d(u,v) = \infty$. At completion, $d(u,v)$ is the length of the
+shortest path from \emph{u} to \emph{v}, if there is one, or $d(u,v)$ is infinity. The
+algorithm has a space complexity of $O(V^2)$, takes time $O(V^3)$ and is defined as
+follows:
+\begin{verbatim}
+1. Initialise the adjacency matrix as above;
+2. Repeat steps 3 and 4 for w = 1, 2, ..., n;
+3.   Repeat step 4 for u = 1, 2, ..., n;
+4.     Repeat for v = 1, 2, ..., n;
+         d(u,v) = min[d(u,v),d(u,w),d(w,v)];
+5. Exit.
+\end{verbatim}
+
+The second algorithm takes advantage of the sparse nature of most social networks with no
+cycles. Johnson \cite{Johnson1977} provided a combination of algorithms for finding the
+all pairs shortest path on weighted and directed graphs, which breaks the $O(V^3)$
+boundary. In the case of unweighed and undirected networks, the BFS algorithm takes
+advantage of both the symmetric structure representation and sparse nature of such
+networks to solve the single-source to all shortest path problem using space complexity
+O(V) and time O(V+E). The BFS algorithm also can trace the path between any two vertices
+in the network and is defined as follows:
+\begin{verbatim}
+1. Initialise all vertices as unvisited;
+2. Put the stating vertex u in queue Q and mark u as visited;
+3. Repeat steps 4 and 6 until Q is empty
+4.   Remove the front vertex v of Q.
+5.   Process v and mark v as visited;
+6.   Add to the rear of Q all the neighbours of v marked as unvisited;
+7. Exit.
+\end{verbatim}
+
+These algorithms are related with the probability of casual partnerships or the small
+world probability \emph{p} in this model. Floyd-Warshall's algorithm is more efficient
+for regular networks, where the mean geodesic length is large; on the other hand BFS
+algorithm is more suited for random graphs with a small characteristic path length. The
+region in between was evaluated experimentally by varying the value of \emph{p} and
+measuring its effect on the run time of each algorithm. Figure \ref{algoswitch} shows the
+effects of probability \emph{p} on the numerical calculation of the global network
+efficiency.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{algoswitch}
+\caption{Effects of the probability \emph{p} on shortest path algorithms}
+\label{algoswitch}
+\end{center}
+\end{figure}
+
+A network of size 500 was used on the above experiment, which clearly shows the
+transition between algorithms at $p \sim 0.13$. This value will be used as default in
+this model, however one can change it by sliding the algorithm switch point in favour of
+a particular algorithm (Floyd-Warshall 0$\leftarrow\mid\longrightarrow$1 BFS). The
+following three parameters can be adjusted in the model to control the choice of
+algorithm and define when and how the model calculates numerically or estimates the
+global network efficiency.
+\parskip=0pt
+\begin{enumerate}
+    \item \emph{Algorithm Switch} - the algorithm switch point defining when to calculate
+    the exact value of the global network efficiency as a function of the probability of
+    casual partnership of each core group, the small world probability \emph{p};
+    \item \emph{Numerical} - the maximum network size to calculate the global
+    network efficiency numerically;
+    \item \emph{Estimate} - the size of the geodesic sample to be taken when
+    estimating the global network efficiency (characteristic path length).
+\end{enumerate}
+\parskip=\baselineskip
+
+\subsubsection{Estimating the Global Efficiency}
+
+The global network efficiency is estimated by taking a sample of geodesics between two
+randomly selected vertices, without vertices pair repetition. A maximum of $n(n-1)/4$
+samples from the $n(n-1)/2$ universe can be taken, this ensures that the random selection
+of pairs always have at least 50\% chance of success. Let \emph{M} be the sample size of
+geodesics to be taken from a network with \emph{n} vertices and \emph{S} be the set of
+individual samples, the sampling algorithm proceeds as follows:
+
+\begin{verbatim}
+1. Initialise all n(n-1)/2 possible pairs as NOT used;
+2. Repeat steps 3 to 8 for i = 1, 2, ..., M;
+3.   Repeat steps 4 and 5 while idx is used;
+4.      Repeat while v = u;
+           u = INTEGER(U(1,n));
+           v = INTEGER(U(1,n));
+5.      If u > v Then
+           idx = INTEGER(u & v)
+        Else
+           idx = INTEGER(v & u)
+        End If;
+6.   Set pair idx to used;
+7.   Set x = BSF(u,v);
+8.   If x < Infinity Then
+        Let S(i) = 1.0/x;
+     End If
+9. Return S;
+\end{verbatim}
+
+The minimum sample size necessary to estimate the exact value of $E_g$ was defined
+experimentally by checking the sample's mean geodesic length convergence to a normal
+distribution. Figures \ref{samplehist} and \ref{sampleprob} illustrate the geodesic
+samples' mean convergence to a normal probability according with sample size for 100
+replications.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth]{samplehist}
+\caption{Sample mean convergence to a normal distribution} \label{samplehist}
+\end{center}
+\end{figure}
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth]{sampleprob}
+\caption{Normal probability plot of the geodesics sample} \label{sampleprob}
+\end{center}
+\end{figure}
+
+\clearpage
+
+The visual fitting above clearly shows the mean geodesic length convergence to a normal
+probability distribution for sample size = 400. In order to formally confirm this
+convergence, three standard statistical tests to determine the goodness of fit (GOF):
+Chi-squared (Chi-Sq), Anderson-Darling (A-D) and Kolmogorov-Smirnov (K-S) were performed
+using \emph{BestFit}, a probability distribution fitting package that tests and ranks up
+to 27 continuous and discrete distributions to determine which distribution best fits a
+given data  \cite{bestfit452}. Figure \ref{samplefit} summarises the 400 geodesic
+samples' fitting to a normal distribution and the three GOF tests results.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth]{samplefit}
+\caption{Sample fitting to a normal distribution and GOF normality tests}
+\label{samplefit}
+\end{center}
+\end{figure}
+
+The three GOF statistical tests confirmed the convergence of the geodesic samples to a
+normal probability distribution, a sample comprising of at least 400 random geodesics
+provides a good estimate of the global network efficience. Table \ref{samplecilevel}
+illustrates the expected confidence interval (CI) \emph{width}, the difference between
+the upper and lower CI bounds, the \emph{certainty} on the estimated global network
+efficiency, and the proportion of estimates contained between the observed CI bounds for
+the most commonly used confidence and significance levels.
+
+\begin{longtable}[c]{|c|r|c|c|r|c|}
+\caption{Accuracy of the estimated global network efficiency}\\\hline \bfseries Confidence
+& \bfseries Significance & \bfseries Rejected & \bfseries Invalid & \bfseries CI width & \bfseries Certainty
+\\\hline\hline
+\endhead
+\multicolumn{4}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{samplecilevel}
+80\%    & 0.10  & 10 & 22 & 0.019     & 94.50\% \\\hline
+90\%    & 0.05  & 4  & 10 & 0.024     & 97.50\% \\\hline
+95\%    & 0.025 & 1  & 4  & 0.029     & 99.00\% \\\hline
+99\%    & 0.005 & 0  & 1  & 0.038     & 99.75\% \\\hline
+\end{longtable}
+
+A sample is \emph{rejected} if the bilateral p-value of a \emph{t} distribution with
+\emph{M-1} degrees of freedom is less than the desired significance level. A sample is
+\emph{invalid} if the estimated global network efficiency value occurs outside of the
+upper and lower bounds of the observed confidence interval. When choosing a sample size
+for confidence interval based inferences, one should evaluate the width, validity and
+rejection \cite{Jiroutek2003}. The method used here considers all three properties
+simultaneously in order to determine the sample size, which will provide the required
+accuracy of the estimate.
+
+The sampling method define above relays on the BSF algorithm to find the random
+geodesics, therefore it is affected by the probability of casual partners as discussed
+before (\ref{algoswitch}) and is illustrated in Figure \ref{sampletime}. Considering that
+these sampling times are independent of the size of the population, although the effect
+of the small world probability \emph{p} on the sampling algorithm is similar to that of
+the exact solution algorithms, the magnitude of the sampling time can be considered
+negligible, if compared with that for numerical calculation.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{sampletime}
+\caption{Network efficiency sampling time as a function of probability \emph{p}}
+\label{sampletime}
+\end{center}
+\end{figure}
+
+\subsection{Computation}
+
+The computation starts by defining the number of replications and the population
+underline network structure according with each core group definition. The model then
+warms-up the initial population to eliminate transients, if necessary, and runs for the
+predefined length. The social activities associated with formation and dissolution of
+partnership, preventive vaccination intervention and the dynamics of sexual transmission
+of HIV follow the diagram below.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{computation}
+\caption{HIVacSim computation activity diagram} \label{computation}
+\end{center}
+\end{figure}
+
+The initial size of the core group population is kept unchanged throughout the simulation
+run time; individuals dying from natural causes or HIV infection are replaced by new
+individuals from the same core group's definition. The dynamic growth of population adds
+a extra level of complexity to the model structure and has no proven practical effect on
+short term simulation (e.g. 12 years) where the assumption of equilibrium between birth
+and death in the population seems sensible.
+
+
+\subsubsection{Warm-up}
+
+The objective of the warm-up process is to define the initial social connections among
+individuals, making them socially acquainted before starting the simulation. It is unlike
+that a steady state exists within a dynamic sexual network, therefore no attempted has
+been made to define universal rule for length of warm-up. The method and length of the
+warm-up will depend upon the population structure and social rules guiding the
+interactions between individuals. Three warm-up methods are considered:
+
+\begin{longtable}[c]{|l|p{8.5cm}|p{3.5cm}|}
+\caption{Simulation warm-up methods}\\\hline
+\bfseries Method & \bfseries Description & \bfseries Objective\\\hline\hline
+\endhead
+\multicolumn{3}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{modelwarmup}
+
+Traditional & Runs the simulation for a predefined period without collecting data & Acquaintances \\\hline
+
+Temporal    & Creates a single infected individual within the population and runs the
+warm-up for a predefined time period, mimics the case of patient number one. Allows
+internal and external group interactions. & Acquaintances and HIV Prevalence \\\hline
+
+Conditional & Creates a single infected individual within each group and runs the warm-up
+until reaching each group's predefined HIV prevalence in isolation & Acquaintances\\\hline
+\end{longtable}
+
+Warm-up plays an importance role on simulation experiments, it has been the subject of a
+wider range of research for many years, unfortunately no universal rule has been agreed
+upon its length and goodness. Ideally one objective is to fined a stead state, however
+this state becomes less likely with complexity and new simulation techniques such as
+distributed simulation, make it even hard for one to identify all the transients
+affecting the model outcome. In the case of sexual networks, it makes no sense for a
+monogamous society to exist during warm-up, all but \emph{Temporal} method HIV
+transmission is not important during warm-up, one uses currently estimated HIV prevalence
+as the base line epidemic.
+
+Even considering the case of Temporal warm-up, monogamy is meaningless if one takes for
+example the long survival of STDs and more recently the fast spread of HIV would not be
+possible in a monogamous world. Following are the model's settings guiding the warp-up
+process, the core groups' definitions regarding concurrency are overwritten during warm-up
+to enable polygamy in the population.
+
+\begin{longtable}[c]{|l|p{8.5cm}|c|}
+\caption{Warm-up configuration options}\\\hline
+\bfseries Option & \bfseries Description & \bfseries Data type\\\hline\hline
+\endhead
+\multicolumn{3}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{warmupconfig}
+1 - Method        & The warm-up method to be considered & \ref{modelwarmup} \\\hline
+2 - Duration      & The warm-up length for Traditional and Temporal methods as a
+function of the simulation clock \emph{t} & Integer \\\hline
+3 - Infected      & Number of initially infected individuals for Temporal and Conditional
+warm-up methods   & Stochastic \\\hline
+4 - Concurrent    & Maximum number of concurrent partnerships & Integer $\geq 2$ \\\hline
+5 - PrConcurrent  & Probability of concurrent partnership & Decimal (0,1] \\\hline
+\end{longtable}
+
+The traditional method of warm-up will be used as default in this model, the warm-up
+length is defined for each population structure using the Welch's method
+\cite{Welch1983,Welch1981} on the formation of friendships time series. It is important
+to notice that both the warm-up and simulation will stop if the HIV prevalence in the
+population becomes zero for obvious reason.
+
+\subsection{Model Output}
+
+The model provides detailed information on a wider range of population structure and
+interaction quantities as well as on the efficacy of the HIV transmission within each
+core group. This information can be analysed using standard statistical methods to
+quantify the dynamics of sexual network interactions, its effect on the spread of HIV
+within a population, and evaluate a particular decision, a particular policy, or provide
+guidance for evolving good decisions or policies to prevent the spread of HIV. A row of
+data is created for each \emph{replication}, clock \emph{t} and population \emph{group}.
+Table \ref{modeloutput} gives a brief description of the variables contained in the
+model's output data, a statistical analysis of these variables will be discussed in the
+following two chapters.
+
+\begin{longtable}[c]{|l|p{10.9cm}|}
+\caption{Population and HIV output data}\\\hline
+\bfseries Variable & \bfseries Description\\\hline\hline
+\endhead
+\multicolumn{2}{r}{\emph{Continued on next page}}
+\endfoot
+\endlastfoot
+\label{modeloutput}
+Run             & The replication number \\\hline
+Clock           & Model's internal clock \emph{t} \\\hline
+Date            & Model's real world clock defined as a function of \emph{t}  \\\hline
+Group           & Core group unique identification (internal Id and name) \\\hline
+Topology        & The group's underline social network structure representation \\\hline
+Size            & The size of the group's population \\\hline
+Female          & Proportion of females \\\hline
+Male            & Proportion for males (Female + Male = 1.0) \\\hline
+Homosexuals     & Proportion of homosexual males \\\hline
+Friends         & Number of new friendships formed in the group at $\Delta t$ \\\hline
+From Friends    & Number of new friendships found among acquaintances \\\hline
+Partners        & Number of new partnerships formed at $\Delta t$ \\\hline
+Stable          & Number of new stable partnerships formed at $\Delta t$ \\\hline
+From Acquaintances & Number of stable partnerships found among acquaintances \\\hline
+Casual          & Number of new casual partnerships formed at $\Delta t$ \\\hline
+Internal        & Number of new internal (own group) casual partnerships \\\hline
+External        & Number of new external casual partnerships \\\hline
+Concurrent      & Number of new concurrent partnerships formed at $\Delta t$ \\\hline
+STDPrevalence   & The HIV prevalence  within the group's population \\\hline
+STDIncidence    & The HIV incidence (new HIV infections, network efficacy) \\\hline
+STDFemale       & Number of newly HIV infected females \\\hline
+STDMale         & Number of newly HIV infected males \\\hline
+STDHomosexual   & Number of newly HIV infected male homosexuals \\\hline
+STDMale2Female  & Number of new HIV transmissions from male to female \\\hline
+STDFemale2Male  & Number of new HIV transmissions from female to female \\\hline
+STDMale2Male    & Number of new HIV transmissions from male to male \\\hline
+STDStable       & Number of new HIV transmissions within stable partnerships \\\hline
+STDCasual       & Number of new HIV transmissions within casual partnerships \\\hline
+STDInternal     & Number of new HIV transmissions within internal (own group) partnerships \\\hline
+STDExternal     & Number of new HIV transmissions within external partnerships (STDInternal + STDExternal = STDCasual) \\\hline
+STDRecovered    & Number of recoveries from infection (STDs others than HIV) \\\hline
+STDProtected    & Number of newly vaccinated individuals \\\hline
+Deaths          & Total number of deaths within the population \\\hline
+STDDeaths       & Number of death caused by HIV infection \\\hline
+\end{longtable}
+
+\section{HIVacSim Implementation}\label{hivacsimsharp}
+
+The model was implemented using C\# programming language and the .NET framework. Two
+independent interfaces are provided for multiple platform compatibility:
+\parskip=0pt
+\begin{itemize}
+    \item Console -- the main development of this model has been done using a console interface,
+which outputs comma separated value files for analysis using third part statistical
+software such as R and Matlab. The console version runs in multiple platforms (x86,
+PowerPC and SPARC) using the same compiled code in both Microsoft and Mono (open source)
+.NET framework;
+    \item GUI -- graphical user interface for Windows platform is under development, however only
+basic operation for data input, model configuration and run-time control are available.
+\end{itemize}
+\parskip=\baselineskip
+
+An innovative design on simulation software has been introduced to enable HIVacSim to
+simulate multiple predefined scenarios, save their results to separated files and keep a
+log record of the run-time operations, all done automatically by the model without
+further user assistance. This is particular helpful when running multiples scenarios or
+conducting long experiment using a single computer (e.g. overnight runs), which is the
+case for most complex experiments. The maximum network size is limited to computer
+processor and memory, technically social networks of any size can be represented and
+evaluated. An unlimited number of scenarios can be queued to be simulated, the model will
+not stop if a particular scenario file is invalid or has any other problem. The run-time
+errors are kept in the log file for further examination.
+
+
+TODO: Detailed description of the model interface, waiting for the completion of the new
+GUI and script engine.

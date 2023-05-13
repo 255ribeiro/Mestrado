@@ -1,0 +1,276 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = pt_BR
+\chapter{Introdu\c{c}\~ao}
+\label{chapter:introducao}
+
+\begin{flushright}
+  "Existe geometria no som das cordas;\\
+   existe música no espaçamento das esferas"\\
+  \ \\
+  (Atribuido à Pitágoras de Samos)
+\end{flushright}
+
+No decorrer dos últimos 50 anos, grandes mudanças tem acontecido na Indústria da Construção Civil (\textbf{ICC}). As atividades de planejar e transformar o espaço ao redor de si, almejando uma ocupação ideal e deparando-se inevitavelmente com as possíveis apropriações reais, foram subitamente abordadas por novas formas, métodos de trabalho, demandas, críticas e paradigmas, estéticos e técnicos. É interessante notar o quão pequeno é esse espaço de tempo em uma atividade cuja origem se encontra ligada à das primeiras civilizações humanas. 
+
+A força que as questões ecológicas gradativamente ganharam, desde a década de 1960, levaram as atuais preocupações de conservação de energia na fabricação, execução e uso das edificações. A Computação Gráfica (CG) desenvolve-se no mesmo período e colocou a disposição dos projetistas, primeiro novas ferramentas de desenho que rapidamente substituem a prancheta como instrumento prevalente no mercado, para então terem a sua recém conquistada hegemonia desafiada por sistemas paramétricos de projeto, algoritmos generativos (\textbf{AG}), Sistemas Generativos de Projeto (\textbf{SGP}) e pela aplicação do conceito BIM (\textbf{\textit{Building Information Modeling}}). Algoritmos e programas de análise dos diversos comportamentos do edifício proporcionaram tanto uma maior velocidade de trabalho, quanto critérios de julgamento mais objetivos. A otimização ganha importância pelo valor que se tem dado ao desempenho energético das construções e economia de recursos na execução.
+
+A crise propositiva do Movimento Moderno da Arquitetura, que simbolicamente culmina na demolição do conjunto habitacional Pruitt-Igoe em 1972, pode ser encarada como o rebatimento da crise do modelo mecanicista do universo na Filosofia das Artes. No livro "Complexidade e Contradição na Arquitetura", um manifesto e um dos textos chave para o estudo estético deste período de transição, Robert  \citeonline{venturi1977} transforma o preceito do design minimalista \textbf{\textit{"less is more"}}(menos é mais) do arquiteto Mies van der Rhoe em \textbf{\textit{"less is a bore"}}(menos é um tédio), afirmado que uma "Simplicidade forçada resulta em uma uma simplificação excessiva"\footnote{\textit{Forced simplicity results in oversimplification.}}. Se parte do modernismo tem sua inspiração nas linhas aerodinâmicas dos carros, trens e aeronaves \cite{lecorbusier2000}, Paolo \citeonline[p. 35]{portoghesi2002}, em outro texto fundamental da mesma época, aponta o fato de que "(...)calculadoras eletrônicas não são máquinas no sentido tradicional, de transformação de energia, mas instrumentos que operam de forma análoga ao cérebro humano", dentre os motivos da atual inadequação dos valores que nortearam grande parte da produção arquitetônica da primeira metade do século XX. 
+
+ \citeonline{Oxman2006} reconhece o Museu Guggenheim de Bilbao como um catalizador da complexidade deste momento da Arquitetura em diversos contextos. Principalmente por introduzir, nas suas superfícies metálicas, curvas detalhadas com o suporte do \textit{software} CATIA, a complexidade de novas formas geometricas, livres de formalimos anteriores\footnote{\textit{In architecture, the Guggenheim Museum, Bilbao by Frank Gehry was the most prominent catalyst of theorizing new formal directions and postulating new design methods. Beyond the Postmodern sensibility of complexity through "heterotopia", or complex hybrids, the Guggenheim introduced the complexity of new geometric approaches freed from a priori formalisms, such as linguistic formalisms.}}. \citeonline{picon2011} aponta a retícula das fachadas do \textit{Young Museum}(2005) dos arquitetos Herzog \& de Meuron como um convite para uma experiência tátil, diluindo as barreiras entre objeto e observador, conceito que, segundo o autor, muitos dos projetistas que exploram as potencialidades das ferramentas de projeto digital se identificam. Peter Eisenman \cite[p. 130-135]{eisenman1996} propõe na sua "Casa Guardiola" de 1988 um espaço resultante de operações matemáticas entre sólidos sobrepostos (interseção, subtração...) realizadas em projeto através de comandos de um programa CAD 3D. \citeonline[p. 64]{mitchell2008} identifica nas formas fluidas e dinâmicas de alguns projetos contemporâneos, citando os trabalhos da arquiteta iraniana Zaha Hadid, uma alusão ao ambiente computacional que os originou. O grupo de arquitetos ingleses Archigram, reunidos por volta de 1961 em torno da revista de mesmo nome onde apresentavam sua "abordagem infraestrutural, leve e \textit{high-tech}"\cite{frampton2000} da Arquitetura. Na proposta intitulada \textit{Instant City} (1969), imaginava-se que "as unidades habitáveis estivessem ligadas(...) a uma megaestrutura informacional que alimentaria e possibilitaria a maleabilidade do cotidiano urbano" \cite[p. 104-105]{duarte1999arquitetura}. A plena realização deste ideal estético só aconteceu após o desenvolvimento da tecnologia CAD, como no projeto do Museu de Arte de Graz (\textit{Kunsthaus Graz}, conecido também pelo apelido de \textit{Friendly Alien}), inaugurado em 2003, de autoria de um dos antigos membros do grupo, o arquiteto Peter Cook. Coincidindo com um período importante na difusão das estruturas de informação atualmente disponíveis.
+
+A presente pesquisa propõe um método de trabalho onde aspectos estruturais e estéticos de uma determinada treliça de sustentação de coberturas são analisados com o auxílio de algoritmos generativos, uma ferramenta de análise estrutural cuja modelagem foi baseada em alguns métodos da Grafostática e a possibilidade de  utilização desta análise em um experimento de otimização da forma. Visando a aplicabilidade na prática projetual de alguns dos conceitos que vem mudando a maneira de encarar o projeto arquitetônico, bem como a sempre presente necessidade de comunicação e debate entre alguns dos profissionais envolvidos no processo. Um exercício onde a complexidade inerente à Arquitetura, mostrada na mistura de técnica, tecnologia e estética que a define, pode ser apreciada e estudada enquanto procura-se colaborar com os debates em torno dos seus atuais paradigmas.  
+
+
+\section{Defini\c{c}\~ao do Problema}
+\label{section:definicaoproblema}
+O experimento realizado utiliza um \textbf{Sistema Generativo de Projeto} passível de ser utilizado por arquitetos como ferramenta de auxílio nos primeiros estágios de concepção e definição de um elemento de projeto a ser desenvolvido, bem como servir de ponto de partida do diálogo com outras equipes, particularmente com os escritórios de cálculo e detalhamento de estruturas. O conceito de projeto generativo pode ser definido de maneira simples como "(...)um algoritmo ou processo baseado em regras pelo qual várias potenciais soluções de projeto podem ser criadas"\footnote{\textit{Generative Design can be broadly defined as an algorithmic or rule-based process through which various potential design solutions can be created.}}\cite{fasoulaki2008}.
+
+O algoritmo em foco pode ser conceitualmente dividido em 3 partes que serão adiante explicadas:
+
+\begin{itemize}
+\item Um modelo geométrico baseado em parâmetros e restrições;
+\item Um algoritmo de análise estrutural;
+\item Um método de otimização.
+\end{itemize}
+
+Toda atividade de projeto, em qualquer área, mas particularmente nas que tem por objetivo a confecção de um produto específico, agrega em si uma complexidade de tópicos e áreas do conhecimento. No caso da construção, principalmente vista pelo prisma da Arquitetura, onde técnica, humanidades e arte se mesclam de forma peculiar, o entrelaçamento de diversos campos do saber apresenta um contorno não menos complexo. O modelo teórico representado na Figura \ref{figura:mod} procura ilustrar as relações centrais confrontadas e aliadas neste trabalho.
+ 
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{modelo.png}
+\caption{Modelo Te\'orico} \label{figura:mod}
+\end{center}
+\end{figure}
+
+A primeira das partes do algoritmo, o modelo geométrico baseado em parâmetros e restrições, corresponde no modelo teórico às "flexões possíveis do modelo geométrico". Imaginemos um retângulo ($L$x$P$) onde a medida de um dos lados é definida por uma variável que representa um número real variando entre 2 e 8. Alterando esse valor entre os limites estabelecidos a Figura é redesenhada para que a medita do referido lado corresponda ao valor da variável. Para desenhar a outra dimensão do retângulo estabelece-se como regra que a área do polígono deve ser sempre igual a $10\quad unidades$. Para $L=2$, temos $P = \frac{10}{2} , \Rightarrow P = 5$. Para $L=8$, analogamente temos $P=1,25$, e assim para qualquer valor intermediário ( $L=4 \Rightarrow P=2,5$; $L=3,2 \Rightarrow P=3,125$ ). A variável que define o valor de $L$ é chamada de parâmetro, e os valores limites desta e a obrigação de ter-se sempre uma área $= 10 $ são denominados de restrições e as alterações nos valores das variáveis produzem as flexões do modelo.
+
+A utilização deste tipo de parametrização modifica o método tradicional de projeto onde se propõe o objeto, desenha, analisa e repropõe. Aqui não se propõe um modelo, mas um conjunto de parâmetros e restrições capaz de gerar uma série de objetos para serem analisados como possíveis soluções para o problema. A etapa de análise não recai mais sobre um único objeto proposto, mas sobre uma gama de flexões. Esta etapa pode levar tanto a uma reconfiguração das variáveis, quanto a redefinição dos critérios de parametrização até que conduza ao objeto final, eleito como solução do problema de projeto.
+
+Esta abordagem auxilia o projetista a explorar uma gama maior de soluções do que seria possível pelo método tradicional, principalmente quando os objetivos do projeto abrangem interesses subjetivos e criatividade \cite{krish2011}.
+
+A análise de uma proposta de projeto pode ser feita unicamente pela técnica, experiência e subjetividade do projetista, quanto pode contar com o auxílio de ferramentas computacionais específicas para alguns de seus aspectos. Um instrumento de avaliação estrutural é implementado na segunda parte do algoritmo. As demais implicações do problema podem ser avaliadas pelos critérios citados acima. Contudo, uma das grandes virtudes dos modelos baseados em  paramentos e restrições é a velocidade com que se produzem variações na forma. Utilizando ferramentas de análise de desempenho é possível realizar sucessivas simulações, alterando a configuração das variáveis do SGP. Os resultados de cada uma destas simulações podem contribuir com a experiência do projetista para que as flexões seguintes melhorem os desempenhos investigados.
+
+O cálculo e a análise de estruturas aparecem na ilustração do modelo teórico (Figura \ref{figura:mod}) pertencendo zona de interseção entre a Física e a Geometria. Com particular ênfase na Grafostática, descrita por \citeonline{baumgart2000} como:
+
+\begin{quotation}
+(...) um quase esquecido método gráfico intuitivo para a resolução de problemas mecânicos (...) Era o método Padrão (...) usado por engenheiros civis pelo menos até os anos 1940. Foi Gradualmente substituido por alternativas analíticas, principalmente por métodos baseados na Tecnologia da Compuatação.\footnote{\textit{Graphical statics is an almost forgotten, intuitive drawing method for solving plane mechanical problems."(...)"Graphical statics was the standard method for solving mechanical problems used by civil engineersmat least up until the 1940s. It was gradually replaced by analitical methods, especially methods based on computer tecnology.}}
+\end{quotation}
+
+O aspecto "quase esquecido" será contraposto no desenvolvimento desta dissertação. Tendo em vista que, pelo aperfeiçoamento da própria Tecnologia da Computação, na medida em que esta ganhou proficiência na manipulação e exibição de formas geométricas (Computação Gráfica), autores e centros de pesquisa se interessaram pela Grafostática, dentre outros motivos pela natureza intuitiva do método.
+
+O método de otimização proposto, nada mais é do que a aplicação de sucessivas flexões ao modelo geométrico, comparando os resultados às suas correspondentes análises Grafostáticas, aos aspectos estéticos das formas resultantes e a antevisão das demais características técnicas, funcionais, construtivas que a equipe de projeto, por seu estudo e experiência seja capaz de enxergar.
+
+Para um problema real de construção pode-se citar uma série de variáveis cuja quantificação é extremamente complexa ( aspectos estéticos, a cultura construtiva, qualificação da mão-de-obra local, etc). O método tradicional de projeto, onde de uma proposição geral de uma forma passa por uma etapa  de questionamentos, alterações e descartes, divide-se em elementos menores que passam pelo mesmo processo, até que as soluções de projeto sejam eleitas, oscila seus resultados entre sucessos e fracassos. A competência de uma equipe pode ser entendida, ainda que de maneira extremamente simplista, como a relação entra as ocorrências de cada extremo desta oscilação ao longo de sua atividade. As habilidades técnicas e a experiência da equipe são diretamente ligadas aos relativos êxitos e insucessos, seja no método tradicional ou qualquer outro.
+
+Os SGP proporcionam uma metodologia expressivamente mais rápida de se alterar as formas em estudo, possibilitando a experimentação de uma gama maior de variações, dentre as possíveis soluções, podendo recorrer diretamente à critérios de escolha utilizados pelo método tradicional sobre uma quantidade maior de propostas.   
+ 
+\subsection{Objeto de Estudo}
+\label{subsection:objetodeestudo}
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{cortemercado.png}
+\caption{Proposta para o Mercado São Miguel - Autoria: João Filgueiras Lima e Instituto Habitat - Trecho do "Corte AA"\ - Fonte: Acervo do Instituto Habitat} \label{figura:ctmercado}
+\end{center}
+\end{figure}
+
+O obejeto de estudo eleito foi uma treliça de sustentação de coberturas do tipo \textit{\textbf{shed}} com inspiração nas treliças metálicas recorrentemente apresentadas na obra do arquiteto João (Lelé) Filguiras Lima. No exemplo mostrado na Figura \ref{figura:ctmercado} vê-se um trecho de um corte da proposta para a requalificação do Mercado São Miguel em Salvador - Ba.
+
+O interesse pelos \textit{\textbf{sheds}} vem destes serem, além de estruturas de suporte de coberturas, elementos de iluminação e ventilação capazes de melhorar substantivamente o conforto do ambiente para o uso humano, e assim diminuindo o consumo de energia com iluminação e climatização do espaço. Muito utilizados em projetos de grandes galpões e plantas industriais.
+
+A inspiração na citada obra procura trazer o apuro estético que acompanham as soluções tecnicamente embasadas que marcam de forma singular o trabalho de um dos mais importantes arquitetos brasileiros, trazendo mais complexidade ao experimento.
+
+Aplicando o Modelo Teórico e as partes do algoritmo ao objeto de estudo, o que se propõe é um SGP formado por um modelo baseado em parâmetros e restrições capaz de produzir alternativas de projeto para uma treliça de um \textit{\textbf{shed}}. Este modelo deve levar em conta que as variáveis devem sintetizar uma forma de desenho onde a criatividade e outros aspectos subjetivos do projeto tenham espaço para emergir no processo\ \cite{shea2005}. Uma ferramenta de análise estrutural capaz de calcular as tensões atuantes em cada um dos elementos das diversas configurações possíveis do modelo geométrico, sendo baseada majoritariamente em mecanismos da Grafostática.
+
+%Nesta se\c{c}\~ao o problema \'e claramente identificado. Deve-se
+%apresentar os argumentos que levaram \`a identifica\c{c}\~ao do
+%problema que ser\'a trabalho. Alguns autores podem ser citados com
+%o prop\'osito de explicitar a preocupa\c{c}\~ao da comunidade
+%cient\'ifica ou de parte dela, em tentar resolver o problema
+%dentro dos \^ambitos estabelecidos.
+
+\section{Objetivos}
+\label{section:objetivo}
+
+O objetivo geral deste trabalho é:
+
+\begin{itemize}
+\item Analisar a viabilidade prática da utilização dos SGP na atividade de projeto arquitetônico.
+\end{itemize}
+
+Como Objetivos específicos temos:
+\begin{itemize}
+\item Implementar um SGP para atuar como ferramenta de auxílio no projeto da cobertura de um \textit{\textbf{shed}};
+\item Comprovar a eficacia dos SGP na elaboração de soluções de projeto onde aspectos subjetivos são parte integrante do problema;
+\item Repensar as virtudes da Grafostática como instrumento de análise estrutural, ressaltando seu aspecto intuitivo e prático. 
+\end{itemize}
+
+
+%Nesta se\c{c}\~ao os objetivos principal e espec\'ificos (tamb\'em
+%pode-se se utilizar a palavra meta) da monografia de
+%gradua\c{c}\~ao ou especializa\c{c}\~ao, disserta\c{c}\~ao de
+%mestrado ou tese de doutorado s\~ao apresentados.
+
+
+
+\section{Import\^ancia da Pesquisa}
+\label{section:importanciapesquisa}
+
+\citeonline{kolarevic2003} relata que o distanciamento entre o planejamento e a execução na \textbf{ICC} gradativamente transformou a Arquitetura em "(...)uma profissão incerta quanto ao seu papel na sociedade contemporânea e sua economia, e uma profissão incapaz de responder aos desafios da Era da Informação."\footnote{\textit{The outcome of this progressive disassociation of architecture  from the rest of the building industry is a professsion unsure of its role in contemporary society and it´s economy, and a profession unable to respond to the challenges and opportunities of the Information Age.}} Entretanto aponta, com bastante otimismo que:
+
+\begin{quotation}
+Nos novos processos de produção assistidos por computador, projeto e construção não são mais domínios separados(...)Construtores e fabricantes se envolveram nas primeiras fases do projeto e os arquitetos participam ativamente em todas as fases da construção.\footnote{\textit{In the digitelly-driven processes of production, design and construction are no longer separate realms but are instead , fluidly amalgamated.Builders and fabricators become involved in the earlies phases of constructions and architects aactively participate in all phases of construction.}}
+\end{quotation}
+
+\citeonline{Florio2011} constata que uma semelhante "Fragmentação do ensino em disciplinas estanques, sem conexões umas com as outras, sempre gerou sérios problemas para a integração com os conteúdos no currículo." E encontrou em atividades de modelagem paramétrica desenvolvidas entre estudantes de Arquitetura uma resposta animadora no encurtamento destas distâncias.
+
+E inevitável imaginar o quanto as disrupturas sentidas na prática e no ensino estão relacionadas. A natureza interdisciplinar da aplicação dos SGP se evidencia em ambos os casos. Os benefícios apontados recaem não somente sobre a profissão de arquiteto, trabalha-se com a esperança de levar as virtudes da interdisciplinaridade à \textbf{ICC} como um todo.
+
+O experimento desenvolvido aqui, embora calcado especialmente na etapa de projeto, procura trazer uma contribuição pontual no corrente debate.
+
+Entre tantos desempenhos que poderiam ser escolhidas como objetivo da segunda parte do algoritmo, os argumentos favoráveis à estrutura partem da base do que chamamos de Arquitetura. Vitrúvio, autor do mais antigo tratado arquitetônico conhecido pela História (10 volumes, aprox. 27 a 16  A.C.), embasou a teoria e prática da atividade em 3 pilares:
+
+\begin{itemize}
+\item Firmitas
+\item Utilitas
+\item Venustas
+\end{itemize}
+
+O terceiro pilar refere-se à estética da obra. O segundo sobre o uso. A atividade fim para qual a construção foi dedicada, bem como toda e qualquer apropriação humana que ali ocorra. O primeiro está ligado à propriedade do edifício de permanecer inteiro. É no espaço formado por elementos capazes de se portar que qualquer uso pode ocorrer e qualquer teoria estética sobre a Arquitetura pode ser levantada. No caso dos \textit{\textbf{sheds}}, o benefício que pode ser alcançado, por exemplo, pela exaustão do "ar quente" pela abertura superior, precisa em primeiro lugar que a solução estrutural seja possível.
+
+A Grafostática aparece como uma ferramenta proposta para o entendimento dos prolemas estruturais. \citeonline{gerhardt2003} defendem o valor dos métodos gráficos no ensino da estrutura para engenheiros porque estes permitem que se experimente visualmente as inter-relações entre, por exemplo, a geometria da estrutura e as forças atuantes. Relatam também a aplicação do método para um estudo de reforço estrutural visando atender uma mudança de uso para um dos espaços do prédio da prefeitura de Berlim. Aplicou-se simplesmente um programa CAD e o conhecimento do método. Os métodos analíticos relacionam expressões matemáticas à formas geométricas, as vantagens cognitivas de se aplicarem formas geométricas para avaliar a solidez de outras formas geométricas são defendidas pelos autores. A interseção de duas retas tem por equivalente analítico a resolução de um sistema de duas equações com duas incógnitas. O CAD funciona como uma calculadora geométrica extremamente interessante para a tarefa: Além de  fazer parte do cotidiano profissional dos projetistas, promove uma ligação entre diferentes disciplinas ligadas à construção.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.70
+\textwidth]{energybysector.jpg}
+\caption{Consumo de Energia - Gráfico produzido pela ONG Architecture 2030. Com base nos dados coletados pela agência U.S. Energy Information Administration (EIA) referentes ao ano de 2012}
+\label{figura:consumoenergetico}
+\end{center}
+\end{figure}
+
+A relevância do estudo e aplicação dos métodos de otimização na ICC está diretamente ligada ao crescimento da força que as preocupações ecológicas e de conservação de energia ganharam. O papel a ser desempenhado pela Indústria da Construção neste cenário não é pequeno. A Figura  \ref{figura:consumoenergetico} apresenta um gráfico elaborado pela ONG \textit{Architecture 2030} a partir de dados coletados pela agência \textit{U.S. Energy Information Administration} (EIA) sobre o consumo de energia nos EUA dividindo-o em três setores: a indústria, o transportes e os edifícios. A esse último setor cabe a maior das parcelas, acumulando quase a metade da energia consumida no pais ($ 47,6 \% $). A contribuição que a otimização por SGP pode oferecer é defendida por \citeonline{krish2011}:
+\begin{quotation}
+Os SGP, por outro lado, tem a capacidade de operar nas fases conceituais do projeto, quando a este ainda está sendo formulado. A habilidade de explorar variações nestes primeiros estágios pode produzir benefícios muito maiores  que a otimização realizada entre limites estreitos nas fases finais do processso.\footnote{\textit{Generative design on the other hand, can operate at the conceptual stages of design,where the design is still under formulation. The ability to explore design variations at the early stages of design can produce far more beneficial results, than optimizing it within narrow means at the final stages of design.}}
+\end{quotation}
+%O pesquisador/estudante deve apresentar os aspectos mais
+%relevantes da pesquisa ressaltando os impactos (e.g. cient\'ifico,
+%tecnol\'ogico, econ\^omico, social e ambiental) que a pesquisa
+%causar\'a. Deve-se ter cuidado com a ingenuidade no momento em que
+%os argumentos forem apresentados.
+
+
+
+%\section{Motiva\c{c}\~ao}
+%\label{section:motivacao}
+
+%Muito associada \`as se\c{c}\~oes \textbf{Defini\c{c}\~ao do
+%problema} e \textbf{Import\^ancia da pesquisa}, esta se\c{c}\~ao,
+%apesar de ser opcional, pode ser relevante principalmente em se
+%tratando de projetos de disserta\c{c}\~oes de mestrado e teses de
+%doutorado. Pode-se apresentar motiva\c{c}\~oes pessoais, baseadas
+%em dados e em interesses do(s) centro(s) de pesquisa onde se
+%est\'a desenvolvendo o projeto.
+
+
+
+\section{Limites e Limita\c{c}\~oes}
+\label{section:limiteslimitacoes}
+
+Uma série de questões deve ser levada em conta na implementação do experimento proposto neste trabalho de pesquisa. Quanto a análise de estruturas vale dizer que, salvo poucas exceções (e.g. cálculo de estruturas pelo método dos elementos finitos planos e espaciais), trabalha-se com simplificações das formas onde linhas de eixo representam elementos tridimensionais a serem dimensionados. O que já representa uma simplificação, apesar de estar na base da teoria das estruturas.
+
+Uma série de outras simplificações foram tomadas quanto as estruturas analisadas pelo trabalho que serão apresentadas a medida que o experimento é descrito. É importante entender contudo que a exequibilidade de uma estrutura depende tanto da sua análise e dimensionamento quanto do seu detalhamento. Uma simples ligação entre elementos construtivos mal estudada, um erro de soldagem pode levar ao colapso do conjunto.
+
+Os SGP são em si um execício de limites e possibilidades. É desejável que os algoritmos sejam capazes de produzir uma gama de soluções factíveis. A natureza de como eles são construídos, baseando-se em parâmetros e restrições, por si já subentende-se que cada algoritmo trabalha dentro de suas próprias limitações. Cria-se um território de fronteiras demarcadas mas que deve ser vasto o suficiente para que aconteça uma satisfatória investigação do que nele pode estar contido.
+
+Embora o pressuposto da pesquisa seja de propor um método de trabalho aplicável em projetos reais, onde estruturas factíveis possam ser propostas e modificadas, dentro de uma estratégia compatível com os recursos e prazos usuais em um escritório de projetos, a pesquisa não trata de um projeto específico. Isso explicita que, no desenvolvimento do experimento, não se conhece o contexto em que uma solução da treliça vai ser escolhida. Sem o programa da edificação e o uso destinado, o vão entre apoios não pode ser determinado. Sem as informações sobre o clima do local de implantação do projeto, a orientação, o regime de chuvas, etc; a necessidade de maior ou menor exaustão não pode ser analisada. A relação entre estética e custo também precisaria de mais dados para nortear uma investigação da forma. O que se apresenta no trabalho é um método de projeto suficientemente versátil para se adaptar as demandas de diversas edificações que admitam algumas das treliças contidas nas flexões do SGP como soluções de cobertura.
+
+Ao tratar de um SGP que procura valorizar os atributos estéticos do desenho, faz-se necessário ressaltar que a Filosofia das Artes é um campo de estudo específico e vasto. Qualquer investigação neste campo demanda um investimento de tempo, conceitualização e literatura específica que ultrapassam o escopo da presente pesquisa. 
+%Nesta se\c{c}\~ao o pesquisador apresenta os limites e
+%limita\c{c}\~oes definidas antes e e durante o desenvolvimento da
+%pesquisa. Assim, o trabalho fica resguardado de poss\'iveis
+%cr\'iticas. Os limites s\~ao aspectos que estabelecem o escopo da
+%pesquisa e as limita\c{c}\~oes s\~ao os problemas enfrentados
+%durante a pesquisa que levam a tomadas de decis\~ao que podem,
+%inclusive, mudar o direcionamento da pesquisa.
+
+\section{Quest\~oes e Hip\'oteses}
+\label{section:questoeshipoteses}
+
+Como os SGP podem contribuir nas fases iniciais da concepção das formas de um projeto arquitetônico?
+
+Esta é a principal questão investigada por esta pesquisa. Quanto às hipóteses, imagina-se que é possível desenvolver um SGP que sirva como uma ferramenta à ser usada por equipes de Arquitetura que seja: 
+
+\begin{itemize}
+\item de interação direta com o desenho, o traço e os aspectos estéticos da criação;
+\item forneça subsidio para um julgamento técnico da forma que emerge do processo  de projeto;
+\item apresente uma forma prática de alterar, estudar e eleger uma solução.
+\end{itemize}
+
+Investiga-se também a hipótese de que a implementação do algoritmo de análise baseado na Grafostática apresenta mecanismos semelhantes e compatíveis com os utilizados na construção de um SGP, e apresenta vantagens, do ponto de vista cognitivo, em relação aos seus análogos analíticos. 
+
+%Esta \'e uma se\c{c}\~o importante, pois nela as quest\~oes feitas
+%a partir da defini\c{c}\~ao do problema (comentada na Se\c{c}\~ao
+%\ref{section:definicaoproblema}) s\~ao explicitamente expressadas,
+%conduzindo \`a n\~ao menos expl\'icita, hip\'otese (ou
+%hip\'oteses) que ser\'a investigada, aceita ou rejeitada.
+
+\section{Aspectos Metodol\'ogicos}
+\label{section:aspectosmetodologicos}
+
+Lançando mão de uma metodologia experimental, a organização geral do algoritmo baseou-se no fluxograma proposto por \citeonline{bohnacker2012}, mostrado na Figura \ref{figura:fluxogramametodologia}. Pode-se ver no diagrama as etapas de concepção e funcionamento de um SGP além de ilustrar a maneira como a otimização ocorre, sempre através do julgamentos do projetista (\textit{Designer}). 
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{fluxogramametodologia.jpg}
+\caption{Fluxograma de um SGP - fonte: \citeonline{bohnacker2012}}
+\label{figura:fluxogramametodologia}
+\end{center}
+\end{figure}
+
+A validação dos resultados segue critérios específicos para cada uma das partes do algoritmo apresentadas na Seção \ref{section:definicaoproblema}:
+
+No caso do modelo geométrico baseado em parâmetros e restrições, vistas as limitações quanto a apreciação dos aspectos estéticos, serão avaliadas as capacidades de produzir variações. A facilidade e velocidade com que essas transformações ocorrem. A praticidade da utilização dessas ferramentas no cotidiano do projetista.
+
+O algoritmos de análise Grafostática deve ser construído de maneira coerente com os métodos desta, bem como da Mecânica dos Sólidos e Resistência dos Materiais. Os resultados obtidos serão validados pela coerência dos gráficos gerado pelo algoritmo com a teoria e regras da Grafostática, técnica de cálculo reconhecida e matematicamente provada pelos tratados de \citeonline{cremona1890graphical}.
+
+O método de otimização passa, inevitavelmente, pelo julgamento do projetista. A relação entre plástica e economia assume diferentes pesos e preferências de acordo com às opiniões de cada projetista e a finalidade de cada projeto. Para que esse julgamento seja feito é preciso assegurar que as informações de forma e análise estrutural sejam coerentes, que a rápida alteração de uma implique numa também veloz e coerente alteração de outra, e que o conjunto opere sem conflitos entre as partes.
+
+%Aqui devem ser apresentados as assun\c{c}\~oes do pesquisador com
+%rela\c{c}\~ao \`as perspectivas filos\'oficas, aos m\'etodos de
+%pesquisa utilizados e aos modos de an\'alise. Assim, ainda que
+%apresente resultados ou achados pol\^emicos, a pesquisa poder\'a
+%ser validada, pois estar\'a consistente e apresentar\'a uma
+%coer\^encia com as assun\c{c}\~oes do pesquisador.
+
+%Quando para a pesquisa \'e muito importante ressaltar os
+%fundamentos metodol\'ogicos, sugere-se escrever ou transformar
+%esta se\c{c}\~ao em um cap\'itulo espec\'ifico.
+
+
+
+\section{Organização da Dissertação de Mestrado}
+\label{section:organizacao}
+
+Este documento apresenta $6$ capítulos e est\'a estruturado da
+seguinte forma:
+
+\begin{itemize}
+
+  \item \textbf{Cap\'itulo \ref{chapter:introducao} - Introdu\c{c}\~ao}: contextualiza o \^ambito, no qual a
+  pesquisa proposta est\'a inserida. Apresenta, portanto, a
+  defini\c{c}\~ao do problema, objetivos e justificativas da pesquisa e
+  como esta \thetypeworkthree est\'a estruturada;
+
+  \item \textbf{Cap\'itulo \ref{chapter:sistemasgenerativosdeprojeto} - Sistemas Generativos de Projeto}: apresenta o conceito de algoritmo, investiga o significado dos algoritmos generativos e apresenta os principais modelos dos AGs aplicados ao projeto arquitetônico;
+
+  \item \textbf{Cap\'itulo \ref{chapter:grafostatica} - Grafostática}: apresenta os fundamentos do método, os procedimentos de cálculo de treliças utilizados na implementação do algoritmo de análise estrutural, as pesquisas em que este vem sendo atualmente aplicado, os \textit{sotftwares} que utilizam, e um breve levantamento da pesquisa bibliográfica, citando alguns algoritmos apresentados nos manuais práticos da Estática Gráfica;
+
+  \item \textbf{Cap\'itulo \ref{chapter:ambientedeimplementacao} - ambiente de Testes do Algoritmo}: uma rápida apresentação do ambiante computacional onde o experimento foi realizado;
+
+  \item \textbf{Cap\'itulo \ref{chapter:trabalhoexperimental} - Implementação do Experimento}: apresenta como os algoritmos que formam o SGP foram criados, como funcionam, como se estabelece a comunicação entre eles, e como podem ser utilizados na exploração das possíveis soluções de projeto;
+
+  \item \textbf{Cap\'itulo \ref{chapter:consideracoesfinais} - Conclusões}: apresenta as conclus\~oes, contribui\c{c}\~oes
+  e algumas sugest\~oes de atividades de pesquisa a serem desenvolvidas no futuro.
+
+\end{itemize}

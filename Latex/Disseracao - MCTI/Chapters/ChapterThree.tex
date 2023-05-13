@@ -1,0 +1,495 @@
+% !TeX encoding = ISO-8859-1
+% !TeX spellcheck = pt_BR
+\chapter{Grafostática}
+\label{chapter:grafostatica}
+
+\begin{flushright}
+  "\textit{Los que buscan las leyes de la Naturaleza \\
+  como un apoyo para sus nuevas obras\\ colaboran con el creador.\\ 
+  Copiadores no colaboran.\\
+   Debido a esto, la originalidad\\consiste en regresar al origen.}"
+  \\(Antoni Gaudí)
+\end{flushright}
+
+
+A origem da Geometria está intimamente ligada com as primeiras civilizações humanas. Reconhecendo as dificuldades de estabelecer um consenso em torno das origens da Matemática (Aritmética e Geometria), \citeonline[p. 4]{boyer1974} apontam às teorias antagônicas de Heródoto e Aristóteles como as hipóteses mais aceitas para o surgimento da Geometria. Heródoto acreditava que a origem estava ligada à necessidade prática de se fazer novas medidas de terra, após cada inundação anual, no vale do antigo Egito. Enquanto Aristóteles creditava à classe sacerdotal egípcia, que a teria criado para apreciação do belo. E lembram o fato dos geômetras do Egito serem frequentemente chamados de "esticadores de corda" como um apoio comum as duas teorias, já que essas eram esticadas tanto para demarcar terras, quanto para marcar as bases dos templos. Em ambos os exemplos a atividade de construir está presente.
+
+\citeonline{ceccato2010mbg} chama atenção para o significado das palavras "arquiteto" (mestre construtor) e Geometria (medida da terra) para afirmar que geômetras e arquitetos eram, primordialmente, a mesma pessoa. A ligação entre Geometria e construção são evidentes e profundas, mesmo tendo em conta a subdivisão em diversas profissões pela qual a atividade de construir passou ao longo de séculos. Antes do desenvolvimento da Mecânica dos Materiais (por volta do século XIX), a construção de estruturas era guiada por um conhecimento empírico das proporções entre esforços e materiais \cite{mccormac2009}.
+
+\section{Estática e Grafostática}
+\label{section:EstaGrafo}
+
+A Mecânica é o ramo da Física que estuda o movimento e repouso e divide-se em Cinemática e Dinâmica. Enquanto a primeira se debruça sobre o movimento sem abranger as suas causas, a segunda trata do efeito das forças sobre o movimento e repouso dos corpos, e se divide em Cinética e Estática. \citeonline{johnson1908} aponta métodos algébricos ou gráficos podem ser alternadamente mais eficazes  para a resolução de determinados problemas da Estática, definida como o ramo da Dinâmica que estuda o equilíbrio dos corpos. Desde então, pouco mudou nas bases e definições dos problemas da Mecânica aplicada às construções, mas diferenças significativas aparecem nos métodos e ferramentas de trabalho dos profissionais envolvidos.
+
+\begin{quotation}
+\textbf{Grafostática}, ou \textbf{Estática Gráfica}, estuda os problemas de Estática por métodos puramente geométricos. É de grande utilidade em Resistência dos Materiais para a determinação das reações, esforços cortantes, momentos fletores, flechas e, nos sistemas articulados, para a análise dos esforços interiores que acontecem nas barras dos mesmos. \cite{sanjuan1951}
+\end{quotation}
+
+As ferramentas analíticas e gráficas de cálculo estrutural foram desenvolvidas paralelamente ao longo do século XIX. Trabalhos como o de James Clerk \citeonline[p.451-525]{maxwell1965} são citados tanto como fundamentais na evolução da teoria do cálculo estrutural modero \cite{mccormac2009}, quanto fundador dos procedimentos geométricos de resolução dos problemas de Estática, desenvolvidos principalmente pelos trabalhos de Culmann (1866) e \citeonline{cremona1890graphical} \cite{johnson1908} \cite{gerhardt2003} 
+\cite{aag2010193}. 
+
+A medida que ferramentas numéricas, tanto mecânicas (e.g. régua de cálculo) mas principalmente computacionais crescem em eficiência \cite{baumgart2000} e uma tendência analítica se desenha na engenharia \cite{gerhardt2003}, a Estática Gráfica perde espaço e passa a ser encarada quase que apenas como um instrumento didático para o entendimento da Mecânica, como no livro de \citeonline{costa1974}.
+
+O posterior desenvolvimento da computação gráfica acabou demonstrando que, também no ambiente computacional, o método analítico nem sempre é a maneira mais eficaz de se abordar um problema. O exemplo mais notório provavelmente está na descoberta dos fractais por Mandelbrot. Embora, no experimento que deu origens à este desenvolvimento científico, funções estivessem sendo calculadas através de métodos numéricos e vertidos em gráficos por um processo de mesma natureza, o avanço no conhecimento acontece pela inspeção do olhar humano sobre os desenhos dos resultados, padrões são encontrados, estudados e uma ferramenta matemática é testada e aceita para medir as características destas novas geometrias. 
+
+Sobre a Grafostática, surge a hipótese de que o uso das ferramentas computacionais gráficas para o auxílio à tomada de decisões sobre formas geométricas edificáveis, é capaz de trazer uma compreensão mais ampla, objetiva e clara para o estudo, ensino e prática das questões estruturais. As vantagens cognitivas de utilizar formas geométricas (diagramas), em oposição ao uso de expressões matemáticas, para a análise de outras formas (construção) é evidente.
+
+Entre os defensores desta hipótese, \citeonline{gerhardt2003} apontam as virtudes do método além dos exemplos didáticos. Estabelece relação direta entre o uso histórico da ferramenta e a maneira como ela é capaz de guiar o projetista pelo espaço de soluções possíveis, destacando os trabalhos de Antoní Gaudí e Gustave Eiffel. Um exemplo de utilização da Grafostática em ambiente CAD é apresentado no projeto de reforço estrutural em um prédio da prefeitura de Berlim, onde a proposta executada é enxergada apenas depois de se analisar os diagramas construídos através do método. \citeonline{Block2006} aplicam mecanismos da Grafostática na elaboração de uma estratégia computacional para análise em tempo real de projetos com estruturas em pedra. \citeonline{Tessmann2008} elenca a Estática Gráfica entre as ferramentas eficientes para aprimoramento do diálogo entre projetistas de arquitetura e de estrutura. \citeonline{Zanni2009} trabalham em um modelo computacional gráfico para análise de estruturas submetidas à carregamento axial. \citeonline{Shearer2010} propõe algoritmos para automação do desenho de diagramas da Grafostática e \citeonline{aag2010193} defendem criação de uma ferramenta dinâmica para geração dos mesmos, recebendo informações de um MPR. \citeonline{Harding2012} aponta que a Grafostática de Culmann serve de base para alguns algoritmos computacionais dinâmicos de exploração interativa 2D de estruturas e propõe um algoritmo que adicione o eixo $z$ no cálculo. O trabalho de \citeonline{Block2009}, aplica a Estática Gráfica como ferramenta para "encontrar" interativamente estruturas submetidas unicamente à compressão (\textit{form finding}).
+
+\section{Precisão do Método}
+\label{section:precisao}
+
+A precisão dos métodos gráficos aplicados ao cálculo de estruturas é demonstrado por diversos autores. \citeonline[p. 30]{panseri1952} mostra que apenas duas ou três casas decimais são plenamente satisfatórios quando levadas em conta as tolerâncias de fabricação, as incertezas que envolvem certos esforços e os coeficientes de segurança necessários para a eficiente execução de um elemento construtivo. \citeonline[p. 2]{johnson1908} afirma que, embora os dois métodos sejam cientificamente corretos, a precisão do processo analítico depende da quantidade de casas decimais e algarismos significativos envolvidos. Na resolução gráfica, as habilidades de desenho e os limites da visão humana tem caráter determinante na acuidade do cálculo.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Cálculo de reações em uma viga simples - fonte: \citeonline{sanjuan1951} ]
+         {\label{figura:exemploprecisao1}
+          \includegraphics[width=0.40\textwidth]{exemploprecisao1.jpg}
+         }
+         
+         
+        \subfigure[Cálculo de reações em uma viga simples executado no Rhino3D ]
+           {\label{figura:exemploprecisao2}
+            \includegraphics[width=0.40\textwidth]{exemploprecisao2.jpg}
+           }
+       }
+
+\end{center}
+\caption{Precisão do cálculo}
+\label{figura:exemploprecisao}
+\end{figure}
+
+Utilizando a Grafostática em ambiente computacional as diferenças praticamente desaparecem. A Figura \ref{figura:exemploprecisao1} é um problema apresentado por \citeonline[p. 16]{sanjuan1951} onde o mesmo cálculo de reações é feito de maneira analítica e gráfica, apresentando pequenas variações entre os resultados. O mesmo problema solucionado graficamente em um programa CAD (Figura \ref{figura:exemploprecisao2} ) tem os mesmos valores da resolução analítica se executado em uma calculadora com mesmo número de casas decimais utilizadas pelo CAD. 
+
+Embora a Estática Gráfica sirva como base científica do experimento, em um nível mais baixo são operações numéricas que realizam o cálculo. A habilidade com os instrumentos de desenho é substituída pelo cuidado na aplicação do comando correto. O espaço cartesiano implementado no computador pode esconder erros relacionados as variáveis de ponto flutuante, mas felizmente, as precauções que devem ser tomadas são as mesmas que devem ser adotadas para o desenho técnico em CAD. Se, no final do século XIX, muitos engenheiros e arquitetos enxergavam os benefícios de associar seu instrumento de projeto (a prancheta) com uma ferramenta de cálculo, semelhantes vantagens podem ser usufruídas por usuários experientes nos atuais e precisos sistemas  de projeto assistido por computador.
+
+\section{Conceitos Fundamentais da Estática}
+\label{section:conceitosestatica}
+
+\begin{itemize}
+\item \textbf{Corpo Rígido:} é um corpo que não sofre alterações de forma ou tamanho sob a ação de uma força ou sistema. Embora não exista na natureza um material com essas propriedades, para efeito prático, a grande maioria dos materiais construtivos funcionam como um corpo rígido, em um contexto maior ou menor.
+\item \textbf{Repouso:} a relação existente entre dois pontos quando uma linha imaginária conectando-os não apresenta mudanças em comprimento ou direção.
+\item \textbf{Movimento:} Quando a linha imaginária descrita acima muda. As mudanças no comprimento são chamadas de \textbf{translação}, na direção, de \textbf{rotação}
+\item \textbf{Força:} Ação que causa (ou tende à causar) modificação no movimento de  um corpo. Entendidas como o ato de puxar ou empurrar, as forças são grandezas vetoriais, e como tais possuem três elementos essenciais:
+\subitem \textbf{Módulo ou Magnitude:} é um valor numérico real que mede a capacidade de uma força em produzir movimento, quando comparado com uma força padrão escolhida. Por definição, este valor não possui notação de positivo ou negativo.
+\subitem \textbf{Direção:} a direção da linha sob a qual a força tende a produzir movimento.
+\subitem \textbf{Sentido:} para qual dos extremos da direção a força tende a produzir movimento.
+\item \textbf{Representação Gráfica de Vetores:} É dada através de segmentos orientados. Um dos pontos extremos do segmento é tomado como ponto inicial e o outro como final, definindo assim um sentido. O módulo é representado pelo comprimento e a direção pela reta que contem o segmento, bem como as paralelas à ela.
+\item \textbf{Ponto de Aplicação:} o ponto do corpo em que a força age.
+\item \textbf{Linha de Ação:} a direção do vetor força que passa pelo seu ponto de aplicação. No caso de um corpo rígido, um outro \textbf{ponto de aplicação} pode ser considerado em qualquer local sobre a linha de ação de uma força, produzindo o mesmo efeito.
+\item \textbf{Composição de Vetores:} para um sistema vetorial qualquer(\textbf{componentes}), a composição consiste em encontrar o vetor (\textbf{resultante}) que tende a produzir o mesmo efeito quando aplicado sobre um corpo. Diz-se que as componentes e sua resultante são vetorialmente \textbf{equivalentes}. Também chamada de \textbf{soma de vetores}, a composição é graficamente executada posicionando as componentes de forma que o extremo final do vetor anterior encontre o extremo inicial do vetor seguinte. A resultante é o segmento orientado que tem o mesmo ponto inicial do primeiro vetor e o ponto final do último.
+\item \textbf{Resolução de Vetores:} para um vetor qualquer, encontrar dois ou mais componentes cuja soma tenha por resultante o vetor dado.
+\item \textbf{Equilibrante:} força que equilibra o sistema. Possui o mesmo mesmo módulo e direção e linha de ação do vetor resultante, porem com sentido oposto.
+\item \textbf{Binários:} duas forças iguais (módulo e direção) e de sentidos opostos, com linhas de ação paralelas sobre o mesmo corpo. Os binários apresentam unicamente a tendência de produzir rotação. A medida desta tendência é chamada de \textbf{momento do binário}, que é calculada pela multiplicação do módulo de uma das forças pela distância ortogonal entre suas linhas de ação
+(braço), em unidade apropriada.
+
+\end{itemize}
+
+ 
+\section{Diagramas Recíprocos}
+\label{section:diagramasreciprocos}
+
+A Grafostática baseia seus algoritmos de cálculo nos chamados diagramas recíprocos, que consistem em apresentar o mesmo sistema de forças em duas figuras complementares. Em uma temos os vetores das forças atuantes sobre um corpo rígido, grafados em magnitude, direção, sentido e representados na posição de soma (Figura \ref{figura:poligonodeforcas}), essa figura é referida como polígono de forças (PF). Para a determinação do módulo uma escala que relaciona força e medida é eleita (e.g. $ \dfrac{1 cm}{10 Kgf} $) de forma semelhante ao procedimento de desenho técnico em escala. No segundo diagrama, chamado de forma geométrica (FG) ou plano de situação (Figura \ref{figura:formageometrica}), apenas as linhas de ação são representadas.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Polígono de Forças]
+         {\label{figura:poligonodeforcas}
+          \includegraphics[width=0.45\textwidth]{poligonodeforcas.png}
+         }
+         
+         
+        \subfigure[Forma Geométrica]
+           {\label{figura:formageometrica}
+            \includegraphics[width=0.45\textwidth]{formageometrica.png}
+           }
+       }
+
+\end{center}
+\caption{Diagramas Recíprocos - fonte: \citeonline{Hoskins1899} (editado)}
+\label{figura:driagramasreciprocos}
+\end{figure}
+
+
+Partindo do sistema da Figura \ref{figura:driagramasreciprocos}, considerando um conjunto de quatro forças, representadas por $AB, BC, CD$ e $DE$ no polígono de forças, e cujas respectivas linhas de ação são $ab, bc, cd$ e $de$ na recíproca forma geométrica (notação de Bow \cite[p. 5-7]{burr}), o cálculo da resultante $AE$ e da sua linha de ação $ae$ é feito pelos seguintes passos:
+
+
+\begin{enumerate}
+\item Um ponto qualquer, chamado de polo, representado por $O$ é escolhido no polígono de forças. 
+\item Os raios polares, linhas partindo do ponto $O$ para cada um dos pontos $A, B, C, D$ e $E$  são desenhados.
+\item A reta $oa$, paralela à $OA$ é traçada na forma geométrica partindo de um ponto qualquer na linha de ação $ab$.
+\item Pelo mesmo ponto que $oa$ intercepta $ab$, a reta $ob$ paralela à $OB$ é traçada.
+\item A reta $oc$, paralela a $OC$ é traçada  partir do ponto em que $ob$ intercepta $bc$. O passo é repetido para $od$ partindo da intercessão de $oc$ e $cd$, e para $oe$ por $od$ e $de$.
+\item O vetor $AE$ é determinado pela ligação dos pontos $A$ e $E$ no polígono de forças.
+\item A direção $ae$ é traçada por uma paralela à $AE$ passando pelo ponto intercessão das retas $oa$ e $oe$ na forma geométrica.  
+\end{enumerate}
+
+A poligonal formada por $oa, ob, oc, od,$ e $oe$ é chamada de polígono funicular, e seus lados são as denominados de cordas \cite[p. 16]{Hoskins1899} ou linhas de pressão \cite{costa1974}. Para cada polo $O$ escolhido aleatoriamente um funicular diferente é construído. Para o sistema apresentado na Figura \ref{figura:driagramasreciprocos}, as intercessões de  $oa$ e $oe$ referentes ao polo $O$ e a um outro polo qualquer $O'$ estarão necessariamente sobre a linha de ação $ae$, uma alternativa para o cálculo. 
+
+\section{Condições de Equilíbrio}
+\label{section:condicaodeequilibrio}
+No método analítico, as condições de equilíbrio de um corpo rígido submetido a um sistema de forças é que, tanto o somatório dos momentos, quanto o das translações seja igual a zero (equação \ref{equacao:equilibrio}).
+
+
+\begin{equation}
+\label{equacao:equilibrio}
+ \sum{M}=0  \qquad \sum{T}=0 
+\end{equation}
+
+
+Na Grafostática, a análise do equilíbrio é feita pela observação do polígono de forças e do funicular.
+
+\begin{itemize}
+\item Se PF é um polígono fechado, o sistema está em equilíbrio de translação.
+
+\item Se o funicular é um polígono fechado, o sistema está em equilíbrio de rotação.
+
+\item Se o PF é fechado e o funicular aberto e de lados opostos paralelos, a resultante do sistema é um binário. O corpo rígido submetido a estas forças está em equilíbrio de translação, mas está submetido a um momento. Neste caso, os raios polares extremos serão iguais, e o valor do momento será dado pelo produto do comprimento de um dos raios polares extremos pela distância entre as paralelas das cordas extremas.
+
+\end{itemize}
+
+As propriedades dos diagramas recíprocos estão ligadas ao fato destes serem representações gráficas de aspectos complementares da análise de forças. O polígono de forças trata da soma dos vetores, um PF fechado implica em um somatório de resultante nula para o sistema. O equilíbrio de translação pode ser assim verificado, porém a rotação, os binários e seus momentos precisam de informações quando à posição no espaço, pontos de aplicação e linhas de ação das forças, fornecidas pela forma geométrica. Os raios polares relativos a pontos consecutivos do PF podem ser entendidos como componentes da força representada entre esses pontos (considerando o sentido a partir do polo para o primeiro e sentido em direção ao polo para o segundo). A utilização de intercessões entre linhas de ação do FG corresponde ao princípio da Estática que afirma, sobre o estudo dos corpos rígidos, que qualquer ponto sobre a linha de ação de uma força pode ser adotado como ponto de aplicação produzindo o mesmo efeito. As propriedades dos diagramas recíprocos podem ser experimentadas através do algoritmo no Apêndice \ref{Apend1:funicular1}, cujo funcionamento foi registrado e comentado no vídeo \href{https://www.youtube.com/watch?v=pIa0o2M0-_s}{01 - Propriedades dos PF, FG e Funiculares} em anexo.
+
+
+\section{Problemas em Equilíbrio}
+\label{section:resolucaodeproblemas}
+Os problemas de Estática consistem em determinar os elementos desconhecidos (magnitudes, direções, sentidos, linhas de ação e ponto de aplicação) em sistemas de forças que estão sabidamente em equilíbrio. \citeonline{johnson1908} apresenta os problemas fundamentais da seguinte maneira:
+
+\begin{enumerate}
+\item encontrar a magnitude, direção e ponto de aplicação de uma força de um sistema;
+
+\item magnitude de duas forças de um sistema;
+
+\item magnitude de uma força e magnitude e direção de outra do mesmo sistema;
+
+\item magnitude de três forças do mesmo sistema.
+
+\end{enumerate}
+
+Uma abordagem didática, que permite ao leitores antever os valores desconhecidos que deveram ser determinados pela Grafostática em cada situação. As operações necessárias para encontrar esses valores, representam a solução dos quatro casos que formam a base dos problemas da Estática, cuja formulações e soluções gráficas serão apresentadas e comentadas em seguida.
+
+\subsection{Caso Um - Composição de uma Força}
+\label{section:prob1}
+
+
+O primeiro caso é basicamente o cálculo da resultante apresentado na Seção \ref{section:diagramasreciprocos}. Mas é importante saber que, além da resultante, este problema fundamental também é usado para o cálculo da equilibrante do sistema. Partindo da Figura \ref{figura:driagramasreciprocos}, o primeiro passo para encontrar a força que equilibra o sistema é justamente o cálculo da resultante, seguindo a sequência de instruções apresentada. Na forma geométrica, a linha de ação $ae$ é a mesma para a resultante e equilibrante do sistema. No polígono de forças contudo, o equilíbrio se dá pela atuação da força de mesmo módulo e direção que a resultante $AE$ porem com o sentido oposto. Portanto o vetor $EA$ tem módulo, direção e sentido, bem como ponto te aplicação $ea$ para a resolução do caso.
+
+\subsection{Caso Dois - Resolução de uma Força em Duas Componentes}
+\label{section:prob2}
+
+O segundo caso é dividido em dois problemas: o primeiro trata de forças concorrentes, o segundo, considerado uma situação especial, trata de um conjunto de forças onde todas, inclusive as duas de magnitude desconhecidas, são paralelas.
+
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Polígono de Forças]
+         {\label{figura:pf2a}
+          \includegraphics[width=0.40\textwidth]{pf2a.png}
+         }
+         
+         
+        \subfigure[Forma Geométrica]
+           {\label{figura:fg2a}
+            \includegraphics[width=0.40\textwidth]{fg2a.png}
+           }
+       }
+
+\end{center}
+\caption{Caso 2 -  forças concorrentes - fonte: \citeonline{Hoskins1899}}
+\label{figura:caso2a}
+\end{figure}
+
+No caso de forças concorrentes, ilustrado na Figura \ref{figura:caso2a}, onde são plenamente conhecidas as forças $AB, BC$ e $CD$, e pretende-se encontrar as magnitudes de $DE$ e $EA$. O primeiro passo é desenhar todas as linhas de ação no FG (Figura \ref{figura:fg2a}). Em seguida, desenha-se as forças totalmente conhecidas no PF. Sabendo que o sistema está em equilíbrio, infere-se que o PF tem que ser um polígono fechado. Traçando uma paralela à $de$ pelo ponto $D$ e uma à $ea$ pelo ponto $A$, observa-se que o ponto de encontro dessas duas retas é o ponto $E$. O PF se fecha e são determinadas as magnitudes $DE$ e $EA$. O ponto $E'$ pode ser construído traçando-se uma paralela à $EA$ pelo ponto $D$ e uma paralela à $DE$ pelo ponto $A$ e também é admitido como solução do problema, os mesmos vetores são encontrados em magnitude e sentido, tendo por direção as retas que cada uma delas é paralela. Deve-se contudo, atentar para que não haja conflito com a nomenclatura dos vetores nos diagramas recíprocos. 
+
+\begin{figure}[!h]
+\begin{center}
+  \mbox{
+      \subfigure[Polígono de Forças]
+         {\label{figura:pf2b}
+          \includegraphics[width=0.40\textwidth]{pf2b.png}
+         }
+         
+         
+        \subfigure[Forma Geométrica]
+           {\label{figura:fg2b}
+            \includegraphics[width=0.40\textwidth]{fg2b.png}
+           }
+       }
+
+\end{center}
+\caption{Caso 2 - forças paralelas - fonte: \citeonline{johnson1908}}
+\label{figura:caso2b}
+\end{figure}
+
+Para um sistema de forças paralelas (Figura \ref{figura:caso2b}) tomemos por vetores totalmente conhecidos $AB, BC$ e $CD$, com suas respectivas linhas de ação traçadas na figura \ref{figura:fg2b}. No PF, traça-se as forças $AB, BC$ e $CD$, bem como seus respectivos raios polares relativos à um polo $O$ qualquer. As cordas paralelas aos raios polares conhecidos são desenhadas na FG. Para que o sistema esteja em equilíbrio de rotação, a corda $eo$ deve interceptar $ea$ e $de$ nos pontos coincidentes com  $oa$ e $od$, fechando o funicular. Uma paralela à $eo$ e desenhada pelo polo $O$, dividindo a resultante parcial $AE$ em $DE$ e $EA$, em magnitude e sentido. Essa construção é bastante usada para determinar reações dos apoios de vigas simples, como no exemplo mostrado na Figura \ref{figura:exemploprecisao}. 
+
+\subsection{Caso Três - Resolução de uma Força em uma Componente de Direção Conhecida e Outra que Passe por um Ponto}
+\label{section:prob3}
+
+A construção mostrada no \textbf{caso dois}, quando aplicada no cálculo das reações de apoio para uma viga bi-apoiada, funciona apenas quando o carregamento não possui componentes horizontais, ou se estes são considerados dispensáveis na análise do modelo. Caso algum dos vetores não seja perpendicular ao eixo da viga, uma das possibilidades é admitir que um de seus apoios deve resistir também a esforços na direção axial. Embora seja conhecido o ponto de aplicação desta reação, sua linha de ação permanece desconhecida. Este terceiro caso básico é a forma genérica de resolução destes problemas.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Polígono de Forças]
+         {\label{figura:pf3}
+          \includegraphics[width=0.55\textwidth]{pf3.png}
+         }
+         
+         
+        \subfigure[Forma Geométrica]
+           {\label{figura:fg3}
+            \includegraphics[width=0.30\textwidth]{fg3.png}
+           }
+       }
+
+\end{center}
+\caption{Caso 3 - fonte: \citeonline{johnson1908} (editado)}
+\label{figura:caso3}
+\end{figure}
+
+As forças $AB, BC$ e $CD$ são totalmente conhecidas, $DE$ tem sua linha de ação definida por $de$ e de $EA$ conhecemos apenas o ponto de aplicação $P$ (figura \ref{figura:caso3}). Desenha-se o PF com as forças conhecidas por inteiro, com os seus respectivos raios polares. O traçado das cordas  deve começar pelo ponto $P$, e segue pelo ponto de interseção entre $oa$ e $ab$, até que a linha de ação $dc$. Para que a condição de equilíbrio de rotação seja atendida, a corda $oe$ deve conter o ponto de encontro entre $od$ e $de$ , bem como o ponto $P$. Traçando as paralelas a $oe$, partindo do polo, e $de$, pelo ponto $D$, encontra-se $E$ que fecha o PF obtendo o vetor $EA$. A linha de ação $ea$ é determinada desenhando uma paralela à $EA$ pelo ponto $P$.
+
+
+
+\subsection{Caso Quatro - Resolução de uma Força em Três Componentes}
+\label{section:prob4}
+
+No estudo das treliças, a maior parte das linhas de ação são definidas previamente pela proposta do desenho dos eixos das peças. A análise dos esforços pode ser feita através dos nós (método de Cremona), os pontos de união dos eixos das diagonais e banzos, ou pelo método das seções, tomadas de forma a cortarem até três elementos desconhecidos da treliça (método de Culmann). Estes últimos são resolvidos pelo caso quatro, que pode ser considerado uma combinação dos casos dois e três. Uma força aplicada à um ponto de um corpo rígido, tem o mesmo efeito que a aplicação da mesma força em qualquer outro ponto de sua linha de ação. Por essa afirmação da Estática, pode-se considerar o ponto de interseção entre duas das direções das forças parcialmente conhecidas como o ponto $P$ e resolver o problema conforme descrito no caso três. Assim feito, o vetor calculado no ponto $P$ é concorrente com as duas forças ainda não completamente conhecidas, situação que pode ser resolvida pelo caso dois. 
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Polígono de Forças]
+         {\label{figura:pf4}
+          \includegraphics[width=0.30\textwidth]{pf4.png}
+         }
+         
+         
+        \subfigure[Forma Geométrica]
+           {\label{figura:fg4}
+            \includegraphics[width=0.50\textwidth]{fg4.png}
+           }
+       }
+
+\end{center}
+\caption{Caso 4 - fonte:  \citeonline{Hoskins1899}}
+\label{figura:caso4}
+\end{figure}
+
+De maneira simples, imagina-se que a força $AB$ é a resultante das forças conhecidas do problema, grafadas no PF e $ab$ é sua linha de ação no FG (Figura \ref{figura:caso4}). Na forma geométrica, encontram-se os pontos de interseção das linhas de ação das quatro forças (as três desconhecidas e $ab$), duas à duas. No ponto $M$ a linha de ação da resultante das forças conhecidas $ab$ encontra $da$ e $cd$ e $bc$ tem por $N$ seu ponto em comum. Para que as condições de equilíbrio sejam satisfeitas, as resultantes de $bc$ e $cd$ precisam ter a mesma linha de ação da composição de $ab$ e $da$ (como mesmo módulo e sentido contrário). Uma paralela à $NM$ traçada em $B$ representa a direção da composição de $BC$ e $CD$ e encontra a paralela à $da$ traçada em $A$, definindo o vetor $DA$ em módulo e sentido. O encontro de uma paralela à $bc$, traçada em $B$, com uma paralela à $cd$, pelo ponto $D$ define o ponto $C$ que fecha o PF, garantindo equilíbrio de translação para o sistema. É importante notar que o segmento $BD$ na Figura \ref{figura:pf4} não representa nenhuma força descrita no problema, é apenas uma construção auxiliar para completar o desenho do PF. No sentido $DB$, é a composição de $DA$ e $AB$, seu inverso, $BD$ é a resultante de $BC$ e $CD$. Iguais em magnitude e direção, como exige a Estática.
+
+
+\section{Cálculo das Reações e Esforços em Treliças Planas Bi-Apoiadas}
+\label{section:trelicabiGarfo}
+
+\citeonline{malcolm2009} apontava o método gráfico como o mais conveniente para o cálculo das tenções em treliças de cobertura, tanto pela velocidade, quanto pelo fato das construções geométricas fornecerem maneiras de se verificar os resultados. A Figura \ref{figura:TrExMal01} é apresentada como um exemplo ilustrativo do cálculo das reações e esforços. Partindo do desenho dos eixos dos elementos da treliça e conhecendo totalmente os vetores dos carregamentos, pode-se afirmar que todas as linhas de ação das forças no FG são conhecidas.
+
+\begin{figure}[!ht]
+\begin{center}
+  \mbox{
+      \subfigure[Treliça - Forma Geométrica]
+         {\label{figura:TrExMal01}
+          \includegraphics[width=0.50\textwidth]{TrExMal01.png}
+         }
+         
+         
+        \subfigure[Polígono de Forças]
+           {\label{figura:TrExMal02}
+            \includegraphics[width=0.45\textwidth]{TrExMal02.png}
+           }
+       }
+
+\end{center}
+\caption{Exemplo de Cálculo de Esforços de Treliças - fonte:  \citeonline{malcolm2009}}
+\label{figura:exemplotr01}
+\end{figure}
+
+\subsection{Determinação Estática de Treliças}
+\label{section:determinacaoestatica}
+
+Antes de utilizar-se um modelo matemático para a resolução de um problema, é preciso certificar-se que o modelo se aplique adequadamente ao problema. Os métodos gráficos apresentados aqui lidam com problemas da Estática Pura. Definida como o campo da ciência que trata dos problemas da Estática passiveis de solução apenas pela satisfação das condições de equilíbrio dos corpos rígidos  \cite[p. 45]{johnson1908}. Na literatura atual é mais comum encontrar os termos isostático e hiperestático apara definir os principais tipo de problema do cálculo estrutural. Quando as equações de equilíbrio de um corpo rígido são de mesma quantidade que as variáveis envolvidas, diz-se que o problema é isostático. Quando existem mais variáveis que equações diz-se que o problema é hiperestático \cite{mccormac2009}. Para resolver um sistema estrutural hiperestático, são adicionadas equações ao problema, provenientes das características da deformações dos materiais de construção empregados (lei de Hooke). Portanto, dizer que um problema é isostático ou que ele pertence ao escopo da Estática Pura tem o mesmo significado.
+
+A isostaticidade de uma treliça é determinada por duas características e uma condição de igualdade. As características são:
+
+\begin{itemize}
+\item os elementos devem formar apenas triângulos pelo encontro de seus eixos;
+\item dois ou mais eixos devem se encontrar apenas em um nó.
+\end{itemize}
+
+A condição de igualdade apresentada na  Equação \ref{equacao:trelicaIso} \cite[p. 99]{mccormac2009} deve ser satisfeita, onde $m$ é o numero de barras (membros) da treliça e $j$ é o número de nós.
+
+\begin{equation}
+\label{equacao:trelicaIso}
+ m= (2 \times j) -3
+\end{equation}
+
+No exemplo em questão, nota-se por inspeção da forma, que as duas características são satisfeitas e que existem $21$ elementos e $12$ nós. A condição de igualdade ($(12 \times 2) - 3 = 21$) é atingida, portanto a treliça é isostática e pode ser resolvida dentro do escopo da Estática Pura.
+
+\subsection{Regras de Desenho para Obtenção de Diagramas Recíprocos}
+\label{section:Sentido_select}
+
+Antes de prosseguir com a descrição do algoritmo de desenho, algumas regras devem ser assumidas para que as figuras geradas sejam realmente recíprocas. As propriedades que garantem a reciprocidade das figuras são \citeonline[p. 65]{Hoskins1899}:
+\begin{itemize}
+\item Para cada conjunto de linhas que se interceptam em um ponto na FG, são representadas no PF como um polígono fechado com paralelas às respectivas linhas na outra figura.
+\item A ordem das forças representadas no PF é deve ser a mesma das linhas da FG, se observadas consecutivamente ao redor do nó.
+\end{itemize}
+
+Para que a segunda propriedade seja plenamente atingida é necessário estabelecer um sentido de seleção para as forças conhecidas e linhas de ação que deve ser adotado tanto para o cálculo das reações quanto para o dos esforços nas barras. O sentido adotado neste exemplo é horário, o sentido anti-horário poderia ser também utilizado, obtendo os mesmos valores para as incógnitas, desde que apenas um desses sentidos possíveis seja utilizado em todas as etapas do processo.
+
+
+\subsection{Cálculo das Reações}
+\label{section:reacExemplo}
+
+As reações de apoio $R1$ e $R2$ são as únicas forças externas desconhecidas e devem ser calculadas primeiro. Como apenas carregamentos verticais são aplicados à treliça, pode-se afirmar que as duas reações tem direções também verticais. Neste caso, aplica-se o problema fundamental da Estática chamado de caso dois para forças paralelas, descrito na Seção \ref{section:prob2}. A seleção das forças deve seguir o sentido eleito, partindo da força mais próxima de $R1$ até $R2$. Os raios polares e o funicular são desenhados (linhas pontilhadas na Figura \ref{figura:exemplotr01}) e as reações são definidas. A ordem estabelecida garante que a componente $R1$ será a porção do somatório de forças mais próxima do carregamento no nó $U1$. Analogamente ao cálculo analítico, as reações são determinadas pela satisfação da premissa que garante o equilíbrio de rotação do sistema.
+
+\subsection{Cálculo dos Esforços}
+\label{section:forcasExemplo}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{TrExMal03.png}
+\caption{Polígono de Forças - fonte:\citeonline{malcolm2009}} 
+\label{figura:PFfinalExemplo01}
+\end{center}
+\end{figure}
+
+Além da obtenção dos módulos e sentidos dos esforços em cada elemento, do ponto de vista gráfico, partindo dos carregamentos e resultantes calculados na Figura \ref{figura:TrExMal02}, procura-se construir um único polígono de forças que contenha elementos recíprocos à todas as linhas de ação da forma geométrica, como mostrado na Figura \ref{figura:PFfinalExemplo01}. Utilizando-se do método de Cremona, que procura satisfazer as condições de equilíbrio de translação para cada nó, deve-se iniciar por um ponto onde no máximo duas forças não estejam completamente determinadas. Geralmente pelos pontos de apoio, onde atuam as reações $R1$ e $R2$.
+
+\begin{figure}[!h]
+\begin{center}
+  \mbox{
+      \subfigure[Nó $L0$]
+         {\label{figura:TrExMalNo01}
+          \includegraphics[width=0.40\textwidth]{TrExMalNo01.png}
+         }
+         
+         
+        \subfigure[Nó $U1$]
+           {\label{figura:TrExMalNo02}
+            \includegraphics[width=0.40\textwidth]{TrExMalNo02.png}
+           }
+       }
+
+\end{center}
+\caption{Satisfação das Condições de Equilíbrio de Translação - $L0$ e $U1$ - fonte:  \citeonline{malcolm2009}}
+\label{figura:nosL0U1}
+\end{figure}
+
+Aplicando a condição de equilíbrio no nó $L0$, utilizando o sentido de seleção das forças ao redor do ponto, deve-se ordenar os elementos atuantes de forma que as duas forças desconhecidas sejam usadas por ultimo. Analisando o nó em questão, apenas a reação $R1$ é completamente conhecida. A partir de $R1$ no PF, desenha-se o sentido do elemento $X1$ na extremidade final e a direção do elemento $1Y$ no primeiro ponto, como ilustrado na Figura \ref{figura:TrExMalNo01}. Para que a condição de equilíbrio seja completamente atendida, os vetores devem descrever um polígono fechado também em suas direções, portanto $X1$ tem sentido descendente e $1Y$ da esquerda para a direita. A definição da natureza dos esforços baseia-se nos critérios apresentados em \citeonline[p. 99-102]{malcolm2009}. Movendo as forças $X1$ e $1Y$ do PF para a FG pelos seus pontos finais até o ponto do nó, a natureza do esforço sera de compressão, caso haja sobreposição entre os elementos do FG e o seguimento recíproco movido do PF, como acontece com a força $X1$. Caso os segmentos não se sobreponham, como no caso da força $1Y$, a solicitação é de tração. O procedimento de determinação dos sentidos e natureza dos esforços deve ser realizado para todas as solicitações calculadas.
+
+Determinando todas as solicitações que atuam em $L0$, restam apenas dois valores desconhecidos no nó $U1$. Aplicando o sentido de seleção, partindo das forças conhecidas procura-se os vetores $1X$ ($X1$ e $1X$ representam o mesmo elemento segundo a notação de Bow, que leva em conta o sentido de seleção para determinar a nomenclatura em cada nó) e o carregamento $P$. Desenha-se as direções dos elementos $X2$ e $21$, partindo respectivamente do ponto final e inicial do polígono aberto das forças conhecidas neste ponto. no ponto de encontro dessas duas direções fecha-se o polígono determinam os sentidos (Figura \ref{figura:TrExMalNo02}).
+
+\begin{figure}[!h]
+\begin{center}
+  \mbox{
+      \subfigure[Nó $L1$]
+         {\label{figura:TrExMalNo03}
+          \includegraphics[width=0.40\textwidth]{TrExMalNo03.png}
+         }
+         
+         
+        \subfigure[Nó $U2$]
+           {\label{figura:TrExMalNo04}
+            \includegraphics[width=0.40\textwidth]{TrExMalNo04.png}
+           }
+       }
+
+\end{center}
+\caption{Satisfação das Condições de Equilíbrio de Translação - $L1$ e $U2$ - fonte:  \citeonline{malcolm2009}}
+\label{figura:nosL1U2}
+\end{figure} 
+
+A determinação completa das forças no nó $U1$ abre caminho para resolução de $L1$. Pelos critérios de seleção adotados, procura-se por $Y1$ e $12$ no PF (elementos completamente conhecidos) e desenha-se a direção de $23$ no ponto final de $12$ e $3Y$ no início de $Y1$. Como $Y1$ e $3Y$ tem a mesma direção, ocorre uma sobreposição de linhas, como mostra a Figura \ref{figura:TrExMalNo03}.
+
+A soma de vetores é uma operação comutativa, independem da ordem em que os vetores são selecionados. Obedecendo o sentido de seleção, contudo, garante-se um único polígono de forças para todos os nós. Analisando $U2$ nota-se que as forças conhecidas $32$, $2X$ e $P$ estão grafadas no PF pelos passos anteriores, $X4$ e $43$, quando determinadas nos pontos final e inicial  respectivamente do polígono aberto (Figura \ref{figura:TrExMalNo04}) garantem que os vértices seguintes que dependem dessas forças encontraram suas representações no PF nas posições convenientes para prosseguir com o cálculo de um PF único.
+
+
+
+\begin{figure}[!h]
+\begin{center}
+  \mbox{
+      \subfigure[Nó $L2$]
+         {\label{figura:TrExMalNo05}
+          \includegraphics[width=0.40\textwidth]{TrExMalNo05.png}
+         }
+         
+         
+        \subfigure[Nó $U3$]
+           {\label{figura:TrExMalNo06}
+            \includegraphics[width=0.40\textwidth]{TrExMalNo06.png}
+           }
+       }
+
+\end{center}
+\caption{Satisfação das Condições de Equilíbrio de Translação - $L2$ e $U3$ - fonte:  \citeonline{malcolm2009}}
+\label{figura:nosL2U3}
+\end{figure}
+
+Em $L2$ as forças conhecidas $Y3$ e $34$ são identificadas no PF e determina-se as magnitudes e sentidos desconhecidos para $45$ e $5Y$ (Figura \ref{figura:TrExMalNo05}). Em $U3$, pode-se calcular as forças desconhecidas $x4'$ e $4'5'$ efetuando os mesmos passos a partir do vértice onde atua $R2$ , mas como tanto a forma da treliça, quanto os carregamentos são simétricos em relação ao eixo $5'5$, os resultados para cada elemento apresentarão mesmo módulo e natureza dos elementos simétricos já calculados. O PF final apresentará também simetria, como grafado na Figura \ref{figura:PFfinalExemplo01}. O cálculo de $5'5$ é apresentado na Figura \ref{figura:TrExMalNo06} e ocorre pela aplicação do caso um dos problemas fundamentais da Estática. o PF desenhado pelas demais forças que atuam em $U3$ já descrevem um polígono fechado, implicando na nulidade da magnitude de $5'5$. Optando por não colocar um elemento $5'5$, as condições de isostaticidade apresentadas na Seção \ref{section:determinacaoestatica} ainda seriam satisfeitas com 19 elementos e 11 vértices ($(11 \times 2)-3=19$).
+
+\section{Cálculo das Reações e Esforços em Treliças Planas em Balanço}
+\label{section:trelicaBalGarfo}
+
+\begin{figure}[!h]
+\begin{center}
+  \mbox{
+      \subfigure[Treliça - Forma Geométrica]
+         {\label{figura:trelicaBalancoExemplo}
+          \includegraphics[width=0.55\textwidth]{trelicaBalancoExemplo.png}
+         }
+         
+         
+        \subfigure[Polígono de Forças]
+           {\label{figura:trelicaBalancoExemploPF}
+            \includegraphics[width=0.40\textwidth]{trelicaBalancoExemploPF.png}
+           }
+       }
+
+\end{center}
+\caption{Exemplo de Cálculo de Esforços de Treliças em Balanço- fonte:  \citeonline{malcolm2009}}
+\label{figura:exemplotr02}
+\end{figure}
+
+O método apresentado nesta seção baseia-se nos algoritmos apresentados  em \citeonline[p. 145-159]{burr}, \citeonline[p. 114-116]{malcolm2009}\citeonline[p. 161-172]{goldenhorn1943} ou \citeonline[p. 132-133]{zalewski1998shaping}. Para o cálculo das reações na treliça em balanço apresentada na Figura \ref{figura:trelicaBalancoExemplo}, deve-se primeiro analisar as reações $R1$ e $R2$. Enquanto a segunda tem uma direção definida pelo seguimento $AD$, a primeira tem direção desconhecida. A resolução usual deste problema parte do cálculo da resultante dos carregamentos ignorando as reações.
+
+Pelo caso um dos problemas fundamentais da Estática, a reação $R$ é calculada pelo fechamento do funicular. As reações $R1$ e $R2$ tem por soma $R$. prolongando o sentido de $R2$ até encontrar a linha de ação de $R$ no ponto $C$. Para satisfação das condições de equilíbrio, $R1$ deve ter direção $BC$. Atendendo os critérios de seleção e sentido (adotado o anti-horário neste exemplo) em torno do ponto $R$ as reações são completamente determinadas, sendo $R1$ tração e $R2$ compressão. O esforço no elemento $AD$ também é determinado, visto que este precisa se anular com a reação $R2$ em torno do nó $A$, tratam-se de forças com mesmo módulo e direção, mas com sentidos opostos no PF. 
+
+A resolução dos demais elementos da treliça deve ser executada a partir do ponto $B$ e seguir em direção ao ponto $E$, respeitando os mesmos critérios de seleção, sentido e construções geométricas aplicadas na resolução da treliça apresentada na Seção \ref{section:trelicabiGarfo}.
+
+O nó $E$, entretanto, não chega a ser formalmente calculado, e sim serve como ferramenta de conferência do Cálculo. Em torno deste nó atuam o carregamento $YX$, a solicitação no elemento $X1$ do banzo superior e em $1Y$ no inferior. Enquanto o carregamento é um dado do problema, $1Y$ é calculado fechando o polígono para o nó imediatamente anterior à $E$ no banzo inferior e $X1$ para o nó imediatamente anterior à $E$ no banzo superior. Quando o elemento $X1$ é definido em magnitude é sentido, ele deve fechar os polígonos de forças ao redor do ponto em que foi calculado e também em torno do ponto $E$. Se os dois polígonos se fecham com uma linha paralela à $X1$ na FG, o problema foi resolvido corretamente.
+
+
+\section{Outros Algoritmos da Grafostática}
+\label{section:AlgorGarfo}
+
+Apesar das publicações e republicações sobre Grafostática terem sido drasticamente reduzidas na segunda metade do século XX, a quantidade de material disponível sobre o assunto é muito grande. A real dificuldade, na ausência de um levantamento bibliográfico sobre os métodos de solução para diferentes prolemas da Estática Gráfica, é filtrar o material existente. Sem a pretensão de realizar um levantamento extensivo, serão listados nesta seção alguns tópicos que merecem destaque, pela clareza da exposição, pelo cuidado com a apresentação da teoria das estruturas ou por apresentarem algoritmos pouco explorados por seus pares, nos trabalhos dos autores que forneceram a fundamentação para o estudo da Grafostática realizado nesta pesquisa.
+
+Dentre os livros técnicos e manuais práticos consultados para a elaboração deste trabalho (muitos deles com os direitos de publicação e reprodução já em domínio público) encontram-se disponíveis para consulta e \textit{download} em repositórios na internet (e.g. \href{http://openlibrary.org/}{openlibrary.org}), outros podem ser encontrados em território nacional, no comércio \textit{online} de livros usados.
+
+Os algoritmos fundamentais, os cálculos e diagramas de solicitações e tensões básicas para treliças e vigas de alma cheia são assuntos cobertos por todas as publicações. Destacam-se o livro de \citeonline{Hoskins1899}, pela abordagem objetiva e introdutória das bases da disciplina e \citeonline{johnson1908} pela cuidadosa apresentação dos conceitos teóricos e o constante paralelo com os métodos analíticos para os mesmos problemas. O livro de \citeonline{burr} tem um capítulo inteiro dedicado à teoria das linhas de influência aplicada nos algoritmos de cálculo e análise, outro sobre deformações calculadas graficamente. \citeonline{Kneip1939} apresentam o tratamento gráfico de eixos e gruas, com suas aplicações ao projeto de peças mecânicas. \citeonline{henkel1953} trabalha com algoritmos de deformação no cálculo de equilíbrio em vigas continuas. \citeonline{eddy2010new} trata de tensões provenientes da dilatação térmica e estruturas em forma de cúpula, em metal e pedra. \citeonline{malcolm2009} discute a análise e o cálculo de tensões para um série de treliças de cobertura, inclusive estruturas em balanço e assimétricas. \citeonline{goldenhorn1943} apresenta dois métodos para o cálculo de vigas continuas e o tratamento gráfico das propriedades das seções planas (incluindo o momento de inércia e o raio de giração). \citeonline{sanjuan1951} mostra métodos de desenho para a determinação gráfica de integrais no final de seu livro, com suas aplicações na resistência dos materiais em sistemas isostáticos e hiperestáticos, mostrando a extensão do poder de cálculo desses algoritmos. \citeonline{panseri1952} trata, de maneira extensa e cuidadosa com os aspectos teóricos da Física, as propriedades de seções planas, apresentando os métodos de Culmann e Mohr para o cálculo destas propriedades. As aplicações das derivadas e integrais gráficas no tratamento dos esforços cortante e momento fletor abordadas pelo autor, também merecem destaque. \citeonline{Bayle1966} apresenta objetivamente os aspectos básicos da Grafostática com a particularidade de, ao final de cada capítulo, mostrar de maneira resumida as correlatas aplicações analíticas e métodos de verificação do cálculo gráfico pela utilização de expressões matemáticas. O trabalho teórico de \citeonline{Crapo} é considerado fundamental \cite{gerhardt2003} \cite{aag2010193} para a formulação do estudo tridimensional da Grafostática. O livro de \citeonline{zalewski1998shaping} é uma publicação recente sobre o tema, largamente ilustrada onde a Estática Gráfica é utilizada como ferramenta para a criação e refino de forma, demonstra o renovado interesse de instituições respeitadas de ensino e pesquisa como o MIT e a Universidade de Yale a respeito do método. A única publicação nacional encontrada nesta pesquisa foi a de \citeonline[p. 3-39]{costa1974} que, apesar de utilizar a Grafostática com recurso introdutório para o estudo analítico de Resistência dos Materiais, apresenta em poucas páginas os fundamentos básicos da disciplina de maneira clara e objetiva.
+
+
+
+
+\section{Ferramentas Computacionais}
+\label{section:ferramentascomputacionais}
+
+\begin{itemize}
+
+\item \textbf{ActiveStatics:} Desenvolvido por Simon Greenwold no MIT (\citeauthor{GREENWOLD}), é considerada a primeira implementação computacional baseada em Grafostática. Idealizada como ferramenta de ensino, o programa implementa alguns algoritmos gráficos de Estática que podem ser dinamicamente experimentados \cite{Shearer2010};
+
+\item \textit{\textbf{eQUILIBRIUM:}} Implementação na plataforma educacional \textit{Open sourse} GeoGebra de alguns métodos da Estática Gráfica pelo \citeauthor{BLOCKResearchGroup} da Politécnica de Zurique;
+
+\item \textbf{CADenary:} Uma ferramenta baseada em Grafostática implementada na linguagem de \textit{scripts} \textit{Processing} (\citeauthor{Kilian});
+
+\item \textbf{RhinoStatics:} Desenvolvido como parte da dissertação de mestrado de \citeonline{Shearer2010}, ferramentas Grafostáticas são desenvolvidas sobre a forma de \textit{scripts}, em linguagem \textit{Visual Basic} no ambiente \textit{Rhinoceros}. As soluções são construídas através de funções que manipulam entidades gráficas. Qualquer alteração feita nas geometrias, porem, deve ser redesenhada por novas chamadas das funções do programa;
+
+\item Os algoritmos propostos por \citeonline{lachauer2011a}, a única ferramente computacional baseada em Grafostática, implementada em um ambiente altamente dinâmico como o \textit{Grasshopper}, que esta pesquisa encontrou. Aplicados como modelo de análise e geração \textit{form finding}, os algoritmos são propostos em um ambiente (\textit{Rhinoceros, Grasshopper, VB.net}) semelhante ao utilizado neste experimento (\textit{Rhinoceros, Grasshopper, Python}).
+
+\end{itemize}
+

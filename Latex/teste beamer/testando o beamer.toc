@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{parte 1}{2}{0}{1}
+\beamer@sectionintoc {2}{parte 2}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{parte 2b}{5}{0}{2}
+\beamer@sectionintoc {3}{parte 3}{6}{0}{3}
+\beamer@sectionintoc {4}{parte 4}{7}{0}{4}
+\beamer@sectionintoc {5}{parte 5}{8}{0}{5}
+\beamer@sectionintoc {6}{parte 6}{9}{0}{6}
+\beamer@sectionintoc {7}{parte 7}{10}{0}{7}

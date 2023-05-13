@@ -1,0 +1,102 @@
+\select@language {brazil}
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}Introdu\c {c}\~ao}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Defini\c {c}\~ao do Problema}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objeto de Estudo}{6}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos}{7}{section.1.2}
+\contentsline {section}{\numberline {1.3}Import\^ancia da Pesquisa}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}Limites e Limita\c {c}\~oes}{10}{section.1.4}
+\contentsline {section}{\numberline {1.5}Quest\~oes e Hip\'oteses}{11}{section.1.5}
+\contentsline {section}{\numberline {1.6}Aspectos Metodol\'ogicos}{11}{section.1.6}
+\contentsline {section}{\numberline {1.7}Organiza\c c\~ao da Disserta\c c\~ao de Mestrado}{13}{section.1.7}
+\contentsline {chapter}{\numberline {2}Algoritmos Generativos e Sistemas Generativos de Projeto}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Defini\c c\~ao de Algoritmo e Algoritmos Generativos}{14}{section.2.1}
+\contentsline {section}{\numberline {2.2}Principais Modelos de Algoritmos Generativos Aplicados \`a Arquitetura e ICC}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Gram\'aticas de Forma (GF)}{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}\textit {L-Systems} (LS)}{19}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Aut\^omatos Celulares (AC)}{21}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}\textit {Swarm Intelligence} (SI)}{23}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Diagramas de Voronoi (DV)}{24}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Algoritmos de Otimiza\c c\~ao Estoc\'astica}{26}{subsection.2.2.6}
+\contentsline {subsubsection}{\numberline {2.2.6.1}Algoritmos Gen\'eticos}{26}{subsubsection.2.2.6.1}
+\contentsline {subsubsection}{\numberline {2.2.6.2}\textit {Simulated Annealing} (SA)}{28}{subsubsection.2.2.6.2}
+\contentsline {subsection}{\numberline {2.2.7}Fractais}{31}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}Modelos de Par\^ametros e Restri\c c\~oes (MPR)}{35}{subsection.2.2.8}
+\contentsline {chapter}{\numberline {3}Grafost\'atica}{40}{chapter.3}
+\contentsline {section}{\numberline {3.1}Est\'atica e Grafost\'atica}{40}{section.3.1}
+\contentsline {section}{\numberline {3.2}Precis\~ao do M\'etodo}{42}{section.3.2}
+\contentsline {section}{\numberline {3.3}Conceitos Fundamentais da Est\'atica}{43}{section.3.3}
+\contentsline {section}{\numberline {3.4}Diagramas Rec\IeC {\'\i }procos}{44}{section.3.4}
+\contentsline {section}{\numberline {3.5}Condi\c c\~oes de Equil\IeC {\'\i }brio}{46}{section.3.5}
+\contentsline {section}{\numberline {3.6}Problemas em Equil\IeC {\'\i }brio}{47}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Caso Um - Composi\c c\~ao de uma For\c ca}{47}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Caso Dois - Resolu\c c\~ao de uma For\c ca em Duas Componentes}{47}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Caso Tr\^es - Resolu\c c\~ao de uma For\c ca em uma Componente de Dire\c c\~ao Conhecida e Outra que Passe por um Ponto}{49}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Caso Quatro - Resolu\c c\~ao de uma For\c ca em Tr\^es Componentes}{50}{subsection.3.6.4}
+\contentsline {section}{\numberline {3.7}C\'alculo das Rea\c c\~oes e Esfor\c cos em Treli\c cas Planas Bi-Apoiadas}{51}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Determina\c c\~ao Est\'atica de Treli\c cas}{51}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Regras de Desenho para Obten\c c\~ao de Diagramas Rec\IeC {\'\i }procos}{52}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}C\'alculo das Rea\c c\~oes}{53}{subsection.3.7.3}
+\contentsline {subsection}{\numberline {3.7.4}C\'alculo dos Esfor\c cos}{53}{subsection.3.7.4}
+\contentsline {section}{\numberline {3.8}C\'alculo das Rea\c c\~oes e Esfor\c cos em Treli\c cas Planas em Balan\c co}{56}{section.3.8}
+\contentsline {section}{\numberline {3.9}Outros Algoritmos da Grafost\'atica}{57}{section.3.9}
+\contentsline {section}{\numberline {3.10}Ferramentas Computacionais}{58}{section.3.10}
+\contentsline {chapter}{\numberline {4}Ambiente de Implementa\c c\~ao}{60}{chapter.4}
+\contentsline {section}{\numberline {4.1}\textit {Rhinoceros 3D}}{61}{section.4.1}
+\contentsline {section}{\numberline {4.2}\textit {Grasshopper}}{61}{section.4.2}
+\contentsline {section}{\numberline {4.3}\textit {Python Script}}{65}{section.4.3}
+\contentsline {chapter}{\numberline {5}Trabalho experimental e desenvolvimento da pesquisa}{66}{chapter.5}
+\contentsline {section}{\numberline {5.1}Divis\~ao da Treli\c ca em Elementos e Nomenclatura Utilizada}{67}{section.5.1}
+\contentsline {section}{\numberline {5.2}Algoritmo de Gera\c c\~ao dos Eixos}{68}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Par\^ametro 1: Curva}{69}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Par\^ametro 2: Eixo de Simetria}{70}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Par\^ametro 3: HV1}{71}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Par\^ametros 5 e 7: HV2 e HV3}{71}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Par\^ametros 4, 6 e 8: diagV1, diagV2 e diagV3}{72}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Par\^ametro 9: No\_Shed}{72}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Par\^ametro 10: VigaDist}{72}{subsection.5.2.7}
+\contentsline {subsection}{\numberline {5.2.8}Par\^ametro 11: Plano}{73}{subsection.5.2.8}
+\contentsline {subsection}{\numberline {5.2.9}Fun\c c\~ao 01: Gera\c c\~ao dos Eixos das Vigas v1 e v2}{74}{subsection.5.2.9}
+\contentsline {subsection}{\numberline {5.2.10}Fun\c c\~ao 02: Gera\c c\~ao dos Eixos da Viga v3}{75}{subsection.5.2.10}
+\contentsline {subsection}{\numberline {5.2.11}Teste de Determina\c c\~ao Est\'atica}{75}{subsection.5.2.11}
+\contentsline {subsection}{\numberline {5.2.12}Sa\IeC {\'\i }das do Algoritmo}{76}{subsection.5.2.12}
+\contentsline {section}{\numberline {5.3}Algoritmo de Gera\c c\~ao da Volumetria}{76}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Par\^ametro 1: Mostrar Volume}{77}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Par\^ametro 2: N\_Tr}{78}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Par\^ametro 3: Cobertura}{78}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Par\^ametro 4: Eixos}{78}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Par\^ametro 5: Dist\_entre\_eixos}{78}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Par\^ametro 6: Peso\_cobertura}{79}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Par\^ametro 7: Peso\_esp\_Tr}{79}{subsection.5.3.7}
+\contentsline {subsection}{\numberline {5.3.8}Par\^ametro 8: Fator\_de\_Conv}{79}{subsection.5.3.8}
+\contentsline {subsection}{\numberline {5.3.9}Par\^ametros 9 e 10: Diag\_e e Diag\_l}{79}{subsection.5.3.9}
+\contentsline {subsection}{\numberline {5.3.10}Par\^ametros 11 e 12: Bz\_e e Bz\_l}{79}{subsection.5.3.10}
+\contentsline {subsection}{\numberline {5.3.11}Par\^ametro 13: Plano}{79}{subsection.5.3.11}
+\contentsline {subsection}{\numberline {5.3.12}Fun\c c\~ao 01: Gera\c c\~ao dos volumes}{80}{subsection.5.3.12}
+\contentsline {subsection}{\numberline {5.3.13}Fun\c c\~oes 02 e 03: Cargas}{80}{subsection.5.3.13}
+\contentsline {subsection}{\numberline {5.3.14}Fun\c c\~oes 04 e 05: \'Areas e Momentos de In\'ercia M\IeC {\'\i }nimos}{81}{subsection.5.3.14}
+\contentsline {subsection}{\numberline {5.3.15}Sa\IeC {\'\i }das do Algoritmo}{82}{subsection.5.3.15}
+\contentsline {section}{\numberline {5.4}Aplica\c c\~ao e Valida\c c\~ao Dos Algoritmos de Gera\c c\~ao dos Eixos e dos Volumes}{82}{section.5.4}
+\contentsline {section}{\numberline {5.5}Algoritmo de An\'alise Grafost\'atica}{84}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Defini\c c\~ao do Sentido de Sele\c c\~ao das Linhas de A\c c\~ao}{88}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}M\'etodo Grafost\'atico Aplicado \`a Viga do \textit {Shed}}{89}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}M\'etodo Grafost\'atico Aplicado \`as Vigas v1, v2 e Conector}{92}{section.5.6}
+\contentsline {section}{\numberline {5.7}Valida\c c\~ao para Treli\c cas Geradas por Curvas Iniciais no Sentido Dirieta-Esquerda}{94}{section.5.7}
+\contentsline {section}{\numberline {5.8}Teste do Dimensionamento dos Menbros da Treli\c ca}{97}{section.5.8}
+\contentsline {section}{\numberline {5.9}Par\^ametros do Algoritmo de An\'alise Grafost\'atica}{98}{section.5.9}
+\contentsline {section}{\numberline {5.10}Fun\c c\~oes do Algoritmo de An\'alise Grafost\'atica}{99}{section.5.10}
+\contentsline {section}{\numberline {5.11}Sa\IeC {\'\i }das do Algoritmo de An\'alise Grafost\'atica}{103}{section.5.11}
+\contentsline {section}{\numberline {5.12}Aplica\c c\~ao do Algoritmo de An\'alise Grafost\'atica}{103}{section.5.12}
+\contentsline {chapter}{\numberline {6}Considera\c {c}\~oes finais}{105}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\~oes}{106}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contribui\c c\~oes}{107}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Principais Produtos e Algoritmos Desenvolvidos}{108}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Atividades Futuras de Pesquisa}{109}{section.6.3}
+\contentsline {chapter}{\numberline {A}Algoritmos Baseados na Grafost\'atica}{110}{appendix.A}
+\contentsline {section}{\numberline {A.1}Algoritmo de Soma de Vetores e C\'alculo da Equilibrante}{110}{section.A.1}
+\contentsline {section}{\numberline {A.2}\textit {Cluster} Utilizado para a Visualiza\c c\~ao de Vetores}{110}{section.A.2}
+\contentsline {section}{\numberline {A.3}Algoritmo de Desenho do PF, FG, Funicular e C\'alculo da Resultante e Momento }{111}{section.A.3}
+\contentsline {chapter}{\numberline {B}ALgoritmos Generativos no \textit {Rhinoceros 3D / Grasshopper}}{112}{appendix.B}
+\contentsline {section}{\numberline {B.1} Tri\^angulo de Sierpinski}{112}{section.B.1}
+\contentsline {section}{\numberline {B.2}C\'upula M\'ovel}{113}{section.B.2}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{114}{figure.B.3}

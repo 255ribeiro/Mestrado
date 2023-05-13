@@ -1,0 +1,283 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{krish2011}
+S.~Krish,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0010448510001764}{{A
+  practical generative design method}}, Computer-Aided Design 43~(1) (2011)
+  88--100.
+\newblock \href {http://dx.doi.org/10.1016/j.cad.2010.09.009}
+  {\path{doi:10.1016/j.cad.2010.09.009}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0010448510001764}
+
+\bibitem{ceccato2010mbg}
+C.~Ceccato, {The Master-Builder-Geometer}, in: C.~Ceccato, L.~Hesselgren,
+  M.~Pauly (Eds.), Advances in Architectural Geometry 2010, Springer, 2010, pp.
+  9--14.
+
+\bibitem{Oxman2006}
+R.~Oxman,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0142694X05000840}{{Theory
+  and design in the first digital age}}, Design Studies 27~(3) (2006) 229--265.
+\newblock \href {http://dx.doi.org/10.1016/j.destud.2005.11.002}
+  {\path{doi:10.1016/j.destud.2005.11.002}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0142694X05000840}
+
+\bibitem{picon2011}
+A.~Picon, \href{http://dash.harvard.edu/handle/1/12638041}{{Ornament and its
+  users: from the Vitruvian tradition to the digital age}}, Le Visiteur~(17)
+  (2011) 176--180.
+\newline\urlprefix\url{http://dash.harvard.edu/handle/1/12638041}
+
+\bibitem{kolarevic2003}
+B.~Kolarevic, {Architecture in the digital age: design and manufacturing},
+  London, 2003.
+
+\bibitem{aag2010113}
+C.~Ceccato, Others (Eds.), {Towards Teaching Generative Design in
+  Architecture}, Springer, 2010.
+
+\bibitem{knuth1997art}
+D.~E. Knuth, \href{http://books.google.com.br/books?id=x9AsAwAAQBAJ}{{Art of
+  Computer Programming, Volume 1: Fundamental Algorithms}}, Pearson Education,
+  1997.
+\newline\urlprefix\url{http://books.google.com.br/books?id=x9AsAwAAQBAJ}
+
+\bibitem{terzidis2006algorithmic}
+K.~Terzidis,
+  \href{http://books.google.com.br/books?id=yT7NXhZYepwC}{{Algorithmic
+  Architecture}}, Taylor \& Francis, 2006.
+\newline\urlprefix\url{http://books.google.com.br/books?id=yT7NXhZYepwC}
+
+\bibitem{mitchell2008}
+W.~J. Mitchell,
+  \href{http://books.google.com.br/books?id=DxszH9whFSIC}{{World's Greatest
+  Architect : Making, Meaning, and Network Culture}}, MIT Press, Cambrige,
+  2008.
+\newline\urlprefix\url{http://books.google.com.br/books?id=DxszH9whFSIC}
+
+\bibitem{fasoulaki2008}
+E.~Fasoulaki, {Integrated Design}, Ph.D. thesis, MIT, Cambrige (2008).
+
+\bibitem{bohnacker2012}
+H.~Bohnacker, B.~Gross, J.~Laub, C.~Lazzeroni,
+  \href{http://books.google.com.pe/books?id=tSS9uAAACAAJ}{{Generative Design:
+  Visualize, Program, and Create with Processing}}, Princeton Architectural
+  Press, Princeton Architectural Press, 2012.
+\newline\urlprefix\url{http://books.google.com.pe/books?id=tSS9uAAACAAJ}
+
+\bibitem{DIno2012}
+I.~G. DIno, {Creative Design Exploration By Parametric Generative Systems In
+  Architecture}, Metu Journal of the Faculty of Architecture (2012)
+  207--224\href {http://dx.doi.org/10.4305/METU.JFA.2012.1.12}
+  {\path{doi:10.4305/METU.JFA.2012.1.12}}.
+
+\bibitem{stiny1972}
+G.~Stiny, J.~Gips, {shape Grammars and the Generative Specification of Painting
+  and Sculpture}, in: Petrocelli (Ed.), The Best Computer Papers of 1971,
+  Auerbach, 1972, pp. 125--135.
+
+\bibitem{Stiny1978}
+G.~Stiny, W.~J. Mitchell,
+  \href{http://www.envplan.com/abstract.cgi?id=b050005}{{The Palladian
+  grammar}}, Environment and Planning B 5~(1) (1978) 5--18.
+\newline\urlprefix\url{http://www.envplan.com/abstract.cgi?id=b050005}
+
+\bibitem{duarte2005}
+J.~P. Duarte,
+  \href{http://www.sciencedirect.com/science/article/pii/S0926580504000810}{{A
+  discursive grammar for customizing mass housing: the case of Siza's houses at
+  Malagueira}}, Automation in Construction 14~(2) (2005) 265--275.
+\newblock \href {http://dx.doi.org/10.1016/j.autcon.2004.07.013}
+  {\path{doi:10.1016/j.autcon.2004.07.013}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0926580504000810}
+
+\bibitem{tepavcevic2012}
+B.~Tepavcevic, V.~Stojakovic,
+  \href{http://www.doiserbia.nb.rs/Article.aspx?ID=0354-46051202169T}{{Shape
+  grammar in contemporary architectural theory and design}}, Facta
+  universitatis - series: Architecture and Civil Engineering 10~(2) (2012)
+  169--178.
+\newblock \href {http://dx.doi.org/10.2298/FUACE1202169T}
+  {\path{doi:10.2298/FUACE1202169T}}.
+\newline\urlprefix\url{http://www.doiserbia.nb.rs/Article.aspx?ID=0354-46051202169T}
+
+\bibitem{caldas1999}
+L.~Caldas, L.~Norford, {A Genetic Algorithm Tool For Design Optimization}, in:
+  Media and Design, Acadia'99, Salt Lake City, 1999, pp. 260--261.
+
+\bibitem{Troiano2012}
+L.~Troiano, C.~Birtolo,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0020025512000242}{{Genetic
+  algorithms supporting generative design of user interfaces: Examples}},
+  Information Sciences (2012) 1--19\href
+  {http://dx.doi.org/10.1016/j.ins.2012.01.006}
+  {\path{doi:10.1016/j.ins.2012.01.006}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0020025512000242}
+
+\bibitem{Caldas2002}
+L.~G. Caldas, L.~K. Norford,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0926580500000960}{{A
+  design optimization tool based on a genetic algorithm}}, Automation in
+  Construction 11~(2) (2002) 173--184.
+\newblock \href {http://dx.doi.org/10.1016/S0926-5805(00)00096-0}
+  {\path{doi:10.1016/S0926-5805(00)00096-0}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0926580500000960}
+
+\bibitem{Herr2007}
+C.~M. Herr, T.~Kvan,
+  \href{http://www.sciencedirect.com/science/article/pii/S0926580505001494}{{Adapting
+  cellular automata to support the architectural design process}}, Automation
+  in Construction 16~(1) (2007) 61--69.
+\newblock \href {http://dx.doi.org/10.1016/j.autcon.2005.10.005}
+  {\path{doi:10.1016/j.autcon.2005.10.005}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0926580505001494}
+
+\bibitem{Ceranic2001}
+B.~Ceranic, C.~Fryer, R.~Baines,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0045794901000372}{{An
+  application of simulated annealing to the optimum design of reinforced
+  concrete retaining structures}}, Computers \& Structures 79~(17) (2001)
+  1569--1581.
+\newblock \href {http://dx.doi.org/10.1016/S0045-7949(01)00037-2}
+  {\path{doi:10.1016/S0045-7949(01)00037-2}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0045794901000372}
+
+\bibitem{Correia2001}
+V.~M. Correia, C.~a. M. C.~A. {Mota Soares},
+  \href{http://www.sciencedirect.com/science/article/pii/S026382230100085X}{{Refined
+  models for the optimal design of adaptive structures using simulated
+  annealing}}, Composite Structures 54~(2-3) (2001) 161--167.
+\newblock \href {http://dx.doi.org/10.1016/S0263-8223(01)00085-X}
+  {\path{doi:10.1016/S0263-8223(01)00085-X}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S026382230100085X}
+
+\bibitem{Lamberti2008}
+L.~Lamberti,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0045794908000448}{{An
+  efficient simulated annealing algorithm for design optimization of truss
+  structures}}, Computers \& Structures 86~(19-20) (2008) 1936--1953.
+\newblock \href {http://dx.doi.org/10.1016/j.compstruc.2008.02.004}
+  {\path{doi:10.1016/j.compstruc.2008.02.004}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0045794908000448}
+
+\bibitem{Bland1991}
+J.~Bland, G.~Dawson,
+  \href{http://www.sciencedirect.com/science/article/pii/001044859190089F}{{Tabu
+  search and design optimization}}, Computer-Aided Design 23~(3) (1991)
+  195--201.
+\newblock \href {http://dx.doi.org/10.1016/0010-4485(91)90089-F}
+  {\path{doi:10.1016/0010-4485(91)90089-F}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/001044859190089F}
+
+\bibitem{Luh2011}
+G.-C. Luh, C.-Y. Lin, Y.-S. Lin,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S1568494610002905}{{A
+  binary particle swarm optimization for continuum structural topology
+  optimization}}, Applied Soft Computing 11~(2) (2011) 2833--2844.
+\newblock \href {http://dx.doi.org/10.1016/j.asoc.2010.11.013}
+  {\path{doi:10.1016/j.asoc.2010.11.013}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S1568494610002905}
+
+\bibitem{Yahya2014}
+M.~Yahya, M.~Saka,
+  \href{http://www.sciencedirect.com/science/article/pii/S0926580513001945}{{Construction
+  site layout planning using multi-objective artificial bee colony algorithm
+  with Levy flights}}, Automation in Construction 38 (2014) 14--29.
+\newblock \href {http://dx.doi.org/10.1016/j.autcon.2013.11.001}
+  {\path{doi:10.1016/j.autcon.2013.11.001}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0926580513001945}
+
+\bibitem{Turrin2011}
+M.~Turrin, P.~von Buelow, R.~Stouffs,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S1474034611000577}{{Design
+  explorations of performance driven geometry in architectural design using
+  parametric modeling and genetic algorithms}}, Advanced Engineering
+  Informatics 25~(4) (2011) 656--675.
+\newblock \href {http://dx.doi.org/10.1016/j.aei.2011.07.009}
+  {\path{doi:10.1016/j.aei.2011.07.009}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S1474034611000577}
+
+\bibitem{Fischer2005}
+T.~Fischer, M.~Burry, J.~Frazer,
+  \href{http://linkinghub.elsevier.com/retrieve/pii/S0926580504000780}{{Triangulation
+  of generative form for parametric design and rapid prototyping}}, Automation
+  in Construction 14~(2) (2005) 233--240.
+\newblock \href {http://dx.doi.org/10.1016/j.autcon.2004.07.004}
+  {\path{doi:10.1016/j.autcon.2004.07.004}}.
+\newline\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0926580504000780}
+
+\bibitem{lachauer2011a}
+L.~Lachauer, H.~Jungjohann, T.~Kotnik,
+  \href{http://www.schwartz.arch.ethz.ch/Publikationen/Dokumente/InteractiveTools.pdf}{{Interactive
+  parametric tools for structural design}}, in: Proceedings of the IABSE-IASS
+  Symposium 2011, London, UK, 2011.
+\newline\urlprefix\url{http://www.schwartz.arch.ethz.ch/Publikationen/Dokumente/InteractiveTools.pdf}
+
+\bibitem{Milena2010a}
+S.~Milena, M.~Ognen,
+  \href{http://www.wseas.us/e-library/conferences/2010/Faro/MACMESE/MACMESE-27.pdf}{{Application
+  of Generative Algorithms in Architectural Design}}, in: Advances in
+  Mathematical and Computational Methods, 2010, pp. 175--180.
+\newline\urlprefix\url{http://www.wseas.us/e-library/conferences/2010/Faro/MACMESE/MACMESE-27.pdf}
+
+\bibitem{Hoffmann2005}
+C.~M. Hoffmann, R.~Joan-Arinyo, {A brief on constraint solving}, Computer-Aided
+  Design and Applications 2~(5) (2005) 655--663.
+\newblock \href {http://dx.doi.org/10.1080/16864360.2005.10738330}
+  {\path{doi:10.1080/16864360.2005.10738330}}.
+
+\bibitem{Bartk01theoryand}
+R.~Bart\'{a}k, {Theory and practice of constraint propagation}, in: In
+  Proceedings of the 3rd Workshop on Constraint Programming in Decision and
+  Control, 2001, pp. 7--14.
+
+\bibitem{ARQ:359533}
+S.~Philippou, {The primitive as an instrument of subversion in
+  twentieth-century Brazilian cultural practice}, arq: Architectural Research
+  Quarterly 8~(3-4) (2004) 285--298.
+\newblock \href {http://dx.doi.org/10.1017/S1359135504000302}
+  {\path{doi:10.1017/S1359135504000302}}.
+
+\bibitem{ferraz2000joão}
+M.~C. Ferraz, G.~Latorraca, I.~G. Ferraz, E.~S. de~Freitas, S.~Birkinshaw,
+  K.~Szab\'{o},
+  \href{https://books.google.com.br/books?id=hHJEAQAAIAAJ}{{Jo{\~{a}}o
+  Filgueiras Lima, Lel{\'{e}}}}, Arquitectos brasileiros - Brazilian
+  architects, Editorial Blau, 2000.
+\newline\urlprefix\url{https://books.google.com.br/books?id=hHJEAQAAIAAJ}
+
+\bibitem{Campagnol2014}
+G.~Campagnol, {Positive Distraction and the Rehabilitation Hospitals of
+  Jo\~{a}o Filgueiras Lima}, HEALTH ENVIRONMENTS RESEARCH \& DESIGN JOURNAL
+  8~(1) (2014) 199--227.
+
+\bibitem{Maciel2007}
+A.~A. Maciel, B.~Ford, R.~Lamberts,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360132306003052}{{Main
+  influences on the design philosophy and knowledge basis to bioclimatic
+  integration into architectural design—The example of best practices}},
+  Building and Environment 42~(10) (2007) 3762--3773.
+\newblock \href {http://dx.doi.org/10.1016/j.buildenv.2006.07.041}
+  {\path{doi:10.1016/j.buildenv.2006.07.041}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360132306003052}
+
+\bibitem{McCarthy1960}
+J.~McCarthy, \href{http://dl.acm.org/citation.cfm?id=367199}{{Recursive
+  functions of symbolic expressions and their computation by machine, Part I}},
+  Communications of the ACM~(April) (1960) 1--34.
+\newline\urlprefix\url{http://dl.acm.org/citation.cfm?id=367199}
+
+\bibitem{Steele:1996:EL:234286.1057818}
+G.~L. Steele, R.~P. Gabriel,
+  \href{http://doi.acm.org/10.1145/234286.1057818}{{The Evolution of Lisp}},
+  ACM, New York, NY, USA, 1996, Ch. The Evolut, pp. 233--330.
+\newblock \href {http://dx.doi.org/10.1145/234286.1057818}
+  {\path{doi:10.1145/234286.1057818}}.
+\newline\urlprefix\url{http://doi.acm.org/10.1145/234286.1057818}
+
+\end{thebibliography}
